@@ -127,6 +127,7 @@ def test_diagnostic_shell_does_not_bypass_other_body_gates(restriction):
     if restriction == "forbidden":
         case["forbidden_any"] = ["foxtrot"]
     elif restriction == "blocked":
+        case["forbidden_any"] = ["Access denied"]
         artifact += "\nAccess denied"
     else:
         case["min_content_chars"] = len(artifact) + 1

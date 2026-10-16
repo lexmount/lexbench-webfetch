@@ -27,6 +27,10 @@ def load_scoring_regressions(path: Path | None = None) -> dict[str, dict[str, An
     if document.get("schema_version") != 1 or not isinstance(document.get("cases"), list):
         raise ValueError("Unsupported scoring regression registry")
     rows: dict[str, dict[str, Any]] = {}
+    if document.get('control_revisions'):
+        raise ValueError('Historical controls cannot override inputs or expected results; add new IDs')
+    if document.get('historical_policy_versions'):
+        raise ValueError('Historical policy selectors belong in frozen scorer snapshots')
     for index, row in enumerate(document["cases"], 1):
         identifier = row.get("id")
         if not isinstance(identifier, str) or not identifier.strip() or identifier in rows:
@@ -66,7 +70,16 @@ def active_scoring_regressions(path: Path | None = None) -> dict[str, dict[str, 
         if any(rows[old].get(field) != rows[new].get(field) for field in
                ("case", "artifact", "ok", "metadata", "title", "final_url")):
             raise ValueError("Policy supersession must preserve synthetic inputs")
-    return {key: row for key, row in rows.items() if key not in mapping}
+    import hashlib
+    archived = json.loads(path.read_text()).get('superseded_controls', {}).get('controls', [])
+    for item in archived:
+        key = item['id']
+        if key in rows:
+            digest = hashlib.sha256(json.dumps(rows[key], ensure_ascii=False, sort_keys=True).encode()).hexdigest()
+            if digest != item['sha256']:
+                raise ValueError('Archived scoring control identity changed: ' + key)
+    excluded = {item['id'] for item in archived}
+    return {key: row for key, row in rows.items() if key not in mapping and key not in excluded}
 
 
 def require_scoring_regressions(identifiers: list[str] | tuple[str, ...], *,

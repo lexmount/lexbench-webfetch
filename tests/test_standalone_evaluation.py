@@ -14,9 +14,16 @@ from lexbench_webfetch.scoring_regressions import active_scoring_regressions
 
 @pytest.mark.parametrize("identifier,row", active_scoring_regressions().items())
 def test_declared_acceptance_scenarios(identifier, row):
-    metrics = score_attempt(row['case'], row['artifact'].encode(), ok=row['ok'],
-                            metadata=row.get('metadata'), title=row.get('title'),
-                            final_url=row.get('final_url'))
+    arguments = dict(ok=row['ok'], metadata=row.get('metadata'), title=row.get('title'),
+                     final_url=row.get('final_url'))
+    if 'native_response' in row:
+        arguments['native_response'] = row['native_response'].encode()
+    if row.get('expected_validation_error'):
+        with pytest.raises(ValueError, match=row['expected_validation_error']):
+            score_attempt(row['case'], row['artifact'].encode(), **arguments)
+        assert row['expected_task_pass'] is False
+        return
+    metrics = score_attempt(row['case'], row['artifact'].encode(), **arguments)
     assert task_passed(row['ok'], metrics, row['case'].get('task_kind', 'body')) == row['expected_task_pass']
     if 'expected_task_measured' in row:
         assert task_measured(metrics) == row['expected_task_measured']

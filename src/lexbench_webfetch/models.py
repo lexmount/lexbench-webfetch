@@ -24,6 +24,7 @@ class EvalCase:
     tags: list[str] = field(default_factory=list)
     required_facts: list[dict[str, Any]] = field(default_factory=list)
     forbidden_any: list[str] = field(default_factory=list)
+    diagnostic_any: list[str] = field(default_factory=list)
     min_content_chars: int = 1
     fact_coverage_threshold: float = 1.0
     ground_truth_evidence: list[dict[str, str]] = field(default_factory=list)
@@ -45,6 +46,7 @@ class EvalCase:
     retrieval_hints: dict[str, Any] = field(default_factory=dict)
     source_review_url: str = ""
     evaluation_url: str = ""
+    page_identity_required: bool = False
     expected_final_url: str = ""
     expected_document_language: str = ""
     expected_document_language_present: bool = True
@@ -55,6 +57,8 @@ class EvalCase:
 
 def validate_case(case: EvalCase) -> None:
     """Validate required fields, routing and identity before acquisition."""
+    if not isinstance(case.page_identity_required, bool):
+        raise ValueError("page_identity_required must be boolean")
     safe_identifier(case.id)
     validate_http_url(case.url)
     if not isinstance(case.name, str) or not case.name.strip():

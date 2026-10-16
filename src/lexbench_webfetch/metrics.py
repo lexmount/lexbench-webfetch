@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import re
+import html
 import json
 import math
 import hashlib
@@ -24,9 +25,11 @@ METRIC_DEFINITIONS = {
     "markdown_links": "输出中目标为 HTTP(S) 的 Markdown 链接数量。",
     "html_tags": "输出中残留的类 HTML 标签数量。",
     "fact_coverage": "命中的预登记事实组除以全部必需事实组；同组可接受表达等价。",
-    "forbidden_hits": "输出中出现的预登记错误页、挑战页或拒绝访问文本。",
-    "blocked_page": "输出整体是已知阻断或人机验证页；即使偶然含目标链接或资源也不通过。",
-    "blocked_page_hits": "对 blocked_page 判定起效的独立页标题或标记，用于证据展示和失败归类。",
+    "forbidden_requirement_hits": "命中案例明确禁止的内容；命中任一项即任务未通过。",
+    "forbidden_requirement_pass": "案例明确声明的禁止内容均未出现。",
+    "diagnostic_hits": "命中供诊断的文字；不会单独使任务失败。",
+    "blocked_page": "检测到独立的访问限制或人机验证提示；仅作诊断，不决定任务是否通过。",
+    "blocked_page_hits": "检测到的独立提示标题或标记；仅作诊断，不作为失败依据。",
     "declared_truncation_hits": "供应商输出中精确命中的截断声明；正文仅在全部预登记区域均被完整覆盖时可通过，资源与结构任务仍按各自交付合同验收。",
     "content_sha256": "完整输出的 SHA-256，用于核验报告预览与原始结果一致。",
     "unique_line_ratio": "去重后的非空规范化行数除以全部非空行数，用于诊断重复模板。",
@@ -62,17 +65,9 @@ def normalize_resource_url(value: str, base_url: str) -> str | None:
     if parsed.scheme not in {"http", "https"} or not parsed.netloc:
         return None
     path,query=parsed.path,parsed.query
-    # Same asset at different presentation sizes. Never drop signed query
-    # parameters on arbitrary hosts or collapse distinct resources globally.
-    if parsed.hostname in {'images.unsplash.com','plus.unsplash.com','images.pexels.com','images-assets.nasa.gov','www.nasa.gov'}:
-        query=''
+    # Query parameters and paths may select different resources. Equivalence
+    # belongs to task-declared aliases or patterns, never to a known website.
     netloc = parsed.netloc.lower()
-    if parsed.hostname in {'upload.wikimedia.org', 'thumb.wikimedia.org'} and '/thumb/' in path:
-        path=path.replace('/thumb/','/').rsplit('/',1)[0];query=''
-        # Wikimedia moved thumbnails, not original files or videos, to the
-        # thumb host. Only a thumbnail path identifies the same hosted asset.
-        if parsed.hostname == 'thumb.wikimedia.org':
-            netloc = netloc.replace('thumb.wikimedia.org', 'upload.wikimedia.org')
     return urlunsplit((parsed.scheme.lower(), netloc, unquote(path), query, ""))
 
 
@@ -147,41 +142,27 @@ def _looks_like_image_url(value: str) -> bool:
     return bool(re.search(rf"\.(?:{'|'.join(IMAGE_FILE_SUFFIXES)})$", path, re.I))
 
 
-def _matches_resource_definition(
-    value: str, expected_resources: list[dict[str, Any]], *, base_url: str,
-) -> bool:
-    url = normalize_resource_url(value, base_url)
-    if not url:
-        return False
-    for resource in expected_resources:
-        aliases = [*resource.get("urls", []), *resource.get("aliases", [])]
-        if url in {normalized for item in aliases
-                   if (normalized := normalize_resource_url(str(item), base_url))}:
-            return True
-        if any(re.search(pattern, url) for pattern in resource.get("url_patterns", [])):
-            return True
-    return False
-
-
-def _image_content_candidates(
-    content: str, expected_resources: list[dict[str, Any]], *, base_url: str,
-) -> list[tuple[str, str]]:
+def _image_content_candidates(content: str) -> list[tuple[str, str]]:
     candidates = [(url, "content.markdown_image")
                   for url in _markdown_image_destinations(content)]
-    candidates.extend((match[1], "content.html_img") for match in re.findall(
+    candidates.extend((html.unescape(match[1]), "content.html_img") for match in re.findall(
         r"<img\b[^>]*?\bsrc\s*=\s*([\"'])(.*?)\1", content, re.I | re.S
     ))
     for match in re.findall(r"<img\b[^>]*?\bsrcset\s*=\s*([\"'])(.*?)\1", content, re.I | re.S):
-        candidates.extend((part.strip().split()[0], "content.html_img_srcset")
+        candidates.extend((html.unescape(part.strip().split()[0]), "content.html_img_srcset")
                           for part in match[1].split(',') if part.strip())
-    # A provider may answer with a bare image address rather than Markdown.
-    # Restrict this fallback to image-like paths or declared target aliases;
-    # ordinary page links are not image answer candidates. The alias check is
-    # necessary for extensionless image CDNs such as Unsplash.
+    # HTML attributes are decoded above. Do not also admit their raw entity
+    # spelling as a second bare candidate; plain URL answers remain literal.
+    bare_content = re.sub(r"<img\b[^>]*>", "", content, flags=re.I | re.S)
+    # Explicit image markup is typed evidence. A standalone HTTP URL may also
+    # be the entire answer, including an extensionless CDN address. Every URL
+    # with that syntax is admitted alike, without consulting target resources.
+    url_pattern = r"https?://[^\s<>'\")\]]+"
+    bare_lines = {line.strip().strip('<>') for line in bare_content.splitlines()
+                  if re.fullmatch(r"\s*<?" + url_pattern + r">?\s*", line)}
     candidates.extend((url, "content.bare_image_url") for url in
-                      re.findall(r"https?://[^\s<>'\")\]]+", content)
-                      if (_looks_like_image_url(url) or _matches_resource_definition(
-                          url, expected_resources, base_url=base_url)))
+                      re.findall(url_pattern, bare_content)
+                      if _looks_like_image_url(url) or url in bare_lines)
     return candidates
 
 
@@ -211,7 +192,6 @@ class _VisibleInlineFrames(HTMLParser):
 
 def _inline_frame_candidates(
     content: str,
-    expected_resources: list[dict[str, Any]],
     *,
     base_url: str,
     images_only: bool,
@@ -241,7 +221,7 @@ def _inline_frame_candidates(
         )
         if images_only:
             raw_candidates = _image_content_candidates(
-                document, expected_resources, base_url=frame_base,
+                document,
             )
         else:
             raw_candidates = [
@@ -263,7 +243,6 @@ def _inline_frame_candidates(
 
 def _native_json_resource_candidates(
     content: str,
-    expected_resources: list[dict[str, Any]],
     *,
     base_url: str,
 ) -> list[tuple[str, str]]:
@@ -293,7 +272,7 @@ def _native_json_resource_candidates(
             for url in re.findall(r"https?://[^\s<>'\")\]]+", html)
         )
         candidates.extend(_inline_frame_candidates(
-            html, expected_resources, base_url=base_url, images_only=False,
+            html, base_url=base_url, images_only=False,
         ))
     pending = [payload.get("network")]
     while pending:
@@ -358,6 +337,9 @@ def evaluate_resources(
         raise ValueError(f"Unsupported resource unexpected policy: {contract.get('unexpected')!r}")
 
     candidates: list[tuple[str, str]] = []
+    projection = metadata.get('native_answer_projection') or {}
+    typed_json_answer = (projection.get('content_format') == 'json'
+                         and bool(projection.get('answer_fields')))
     if eligible and candidate_scope == "image_answer_fields":
         if "images" in metadata:
             candidates.extend(_metadata_image_candidates(
@@ -367,30 +349,24 @@ def evaluate_resources(
         for key in ("media", "extras"):
             if key in metadata:
                 candidates.extend(_metadata_image_candidates(metadata[key], path=f"metadata.{key}"))
-        candidates.extend(_image_content_candidates(
-            content, expected_resources, base_url=base_url,
-        ))
-        candidates.extend(_inline_frame_candidates(
-            content, expected_resources, base_url=base_url, images_only=True,
-        ))
+        if not typed_json_answer:
+            candidates.extend(_image_content_candidates(content))
+            candidates.extend(_inline_frame_candidates(content, base_url=base_url, images_only=True))
     elif eligible:
         answer_fields = {key: metadata[key] for key in ('links','images','videos','media','extras') if key in metadata}
         candidates.extend(_metadata_resource_candidates(answer_fields))
-        from .reference_quality import markdown_link_destinations
-        candidates.extend((url, "content.bare_url") for url in
-                          re.findall(r"https?://[^\s<>'\")\]]+", content))
-        candidates.extend((match[1], "content.html_url") for match in
-                          re.findall(r"(?:src|href)\s*=\s*([\"'])(.*?)\1", content, re.I))
-        candidates.extend((url, "content.markdown_link")
-                          for url in markdown_link_destinations(content))
-        candidates.extend((url, "content.visible_file")
-                          for url in _visible_relative_resource_urls(content))
-        candidates.extend(_inline_frame_candidates(
-            content, expected_resources, base_url=base_url, images_only=False,
-        ))
-        candidates.extend(_native_json_resource_candidates(
-            content, expected_resources, base_url=base_url,
-        ))
+        if not typed_json_answer:
+            from .reference_quality import markdown_link_destinations
+            candidates.extend((url, "content.bare_url") for url in
+                              re.findall(r"https?://[^\s<>'\")\]]+", content))
+            candidates.extend((match[1], "content.html_url") for match in
+                              re.findall(r"(?:src|href)\s*=\s*([\"'])(.*?)\1", content, re.I))
+            candidates.extend((url, "content.markdown_link")
+                              for url in markdown_link_destinations(content))
+            candidates.extend((url, "content.visible_file")
+                              for url in _visible_relative_resource_urls(content))
+            candidates.extend(_inline_frame_candidates(content, base_url=base_url, images_only=False))
+            candidates.extend(_native_json_resource_candidates(content, base_url=base_url))
     normalized_candidates, candidate_evidence = _normalized_candidates(candidates, base_url=base_url)
     results = []
     allowed_urls: set[str] = set()
@@ -460,8 +436,15 @@ def task_passed(ok: bool, metrics: dict, task_kind: str | None = None) -> bool:
     # Scored records carry the case kind so dataset-free summaries use the same
     # predicate as the report. Explicit case context still takes precedence.
     task_kind = task_kind if task_kind is not None else metrics.get('task_kind', 'body')
-    if (not task_measured(metrics, task_kind) or metrics.get('deadline_overrun')
-            or metrics.get('blocked_page')):
+    if ('acceptance_policy_version' in metrics or 'forbidden_hits' in metrics
+            or ('blocked_page' in metrics and 'forbidden_requirement_hits' not in metrics)):
+        raise ValueError('Historical scoring metrics require their frozen scorer or a complete offline rescore')
+    if metrics.get('forbidden_requirement_hits') or metrics.get('forbidden_requirement_pass') is False:
+        return False
+    if (metrics.get('page_identity_required')
+            and metrics.get('page_identity_status') != 'verified'):
+        return False
+    if not task_measured(metrics, task_kind) or metrics.get('deadline_overrun'):
         return False
     if "stable_task_pass" in metrics:
         combined = (metrics.get("content_pass")
@@ -471,19 +454,31 @@ def task_passed(ok: bool, metrics: dict, task_kind: str | None = None) -> bool:
                     else True)
         return bool(ok and metrics["stable_task_pass"]
                     and combined
-                    and metrics.get("body_coverage_pass") is not False
-                    and not metrics.get("forbidden_hits")
-                    and not metrics.get("stable_blocked_page"))
+                    and metrics.get("body_coverage_pass") is not False)
     field = {'structure':'list_task_pass', 'resource':'resource_pass', 'file':'raw_file_pass'}.get(task_kind, 'content_pass')
     return bool(ok and metrics.get(field))
 
 
 def task_measured(metrics: dict, task_kind: str | None = None) -> bool:
+    if metrics.get('evaluation_excluded'):
+        return False
     if metrics.get('rule_review_status') == 'unresolved':
         return False
-    # A completed call missing required page observations is a measured failure.
-    # Missing benchmark rules remain unmeasured through rule_review_status above.
     kind = task_kind or metrics.get('task_kind', 'body')
+    if (metrics.get('page_identity_required')
+            and metrics.get('page_identity_status') == 'unavailable'
+            and metrics.get('request_ok') is not False):
+        # Combined pass flags already include identity. Only independent
+        # failed requirements can prove failure while identity is unknown.
+        definite_failure = bool(
+            metrics.get('deadline_overrun')
+            or any(error != 'page_identity_not_verified'
+                   for error in metrics.get('stable_task_errors', []))
+            or (kind == 'body' and (metrics.get('length_pass') is False
+                                   or metrics.get('body_coverage_pass') is False))
+        )
+        if not definite_failure:
+            return False
     return kind != 'file' or isinstance(metrics.get('raw_file_pass'), bool)
 
 
@@ -547,6 +542,15 @@ def normalize_for_match(value: str) -> str:
     # Keep the separator itself (and all operands); do not collapse >=, signs
     # or English word boundaries. Fold layout newlines on both sides first:
     # plain-text DOM extraction may put every menu label on a separate line.
+    # Preserve an existing quoted scalar's exact key/value while unifying
+    # JSON and YAML notation before layout whitespace is folded away.
+    def quoted_pair(match):
+        import json
+        key, scalar = match[1], match[2]
+        value = scalar[1:-1].replace("''", "'")
+        return json.dumps(key, ensure_ascii=False) + ": " + json.dumps(value, ensure_ascii=False)
+    normalized = re.sub(r"(?m)^[ \t]*([a-z_][a-z0-9_.-]*)[ \t]*:[ \t]*('(?:[^'\n]|'')*')[ \t]*$",
+                        quoted_pair, normalized)
     normalized = re.sub(r"\s+", " ", normalized).strip()
     # A serializer may leave layout whitespace before sentence punctuation at
     # an inline-link boundary. Never bridge a digit to punctuation: doing so
@@ -607,6 +611,39 @@ def declared_truncation_hits(value: str) -> list[str]:
             if (match := pattern.search(value))]
 
 
+def code_matching_blocks(content: str) -> list[str]:
+    """Keep literal code and independent block boundaries while ignoring layout."""
+    if re.search(r'<(?:!doctype|html|body|pre)\b', content, re.I):
+        from bs4 import BeautifulSoup
+        soup = BeautifulSoup(content, 'html.parser')
+        blocks = [node.get_text('', strip=False) for node in soup.find_all('pre')]
+    else:
+        text = re.sub(r'(?m)^[ \t]*(?:>[ \t]?)+', '', content)
+        blocks, current, fence = [], [], None
+        for line in text.splitlines(keepends=True):
+            if fence is not None:
+                if re.fullmatch(r'[ \t]*' + re.escape(fence[0])
+                                + '{' + str(len(fence)) + r',}[ \t]*', line.rstrip('\r\n')):
+                    blocks.append(''.join(current))
+                    current, fence = [], None
+                else:
+                    current.append(line)
+            elif match := re.match(r'^[ \t]*(`{3,}|~{3,})[^\r\n]*', line):
+                fence = match[1]
+        if fence is not None:
+            blocks.append(''.join(current))
+        if not blocks:
+            text = html.unescape(text)
+            from .body_coverage import native_markup_body_text
+            if re.search(r'<(?:b|a|span)\b', text, re.I):
+                text = native_markup_body_text(text, text)
+            blocks = [text]
+        else:
+            blocks = [html.unescape(block) for block in blocks]
+    return [re.sub(r'\s+', '', re.sub(r'(?m)^[ \t]*[0-9]{2,4}[ \t]+', '', block))
+            for block in blocks]
+
+
 def evaluate_content(
     content: str,
     expected: list[str],
@@ -614,6 +651,7 @@ def evaluate_content(
     title: str | None = None,
     required_facts: list[dict[str, Any]] | None = None,
     forbidden_any: list[str] | None = None,
+    diagnostic_any: list[str] | None = None,
     min_content_chars: int = 1,
     fact_coverage_threshold: float = 1.0,
     ground_truth_main_content: str = "",
@@ -678,32 +716,36 @@ def evaluate_content(
             if (term := normalize_for_match(hit)) and term in reference_block_terms
         ]
         block_hits = [hit for hit in block_hits if hit not in block_reference_exemptions]
-    reference_exemptions = [item for item in (forbidden_any or [])
-                            if reference_folded and forbidden_in_text(reference_folded, normalize_for_match(item))]
-    if acceptance_contract:
-        # A historical snapshot cannot exempt an explicit stable-mode block rule.
-        reference_exemptions = []
+    # Explicit forbidden text is a task requirement, not a challenge-page guess.
+    # A reference mentioning it cannot silently remove the declared requirement.
     forbidden = [item for item in (forbidden_any or [])
-                 if item not in reference_exemptions and forbidden_in_text(folded, normalize_for_match(item))]
+                 if (text := normalize_for_match(item)) and forbidden_in_text(folded, text)]
     lines = [re.sub(r"\s+", " ", line).strip().casefold() for line in answer_text.splitlines()]
     lines = [line for line in lines if line]
     unique_line_ratio = round(len(set(lines)) / len(lines), 4) if lines else 1.0
     legacy_pass = bool(matched) if expected else True
     length_pass = len(visible_content) >= min_content_chars
     content_pass = (legacy_pass and length_pass and fact_coverage >= fact_coverage_threshold
-                    and not forbidden and not block_hits and not encoding_corruption
+                    and not forbidden
+                    and not encoding_corruption
                     and not script_shell)
     pattern_results = []
+    code_blocks = None
     for rule in required_patterns or []:
-        scope = rule.get('match_scope', 'text')
-        if scope not in {'text', 'output'}:
-            raise ValueError('Required pattern match_scope must be text or output')
-        pattern_content = content if scope == 'output' else visible_content
-        count = len(set(re.findall(rule['pattern'], pattern_content, re.I)))
+        scope = rule.get('match_scope', 'visible_text')
+        if scope not in {'visible_text', 'text', 'output', 'code_compact'}:
+            raise ValueError('Unknown required-pattern matching scope')
+        if scope == 'code_compact' and code_blocks is None:
+            code_blocks = code_matching_blocks(content)
+        targets = code_blocks if scope == 'code_compact' else [content if scope == 'output' else visible_content]
+        flags = 0 if scope == 'code_compact' else re.I
+        count = len({match for target in targets for match in re.findall(rule['pattern'], target, flags)})
         pattern_results.append({'id':rule['id'],'count':count,'minimum':rule.get('minimum',1),'pass':count >= rule.get('minimum',1)})
     content_pass = content_pass and all(item['pass'] for item in pattern_results)
-    from .body_coverage import evaluate_body_requirements
-    body_checks = evaluate_body_requirements(visible_content, body_requirements or {})
+    from .body_coverage import evaluate_body_requirements, native_markup_body_text
+    body_content = (native_markup_body_text(content, html.unescape(re.sub(r"<(script|style|template)\b[^>]*>.*?</\1\s*>", "", content, flags=re.I | re.S)))
+                    if body_requirements and not is_html else visible_content)
+    body_checks = evaluate_body_requirements(body_content, body_requirements or {})
     content_pass = content_pass and body_checks['body_coverage_pass']
     word_precision = word_recall = word_f1 = None
     if ground_truth_main_content:
@@ -723,12 +765,14 @@ def evaluate_content(
         "fact_total": len(fact_results),
         "fact_coverage": fact_coverage,
         "fact_coverage_threshold": fact_coverage_threshold,
-        "forbidden_hits": forbidden,
+        "forbidden_requirement_hits": forbidden,
+        "diagnostic_hits": [item for item in (diagnostic_any or [])
+                            if (text := normalize_for_match(item)) and forbidden_in_text(folded, text)],
+        "forbidden_requirement_pass": not forbidden,
         "blocked_page": bool(block_hits),
         "blocked_page_hits": block_hits,
         "blocked_page_reference_exemptions": block_reference_exemptions,
         "script_payload_shell": script_shell,
-        "reference_term_exemptions": reference_exemptions,
         "minimum_content_chars": min_content_chars,
         "length_pass": length_pass,
         "content_chars": len(content),
@@ -772,16 +816,13 @@ def evaluate_content(
         result.update(evaluate_stable_task(content, acceptance_contract,
                                            base_url, links=named_links,
                                             anchor_text=visible_content if has_html_prose else None,
+                                           allow_closed_title_cards=True,
                                            anchors_required=anchors_required))
         if encoding_corruption:
             result["stable_task_pass"] = False
             result["stable_content_pass"] = False
             if "text_encoding_corruption" not in result["stable_task_errors"]:
                 result["stable_task_errors"].append("text_encoding_corruption")
-        if forbidden:
-            result["stable_task_pass"] = False
-            result["stable_content_pass"] = False
-            result["stable_task_errors"].append("forbidden_content")
         if script_shell and acceptance_contract.get("schema") == "body_text":
             result["stable_task_pass"] = False
             result["stable_content_pass"] = False
@@ -797,7 +838,7 @@ def evaluate_content(
             if "content_too_short" not in result["stable_task_errors"]:
                 result["stable_task_errors"].append("content_too_short")
         result["content_pass"] = bool(
-            declared_body_pass and declared_pattern_pass and result["stable_task_pass"]
+            declared_body_pass and declared_pattern_pass and result["stable_task_pass"] and not forbidden
         )
         result["content_decision_basis"] = (
             "declared_content_requirements_with_stable_text_diagnostics"
@@ -807,9 +848,8 @@ def evaluate_content(
         from .dynamic_lists import visible_html_text
         composite = evaluate_composite_acceptance(
             visible_html_text(content, preserve_links=True) if is_html else visible_content,
-            composite_acceptance,
-            base_url=base_url,
-            links=named_links,
+            composite_acceptance, base_url=base_url, links=named_links,
+            native_html=content if is_html else None,
             table_content=content,
         )
         result.update(composite)

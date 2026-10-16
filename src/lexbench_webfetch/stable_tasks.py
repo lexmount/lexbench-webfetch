@@ -126,11 +126,11 @@ def _unwrap_links(text, schema):
     return "".join(output)
 
 
-def _visible(text, schema=None):
+def _visible(text, schema=None, *, normalized_html=False):
     from .reference_quality import is_html_document_or_fragment
 
     projected_html = (
-        schema in SCHEMA_FIELDS
+        not normalized_html and schema in SCHEMA_FIELDS
         and schema not in {"named_link", "linked_product", "table_row", "body_text", "page_identity"}
         and is_html_document_or_fragment(text)
     )
@@ -138,11 +138,20 @@ def _visible(text, schema=None):
         from .dynamic_lists import visible_html_text
 
         text = visible_html_text(text)
+    if schema == "name_description" and not normalized_html and not projected_html and re.search(r"<(?:div|section|article|span|script|template)\b", text, re.I):
+        from .dynamic_lists import _scoped_html
+        text = _scoped_html(text).get_text(separator="\n")
+        projected_html = True
     text = clean_reference_text(text)
+    # An actual inline HTML break in Markdown is layout. Preserve escaped
+    # markup and code spans, and decode character references only afterward.
+    text = re.sub(r'(`+|~{3,}).*?\1|(?<!\\)<br\s*/?>' if schema != "table_row" and not normalized_html else r'(`+|~{3,}).*?\1',
+                  lambda m: m.group(0) if m.group(1) else " ", text,
+                  flags=re.I | re.S)
     # Decode one character-reference layer, as a browser does for both HTML
     # and Markdown. In particular, ``&amp;`` is the visible ``&`` while an
     # intentionally escaped ``&amp;amp;`` remains the literal text ``&amp;``.
-    if not projected_html:
+    if not projected_html and not normalized_html:
         text = unescape(text)
     # Extractors represent Markdown hard breaks using one or two backslashes.
     text = re.sub(r"\\{1,2}[ \t]*(?=\n)", "", text)
@@ -524,6 +533,16 @@ def _earthquakes(text):
         # line. Split only a complete trailing timestamp, within this card.
         separated = []
         for line in lines:
+            compact = re.fullmatch(
+                r"(.+?)(\d{4}-\d{2}-\d{2}[T ]\d{2}:\d{2}:\d{2}"
+                r"(?:\.\d+)?(?:Z|[+-]\d{2}:\d{2}|\s*\(UTC(?:[+-]\d{2}:\d{2})?\))?)"
+                r"\s+(-?\d+(?:\.\d+)?\s*km)", line, re.I,
+            )
+            if (compact and _text(compact[1])
+                    and _valid_field("time", compact[2])
+                    and _valid_field("depth", compact[3])):
+                separated.extend((compact[1].strip(), compact[2], compact[3]))
+                continue
             joined = re.fullmatch(
                 r"(.+?)(\d{4}-\d{2}-\d{2}[T ]\d{2}:\d{2}:\d{2}"
                 r"(?:\.\d+)?(?:Z|[+-]\d{2}:\d{2}|\s*\(UTC(?:[+-]\d{2}:\d{2})?\))?)",
@@ -639,14 +658,54 @@ def _non_record_visible(content, contract, records, base_url):
     return None
 
 
-def _anchor_matches(anchor, records, visible, schema, non_record_visible=None,
-                    anchor_visible=None):
+def _stable_literal_match(surface, value, registered_words=()):
+    """An atomic Latin label is a word, not part of another word.
+
+    Native camel boundaries and fully covered chains of registered labels
+    preserve adjacent UI text without accepting arbitrary word fragments.
+    Longer declared text retains the existing exact-phrase containment rule.
+    """
     from .metrics import fact_in_text, normalize_for_match
+    expected = normalize_for_match(_visible(value))
+    folded = normalize_for_match(surface)
+    if not fact_in_text(folded, expected):
+        return False
+    if not re.fullmatch(r"[A-Za-z]+", value):
+        return True
+    boundary = lambda needle, text: bool(re.search(
+        r"(?<![a-z])" + re.escape(needle) + r"(?![a-z])", text))
+    if boundary(expected, folded):
+        return True
+    camel = lambda text: re.sub(
+        r"(?<=[a-z])(?=[A-Z])|(?<=[A-Z])(?=[A-Z][a-z])", " ", text)
+    if boundary(normalize_for_match(camel(value)),
+                normalize_for_match(camel(surface))):
+        return True
+    labels = {normalize_for_match(word) for word in registered_words}
+    for token in set(re.findall(r"[a-z]+", folded)):
+        if expected not in token:
+            continue
+        states = {(0, False)}
+        for position in range(len(token)):
+            for start, found in tuple(states):
+                if start != position:
+                    continue
+                for label in labels:
+                    if token.startswith(label, position):
+                        states.add((position + len(label), found or label == expected))
+        if (len(token), True) in states:
+            return True
+    return False
+
+
+def _anchor_matches(anchor, records, visible, schema, non_record_visible=None,
+                    anchor_visible=None, registered_words=()):
+    from .metrics import normalize_for_match
     if anchor.get('match_scope') == 'non_record_lines':
         if non_record_visible is not None:
             folded = normalize_for_match(non_record_visible)
             return [value for value in anchor['alternatives']
-                    if fact_in_text(folded, normalize_for_match(_visible(value)))]
+                    if _stable_literal_match(non_record_visible, value, registered_words)]
         # A known record label cannot stand in for page context. This is a
         # conservative ownership rule, not a claim of recovered DOM ownership.
         # Flattened page output can put headings and records on one physical
@@ -656,7 +715,7 @@ def _anchor_matches(anchor, records, visible, schema, non_record_visible=None,
         for title in sorted(set(titles), key=len, reverse=True):
             folded = folded.replace(title, ' ')
         return [value for value in anchor["alternatives"]
-                if fact_in_text(folded, normalize_for_match(_visible(value)))]
+                if _stable_literal_match(folded, value, registered_words)]
     owned = []
     if schema != "named_link":
         for value in anchor["alternatives"]:
@@ -679,7 +738,9 @@ def _anchor_matches(anchor, records, visible, schema, non_record_visible=None,
             field_matches(record, fields, field)
             for field in SCHEMA_FIELDS[schema]) for record in records)]
     folded = normalize_for_match(anchor_visible if anchor_visible is not None else visible)
-    return [value for value in anchor["alternatives"] if fact_in_text(folded, normalize_for_match(_visible(value)))]
+    return [value for value in anchor["alternatives"]
+            if _stable_literal_match(anchor_visible if anchor_visible is not None else visible,
+                                     value, registered_words)]
 
 
 def validate_acceptance_contract(contract: dict) -> None:
@@ -688,12 +749,32 @@ def validate_acceptance_contract(contract: dict) -> None:
             or contract.get("version") != 1 or not isinstance(contract.get("schema"), str)
             or contract.get("schema") not in SCHEMA_FIELDS):
         raise ValueError("Unsupported stable acceptance contract")
-    if set(contract) - {"version", "schema", "minimum_records", "maximum_records", "page_patterns", "stable_text_anchors", "stable_text_role", "hosts", "entry_path", "entry_identity_pattern", "entry_context", "entry_scope", "name_validation", "identity_query_keys", "field_minimum_records", "record_name_exclusions", "title_exclusion_patterns", "price_patterns", "price_exclusion_patterns", "price_unavailable_patterns", "record_count_policy", "source_record_pair_hashes", "source_record_pairs_sha256", "table_columns", "record_identity_fields", "table_scope", "duplicate_policy", "link_base_url"}:
+    if set(contract) - {"version", "schema", "minimum_records", "maximum_records", "page_patterns", "stable_text_anchors", "stable_text_role", "hosts", "entry_path", "entry_identity_pattern", "entry_context", "entry_scope", "name_validation", "identity_query_keys", "field_minimum_records", "record_name_exclusions", "title_exclusion_patterns", "price_patterns", "price_exclusion_patterns", "price_unavailable_patterns", "record_count_policy", "source_record_pair_hashes", "source_record_pairs_sha256", "table_columns", "record_identity_fields", "table_scope", "duplicate_policy", "link_base_url", "text_exclusions", "content_scope"}:
         raise ValueError("Unknown stable acceptance contract fields")
     if contract.get("stable_text_role", "required") not in {"required", "diagnostic"}:
         raise ValueError("Invalid stable text role")
     if contract.get("stable_text_role") == "diagnostic" and contract["schema"] != "body_text":
         raise ValueError("Diagnostic stable text requires a body-text contract")
+    if contract.get('content_scope', 'legacy') not in {'legacy', 'target_content', 'full_page_stable_coverage'}:
+        raise ValueError('Invalid stable content scope')
+    if contract.get('content_scope') == 'target_content' and any(
+            re.search(r'(^|[ >])(nav|footer)([ >.#:]|$)', a.get('source_location', ''), re.I)
+            for a in contract.get('stable_text_anchors', [])):
+        raise ValueError('Excluded navigation/footer cannot supply target-content anchors')
+    exclusions = contract.get('text_exclusions', {})
+    if (not isinstance(exclusions, dict)
+            or set(exclusions) - {'html_selectors', 'text_patterns'}):
+        raise ValueError('Invalid stable text exclusions')
+    for key, values in exclusions.items():
+        if (not isinstance(values, list)
+                or any(not isinstance(value, str) or not value.strip() for value in values)):
+            raise ValueError('Invalid stable text exclusions')
+        for value in values:
+            if key == 'text_patterns':
+                re.compile(value)
+            else:
+                import soupsieve
+                soupsieve.compile(value)
     if contract['schema'] == 'table_row':
         from .structured_tables import validate_table
         validate_table(contract)
@@ -934,7 +1015,9 @@ def evaluate_stable_task(content: str, contract: dict, base_url: str = "", eligi
     minimum, maximum = contract["minimum_records"], contract.get("maximum_records")
     patterns = contract.get("page_patterns", [])
     visible = _visible(content, schema)
-    anchor_visible = anchor_text
+    # HTML normalization can also decode entities in Markdown. Preserve its
+    # explicit link boundaries before matching atomic page labels.
+    anchor_visible = _visible(anchor_text, schema, normalized_html=True) if anchor_text is not None else None
     if anchor_visible is None:
         html_candidate = content.lstrip()
         first_line, newline, remainder = html_candidate.partition('\n')
@@ -949,13 +1032,27 @@ def evaluate_stable_task(content: str, contract: dict, base_url: str = "", eligi
                     html_candidate, re.I):
             from .dynamic_lists import visible_html_text
             anchor_visible = visible_html_text(html_candidate)
+    exclusions = dict(contract.get('text_exclusions', {}))
+    if contract.get('content_scope') == 'target_content':
+        exclusions['html_selectors'] = ['nav', 'footer', *exclusions.get('html_selectors', [])]
+    if exclusions:
+        if exclusions.get('html_selectors') and re.search(r'<[a-z][^>]*>', content, re.I):
+            from bs4 import BeautifulSoup
+            from .dynamic_lists import visible_html_text
+            soup = BeautifulSoup(content, 'html.parser')
+            for selector in exclusions['html_selectors']:
+                for element in soup.select(selector):
+                    element.decompose()
+            anchor_visible = visible_html_text(str(soup))
+        else:
+            anchor_visible = anchor_visible if anchor_visible is not None else visible
+        for pattern in exclusions.get('text_patterns', []):
+            anchor_visible = re.sub(pattern, ' ', anchor_visible, flags=re.I | re.M)
     text_surface = anchor_visible if anchor_visible is not None else visible
     page_results = [{"pattern": p, "pass": bool(re.search(p, text_surface, re.I | re.M))} for p in patterns]
     content_errors = (["page_identity_mismatch"] if not all(r["pass"] for r in page_results) else [])
     from .reference_quality import blocked_page_hits
     blocked_page = bool(blocked_page_hits(text_surface))
-    if blocked_page:
-        content_errors.append("blocked_page")
     errors = []
     if schema in {"named_link", "linked_product"}:
         link_diagnostics = []
@@ -1022,9 +1119,12 @@ def evaluate_stable_task(content: str, contract: dict, base_url: str = "", eligi
     if schema == 'named_link' and any(a.get('match_scope') == 'non_record_lines'
                                       for a in contract.get('stable_text_anchors', [])):
         non_record_visible = _non_record_visible(content, contract, records, base_url)
+    registered_words = tuple(value for anchor in contract.get("stable_text_anchors", [])
+                             for value in anchor["alternatives"]
+                             if re.fullmatch(r"[A-Za-z]+", value))
     for anchor in contract.get("stable_text_anchors", []):
         matched = _anchor_matches(anchor, records, visible, schema,
-                                  non_record_visible, anchor_visible)
+                                  non_record_visible, anchor_visible, registered_words)
         anchors.append({**anchor, "matched": matched, "pass": bool(matched)})
     anchor_errors = ["missing_stable_anchor:" + r["id"] for r in anchors if not r["pass"]]
     if anchors_required:

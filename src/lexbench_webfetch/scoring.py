@@ -21,7 +21,7 @@ SCORING_SOURCE_FILES = tuple(Path(__file__).with_name(name) for name in (
     "list_verification.py", "reference_quality.py", "dynamic_entry_matching.py",
     "response_input.py", "body_coverage.py", "structured_tables.py",
     "ordered_tree.py", "composite_tasks.py", "dynamic_reference.py",
-    "file_acceptance.py", "evaluation.py", "models.py", "paths.py",
+    "file_acceptance.py", "evaluation.py", "models.py", "paths.py", "answer_projection.py",
 ))
 SCORING_SOURCE_SHA256 = hashlib.sha256(b"\0".join(
     path.read_bytes() for path in SCORING_SOURCE_FILES)).hexdigest()
@@ -87,6 +87,9 @@ def score_attempt(
     list_reference: dict | None = None,
     status_code: int | None = None,
     prepared_answer: tuple | None = None,
+    native_response: bytes | None = None,
+    native_files: list | None = None,
+    native_diagnostic: bytes | None = None,
     title: str | None = None,
     final_url: str | None = None,
 ) -> dict[str, Any]:
@@ -100,6 +103,28 @@ def score_attempt(
     evidence is preserved; the caller must have validated its artifact binding.
     """
     case = _case_dict(case)
+    if native_files is not None and native_response is None:
+        raise ValueError('Native file scoring requires its retained response bytes')
+    if native_response is not None:
+        from .answer_projection import require_native_answer_projection
+        require_native_answer_projection(artifact.decode('utf-8'), metadata or {},
+                                         native_response, files=native_files or (), title=title, final_url=final_url,
+            request_url=case.get('url'), diagnostic=native_diagnostic,
+            transport_receipt=(metadata or {}).get('source_transport_receipt'))
+    if native_files is not None:
+        from .file_acceptance import evaluate_files
+        metadata = dict(metadata or {})
+        metadata['file_evaluation'] = evaluate_files(case, [item.get('data') for item in native_files])
+    if 'acceptance_policy_version' in case:
+        raise ValueError('Historical policy selectors require their frozen scorer; current scoring has one contract')
+    identity_required = case.get('page_identity_required', False)
+    if not isinstance(identity_required, bool):
+        raise ValueError('page_identity_required must be boolean')
+    contract = case.get('acceptance_contract') or {}
+    if contract.get('content_scope') == 'full_page_stable_coverage':
+        if (contract.get('minimum_records', 0) == 0
+                and not (case.get('body_requirements') or {}).get('regions')):
+            raise ValueError('Full-page coverage requires target records or body regions')
     from .response_input import answer_input
     # Live callers forward the conversion completed inside the timed boundary.
     # Offline callers reconstruct it from immutable evidence by the same function.
@@ -108,7 +133,9 @@ def score_attempt(
     result = {key: value for key, value in (previous_metrics or {}).items()
               if key not in _CONDITIONAL_FIELDS
               and not key.startswith(("stable_", "list_", "page_context_"))}
-    keys = ("required_facts", "forbidden_any", "min_content_chars",
+    for retired in ('acceptance_policy_version', 'forbidden_hits', 'reference_term_exemptions'):
+        result.pop(retired, None)
+    keys = ("required_facts", "forbidden_any", "diagnostic_any", "min_content_chars",
             "fact_coverage_threshold", "ground_truth_main_content", "required_patterns",
             "acceptance_contract", "body_requirements", "composite_acceptance")
     task_kind = case.get("task_kind", "body")
@@ -189,7 +216,7 @@ def score_attempt(
             else "unavailable"
         )
         result.update(
-            page_identity_required=False,
+            page_identity_required=identity_required,
             page_identity_status=identity_status,
             final_url_consistent=final_consistent,
             language_consistent=language_consistent,
@@ -207,7 +234,7 @@ def score_attempt(
             and any(_same_page_url(final_url, expected) for expected in acceptable_urls)
         )
         result.update(
-            page_identity_required=False,
+            page_identity_required=identity_required,
             page_identity_status=(
                 "verified" if final_consistent else "mismatch" if final_url else "unavailable"
             ),
@@ -242,7 +269,7 @@ def score_attempt(
             if "declared_truncation" not in result["stable_task_errors"]:
                 result["stable_task_errors"].append("declared_truncation")
     file_evaluation = (metadata or {}).get('file_evaluation')
-    if result['task_kind'] == 'file' and isinstance(file_evaluation, dict) and 'raw_file_pass' not in result:
+    if result['task_kind'] == 'file' and isinstance(file_evaluation, dict) and ('raw_file_pass' not in result or native_files is not None):
         result['raw_file_pass'] = bool(file_evaluation.get('pass'))
     result["content_score_applicable"] = case.get("content_score_applicable", True)
     contract = scoring_values.get("acceptance_contract")
@@ -299,6 +326,7 @@ def score_attempt(
         # interpretation of continuous similarity as a pass rate.
         if 'ordered_tree_min_similarity' in case:
             result['content_pass'] = bool(
-                ok and tree_result['score'] >= case['ordered_tree_min_similarity'])
+                ok and tree_result['score'] >= case['ordered_tree_min_similarity']
+                and not result['forbidden_requirement_hits'])
     result["scoring_source_sha256"] = SCORING_SOURCE_SHA256
     return result

@@ -436,6 +436,69 @@ def test_field_report_reads_owned_markdown_table_cells_before_fixed_value_checks
     )["composite_acceptance_pass"]
 
 
+def test_scoped_field_report_accepts_single_cell_section_heading():
+    rules = contract({"id": "statistics", "kind": "field_report", "start_pattern": r'^Prose$',
+        "end_pattern": r'^End$', "required_fields": [{"id": "words", "kind": "integer", "aliases": ["Words"]}]})
+    positive = '| Prose |\n| --- |\nWords 12604\nEnd'
+    assert evaluate_composite_acceptance(positive, rules, base_url='https://example.test/')['composite_acceptance_pass']
+    assert not evaluate_composite_acceptance(positive.replace('| Prose |','| Other |'), rules, base_url='https://example.test/')['composite_acceptance_pass']
+
+
+def test_scoped_statistics_allow_adjacent_native_controls():
+    rules = contract({"id": "statistics", "kind": "field_report",
+        "start_pattern": r"^(?:#{1,6}\s*)?Statistics(?:\s+(?:\\)?\[(?:show|hide)(?:\\)?\])*$",
+        "end_pattern": r"^End$", "required_fields": [{"id": "id", "kind": "integer", "aliases": ["ID"]}]})
+    for heading in ('### Statistics [show][hide]', r'### Statistics \[show\]\[hide\]'):
+        positive = heading + '\nID 1164\nEnd'
+        assert evaluate_composite_acceptance(positive, rules, base_url='https://example.test/')['composite_acceptance_pass']
+        negative = positive.replace('Statistics', 'Different section')
+        assert not evaluate_composite_acceptance(negative, rules, base_url='https://example.test/')['composite_acceptance_pass']
+
+
+def test_field_report_period_qualifier_is_not_the_value():
+    rules = contract({"id": "views", "kind": "field_report", "required_fields": [
+        {"id": "views", "kind": "integer", "aliases": ["Pageviews"]}]})
+    positive = evaluate_composite_acceptance('Pageviews (30 days)580,281', rules, base_url='https://example.test/')
+    assert positive['composite_acceptance_pass']
+    assert positive['composite_group_results'][0]['records'][0]['fields']['views'] == '580,281'
+    assert not evaluate_composite_acceptance('Pageviews (30 days)', rules, base_url='https://example.test/')['composite_acceptance_pass']
+
+
+def test_html_void_image_cannot_swallow_the_section_end():
+    rules = contract({"id": "articles", "kind": "named_link", "minimum_records": 1,
+        "hosts": ["example.test"], "entry_path": "/article/.+", "start_pattern": r"^## News\s*$",
+        "end_pattern": "Next section", "required_fields": [{"id": "date", "kind": "date_or_time"}]})
+    positive = '<html><body><h2>News</h2><article><a href="/article/one">First article</a><p>Oct. 9, 2026</p></article><h2><img src="/logo.png" alt="Logo">Next section</img></h2></body></html>'
+    result = evaluate_composite_acceptance(positive, rules, base_url="https://example.test/", table_content=positive, native_html=positive)
+    assert result['composite_acceptance_pass']
+    negative = positive.replace('alt="Logo">Next section', 'alt="Next section">')
+    result = evaluate_composite_acceptance(negative, rules, base_url="https://example.test/", table_content=negative, native_html=negative)
+    assert not result['composite_acceptance_pass']
+
+
+def test_date_before_title_belongs_to_same_target_image_card():
+    rules = contract({"id": "articles", "kind": "named_link", "minimum_records": 1,
+        "hosts": ["example.test"], "entry_path": "/article/.+",
+        "required_fields": [{"id": "time", "kind": "date_or_time"}]})
+    positive = "[![](/image.png)](/article/first)\n\n4 hours ago\n[First article](/article/first)\n"
+    assert evaluate_composite_acceptance(positive, rules, base_url="https://example.test/")["composite_acceptance_pass"]
+    negative = "[Previous article](/article/previous)\n\n4 hours ago\n[![](/image.png)](/article/first)\n\n[First article](/article/first)\n"
+    # The earlier card owns its date; the image cannot move it to the next one.
+    result = evaluate_composite_acceptance(negative, rules, base_url="https://example.test/")
+    assert all(row['url'] != 'https://example.test/article/first' for row in result['composite_group_results'][0]['records'])
+
+
+def test_field_report_preserves_linked_value_boundary():
+    rules = contract({"id": "report", "kind": "field_report", "required_fields": [
+        {"id": "page_id", "kind": "integer", "aliases": ["ID"]},
+        {"id": "wikidata", "kind": "text", "aliases": ["Wikidata ID"], "pattern": r"Q[0-9]+"}],
+        "fixed_values": {"page_id": "1164", "wikidata": "Q11660"}})
+    positive = "ID[1164](/page)\nWikidata ID[Q11660](/entity) · 214 sitelinks"
+    assert evaluate_composite_acceptance(positive, rules, base_url="https://example.test/")["composite_acceptance_pass"]
+    for negative in (positive.replace("ID[1164]", "OtherID[1164]"), positive.replace("[Q11660]", "[Q99999]")):
+        assert not evaluate_composite_acceptance(negative, rules, base_url="https://example.test/")["composite_acceptance_pass"]
+
+
 def test_field_report_prefers_the_longest_declared_label():
     rules = contract(
         {
