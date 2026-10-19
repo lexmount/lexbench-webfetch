@@ -4,7 +4,7 @@
   "id": "risk-control-audited-100",
   "name": "风控网站正文评测",
   "dataset": "dataset.json",
-  "dataset_sha256": "165b888133e859304b035d74183dd40bf7ab609cac78bb6ae6e75b645c1de426",
+  "dataset_sha256": "c62e53c6bbf8ab0ae80830d9defa0f84437edff4fa70dc1f4f7f76c44b29fdfd",
   "case_count": 100,
   "cases": [
     {
@@ -13,8 +13,8 @@
       "url": "https://www.zhihu.com/question/282715644/answer/3629347314",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "4e591a4595a0554b7f86a0eba1c601531f7fed481500da14494036310e974f70",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "d226bc717b644cb916c46f44d7a2214f4dd7157a277f0ed00f3dc0362e831d13",
       "reference_sha256": null
     },
     {
@@ -23,8 +23,8 @@
       "url": "https://www.flipkart.com/acer-aspire-lite-amd-ryzen-3-quad-core-5400u-8-gb-256-gb-ssd-windows-11-home-al15-41-thin-light-laptop/p/itm1bc0bcb4598e7",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "119d84a124f4aaa94f60f41383c27b0b74b7a8185a003567ddbfb05b39b89d40",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "b61c3179a4046ce4ac4a72b5d13dcfd0f7585a4c3519ed3afbb9efd96ea02a3f",
       "reference_sha256": null
     },
     {
@@ -33,8 +33,8 @@
       "url": "https://s.weibo.com/top/summary",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "65eff51f32d754895c70737b8ce336e47606a575b7826b738cbcc4e4ec763e10",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "f4a046185b5938dd6441c7226cfa072dd5874c7221dc2d9ed479711c3eb8445b",
       "reference_sha256": null
     },
     {
@@ -43,8 +43,8 @@
       "url": "https://www.toutiao.com/article/7595028554912399898/",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "f899d00a5c7a6303492637698931df6c99167bc66ed6066f15ae3e14959fcd0e",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "be6cc93464058d8d68b56544d0dc469dcab2614a1fce37fbd9350a4c95d80e05",
       "reference_sha256": null
     },
     {
@@ -53,8 +53,8 @@
       "url": "https://dribbble.com/search/web-design",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "fd97c97d7512ccec16bb9c2ac9ed18fd3c86b87ee3fb7ab306feb33cf655d67e",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "ba1bbf56d4c0baaf09907c545fd9d40361d7d99528399990a506a462c4f3875b",
       "reference_sha256": null
     },
     {
@@ -63,8 +63,8 @@
       "url": "https://www.bilibili.com/v/popular/all/",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "82de10eea401cff30b9c7302a18c112063a1e0f2fc44f3121844594b1429879a",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "57976251586c35083ab294b2942c2197165228ee33ae9f284510b23fd2f0d9cf",
       "reference_sha256": null
     },
     {
@@ -73,8 +73,8 @@
       "url": "https://v.qq.com/channel/movie",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "a1a5341179ecce8397ee75b09b292ea72f5e184a936419b2e9cead7528d7e142",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "d08fb20e32e9bad8e041d26a73849d4618342296453f95c5dcfc0e7885d4112f",
       "reference_sha256": null
     },
     {
@@ -83,8 +83,8 @@
       "url": "https://dev.sanctum.geek.nz/cgit/?p=about",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "8f7e99e10858cf25406a2fa9bbb199b50befe2dd120e0915574a59e08ab31438",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "10af7be7a5188f6a6156f4664c9579a5779485907fd0791e912311f09dcf0e24",
       "reference_sha256": null
     },
     {
@@ -93,8 +93,8 @@
       "url": "https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "29ff371f48f33a097d310f071ef25194d302532ca923861f7625b8d228bf0060",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "2a5027cbd085895cd2cd46c2e0b6bf596a67ade468cfebea7ac4c1d99302b60f",
       "reference_sha256": null
     },
     {
@@ -103,8 +103,8 @@
       "url": "https://wiki.debian.org/DebianInstall",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "9518f4ff3218de56c9da64cc9948c8acdcebd874aa02ac7fcd5c0b5f4f42af0f",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "d657b823dfdae6363be17d0d87405ea67c91a8d4f7d207facf1539f57641ab74",
       "reference_sha256": null
     },
     {
@@ -113,8 +113,8 @@
       "url": "https://bugs.winehq.org/",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "520ec13a5e8f641a324ab421e3118d3df3159dee4aa61bebca0fbbe5b85b3391",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "362b5e2a0626f28c3072757218c16db3343b173147262640af90d68e479d86a9",
       "reference_sha256": null
     },
     {
@@ -123,8 +123,8 @@
       "url": "https://scioly.org/wiki/index.php/Main_Page",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "f243ee8a571dc97e840eb5b5e5cb00a304bd2727987b4e659777a07224cbbe15",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "d14442f65b93a4a684a8ea293f99ad8ebf812d9f5a20f52f6689ebec3ef736e3",
       "reference_sha256": null
     },
     {
@@ -133,8 +133,8 @@
       "url": "https://git.enlightenment.org/enlightenment/enlightenment",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "75827072b43b9bb530435287df09ce05eb9aa63035d08730922df86093f7b5e8",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "ff953de48816740c23101d6095cc7c58e995911a781a7ef4f33f3b070681dc09",
       "reference_sha256": null
     },
     {
@@ -143,8 +143,8 @@
       "url": "https://forum.freecad.org/",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "338297148e1b45116d6ef782ed93ae02bec71f5de2846ebbcdbc3c0bcdacaee3",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "4e0f7c2db884f14399e29cb70a7065cc9a72918a485107009fb30f4417bc34a1",
       "reference_sha256": null
     },
     {
@@ -153,8 +153,8 @@
       "url": "https://wiki.scummvm.org/index.php/Main_Page",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "09277073909b6f4e6889f83cd0773450bdbe7fb385a934140451fc34b6954be2",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "e9c6b173c8b01031e71418b302c023350ae09428e98fb4d3ea4507dd1d6ef0c3",
       "reference_sha256": null
     },
     {
@@ -163,8 +163,8 @@
       "url": "https://openwrt.org/start",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "efc2a8c10e8a109cbfe8df740392b423fe314037caac42fe2d1d7c1ce2fc626d",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "b907c07f87e5423e23b29333ffa1b0b3ca70ce28baf18eb4c738a97db83912cf",
       "reference_sha256": null
     },
     {
@@ -173,8 +173,8 @@
       "url": "https://wiki.archlinux.org/title/Main_page",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "30a2268fda5aa866597e5a75453e0e45fcbda67cca4961ab2f4278ed48e1707a",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "79aa74ba912c6f64b5eac216671cdb2b50b1c8554473daac60e37ffd1d695706",
       "reference_sha256": null
     },
     {
@@ -183,8 +183,8 @@
       "url": "https://svnweb.freebsd.org/base/",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "4599e13e815f3c5595df7d573341e0fdd08780daf2761db24d489d3a1c5f0e01",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "3e28c67c5a0e6daa46a4aff52eebe25bd0c434b537944b8b3be0d50df88a95dc",
       "reference_sha256": null
     },
     {
@@ -193,8 +193,8 @@
       "url": "https://source.puri.sm/Librem5/phosh",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "b6ca53feac1c9ff38ff47ca7ff872cd1c5b44a199edcf138689b3157c34dda37",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "36b7be3d1fb56e0cf14af7a9a3783f2a597fef09431c0fed10e507ea4d86b63e",
       "reference_sha256": null
     },
     {
@@ -203,8 +203,8 @@
       "url": "https://dev.haiku-os.org/",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "cbff3640b4e71d5c49fcd1af6e767f93760f8133de56a7ab7f3b5f29d58c84c7",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "7612f52216f1ab51f9623521f2f5bd33d712d8fefc3e2d3672e5655449ea140b",
       "reference_sha256": null
     },
     {
@@ -213,8 +213,8 @@
       "url": "https://git.devuan.org/devuan/installer-iso",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "34d554128a209a16c28b091b87ae22ee2ad63f91b62212c51a76d3fcf4887269",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "2ffdef3d1907d75804df5a9ddec5ee9b95f35b20ab87f70ca8bcd6d7f458c5ec",
       "reference_sha256": null
     },
     {
@@ -223,8 +223,8 @@
       "url": "https://www.cfaarchive.org/",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "75c4ba4f48dc99fc2661f8ae3fc9fe2803b2c633ce6380d83066b9ba759b7858",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "5d140ba16019122f48316204c99c3efea0c022a95c927324403b60d1d3a5b125",
       "reference_sha256": null
     },
     {
@@ -233,8 +233,8 @@
       "url": "https://bugzilla.proxmox.com/",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "024b598aa2297dd6da4bb324f2440f76939cd003e1d8100507998cbc7c610b8d",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "770fbe4a496f5496f16077ee9232e1c942de3ac17fb56cdeec13d5f0a965a7a7",
       "reference_sha256": null
     },
     {
@@ -243,8 +243,8 @@
       "url": "https://reactos.org/wiki/Main_Page",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "6e297e1ffb8738d6f1057f189f88df128505dea03df8240228a40c0e160371f2",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "ac38282c15d7b0fc0a42580e5b6fe4333f016fe18dc6ae09b7cba20a44c4052b",
       "reference_sha256": null
     },
     {
@@ -253,8 +253,8 @@
       "url": "https://www.archlinux32.org/packages/",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "36a18f11e670411c7969a26b4095de6a5b1bfe2cea37c111dbce440764e11991",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "f128f274cbb212f2ed8ea4caa99c4093470f591c6e61dd58f9784b4d2b42123a",
       "reference_sha256": null
     },
     {
@@ -263,8 +263,8 @@
       "url": "https://git.slackware.nl/current/",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "f77638953c120ea4628d342aa73693d91e9ed7c98a40a27991dd9e181a719223",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "ae23630730387276d2271ffd6fbf8139372eb8e99fddfd22e63eda9cbd9dec9b",
       "reference_sha256": null
     },
     {
@@ -273,8 +273,8 @@
       "url": "https://repository.duke.edu/",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "7c67f961f5afbd2e9f343bc5eca6f5a783ebaa63354b5832f89376d61857aefd",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "42b49b699220a378615fce9c3a0623a9ace63b4b23cbd3458123fd73bf44bb4e",
       "reference_sha256": null
     },
     {
@@ -283,8 +283,8 @@
       "url": "https://tufind.hds.hebis.de/",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "670c2f60030ecc27bf314eade1ac6116c2b2697803156c9483ccdfefff87444b",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "05c2739caf29c1cabc5d1640429929b0753dd9b886bd2243898ff978f2034f0a",
       "reference_sha256": null
     },
     {
@@ -293,8 +293,8 @@
       "url": "https://xeiaso.net/",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "db60c0ebf6aad7b76632735d6acf208e7f3d8043399efb5488a1df686460d756",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "54c8b88880eda5691f1629caaecbba3173433dffc5655f7ce8885a98a8683fb8",
       "reference_sha256": null
     },
     {
@@ -303,8 +303,8 @@
       "url": "https://superlove.sayitditto.net/",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "5a5131232354f0e34134945124cccdf809ba7d5e23ae710683d35063d53bc4b8",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "158ce068a931d86b3de5ce494923e8493e073aad40b9f2a6b970ac2bfedf9a58",
       "reference_sha256": null
     },
     {
@@ -313,8 +313,8 @@
       "url": "https://www.ticketmaster.com/discover/concerts",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "93a4aec34c617dda96b5f4f3e06a77a6d8dd3abb53fe2b0c2953d5f668f744ee",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "69dc00ded513ab99536b30818807b4720b2f3f55350bde12a89dde1e8e059766",
       "reference_sha256": null
     },
     {
@@ -323,8 +323,8 @@
       "url": "https://azurlane.koumakan.jp/",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "fc3104cfd5f22fd321503e226b57f54088c6c059feafb509bb703c79d438a52b",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "9a306362191bd38c858289a347e0a7ed53670266c5d41d72fde6f96e1cb39109",
       "reference_sha256": null
     },
     {
@@ -333,8 +333,8 @@
       "url": "https://dev.sanctum.geek.nz/",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "33532667a459ec873b69c0b104d8d6b3e51c6f0a41702ad4d1803901875d4a29",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "41c788f1231719999bfd777b9317f385df2238a875e535db30a1c54b6e1628af",
       "reference_sha256": null
     },
     {
@@ -343,8 +343,8 @@
       "url": "https://extensions.typo3.org/",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "a59ca8301806bdb7172cf6ea4c21f222448e231c24855932c91a2a2b32e46524",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "cc90957d5fe4db148e689d5774be434cd0171a351aae13b230ce8f453ceb0d1c",
       "reference_sha256": null
     },
     {
@@ -353,8 +353,8 @@
       "url": "https://mozillazine.org/",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "0b37f86d1c5102eb5a3d656e5454f9016a639c9f9d28810c24650120d6903eda",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "114822175ae1e15b00e4d04cc55db2490e4cdd4f130ddd364ce3b231a2ef0b68",
       "reference_sha256": null
     },
     {
@@ -363,8 +363,8 @@
       "url": "https://pluralpedia.org/",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "c8d96f1796c4871b36eb5be85de6e81c6beb5ea7727263d6a31f6b37a6730e19",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "c12522a5fc2db98fda07dfc45e1e0c435dc71102f235d66ec8af423434538c81",
       "reference_sha256": null
     },
     {
@@ -373,8 +373,8 @@
       "url": "https://rpmfusion.org/",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "670fb01613742e048a7a8e4a1fdda5cb00d6b05108c35f38b8a65354679c34eb",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "b9934b798c021a842af5fa0ccd097cde5e70139468bd43fe1012edf3b816ae2f",
       "reference_sha256": null
     },
     {
@@ -383,8 +383,8 @@
       "url": "https://squirreljme.cc/",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "3ed4808cbe6fd9abb5321ec9fb889a6f9ea96fb986203d9911435cca4ff9deae",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "d422d510f4db67900153a30b275b3775220fbd8a477f1b6f38f4ee33c6b2d32d",
       "reference_sha256": null
     },
     {
@@ -393,8 +393,8 @@
       "url": "https://forums.dolphin-emu.org/",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "dc00ef5fe7fc8871581e1618ddcf7004b80c4f1fa209632019e7b05139632728",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "e8f6dadfc7b2feb8cf832bcd5f31ca03dc045e800ad2bb2946d078933b72a29c",
       "reference_sha256": null
     },
     {
@@ -403,8 +403,8 @@
       "url": "https://wiki.freepascal.org/",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "9c7916dafe96857c32d60fabe4769fc7df4eade65fded00f3e093e340af43163",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "c5d899f2c9b27c297399c5dbbedcab468a4eedbbf412021ec837cc4582cb129d",
       "reference_sha256": null
     },
     {
@@ -413,8 +413,8 @@
       "url": "https://wiki.koha-community.org/",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "889884b2d86f23bea6bd99b7a856fd2f43edb567fdd76ae0b591f728252296a6",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "f63c538af26863a23391aaffd37710afec6fd614a27649d274b151f071f41b4f",
       "reference_sha256": null
     },
     {
@@ -423,8 +423,8 @@
       "url": "https://ws.hydrooj.com/d/faqs/",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "e00b6b37cc32127897a7a48740a2a50516022c268ea7a7768b4ca184cabdf16e",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "c6a5852c0470ebccbaabca9c86586ccbc2d2da0a01042402eed5087b04ab9b5a",
       "reference_sha256": null
     },
     {
@@ -433,8 +433,8 @@
       "url": "https://www.zillow.com/seattle-wa/",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "478c7dc7335cf4316c7b0dfae4753cfbe9b1b72bc7953059613a4a0a43f64820",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "89123e66cbdcc9ae75b62d7226a71a9447dd6814cb0b24e239c877585c4347a1",
       "reference_sha256": null
     },
     {
@@ -443,8 +443,8 @@
       "url": "https://www.gocompare.com/",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "116b80a20713f4629f41da494fcec44eb945b7197719150bfa5f63b1b5f2afd3",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "173ac6ea7d6342f4eac7c6238e9127b0d3bb3d154ff327d4f1cfa5a63f3e3ee2",
       "reference_sha256": null
     },
     {
@@ -453,8 +453,8 @@
       "url": "https://wiki.dlang.org/",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "96840e0deebc9ceea29abf68ffc68f5de228864e500767f0da65d75a693597c6",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "2ab300becaf2d423716aa809dae2ee8df6c98fd79d8d4808c9c6bc87bcb41900",
       "reference_sha256": null
     },
     {
@@ -463,8 +463,8 @@
       "url": "https://dsource.org/",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "884c24446fca078cf14d202d6f63b2c9187d5e1053b75e2a6df02ae3f4e5882d",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "d119565598e7b6906f7f6b6090a915a7f200bc92d39d67222837ab30b28259a9",
       "reference_sha256": null
     },
     {
@@ -473,8 +473,8 @@
       "url": "https://www.lznoip.club/training/66358a5906b752f133d95f9f",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "9857521a0b6a1ec9b2a80313f994346b68c942524b45ffdbf4531c7811acdad3",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "7063da712273a914973f3887a079eaa93f4b8d8f149a6877b8afe5e9b222e0dd",
       "reference_sha256": null
     },
     {
@@ -483,8 +483,8 @@
       "url": "https://www.scribus.net/",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "f80964a03dfcee684872a0480903f799847dfdf19c0f3edcf8aaae37096e45ab",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "ffe519d17503aa90756a663c893202e93ba83646e0f2f2a6469d34edfe04d061",
       "reference_sha256": null
     },
     {
@@ -493,8 +493,8 @@
       "url": "https://hal.science/",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "8aa2129bad9a21c2eed3941ad306b37c52b9bbf20c222823803279dcb928520d",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "e169a39c8d09a8b6203c560fe6611adcc5f800e2690a41218e818c891e83a564",
       "reference_sha256": null
     },
     {
@@ -503,8 +503,8 @@
       "url": "https://observation.org/",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "3b8e333095bdd62ed23078e671b039448e5eb47e98289f85a4f8cee64287ee07",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "cdf4888840913853b5ef1f3d1ae675a4261334aaacd42dac25701bb914b4802f",
       "reference_sha256": null
     },
     {
@@ -513,8 +513,8 @@
       "url": "https://git.linkpuff.me/",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "4c332d88622387867e20c127f09ebc129ddbbf2f18be1948282074ca19640173",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "dd3df3cfffd7ac9ca54412853f60b8c4dcd4f210333e2343393b5594be62152a",
       "reference_sha256": null
     },
     {
@@ -523,8 +523,8 @@
       "url": "https://forum.egosoft.com/",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "6544835745d971406a3c1bf03f373d87f3391f092fa04e3f241dd3b1c94c29f9",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "34840b594e908eef22af5fbc600e1e1315a8dcbc62b80bde3d01a551c6d63147",
       "reference_sha256": null
     },
     {
@@ -533,8 +533,8 @@
       "url": "https://xtools.wmcloud.org/articleinfo/en.wikipedia.org/Artificial_intelligence",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "57ccb3ad6f18a060b7709e3d7532cd8dd7a8f31fd7ce182a3b457d2501b6a31e",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "0f7c833abb0ab9c2ed633623dc1c8c419d82c839140a1619d9a85bc76015a299",
       "reference_sha256": null
     },
     {
@@ -543,8 +543,8 @@
       "url": "https://spcodex.wiki/",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "39ae5b459718f20831fe1ac68f37d4c0a289080d655c746a37bc03fb2d9dfb2e",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "8656343f8b73b88f97649a6774b3c460c3206e30af390eaaa83ed3a94d006a9e",
       "reference_sha256": null
     },
     {
@@ -553,8 +553,8 @@
       "url": "https://lumiera.org/doxy/",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "6e8a7188b25c90f84b21d90a96f4704f5ef0f013417d81f2cb97a8d4fe5135e7",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "eb738b3a1b87f40af807885d1dfa545a50d42c8205d7ba05b6e2aac050df2e03",
       "reference_sha256": null
     },
     {
@@ -563,8 +563,8 @@
       "url": "https://ibiblio.org/",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "9606cad0f429c0662335f8ab1eae4d5a2963f24f13ae4827e5125406f22785d6",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "0af26a9b896ac01cb8d9d0c13d2662173b0d7c2d28e79973a577cdffa7dd97a7",
       "reference_sha256": null
     },
     {
@@ -573,8 +573,8 @@
       "url": "https://docs.fedoraproject.org/en-US/docs/",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "2db31431ffe3dc39ff463c429719777f843cc709829f0f2d07c1db2af4c00983",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "eb5679998a8c815d09706a20aaea3327446d23e1cbb2307d8557c1ce387f9fd6",
       "reference_sha256": null
     },
     {
@@ -583,8 +583,8 @@
       "url": "https://wiki.qemu.org/",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "46e5b068b86a789be248807115c6cf8effd714a1184a3eff6b62e1a5c70d922c",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "175bc8d48753bc3b7f9a61c737716f2108ac25ab7e5d700f2e5f04df11d45303",
       "reference_sha256": null
     },
     {
@@ -593,8 +593,8 @@
       "url": "https://wiki.musicbrainz.org/",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "a354eb1a57b4b8524f3995266425641277f13d694dbc82522214b7073525804f",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "7e894b84b1d2b15fa0807a60186b75110d659eb7263ae631fb7a5feb671ae8b1",
       "reference_sha256": null
     },
     {
@@ -603,8 +603,8 @@
       "url": "https://www.sabre-roads.org.uk/",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "d3a79c0deb9b67f4f56658812c83749387d264561a575e1a1e07183627bf3e6a",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "cf7e0c2cd2b4367014f1c1731902107748db714b84ccc78532b06bbadf070b54",
       "reference_sha256": null
     },
     {
@@ -613,8 +613,8 @@
       "url": "https://wikibase.world/",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "812e2762770ad7592308b4d287ad40914a9ff4998d50e250325c386eba3dcfa2",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "a41d3e5942802cb63a1f5eefa858e9c2edef78bf24b6ed1800a851a936077895",
       "reference_sha256": null
     },
     {
@@ -623,8 +623,8 @@
       "url": "https://www.noisebridge.net/",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "bee0dabe5f58b72fdb6d98dfaa79d02ee009a4ac754630cd213a8632b12e3dfd",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "85bc148e222766e93df5d1fd4aca7655e1b87e96e3f0ed0b4c31f157c8f1dc16",
       "reference_sha256": null
     },
     {
@@ -633,8 +633,8 @@
       "url": "https://wiki.anton-paar.com/",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "e5ff8417c616f09baf1a777b97836fceade0f645346257a70f5a1354dec356b4",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "ef90104e0beb110415c2099e70e2feefa28e01eb33760f3e3fa3997bb8c2504e",
       "reference_sha256": null
     },
     {
@@ -643,8 +643,8 @@
       "url": "https://wiki.teamfortress.com/wiki/Main_Page",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "0345be81c157a69d3146ae3f64f4a1061e81d1b386bb8f13e47f9d342ce4e572",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "6e670841aa60b78cbc4492f36484c5372071e4af09b09ba75e6432508d710736",
       "reference_sha256": null
     },
     {
@@ -653,8 +653,8 @@
       "url": "https://www.threads.com/@nasa/post/DdEwHNClPdc?hl=zh-cn",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "d0aead382084f4ad0a3242f01b0b5c2514a68e09bd90bb00b698dee103607637",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "888b2cd222cef55d2e028567fb0437a8344fb6b27e175c93e55064f5d6482a08",
       "reference_sha256": null
     },
     {
@@ -663,8 +663,8 @@
       "url": "https://www.goodreads.com/book/show/953716.84_Charing_Cross_Road",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "7e107faed4275e67cc4de09371c2be23de120cc0f369f162a5007bb5b69f2355",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "0da4ede71448b2307967fa242da139d3e95b598169b609142d14da83a6fe7d8e",
       "reference_sha256": null
     },
     {
@@ -673,8 +673,8 @@
       "url": "https://www.power-z.cn/blogs/新闻/chargerlab-power-z-测试仪购买方式",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "d8a0e2a125965a94112c1936b9225bb08c7428c0a8aba14694bcc3c8b66d670b",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "055884b1a2c8f8a9cab2afc5954f6d49154abc7bd6be1df124eb52c19a67231c",
       "reference_sha256": null
     },
     {
@@ -683,8 +683,8 @@
       "url": "https://www.tib.eu/en/",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "51286793c385a614bb706fa23c6ee7303c31a9ca8ab254dd2a66cf1e65b8324a",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "669c309be660c1cb7da5233a98a03089e6156233d9bbbd0292458d9c491b38db",
       "reference_sha256": null
     },
     {
@@ -693,8 +693,8 @@
       "url": "https://www.sciencemadness.org/smwiki/index.php/Main_Page",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "b65f4cc85529cfd1f190195dc3f693a7fabcc9111701e6b30b0278ced9d3b726",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "74a0a3d92fd9ab94048102f6e832bf41cbb50f80f95e3c48c5e15315a3052bd4",
       "reference_sha256": null
     },
     {
@@ -703,8 +703,8 @@
       "url": "https://xeno-canto.org/about/xeno-canto",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "3041a5cfa0bee8f1d90a4828441c2f4debf39c60c92e3582a9be5aee6a2b96bb",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "5531c5d518a4391cdc5d30e3604d5c9689370825d221c1b56bc59ced22630485",
       "reference_sha256": null
     },
     {
@@ -713,8 +713,8 @@
       "url": "https://theglobaleuropean.com/",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "3aeb4f3285949ea8f07b9f9a2cc03d40a0075b1adaee20e9aad5f8a316ce2d95",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "9ad9517e531e25967dba19cabf20bcf1ce0df34a067b962f151a922ec496dbf7",
       "reference_sha256": null
     },
     {
@@ -723,8 +723,8 @@
       "url": "https://knowledge.hacklab.to/wiki/",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "3b1628ec8e7b8c6f76054371cf226a9ca8447248f0393ec6d2f0af79a585b710",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "05e76fd8d30150677fe8213719b4af82d9e37eb64f9b95b2c8159710f1195c27",
       "reference_sha256": null
     },
     {
@@ -733,8 +733,8 @@
       "url": "https://www.freedesktop.org/wiki/",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "956e3912d35a1f3ff9ef81c3c5f1149c8ea7753db9085f321679f4e8ceaddbe2",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "949cc24d04b5eaaf655e9cb5c0dd39d574653086617a97cee39f700e885c53aa",
       "reference_sha256": null
     },
     {
@@ -743,8 +743,8 @@
       "url": "https://en.opensuse.org/Main_Page",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "d4cca1263e33a9d2d16c1b65472777c70ba20f9f9cbd9b1c15b8795ccdab51e5",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "73101560dc418bcf86cf847cdf309ce81eda48314d6dc8278e3aacecd2358f29",
       "reference_sha256": null
     },
     {
@@ -753,8 +753,8 @@
       "url": "https://wiki.alpinelinux.org/wiki/Main_Page",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "866e2946b9c8f5dd5926bcacc92e10cff875fc216876a2d0709857db39374f77",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "3d3893e564014a5bd24aabcbace4c8ed46524859e9d93c6eed935c39290867a6",
       "reference_sha256": null
     },
     {
@@ -763,8 +763,8 @@
       "url": "https://dribbble.com/shots/16508584-TAE-Web-Design-for-Travel-Tourism",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "cbfd2e5f5527d8e48997e9700a40b11b7569f4a77d70ffffd22402871d7309c3",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "8e313a595e9711fcaa5a7b69be2570d02aff04ac58c70a0293ddd14dca70757e",
       "reference_sha256": null
     },
     {
@@ -773,8 +773,8 @@
       "url": "https://wiki.scummvm.org/index.php?title=About",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "8b0aeb87110dd66c4df883be6917e7c6a0b3290dcc7a84d88d0663dc168f94bd",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "88b1929c2f89faec66c02fae79f24dc50b5208ab0f81b1494a34f13cccd96a8e",
       "reference_sha256": null
     },
     {
@@ -783,8 +783,8 @@
       "url": "https://openwrt.org/docs/guide-quick-start/start",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "80fcdc9d37936ff4663edc5626337431767c55eae1e516aac7847adcfa87a3d2",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "d1a0ab13badd0827b220beb9ba38484e2a8fe05c5b974a1260664c99d52adbdc",
       "reference_sha256": null
     },
     {
@@ -793,8 +793,8 @@
       "url": "https://wiki.archlinux.org/title/Installation_guide",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "1086c03375e7d627c4b7cfbbcc1e33ea1df47542f98caddfc353402320e5d8ee",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "7043e9482c175d9c9f513412101e67db901389ff518fb5ee7689f6470b9923e5",
       "reference_sha256": null
     },
     {
@@ -803,8 +803,8 @@
       "url": "https://dev.haiku-os.org/wiki/TracGuide",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "3c4ed8565dae61a808d92cc120b91ac7520080506f347c1bc6a1e28ba8eb6bb9",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "8c856530f98baf71c5c76188f13c30dd9b5035ff0dad4eba9227b26cb9ac5532",
       "reference_sha256": null
     },
     {
@@ -813,8 +813,8 @@
       "url": "https://reactos.org/wiki/ReactOS",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "c7ddcda583d479e4e496b80b3f7578df7cee834d94f6292c2ca8e6c11f3ed468",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "ce1b0ba498e1a28dd43cbaab7f6fb4a08c652fdee054b447ca935316a41267bf",
       "reference_sha256": null
     },
     {
@@ -823,8 +823,8 @@
       "url": "https://superlove.sayitditto.net/about",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "7f6d0d8ffe32b61e4c9a69f5d2f447777cda9c2db1662ae6f14f3ec286542230",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "e985ee801643c81bae574400cf26fa7d8df46efa4ff1d9ce2a9cc8cbe5fcd06e",
       "reference_sha256": null
     },
     {
@@ -833,8 +833,8 @@
       "url": "https://pluralpedia.org/w/Project:About",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "3d376ae1c12f8ca7b3749aeebde59611b23b0b3cf6e9d88117f16554a30f6c05",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "bb3d4ff7e8de9dfb9ab8ce851d1185b15f8eae1af42414aec6915eaab4954dde",
       "reference_sha256": null
     },
     {
@@ -843,8 +843,8 @@
       "url": "https://rpmfusion.org/FAQ",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "064a87a20cae59ad2d80433b40febe2b52b77b46f0fd6d35c3e43e63436ed686",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "293e4ab9da35831cf258793b75f101ba07e479740d19af441a7b6293ca44880d",
       "reference_sha256": null
     },
     {
@@ -853,8 +853,8 @@
       "url": "https://wiki.freepascal.org/Installing_the_Free_Pascal_Compiler",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "134dc199b0e024090cf15d8f45207cbcab8e789d88f94c39e2b504d0e680221a",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "5c3104bc51e46f7864d022d5e7c30fa1bb01db1bc4c0f44a424cb68b0f59d600",
       "reference_sha256": null
     },
     {
@@ -863,8 +863,8 @@
       "url": "https://wiki.koha-community.org/wiki/Getting_involved",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "9983060a609fc693a8879b2f7841f7115b7ebfdb838923d709c6c8f484c99ef1",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "9e47230632ef2023cbc3f7be50ec483e648f136a59deddf04500e41a661d1fe9",
       "reference_sha256": null
     },
     {
@@ -873,8 +873,8 @@
       "url": "https://wiki.dlang.org/Getting_Started",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "939ec0e69b155ab421c71a8d0db769abb23e9b6cc28f7b0eb414b187c66399c5",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "8263f8ced895de72b28a7099e6012414ac3dd691e99f26d4591235d10e18fd1f",
       "reference_sha256": null
     },
     {
@@ -883,8 +883,8 @@
       "url": "https://www.scribus.net/about/",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "d2a933d9d5376df6b1002bdaca9e4b6f0548b585552dfd4df2467bffd9998663",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "13980592b64e2c8772ac8f012852cfc13b36a14e4ba400bb6b433ed63278c31d",
       "reference_sha256": null
     },
     {
@@ -893,8 +893,8 @@
       "url": "https://observation.org/pages/about/",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "d3880e7d05dc5127914ff2af4db1c0475648abd842320393e6c777c6378c2514",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "530e5482e4f9592af1193e50c14c3ba54ca966201b12c059a00af1e28e3f8451",
       "reference_sha256": null
     },
     {
@@ -903,8 +903,8 @@
       "url": "https://spcodex.wiki/SPCodex:About",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "d1a508d18a9e2e1516bf0cb3ff78f12a7e368df27b5da11030c2c18a70744ef8",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "2bd5eab94b6a5dc0dec82b69ef2dd94944be5bcfc5ac28dc33ba7a139fa979ea",
       "reference_sha256": null
     },
     {
@@ -913,8 +913,8 @@
       "url": "https://docs.fedoraproject.org/en-US/beginners-guide/",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "69f07f2aeb03d28e5e4215a71be8f9e24ad5ce90522aab8cf5a7ad85541c76cd",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "e58979324eac9ccb3025f96cf1782edd3059f116eaef8c1bc11b8c83eae2b1b8",
       "reference_sha256": null
     },
     {
@@ -923,8 +923,8 @@
       "url": "https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/about/",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "c32a6ea8e233c75f035dc6ca519b4355c1913baec38d29d7477724d5bffdc284",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "fb210e1e12a48cf262e233b95472611e0511960ff151d75cd107c5ba1a46b7c1",
       "reference_sha256": null
     },
     {
@@ -933,8 +933,8 @@
       "url": "https://scioly.org/wiki/Help:Getting_started",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "f05d66afc127e26d9c17a6c6513e0eef5195896bbc39ca24dabbaa754494fd7e",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "cdaf10453dd9c3e09ca15a4b8115495916053fe419c6e59c7d43e5cc8575f790",
       "reference_sha256": null
     },
     {
@@ -943,8 +943,8 @@
       "url": "https://forum.freecad.org/app.php/help/faq",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "361d8e0a7742190983185246ffd7e618df7ff31d9cc4f7a3059bf43bce14f64d",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "b87ccf9fb80e1c6fc9587d6cbb954ba6530f31f3e0b496fe2307c62708a9b272",
       "reference_sha256": null
     },
     {
@@ -953,8 +953,8 @@
       "url": "https://extensions.typo3.org/about-extension-repository/what-are-extensions",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "07deed8cf2ea29f3c6c8d90e0167c9ff414e0eecf4a7e89b6d0e0803eee06b0f",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "31357a727fddcbd629814e9d6f97272848944394aaaf3237900af4ca09998a4e",
       "reference_sha256": null
     },
     {
@@ -963,8 +963,8 @@
       "url": "https://multiphasicapps.net/doc/ckout/assets/user-guide/readme.mkd",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "6f0f4ba4208f9ac4691b3d19779ec1cddcd2abfcead3bf7cb088f1d10121568e",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "6da27f4b8828b4c86d6aa8748139049e37247f84741dabe9807c3db370de24a6",
       "reference_sha256": null
     },
     {
@@ -973,8 +973,8 @@
       "url": "https://dolphin-emu.org/docs/faq/",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "a8cef268823caf2a1432adce663ac39878e6bb6d36cd45d2bcd4c7abffe4d1f3",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "9569e33e19743696259e88c695639fb312ecdf92339610d1cba51c5ec6e6d4e3",
       "reference_sha256": null
     },
     {
@@ -983,8 +983,8 @@
       "url": "https://forum.egosoft.com/app.php/help/faq",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "82bdfa31fc84ecafd797dc3c809f80a4a5a20f0d0779915eccc16638003b9914",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "496f711eaa5b41f389a6979e1ed4135877ab7a6e3f9fc1d9de54ebd20ccef75b",
       "reference_sha256": null
     },
     {
@@ -993,8 +993,8 @@
       "url": "https://www.ibiblio.org/about/",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "8c09ff83e5736ebd7bbf4854a6077830d94d74c2d4787e8ee754d73c061a20a9",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "9740bc1d52cb2e2d1db14c06e284f2f6e0ffcb3ceb1daedbfcd93585356bb4dd",
       "reference_sha256": null
     },
     {
@@ -1003,8 +1003,8 @@
       "url": "https://wiki.qemu.org/Contribute",
       "category": "risk_control",
       "track": "risk_control",
-      "task_prompt": "提取声明网址首次自动加载出的目标正文、列表和真实链接；不点击、不输入、不滚动、不翻页、不登录，也不使用图片文字。",
-      "definition_sha256": "f2c5c6629dfac5ba5f1b39f5e5f198038978113b02d7fa6429057d7b99d15876",
+      "task_prompt": "提取声明网址初次加载后的目标正文、列表和真实链接；答案范围不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。",
+      "definition_sha256": "6cc16f2472cf0c17c339d5817fdcaa801622ee64fdd107c9b9968477a57eab5c",
       "reference_sha256": null
     }
   ]
