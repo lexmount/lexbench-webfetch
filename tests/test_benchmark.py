@@ -48,6 +48,44 @@ class PublicDefinitions(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'Unknown suite'):
             bench.validate('not-a-suite')
 
+    def test_task_contracts_describe_outcomes_instead_of_retrieval_actions(self):
+        from lexbench_webfetch.models import validate_outcome_contract
+
+        validate_outcome_contract(
+            'profile',
+            'Return the profile details and the first batch of complete posts.',
+            'The answer contains the profile details and complete post records.',
+        )
+        for prompt in (
+            '返回页面正文；不登录。',
+            '返回页面正文；不要点击子页面。',
+            'Return the page without logging in.',
+            'Use an anonymous browser session and return the page.',
+        ):
+            with self.subTest(prompt=prompt):
+                with self.assertRaisesRegex(ValueError, 'requested outcome'):
+                    validate_outcome_contract('profile', prompt)
+        with self.assertRaisesRegex(ValueError, 'requested outcome'):
+            validate_outcome_contract(
+                'profile', 'Return the profile and first batch of posts.',
+                description='Observed in a fresh anonymous browser session.',
+            )
+
+    def test_public_tasks_exclude_reference_capture_instructions(self):
+        case = {
+            'id': 'profile',
+            'name': 'Profile',
+            'url': 'https://example.test/profile',
+            'category': 'dynamic',
+            'track': 'dynamic',
+            'task_prompt': 'Return the profile and first batch of posts.',
+            'retrieval_hints': {
+                'version': 1,
+                'completion': {'selector': '.post', 'minimum_count': 5},
+            },
+        }
+        self.assertNotIn('retrieval_hints', bench.public_task(case))
+
 
 class FrozenInputs(unittest.TestCase):
     def setUp(self):

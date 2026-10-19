@@ -10,6 +10,7 @@ import tempfile
 from pathlib import Path
 from .paths import contained_path
 from .inputs import digest, load_manifest, verify_catalog
+from .models import validate_outcome_contract
 
 SUITES = Path(__file__).parent / "definitions"
 
@@ -19,7 +20,7 @@ PUBLIC_TASK_FIELDS = (
     "expected_any", "required_facts", "forbidden_any", "min_content_chars",
     "fact_coverage_threshold", "expected_resources", "resource_output_contract",
     "content_score_applicable", "required_patterns", "acceptance_contract",
-    "composite_acceptance", "mutable_body_policy", "body_requirements", "retrieval_hints",
+    "composite_acceptance", "mutable_body_policy", "body_requirements",
     "source_review_url", "evaluation_url", "expected_final_url", "expected_document_language",
     "expected_document_language_present", "target_language", "target_region",
 )
@@ -114,6 +115,13 @@ def validate(identifier: str) -> dict:
             or len(ids) != entry["case_count"] or len(ids) != catalog["case_count"]):
         raise ValueError("Inconsistent task inventory")
     for task, row in zip(cases, declared):
+        if "retrieval_hints" in task:
+            raise ValueError(
+                f"Public tasks must not prescribe retrieval behavior: {task['id']}"
+            )
+        validate_outcome_contract(
+            task["id"], task.get("task_prompt", ""), description=task.get("description", "")
+        )
         for key in ("id", "name", "url", "category", "track", "task_prompt"):
             if key in row and row[key] != task.get(key):
                 raise ValueError(f"Task catalog mismatch: {task['id']}/{key}")
