@@ -19,6 +19,7 @@ _IMPLEMENTATION_INSTRUCTION_PATTERNS = (
     re.compile(r"(?:不要求|不需要|不要|不得|禁止|不)(?:点击|输入|滚动|翻页|登录|搜索|使用OCR)"),
     re.compile(r"Browser Use 操作", re.IGNORECASE),
     re.compile(r"(?:允许(?:渲染|解析|加载子文档|获取公开接口)|不限制实现路径)"),
+    re.compile(r"(?:匿名|已登录|登录态)(?:的|状态下的)?(?:浏览器|会话|访问)"),
     re.compile(
         r"\b(?:do not|don't|must not|without)\s+"
         r"(?:click(?:ing)?|typ(?:e|ing)|scroll(?:ing)?|paginat(?:e|ing)|"

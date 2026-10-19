@@ -70,6 +70,11 @@ class PublicDefinitions(unittest.TestCase):
                 'profile', 'Return the profile and first batch of posts.',
                 description='Observed in a fresh anonymous browser session.',
             )
+        with self.assertRaisesRegex(ValueError, 'requested outcome'):
+            validate_outcome_contract(
+                'profile', '返回账号资料和首批帖子。',
+                description='使用全新匿名浏览器复核。',
+            )
 
     def test_public_tasks_exclude_reference_capture_instructions(self):
         case = {
