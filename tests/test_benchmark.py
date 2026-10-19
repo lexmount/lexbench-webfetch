@@ -53,13 +53,11 @@ class PublicDefinitions(unittest.TestCase):
 
         validate_outcome_contract(
             'profile',
-            'Return the profile details and the first batch of complete posts.',
+            'Return the initially loaded profile and first batch of complete posts. '
+            'Do not include content that requires clicking or scrolling.',
             'The answer contains the profile details and complete post records.',
         )
         for prompt in (
-            '返回页面正文；不登录。',
-            '返回页面正文；不要点击子页面。',
-            'Return the page without logging in.',
             'Use an anonymous browser session and return the page.',
         ):
             with self.subTest(prompt=prompt):

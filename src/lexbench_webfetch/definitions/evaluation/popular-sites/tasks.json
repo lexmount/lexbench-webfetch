@@ -10,7 +10,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，并保留这些三次独立观察都出现的稳定普通网页文字：About；Terms；Images；Privacy；Sign in；Business；Advertising；How Search works。图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
+      "task_prompt": "直接获取这个热门网站页面，并保留这些三次独立观察都出现的稳定普通网页文字：About；Terms；Images；Privacy；Sign in；Business；Advertising；How Search works。答案范围不包含点击子页面、翻页或滚动后才加载的内容；图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -93,7 +93,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，并保留这些三次独立观察都出现的稳定普通网页文字：Home；Live；Music；Movies；Shorts；Explore；Sign in；Subscriptions；YouTube Kids；More from YouTube；About；Press；Terms；Privacy；Creators；Advertise；Copyright；Contact us；Developers；Report history；Policy & Safety；How YouTube works；Test new features。图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
+      "task_prompt": "直接获取这个热门网站页面，并保留这些三次独立观察都出现的稳定普通网页文字：Home；Live；Music；Movies；Shorts；Explore；Sign in；Subscriptions；YouTube Kids；More from YouTube；About；Press；Terms；Privacy；Creators；Advertise；Copyright；Contact us；Developers；Report history；Policy & Safety；How YouTube works；Test new features。答案范围不包含点击子页面、翻页或滚动后才加载的内容；图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -266,7 +266,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，并保留这些三次独立观察都出现的稳定普通网页文字：Help；Terms；Images；Plugins；New chat；Learn more；Privacy Policy；Chat with ChatGPT；See plans and pricing；Where should we begin?；Get responses tailored to you。图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
+      "task_prompt": "直接获取这个热门网站页面，并保留这些三次独立观察都出现的稳定普通网页文字：Help；Terms；Images；Plugins；New chat；Learn more；Privacy Policy；Chat with ChatGPT；See plans and pricing；Where should we begin?；Get responses tailored to you。答案范围不包含点击子页面、翻页或滚动后才加载的内容；图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -367,7 +367,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，并保留这些三次独立观察都出现的稳定普通网页文字：画板；互动交流；文档协同；权限管理；特色卡片；目录编排；知识管理；个人免费使用；团队免费使用；组件化编辑器；专业好用的编辑器；像书一样的知识库；Edge 插件；Chrome 插件；Help Center；Security；Terms；Join us；Pricing；Support；Download/下载；Feedback；Developer；Contact us；Media reports；Product information；Login / Register。图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
+      "task_prompt": "直接获取这个热门网站页面，并保留这些三次独立观察都出现的稳定普通网页文字：画板；互动交流；文档协同；权限管理；特色卡片；目录编排；知识管理；个人免费使用；团队免费使用；组件化编辑器；专业好用的编辑器；像书一样的知识库；Edge 插件；Chrome 插件；Help Center；Security；Terms；Join us；Pricing；Support；Download/下载；Feedback；Developer；Contact us；Media reports；Product information；Login / Register。答案范围不包含点击子页面、翻页或滚动后才加载的内容；图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -565,7 +565,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站首次加载后可见的稳定正文，保留产品、功能、栏目和支持入口文字。不固定轮播内容、当前条目、顺序、价格、排名或数量；图片文字、隐藏名称、网页标题和脚本文字不能代替正文。",
+      "task_prompt": "直接获取这个热门网站首次加载后可见的稳定正文，保留产品、功能、栏目和支持入口文字。不固定轮播内容、当前条目、顺序、价格、排名或数量；答案范围不包含点击子页面、翻页或滚动后才加载的内容。图片文字、隐藏名称、网页标题和脚本文字不能代替正文。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -616,7 +616,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站首次加载后可见的稳定正文，保留产品、功能、栏目和支持入口文字。不固定轮播内容、当前条目、顺序、价格、排名或数量；图片文字、隐藏名称、网页标题和脚本文字不能代替正文。",
+      "task_prompt": "直接获取这个热门网站首次加载后可见的稳定正文，保留产品、功能、栏目和支持入口文字。不固定轮播内容、当前条目、顺序、价格、排名或数量；答案范围不包含点击子页面、翻页或滚动后才加载的内容。图片文字、隐藏名称、网页标题和脚本文字不能代替正文。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -687,7 +687,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "依据独立参考保留普通页面文字要求；已移除一项辅助标签，其他要求沿用既有证据，未重新认证全部历史页面状态。",
-      "task_prompt": "直接获取这个热门网站页面，并保留这些独立参考中保留的普通网页文字：The Free Encyclopedia；English；日本語；中文；Deutsch；Español；Русский；Français；Italiano；Português；Polski；Commons；Wikidata；MediaWiki；Meta-Wiki；Wikibooks；Wikiquote；Wikisource；Wikivoyage；Wiktionary；Wikispecies；Wikiversity；Wikifunctions；Terms of Use；Privacy Policy；Wikimedia Foundation；Free knowledge base；Free media collection。图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
+      "task_prompt": "直接获取这个热门网站页面，并保留这些独立参考中保留的普通网页文字：The Free Encyclopedia；English；日本語；中文；Deutsch；Español；Русский；Français；Italiano；Português；Polski；Commons；Wikidata；MediaWiki；Meta-Wiki；Wikibooks；Wikiquote；Wikisource；Wikivoyage；Wiktionary；Wikispecies；Wikiversity；Wikifunctions；Terms of Use；Privacy Policy；Wikimedia Foundation；Free knowledge base；Free media collection。答案范围不包含点击子页面、翻页或滚动后才加载的内容；图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -890,7 +890,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，并保留这些独立观察中确认的稳定普通网页文字：Sign in；New chat；Conversation with Gemini；Gemini is AI and can make mistakes.；About Gemini；For Business；Get Gemini App；Google Privacy Policy。图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
+      "task_prompt": "直接获取这个热门网站页面，并保留这些独立观察中确认的稳定普通网页文字：Sign in；New chat；Conversation with Gemini；Gemini is AI and can make mistakes.；About Gemini；For Business；Get Gemini App；Google Privacy Policy。答案范围不包含点击子页面、翻页或滚动后才加载的内容；图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -973,7 +973,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，保留这些三次独立观察均出现的稳定普通网页文字：Yahoo! JAPAN；ニュース；メール；ショッピング；地図；知恵袋；ヘルプ；主なサービス；お知らせ。同时返回至少 5 条不同的具名详情入口；每条包含有意义的名称和 HTTP(S) 链接，链接路径完整匹配 /pickup/[0-9]+。不固定当前条目、顺序、价格、排名或数量。",
+      "task_prompt": "直接获取这个热门网站页面，保留这些三次独立观察均出现的稳定普通网页文字：Yahoo! JAPAN；ニュース；メール；ショッピング；地図；知恵袋；ヘルプ；主なサービス；お知らせ。同时返回至少 5 条不同的具名详情入口；每条包含有意义的名称和 HTTP(S) 链接，链接路径完整匹配 /pickup/[0-9]+。答案范围不包含点击子页面、翻页或滚动后才加载的内容；不固定当前条目、顺序、价格、排名或数量。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -1075,7 +1075,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，保留这些三次独立观察均出现的稳定普通网页文字：Mail；News；Search；Sports；Finance；Weather；Games；Shopping；Travel；Careers；Help；Feedback；Creators；Advertise；Products and Services；About Our Ads。同时返回至少 10 条不同的具名详情入口；每条包含有意义的名称和 HTTP(S) 链接，链接路径完整匹配 /(?:news|entertainment|finance)/.+。不固定当前条目、顺序、价格、排名或数量。",
+      "task_prompt": "直接获取这个热门网站页面，保留这些三次独立观察均出现的稳定普通网页文字：Mail；News；Search；Sports；Finance；Weather；Games；Shopping；Travel；Careers；Help；Feedback；Creators；Advertise；Products and Services；About Our Ads。同时返回至少 10 条不同的具名详情入口；每条包含有意义的名称和 HTTP(S) 链接，链接路径完整匹配 /(?:news|entertainment|finance)/.+。答案范围不包含点击子页面、翻页或滚动后才加载的内容；不固定当前条目、顺序、价格、排名或数量。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -1228,7 +1228,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，保留这些三次独立观察均出现的稳定普通网页文字：All；Baby；Help；Sell；Books；Music；Prime；Careers；Coupons；English；Fashion；Returns；Audible；Pharmacy；Registry；Computers；Handmade；Gift Cards；Amazon Devices；Conditions of Use；Privacy Notice。同时返回至少 10 条不同的具名详情入口；每条包含有意义的名称和 HTTP(S) 链接，链接路径完整匹配 (?:/[^/]+)?/dp/[A-Z0-9]{10}。不固定当前条目、顺序、价格、排名或数量。",
+      "task_prompt": "直接获取这个热门网站页面，保留这些三次独立观察均出现的稳定普通网页文字：All；Baby；Help；Sell；Books；Music；Prime；Careers；Coupons；English；Fashion；Returns；Audible；Pharmacy；Registry；Computers；Handmade；Gift Cards；Amazon Devices；Conditions of Use；Privacy Notice。同时返回至少 10 条不同的具名详情入口；每条包含有意义的名称和 HTTP(S) 链接，链接路径完整匹配 (?:/[^/]+)?/dp/[A-Z0-9]{10}。答案范围不包含点击子页面、翻页或滚动后才加载的内容；不固定当前条目、顺序、价格、排名或数量。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -1415,7 +1415,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，并保留这些三次独立观察都出现的稳定普通网页文字：地图；学术；新闻；更多；登录；直播；视频；贴吧；关于百度；帮助中心；使用百度前必读；About Baidu。图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
+      "task_prompt": "直接获取这个热门网站页面，并保留这些三次独立观察都出现的稳定普通网页文字：地图；学术；新闻；更多；登录；直播；视频；贴吧；关于百度；帮助中心；使用百度前必读；About Baidu。答案范围不包含点击子页面、翻页或滚动后才加载的内容；图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -1522,7 +1522,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，并保留这些三次独立观察都出现的稳定普通网页文字：검색；게임；경제；날씨；메일；쇼핑；웹툰；증권；지도；지식；카페；구독홈；뉴스홈；더보기；로그인；부동산；블로그；스포츠；치지직；캘린더；고객센터；공지사항；다운로드；오픈소스；이용안내；이용약관；인재채용；회사소개；회원가입；NAVER；Partners；Developers；개인정보처리방침；서비스 전체보기；청소년보호정책。图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
+      "task_prompt": "直接获取这个热门网站页面，并保留这些三次独立观察都出现的稳定普通网页文字：검색；게임；경제；날씨；메일；쇼핑；웹툰；증권；지도；지식；카페；구독홈；뉴스홈；더보기；로그인；부동산；블로그；스포츠；치지직；캘린더；고객센터；공지사항；다운로드；오픈소스；이용안내；이용약관；인재채용；회사소개；회원가입；NAVER；Partners；Developers；개인정보처리방침；서비스 전체보기；청소년보호정책。答案范围不包含点击子页面、翻页或滚动后才加载的内容；图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -1767,7 +1767,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "依据独立参考保留普通页面文字要求；已移除一项辅助标签，其他要求沿用既有证据，未重新认证全部历史页面状态。",
-      "task_prompt": "直接获取这个热门网站页面，并保留这些独立参考中保留的普通网页文字：Sign In；Account；Privacy；Contact Us；Speed Test；Help Center；Media Center；Netflix Shop；Terms of Use；Legal Notices；Ways to Watch；Only on Netflix；Enjoy on your TV；Watch everywhere；Investor Relations；More Reasons to Join；Corporate Information；Frequently Asked Questions；Create profiles for kids；Download your shows to watch offline；Cookie Preferences；Ad Choices；Buy Gift Cards；Redeem Gift Cards。图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
+      "task_prompt": "直接获取这个热门网站页面，并保留这些独立参考中保留的普通网页文字：Sign In；Account；Privacy；Contact Us；Speed Test；Help Center；Media Center；Netflix Shop；Terms of Use；Legal Notices；Ways to Watch；Only on Netflix；Enjoy on your TV；Watch everywhere；Investor Relations；More Reasons to Join；Corporate Information；Frequently Asked Questions；Create profiles for kids；Download your shows to watch offline；Cookie Preferences；Ad Choices；Buy Gift Cards；Redeem Gift Cards。答案范围不包含点击子页面、翻页或滚动后才加载的内容；图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -1946,7 +1946,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，并保留这些三次独立观察都出现的稳定普通网页文字：Word；Excel；PowerPoint；Azure；Careers；Company；Education；Investors；Learn more；Trademarks；What's new；Microsoft AI；Terms of use；Accessibility；Visual Studio；Developer & IT；Small Business；About Microsoft；Download Center；Microsoft Learn；Microsoft Store；Microsoft Teams；Get Copilot apps；Microsoft Security；Microsoft Developer；Privacy at Microsoft；Popular prompts to try；Jump into your favorite app。图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
+      "task_prompt": "直接获取这个热门网站页面，并保留这些三次独立观察都出现的稳定普通网页文字：Word；Excel；PowerPoint；Azure；Careers；Company；Education；Investors；Learn more；Trademarks；What's new；Microsoft AI；Terms of use；Accessibility；Visual Studio；Developer & IT；Small Business；About Microsoft；Download Center；Microsoft Learn；Microsoft Store；Microsoft Teams；Get Copilot apps；Microsoft Security；Microsoft Developer；Privacy at Microsoft；Popular prompts to try；Jump into your favorite app。答案范围不包含点击子页面、翻页或滚动后才加载的内容；图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -2149,7 +2149,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，保留这些三次独立观察均出现的稳定普通网页文字：首页；番剧；直播；游戏中心；会员购；漫画；赛事；登录；大会员；动态；热门；电影；国创；电视剧；综艺；纪录片；动画；鬼畜；音乐；舞蹈；影视；娱乐；知识；科技数码；资讯；美食；专栏；活动；课堂；社区中心。同时返回至少 5 条不同的具名详情入口；每条包含有意义的名称和 HTTP(S) 链接，链接路径完整匹配 /video/(?:BV[A-Za-z0-9]+|av[0-9]+)。不固定当前条目、顺序、价格、排名或数量。",
+      "task_prompt": "直接获取这个热门网站页面，保留这些三次独立观察均出现的稳定普通网页文字：首页；番剧；直播；游戏中心；会员购；漫画；赛事；登录；大会员；动态；热门；电影；国创；电视剧；综艺；纪录片；动画；鬼畜；音乐；舞蹈；影视；娱乐；知识；科技数码；资讯；美食；专栏；活动；课堂；社区中心。同时返回至少 5 条不同的具名详情入口；每条包含有意义的名称和 HTTP(S) 链接，链接路径完整匹配 /video/(?:BV[A-Za-z0-9]+|av[0-9]+)。答案范围不包含点击子页面、翻页或滚动后才加载的内容；不固定当前条目、顺序、价格、排名或数量。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -2399,7 +2399,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，保留这些三次独立观察均出现的稳定普通网页文字：Главное；Свежее；В мире；Политика；Общество；Экономика；Наука；Спорт；Культура；Технологии；Авто；Происшествия；Шоу-бизнес。同时返回至少 10 条不同的具名详情入口；每条包含有意义的名称和 HTTP(S) 链接，链接路径完整匹配 /(?:a/[A-Za-z0-9_-]+|news/story/[A-Za-z0-9_-]+)。不固定当前条目、顺序、价格、排名或数量。",
+      "task_prompt": "直接获取这个热门网站页面，保留这些三次独立观察均出现的稳定普通网页文字：Главное；Свежее；В мире；Политика；Общество；Экономика；Наука；Спорт；Культура；Технологии；Авто；Происшествия；Шоу-бизнес。同时返回至少 10 条不同的具名详情入口；每条包含有意义的名称和 HTTP(S) 链接，链接路径完整匹配 /(?:a/[A-Za-z0-9_-]+|news/story/[A-Za-z0-9_-]+)。答案范围不包含点击子页面、翻页或滚动后才加载的内容；不固定当前条目、顺序、价格、排名或数量。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -2529,7 +2529,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，并保留这些三次独立观察都出现的稳定普通网页文字：XBOX；Azure；Deals；Careers；Company；Copilot；Returns；Sitemap；Support；Surface；Windows；Personal；Education；Investors；Recycling；Trademarks；What's new；Microsoft AI；Accessibility；Visual Studio；Developer & IT；Small Business；About Microsoft；Download Center；Microsoft Learn；Microsoft Store；Microsoft Teams；Microsoft Security；Microsoft Developer；Privacy at Microsoft；Explore Microsoft products；Microsoft 365。图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
+      "task_prompt": "直接获取这个热门网站页面，并保留这些三次独立观察都出现的稳定普通网页文字：XBOX；Azure；Deals；Careers；Company；Copilot；Returns；Sitemap；Support；Surface；Windows；Personal；Education；Investors；Recycling；Trademarks；What's new；Microsoft AI；Accessibility；Visual Studio；Developer & IT；Small Business；About Microsoft；Download Center；Microsoft Learn；Microsoft Store；Microsoft Teams；Microsoft Security；Microsoft Developer；Privacy at Microsoft；Explore Microsoft products；Microsoft 365。答案范围不包含点击子页面、翻页或滚动后才加载的内容；图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -2756,7 +2756,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，并保留这些独立观察中稳定出现的普通网页文字：Browse；Categories；Live；Show all。同时返回至少 10 条不同的具名详情入口；每条包含有意义的名称和 HTTP(S) 链接，链接路径完整匹配 /(?!(?:directory|downloads?|jobs?|settings|login|signup|search|subscriptions|wallet|turbo|videos|friends|inventory|store|drops|creatorcamp|prime|about|legal|brand|security|partners|press|advertisers|blog)(?:/|$))[A-Za-z0-9_]+。不固定当前条目、顺序、价格、排名或数量。",
+      "task_prompt": "直接获取这个热门网站页面，并保留这些独立观察中稳定出现的普通网页文字：Browse；Categories；Live；Show all。同时返回至少 10 条不同的具名详情入口；每条包含有意义的名称和 HTTP(S) 链接，链接路径完整匹配 /(?!(?:directory|downloads?|jobs?|settings|login|signup|search|subscriptions|wallet|turbo|videos|friends|inventory|store|drops|creatorcamp|prime|about|legal|brand|security|partners|press|advertisers|blog)(?:/|$))[A-Za-z0-9_]+。答案范围不包含点击子页面、翻页或滚动后才加载的内容；不固定当前条目、顺序、价格、排名或数量。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -2823,7 +2823,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，并保留这些三次独立观察都出现的稳定普通网页文字：TV；More；Radar；Hourly；Careers；Monthly；Sign in；Sitemap；Feedback；AdChoices；Allergies；Forecasts；News Room；Tornadoes；Wildfires；Atmosphere；Cold & Flu；Air Quality；Alexa Skill；Data Rights；Get Premium；Data Vendors；Terms of Use；Trust Center；Weather Labs；Cookie Notice；Home & Garden；Privacy Policy；Privacy & Legal；Advertise With Us；Health & Wellness；Weather Data APIs；Accessibility Statement。图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
+      "task_prompt": "直接获取这个热门网站页面，并保留这些三次独立观察都出现的稳定普通网页文字：TV；More；Radar；Hourly；Careers；Monthly；Sign in；Sitemap；Feedback；AdChoices；Allergies；Forecasts；News Room；Tornadoes；Wildfires；Atmosphere；Cold & Flu；Air Quality；Alexa Skill；Data Rights；Get Premium；Data Vendors；Terms of Use；Trust Center；Weather Labs；Cookie Notice；Home & Garden；Privacy Policy；Privacy & Legal；Advertise With Us；Health & Wellness；Weather Data APIs；Accessibility Statement。答案范围不包含点击子页面、翻页或滚动后才加载的内容；图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -3056,7 +3056,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，并保留这些三次独立观察都出现的稳定普通网页文字：Plans；Print；Terms；Tools；Events；Log in；Careers；Pricing；Privacy；Product；Sign up；Sitemap；Affinity；Business；Canva AI；Creators；Features；Newsroom；Security；Community；Education；Affiliates；Canva home；Enterprise；Learn blog；Nonprofits；About Canva；Help Center；Design School；Trust Center；Accessibility；Contact Sales；Canva Developers；Apps Marketplace；Visual Suite；Start designing；What will you design today?。图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
+      "task_prompt": "直接获取这个热门网站页面，并保留这些三次独立观察都出现的稳定普通网页文字：Plans；Print；Terms；Tools；Events；Log in；Careers；Pricing；Privacy；Product；Sign up；Sitemap；Affinity；Business；Canva AI；Creators；Features；Newsroom；Security；Community；Education；Affiliates；Canva home；Enterprise；Learn blog；Nonprofits；About Canva；Help Center；Design School；Trust Center；Accessibility；Contact Sales；Canva Developers；Apps Marketplace；Visual Suite；Start designing；What will you design today?。答案范围不包含点击子页面、翻页或滚动后才加载的内容；图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -3313,7 +3313,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，保留这些三次独立观察均出现的稳定普通网页文字：Yahoo!ニュース；トピックス；アクセスランキング；国内；国際；経済；科学；IT；地域；速報。同时返回至少 5 条不同的具名详情入口；每条包含有意义的名称和 HTTP(S) 链接，链接路径完整匹配 /pickup/[0-9]+。不固定当前条目、顺序、价格、排名或数量。",
+      "task_prompt": "直接获取这个热门网站页面，保留这些三次独立观察均出现的稳定普通网页文字：Yahoo!ニュース；トピックス；アクセスランキング；国内；国際；経済；科学；IT；地域；速報。同时返回至少 5 条不同的具名详情入口；每条包含有意义的名称和 HTTP(S) 链接，链接路径完整匹配 /pickup/[0-9]+。答案范围不包含点击子页面、翻页或滚动后才加载的内容；不固定当前条目、顺序、价格、排名或数量。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -3422,7 +3422,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，保留这些三次独立观察均出现的稳定普通网页文字：GAMES；MOVIES；TV；TOP WIKIS；Community；Help；Support；Careers；About；Press；Contact；Advertise；Media Kit；Fandom Apps；Global Sitemap；Terms of Use；Privacy Policy。同时返回至少 3 条不同的具名详情入口；每条包含有意义的名称和 HTTP(S) 链接，链接路径完整匹配 /topics/(?:games|movies|tv)。不固定当前条目、顺序、价格、排名或数量。",
+      "task_prompt": "直接获取这个热门网站页面，保留这些三次独立观察均出现的稳定普通网页文字：GAMES；MOVIES；TV；TOP WIKIS；Community；Help；Support；Careers；About；Press；Contact；Advertise；Media Kit；Fandom Apps；Global Sitemap；Terms of Use；Privacy Policy。同时返回至少 3 条不同的具名详情入口；每条包含有意义的名称和 HTTP(S) 链接，链接路径完整匹配 /topics/(?:games|movies|tv)。答案范围不包含点击子页面、翻页或滚动后才加载的内容；不固定当前条目、顺序、价格、排名或数量。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -3581,7 +3581,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，保留这些三次独立观察均出现的稳定普通网页文字：g1；ge；globoplay；gshow；Notícias；Política；Economia；Esportes；Entretenimento；Educação；Tecnologia；Saúde；Ciência；Vídeos；Todos os Sites；Termo de uso；Aviso de Privacidade；Portal da Privacidade。同时返回至少 10 条不同的具名详情入口；每条包含有意义的名称和 HTTP(S) 链接，链接路径完整匹配 /.+/(?:noticia|blog)/.+。不固定当前条目、顺序、价格、排名或数量。",
+      "task_prompt": "直接获取这个热门网站页面，保留这些三次独立观察均出现的稳定普通网页文字：g1；ge；globoplay；gshow；Notícias；Política；Economia；Esportes；Entretenimento；Educação；Tecnologia；Saúde；Ciência；Vídeos；Todos os Sites；Termo de uso；Aviso de Privacidade；Portal da Privacidade。同时返回至少 10 条不同的具名详情入口；每条包含有意义的名称和 HTTP(S) 链接，链接路径完整匹配 /.+/(?:noticia|blog)/.+。答案范围不包含点击子页面、翻页或滚动后才加载的内容；不固定当前条目、顺序、价格、排名或数量。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -3746,7 +3746,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，保留这些三次独立观察均出现的稳定普通网页文字：mail.ru；Почта；Облако；Новости；Финансы；Игры；Кино；Леди；Hi-Tech；Мой Мир；Помощь；Войти；Регистрация；Создать почту。同时返回至少 5 条不同的具名详情入口；每条包含有意义的名称和 HTTP(S) 链接，链接路径完整匹配 /[^/]+/[0-9]+。不固定当前条目、顺序、价格、排名或数量。",
+      "task_prompt": "直接获取这个热门网站页面，保留这些三次独立观察均出现的稳定普通网页文字：mail.ru；Почта；Облако；Новости；Финансы；Игры；Кино；Леди；Hi-Tech；Мой Мир；Помощь；Войти；Регистрация；Создать почту。同时返回至少 5 条不同的具名详情入口；每条包含有意义的名称和 HTTP(S) 链接，链接路径完整匹配 /[^/]+/[0-9]+。答案范围不包含点击子页面、翻页或滚动后才加载的内容；不固定当前条目、顺序、价格、排名或数量。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -3883,7 +3883,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，并保留这些三次独立观察都出现的稳定普通网页文字：Shop；Legal；Ethics；Mobile；Orders；Careers；Returns；Sitemap；TV & AV；ABOUT US；Newsroom；Wearables；Appliances；Contact Us；Galaxy Tab；Order Help；Projectors；Accessories；Dishwashers；Environment；Galaxy Book；Galaxy Buds；SmartThings；Company Info；Find a Store；For Business；Galaxy Watch；Support Home；Accessibility；Refrigerators；Samsung Care+；Privacy Policy；SUSTAINABILITY；Apps & Services；Computers & Monitors。图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
+      "task_prompt": "直接获取这个热门网站页面，并保留这些三次独立观察都出现的稳定普通网页文字：Shop；Legal；Ethics；Mobile；Orders；Careers；Returns；Sitemap；TV & AV；ABOUT US；Newsroom；Wearables；Appliances；Contact Us；Galaxy Tab；Order Help；Projectors；Accessories；Dishwashers；Environment；Galaxy Book；Galaxy Buds；SmartThings；Company Info；Find a Store；For Business；Galaxy Watch；Support Home；Accessibility；Refrigerators；Samsung Care+；Privacy Policy；SUSTAINABILITY；Apps & Services；Computers & Monitors。答案范围不包含点击子页面、翻页或滚动后才加载的内容；图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -4128,7 +4128,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，并保留这些三次独立观察都出现的稳定普通网页文字：Blog；Help；Chrome；Safari；Themes；Careers；Duck.ai；Firefox；Podcast；Homepage；Settings；Community；Downloads；Press Kit；Newsletter；Privacy Policy；About DuckDuckGo；Email Protection；Terms of Service；Browser Extensions；Advertise on Search；Compare Privacy；DuckDuckGo Subscription；Android Browser；Windows Browser；iOS Browser；Mac Browser。图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
+      "task_prompt": "直接获取这个热门网站页面，并保留这些三次独立观察都出现的稳定普通网页文字：Blog；Help；Chrome；Safari；Themes；Careers；Duck.ai；Firefox；Podcast；Homepage；Settings；Community；Downloads；Press Kit；Newsletter；Privacy Policy；About DuckDuckGo；Email Protection；Terms of Service；Browser Extensions；Advertise on Search；Compare Privacy；DuckDuckGo Subscription；Android Browser；Windows Browser；iOS Browser；Mac Browser。答案范围不包含点击子页面、翻页或滚动后才加载的内容；图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -4325,7 +4325,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，并保留这些独立观察中稳定出现的普通网页文字：Blog；Jobs；About；Brand；Nitro；Terms；Log In；Quests；Safety；Status；Careers；Company；Privacy；Product；Support；Creators；Feedback；Language；Licenses；Newsroom；Policies；Community；Resources；Developers；Gift Cards；Guidelines；App Directory；Cookie Settings；MAKE YOUR GROUP CHATS MORE FUN；Group chat that’s all fun & games；stream like you’re in the same room；Hop in when you're free, no need to call。不固定会随操作系统变化的下载按钮文字。",
+      "task_prompt": "直接获取这个热门网站页面，并保留这些独立观察中稳定出现的普通网页文字：Blog；Jobs；About；Brand；Nitro；Terms；Log In；Quests；Safety；Status；Careers；Company；Privacy；Product；Support；Creators；Feedback；Language；Licenses；Newsroom；Policies；Community；Resources；Developers；Gift Cards；Guidelines；App Directory；Cookie Settings；MAKE YOUR GROUP CHATS MORE FUN；Group chat that’s all fun & games；stream like you’re in the same room；Hop in when you're free, no need to call。答案范围不包含点击子页面、翻页或滚动后才加载的内容；不固定会随操作系统变化的下载按钮文字。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -4552,7 +4552,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，并保留这些独立观察中稳定出现的普通网页文字：AI；Blog；Docs；Shop；Team；About；Terms；Skills；Status；Careers；Company；Pricing；Privacy；Roadmap；Sign in；Sign up；Sitemap；Partners；Platform；Security；Ecosystem；Education；Resources；Enterprise；GitHub CLI；Why GitHub；Developer API；GitHub Mobile；Compare GitHub；Contact GitHub；GitHub Desktop；Community Forum；GitHub features；Premium Support；Customer Stories；GitHub Marketplace；The ReadME Project；GitHub Copilot；GitHub Actions；GitHub Codespaces。不固定当前条目、顺序、价格、排名或数量。",
+      "task_prompt": "直接获取这个热门网站页面，并保留这些独立观察中稳定出现的普通网页文字：AI；Blog；Docs；Shop；Team；About；Terms；Skills；Status；Careers；Company；Pricing；Privacy；Roadmap；Sign in；Sign up；Sitemap；Partners；Platform；Security；Ecosystem；Education；Resources；Enterprise；GitHub CLI；Why GitHub；Developer API；GitHub Mobile；Compare GitHub；Contact GitHub；GitHub Desktop；Community Forum；GitHub features；Premium Support；Customer Stories；GitHub Marketplace；The ReadME Project；GitHub Copilot；GitHub Actions；GitHub Codespaces。答案范围不包含点击子页面、翻页或滚动后才加载的内容；不固定当前条目、顺序、价格、排名或数量。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -4827,7 +4827,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，并保留这些三次独立观察都出现的稳定普通网页文字：Home；Jobs；Legal；Company；Cookies；Support；Show all；About Ads；Investors；Developers；Advertising；Communities；For Artists；For Authors；Install App；For Creators；Spotify Free；Useful links；Your Library；Accessibility；Spotify Plans；For the Record；Privacy Policy；Browse podcasts；Free Mobile App；Safety & Privacy Center；Create your first playlist；Let's find some podcasts to follow。图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
+      "task_prompt": "直接获取这个热门网站页面，并保留这些三次独立观察都出现的稳定普通网页文字：Home；Jobs；Legal；Company；Cookies；Support；Show all；About Ads；Investors；Developers；Advertising；Communities；For Artists；For Authors；Install App；For Creators；Spotify Free；Useful links；Your Library；Accessibility；Spotify Plans；For the Record；Privacy Policy；Browse podcasts；Free Mobile App；Safety & Privacy Center；Create your first playlist；Let's find some podcasts to follow。答案范围不包含点击子页面、翻页或滚动后才加载的内容；图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -5030,7 +5030,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，保留这些三次独立观察均出现的稳定普通网页文字：U.S.；World；Business；Opinion；Arts；Cooking；Games；Wirecutter；The Athletic；Log in；Help；Site Map；Advertise；Contact Us。同时返回至少 10 条不同的具名详情入口；每条包含有意义的名称和 HTTP(S) 链接，链接路径完整匹配 /[0-9]{4}/[0-9]{2}/[0-9]{2}/.+。不固定当前条目、顺序、价格、排名或数量。",
+      "task_prompt": "直接获取这个热门网站页面，保留这些三次独立观察均出现的稳定普通网页文字：U.S.；World；Business；Opinion；Arts；Cooking；Games；Wirecutter；The Athletic；Log in；Help；Site Map；Advertise；Contact Us。同时返回至少 10 条不同的具名详情入口；每条包含有意义的名称和 HTTP(S) 链接，链接路径完整匹配 /[0-9]{4}/[0-9]{2}/[0-9]{2}/.+。答案范围不包含点击子页面、翻页或滚动后才加载的内容；不固定当前条目、顺序、价格、排名或数量。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -5168,7 +5168,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，并保留这些三次独立观察都出现的稳定普通网页文字：About；Phone；Press；Rooms；Terms；Account；Careers；English；Privacy；Sign In；Feedback；Meetings；Partners；Site Map；Webinars；Customers；Investors；Media Kit；Contact Us；What’s new；Zoom Cares；Integrations；Sign Up Free；Trust Center；Accessibility；Collaboration；Contact Sales；Support Center；Zoom Community；Download Center；Plans & Pricing；Legal & Compliance；Find out what's possible；One platform. Endless ways to work together.；Trusted by millions. Built for you.；Businesses achieve more with Zoom。图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
+      "task_prompt": "直接获取这个热门网站页面，并保留这些三次独立观察都出现的稳定普通网页文字：About；Phone；Press；Rooms；Terms；Account；Careers；English；Privacy；Sign In；Feedback；Meetings；Partners；Site Map；Webinars；Customers；Investors；Media Kit；Contact Us；What’s new；Zoom Cares；Integrations；Sign Up Free；Trust Center；Accessibility；Collaboration；Contact Sales；Support Center；Zoom Community；Download Center；Plans & Pricing；Legal & Compliance；Find out what's possible；One platform. Endless ways to work together.；Trusted by millions. Built for you.；Businesses achieve more with Zoom。答案范围不包含点击子页面、翻页或滚动后才加载的内容；图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -5419,7 +5419,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，并保留这些三次独立观察都出现的稳定普通网页文字：FAQs；Blogs；Linux；Press；Events；GitHub；Reddit；Status；Android；Careers；Company；Contact；Desktop；Podcast；Reviews；Rewards；Support；Research；Brave Ads；Community；Downloads；Get Brave；Brave blog；Search API；Advertisers；Help center；Merch store；Brand assets；Brave Search；Brave Wallet；Terms of use；Brave Browser；Release notes；For businesses；Privacy policy；Private search；Powerful VPN；Transparency report；A Web with fewer ads；The browser that puts you first。图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
+      "task_prompt": "直接获取这个热门网站页面，并保留这些三次独立观察都出现的稳定普通网页文字：FAQs；Blogs；Linux；Press；Events；GitHub；Reddit；Status；Android；Careers；Company；Contact；Desktop；Podcast；Reviews；Rewards；Support；Research；Brave Ads；Community；Downloads；Get Brave；Brave blog；Search API；Advertisers；Help center；Merch store；Brand assets；Brave Search；Brave Wallet；Terms of use；Brave Browser；Release notes；For businesses；Privacy policy；Private search；Powerful VPN；Transparency report；A Web with fewer ads；The browser that puts you first。答案范围不包含点击子页面、翻页或滚动后才加载的内容；图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -5694,7 +5694,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，并保留这些三次独立观察都出现的稳定普通网页文字：iPad；Shop；Legal；Watch；AirTag；Events；iPhone；Vision；Wallet；Account；AirPods；Support；Apple TV；Newsroom；Site Map；App Store；Apple One；Apple Pay；Education；Financing；Investors；TV & Home；Apple Card；Apple Cash；Gift Cards；iCloud.com；About Apple；Accessories；Apple Music；Apple Store；Environment；MacBook Air；Apple Arcade；Find a Store；For Business；Terms of Use；Accessibility；Contact Apple；Privacy Policy。图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
+      "task_prompt": "直接获取这个热门网站页面，并保留这些三次独立观察都出现的稳定普通网页文字：iPad；Shop；Legal；Watch；AirTag；Events；iPhone；Vision；Wallet；Account；AirPods；Support；Apple TV；Newsroom；Site Map；App Store；Apple One；Apple Pay；Education；Financing；Investors；TV & Home；Apple Card；Apple Cash；Gift Cards；iCloud.com；About Apple；Accessories；Apple Music；Apple Store；Environment；MacBook Air；Apple Arcade；Find a Store；For Business；Terms of Use；Accessibility；Contact Apple；Privacy Policy。答案范围不包含点击子页面、翻页或滚动后才加载的内容；图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -5963,7 +5963,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，保留这些三次独立观察均出现的稳定普通网页文字：NFL；NBA；MLB；NHL；Soccer；Tennis；Hockey；Baseball；Football；Fantasy；Watch；espnW；Andscape；ESPN Apps；X Games。同时返回至少 10 条不同的具名详情入口；每条包含有意义的名称和 HTTP(S) 链接，链接路径完整匹配 /[a-z0-9-]+/story/_/id/[0-9]+/.+。不固定当前条目、顺序、价格、排名或数量。",
+      "task_prompt": "直接获取这个热门网站页面，保留这些三次独立观察均出现的稳定普通网页文字：NFL；NBA；MLB；NHL；Soccer；Tennis；Hockey；Baseball；Football；Fantasy；Watch；espnW；Andscape；ESPN Apps；X Games。同时返回至少 10 条不同的具名详情入口；每条包含有意义的名称和 HTTP(S) 链接，链接路径完整匹配 /[a-z0-9-]+/story/_/id/[0-9]+/.+。答案范围不包含点击子页面、翻页或滚动后才加载的内容；不固定当前条目、顺序、价格、排名或数量。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -6108,7 +6108,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，保留这些三次独立观察均出现的稳定普通网页文字：Home；News；Sport；Business；Culture；Arts；Travel；Earth；Audio；Video；Live；World；Health；Watch。同时返回至少 10 条不同的具名详情入口；每条包含有意义的名称和 HTTP(S) 链接，链接路径完整匹配 /news/articles/[a-z0-9]+。不固定当前条目、顺序、价格、排名或数量。",
+      "task_prompt": "直接获取这个热门网站页面，保留这些三次独立观察均出现的稳定普通网页文字：Home；News；Sport；Business；Culture；Arts；Travel；Earth；Audio；Video；Live；World；Health；Watch。同时返回至少 10 条不同的具名详情入口；每条包含有意义的名称和 HTTP(S) 链接，链接路径完整匹配 /news/articles/[a-z0-9]+。答案范围不包含点击子页面、翻页或滚动后才加载的内容；不固定当前条目、顺序、价格、排名或数量。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -6246,7 +6246,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，并保留这些三次独立观察都出现的稳定普通网页文字：Business；Personal；Send Money；Get the app；Pay Monthly；Browse Offers；Explore Crypto；Get the Debit Card；Get the PayPal app；See How You're Safe；PayPal Rewards terms；Shop in stores and online；Safety and privacy are our priority；Pay in 4。图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
+      "task_prompt": "直接获取这个热门网站页面，并保留这些三次独立观察都出现的稳定普通网页文字：Business；Personal；Send Money；Get the app；Pay Monthly；Browse Offers；Explore Crypto；Get the Debit Card；Get the PayPal app；See How You're Safe；PayPal Rewards terms；Shop in stores and online；Safety and privacy are our priority；Pay in 4。答案范围不包含点击子页面、翻页或滚动后才加载的内容；图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -6365,7 +6365,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站首次加载后可见的稳定正文，保留产品、功能、栏目和支持入口文字。不固定轮播内容、当前条目、顺序、价格、排名或数量；图片文字、隐藏名称、网页标题和脚本文字不能代替正文。",
+      "task_prompt": "直接获取这个热门网站首次加载后可见的稳定正文，保留产品、功能、栏目和支持入口文字。不固定轮播内容、当前条目、顺序、价格、排名或数量；答案范围不包含点击子页面、翻页或滚动后才加载的内容。图片文字、隐藏名称、网页标题和脚本文字不能代替正文。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -6484,7 +6484,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站首次加载后可见的稳定正文，保留产品、功能、栏目和支持入口文字。不固定轮播内容、当前条目、顺序、价格、排名或数量；图片文字、隐藏名称、网页标题和脚本文字不能代替正文。",
+      "task_prompt": "直接获取这个热门网站首次加载后可见的稳定正文，保留产品、功能、栏目和支持入口文字。不固定轮播内容、当前条目、顺序、价格、排名或数量；答案范围不包含点击子页面、翻页或滚动后才加载的内容。图片文字、隐藏名称、网页标题和脚本文字不能代替正文。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -6561,7 +6561,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，并保留这些三次独立观察都出现的稳定普通网页文字：Help；Home；About；Terms；Sign in；Countries；Hiring Lab；Post a job；Browse jobs；Career advice；ESG at Indeed；Find salaries；Indeed Events；Work at Indeed；Company reviews；Browse companies；Employers / Post Job；Your Privacy Choices；Accessibility at Indeed；Your next job starts here。图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
+      "task_prompt": "直接获取这个热门网站页面，并保留这些三次独立观察都出现的稳定普通网页文字：Help；Home；About；Terms；Sign in；Countries；Hiring Lab；Post a job；Browse jobs；Career advice；ESG at Indeed；Find salaries；Indeed Events；Work at Indeed；Company reviews；Browse companies；Employers / Post Job；Your Privacy Choices；Accessibility at Indeed；Your next job starts here。答案范围不包含点击子页面、翻页或滚动后才加载的内容；图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -6716,7 +6716,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，保留这些三次独立观察均出现的稳定普通网页文字：お買い物；カード；銀行；証券；トラベル；ブックス；ポイント；モバイル；ラクマ；ROOM；ログイン；ヘルプ；会社概要；採用情報。同时返回至少 5 条不同的具名详情入口；每条包含有意义的名称和 HTTP(S) 链接，链接路径完整匹配 /.+。不固定当前条目、顺序、价格、排名或数量。",
+      "task_prompt": "直接获取这个热门网站页面，保留这些三次独立观察均出现的稳定普通网页文字：お買い物；カード；銀行；証券；トラベル；ブックス；ポイント；モバイル；ラクマ；ROOM；ログイン；ヘルプ；会社概要；採用情報。同时返回至少 5 条不同的具名详情入口；每条包含有意义的名称和 HTTP(S) 链接，链接路径完整匹配 /.+。答案范围不包含点击子页面、翻页或滚动后才加载的内容；不固定当前条目、顺序、价格、排名或数量。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -6853,7 +6853,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，并保留这些三次独立观察都出现的稳定普通网页文字：API；FAQ；Fast；Home；iPad；About；macOS；iPhone；Safety；Secure；Simple；Synced；Android；English；Privacy；Private；Platform；Powerful；Expressive；Mobile Web；PC / Linux；Mobile Apps；Recent News；Web-browser；Desktop Apps；Instant View；Translations；Why Telegram?；a new era of messaging。图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
+      "task_prompt": "直接获取这个热门网站页面，并保留这些三次独立观察都出现的稳定普通网页文字：API；FAQ；Fast；Home；iPad；About；macOS；iPhone；Safety；Secure；Simple；Synced；Android；English；Privacy；Private；Platform；Powerful；Expressive；Mobile Web；PC / Linux；Mobile Apps；Recent News；Web-browser；Desktop Apps；Instant View；Translations；Why Telegram?；a new era of messaging。答案范围不包含点击子页面、翻页或滚动后才加载的内容；图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -7062,7 +7062,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，保留这些三次独立观察均出现的稳定普通网页文字：CNN；Home；World；Politics；Business；Health；Entertainment；Style；Travel；Sports；Video；Watch；Live；About；Tech；Science。同时返回至少 10 条不同的具名详情入口；每条包含有意义的名称和 HTTP(S) 链接，链接路径完整匹配 /[0-9]{4}/[0-9]{2}/[0-9]{2}/.+。不固定当前条目、顺序、价格、排名或数量。",
+      "task_prompt": "直接获取这个热门网站页面，保留这些三次独立观察均出现的稳定普通网页文字：CNN；Home；World；Politics；Business；Health；Entertainment；Style；Travel；Sports；Video；Watch；Live；About；Tech；Science。同时返回至少 10 条不同的具名详情入口；每条包含有意义的名称和 HTTP(S) 链接，链接路径完整匹配 /[0-9]{4}/[0-9]{2}/[0-9]{2}/.+。答案范围不包含点击子页面、翻页或滚动后才加载的内容；不固定当前条目、顺序、价格、排名或数量。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -7215,7 +7215,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，并保留这些三次独立观察都出现的稳定普通网页文字：대문；문법；분류；설정；신고；역사；통계；파일；FAQ；게시판；연습장；기본방침；업데이트；편집지침；공지 목록；문서 목록；문서 열람；최근 변경；최근 토론；특수 문서；나무위키 프로젝트；나무위키의 도움말；Privacy Policy；Términos de uso；나무위키는 누구나 기여할 수 있는 위키입니다.；검증되지 않았거나 편향된 내용이 있을 수 있습니다.。图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
+      "task_prompt": "直接获取这个热门网站页面，并保留这些三次独立观察都出现的稳定普通网页文字：대문；문법；분류；설정；신고；역사；통계；파일；FAQ；게시판；연습장；기본방침；업데이트；편집지침；공지 목록；문서 목록；문서 열람；최근 변경；최근 토론；특수 문서；나무위키 프로젝트；나무위키의 도움말；Privacy Policy；Términos de uso；나무위키는 누구나 기여할 수 있는 위키입니다.；검증되지 않았거나 편향된 내용이 있을 수 있습니다.。答案范围不包含点击子页面、翻页或滚动后才加载的内容；图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -7406,7 +7406,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，并保留这些三次独立观察都出现的稳定普通网页文字：Kids；Tops；Curve；Shoes；New In；Dresses；Automotive；Flash Sale；Electronics；Hot Sellers；Free Returns；New Arrivals；Pet Supplies；Toys & Games；Customization；Fall & Winter；Free Shipping；Home & Living；Home Textiles；Bags & Luggage；Women Clothing；Beauty & Health；Home Appliances；Baby & Maternity；Books & Magazine；Food & Beverages；Sports & Outdoor；Jewelry & Accessories；Office & School Supplies；Tools & Home Improvement；Cell Phones & Accessories；SHEIN。图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
+      "task_prompt": "直接获取这个热门网站页面，并保留这些三次独立观察都出现的稳定普通网页文字：Kids；Tops；Curve；Shoes；New In；Dresses；Automotive；Flash Sale；Electronics；Hot Sellers；Free Returns；New Arrivals；Pet Supplies；Toys & Games；Customization；Fall & Winter；Free Shipping；Home & Living；Home Textiles；Bags & Luggage；Women Clothing；Beauty & Health；Home Appliances；Baby & Maternity；Books & Magazine；Food & Beverages；Sports & Outdoor；Jewelry & Accessories；Office & School Supplies；Tools & Home Improvement；Cell Phones & Accessories；SHEIN。答案范围不包含点击子页面、翻页或滚动后才加载的内容；图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -7633,7 +7633,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，保留这些三次独立观察均出现的稳定普通网页文字：QQ；体育；娱乐；科技；游戏；汽车；教育；军事；房产；健康；财经；国际；微信；登录；反馈。同时返回至少 10 条不同的具名详情入口；每条包含有意义的名称和 HTTP(S) 链接，链接路径完整匹配 /rain/a/[A-Za-z0-9]+。不固定当前条目、顺序、价格、排名或数量。",
+      "task_prompt": "直接获取这个热门网站页面，保留这些三次独立观察均出现的稳定普通网页文字：QQ；体育；娱乐；科技；游戏；汽车；教育；军事；房产；健康；财经；国际；微信；登录；反馈。同时返回至少 10 条不同的具名详情入口；每条包含有意义的名称和 HTTP(S) 链接，链接路径完整匹配 /rain/a/[A-Za-z0-9]+。答案范围不包含点击子页面、翻页或滚动后才加载的内容；不固定当前条目、顺序、价格、排名或数量。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -7777,7 +7777,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，并保留这些三次独立观察都出现的稳定普通网页文字：三农；亲子；体育；全部；关注；动物；壁纸；影视；我的；投稿；推荐；旅行；朋友；汽车；消息；游戏；直播；知识；短剧；精选；美食；通知；音乐；二次元；充钻石；客户端；小剧场；放映厅；AI抖音；下载抖音；加入我们；友情链接；广告投放；抖音电商；站点地图；美妆穿搭；联系我们；账号找回；隐私政策；用户服务协议；电子营业执照；网络谣言曝光台；网上有害信息举报。图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
+      "task_prompt": "直接获取这个热门网站页面，并保留这些三次独立观察都出现的稳定普通网页文字：三农；亲子；体育；全部；关注；动物；壁纸；影视；我的；投稿；推荐；旅行；朋友；汽车；消息；游戏；直播；知识；短剧；精选；美食；通知；音乐；二次元；充钻石；客户端；小剧场；放映厅；AI抖音；下载抖音；加入我们；友情链接；广告投放；抖音电商；站点地图；美妆穿搭；联系我们；账号找回；隐私政策；用户服务协议；电子营业执照；网络谣言曝光台；网上有害信息举报。答案范围不包含点击子页面、翻页或滚动后才加载的内容；图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -8070,7 +8070,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站首次加载后可见的稳定正文，保留产品、功能、栏目和支持入口文字。不固定轮播内容、当前条目、顺序、价格、排名或数量；图片文字、隐藏名称、网页标题和脚本文字不能代替正文。",
+      "task_prompt": "直接获取这个热门网站首次加载后可见的稳定正文，保留产品、功能、栏目和支持入口文字。不固定轮播内容、当前条目、顺序、价格、排名或数量；答案范围不包含点击子页面、翻页或滚动后才加载的内容。图片文字、隐藏名称、网页标题和脚本文字不能代替正文。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -8238,7 +8238,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，并保留这些三次独立观察都出现的稳定普通网页文字：Home；Legal；Status；Careers；Mastery；Privacy；Support；About Us；Advocacy；Security；Services；Community；Higher Ed；Parchment；Resources；Solutions；Contact Us；Leadership；All Products；Our Partners；Accessibility；AI Principles；Let's Connect；Why Instructure；Explore Canvas；Company Overview；Instructure Ecosystem；Explore the marketplace。图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
+      "task_prompt": "直接获取这个热门网站页面，并保留这些三次独立观察都出现的稳定普通网页文字：Home；Legal；Status；Careers；Mastery；Privacy；Support；About Us；Advocacy；Security；Services；Community；Higher Ed；Parchment；Resources；Solutions；Contact Us；Leadership；All Products；Our Partners；Accessibility；AI Principles；Let's Connect；Why Instructure；Explore Canvas；Company Overview；Instructure Ecosystem；Explore the marketplace。答案范围不包含点击子页面、翻页或滚动后才加载的内容；图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -8441,7 +8441,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，保留这些三次独立观察均出现的稳定普通网页文字：Главная；Для вас；Каталог；В топе；Shorts；Детям；Спорт。同时返回至少 10 条不同的具名详情入口；每条包含有意义的名称和 HTTP(S) 链接，链接路径完整匹配 /video/[a-f0-9]+。不固定当前条目、顺序、价格、排名或数量。",
+      "task_prompt": "直接获取这个热门网站页面，保留这些三次独立观察均出现的稳定普通网页文字：Главная；Для вас；Каталог；В топе；Shorts；Детям；Спорт。同时返回至少 10 条不同的具名详情入口；每条包含有意义的名称和 HTTP(S) 链接，链接路径完整匹配 /video/[a-f0-9]+。答案范围不包含点击子页面、翻页或滚动后才加载的内容；不固定当前条目、顺序、价格、排名或数量。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -8529,7 +8529,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，保留这些三次独立观察均出现的稳定普通网页文字：单机；资讯；攻略；下载；专区；商城；娱乐；动漫；专栏；众评。同时返回至少 10 条不同的具名详情入口；每条包含有意义的名称和 HTTP(S) 链接，链接路径完整匹配 /z/[^/]+。不固定当前条目、顺序、价格、排名或数量。",
+      "task_prompt": "直接获取这个热门网站页面，保留这些三次独立观察均出现的稳定普通网页文字：单机；资讯；攻略；下载；专区；商城；娱乐；动漫；专栏；众评。同时返回至少 10 条不同的具名详情入口；每条包含有意义的名称和 HTTP(S) 链接，链接路径完整匹配 /z/[^/]+。答案范围不包含点击子页面、翻页或滚动后才加载的内容；不固定当前条目、顺序、价格、排名或数量。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -8634,7 +8634,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，保留这些三次独立观察均出现的稳定普通网页文字：请登录；我的京东；京东会员；企业采购；客户服务；京东公益；京东通信；京东E卡；价格保护。同时返回至少 10 条不同的具名详情入口；每条包含有意义的名称和 HTTP(S) 链接，链接路径完整匹配 /\\d+\\.html。不固定当前条目、顺序、价格、排名或数量。",
+      "task_prompt": "直接获取这个热门网站页面，保留这些三次独立观察均出现的稳定普通网页文字：请登录；我的京东；京东会员；企业采购；客户服务；京东公益；京东通信；京东E卡；价格保护。同时返回至少 10 条不同的具名详情入口；每条包含有意义的名称和 HTTP(S) 链接，链接路径完整匹配 /\\d+\\.html。答案范围不包含点击子页面、翻页或滚动后才加载的内容；不固定当前条目、顺序、价格、排名或数量。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -8737,7 +8737,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，保留这些三次独立观察均出现的稳定普通网页文字：发现；推荐；发布；视频；直播；穿搭；美食；彩妆；影视；职场；情感；家居；游戏；旅行；关于我们；营业执照；网上有害信息举报专区。同时返回至少 10 条不同的具名详情入口；每条包含有意义的名称和 HTTP(S) 链接，链接路径完整匹配 /explore/[a-fA-F0-9]+。不固定当前条目、顺序、价格、排名或数量。",
+      "task_prompt": "直接获取这个热门网站页面，保留这些三次独立观察均出现的稳定普通网页文字：发现；推荐；发布；视频；直播；穿搭；美食；彩妆；影视；职场；情感；家居；游戏；旅行；关于我们；营业执照；网上有害信息举报专区。同时返回至少 10 条不同的具名详情入口；每条包含有意义的名称和 HTTP(S) 链接，链接路径完整匹配 /explore/[a-fA-F0-9]+。答案范围不包含点击子页面、翻页或滚动后才加载的内容；不固定当前条目、顺序、价格、排名或数量。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -8896,7 +8896,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，保留这些三次独立观察均出现的稳定普通网页文字：全部；关注；推荐；热榜；直答；专栏；圈子；教育；数码；法律；心理学；社会学；健康医学；体育竞技；家居生活；家用电器；切换模式。同时返回至少 10 条不同的具名详情入口；每条包含有意义的名称和 HTTP(S) 链接，链接路径完整匹配 /question/\\d+。不固定当前条目、顺序、价格、排名或数量。",
+      "task_prompt": "直接获取这个热门网站页面，保留这些三次独立观察均出现的稳定普通网页文字：全部；关注；推荐；热榜；直答；专栏；圈子；教育；数码；法律；心理学；社会学；健康医学；体育竞技；家居生活；家用电器；切换模式。同时返回至少 10 条不同的具名详情入口；每条包含有意义的名称和 HTTP(S) 链接，链接路径完整匹配 /question/\\d+。答案范围不包含点击子页面、翻页或滚动后才加载的内容；不固定当前条目、顺序、价格、排名或数量。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -9055,7 +9055,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，保留这些三次独立观察均出现的稳定普通网页文字：读书；音乐；同城；小组；阅读；豆品；豆瓣电影；排行榜；选电影；选剧集；关于豆瓣；帮助中心；法律声明；联系我们；移动应用。同时返回至少 10 条不同的具名详情入口；每条包含有意义的名称和 HTTP(S) 链接，链接路径完整匹配 /subject/\\d+。不固定当前条目、顺序、价格、排名或数量。",
+      "task_prompt": "直接获取这个热门网站页面，保留这些三次独立观察均出现的稳定普通网页文字：读书；音乐；同城；小组；阅读；豆品；豆瓣电影；排行榜；选电影；选剧集；关于豆瓣；帮助中心；法律声明；联系我们；移动应用。同时返回至少 10 条不同的具名详情入口；每条包含有意义的名称和 HTTP(S) 链接，链接路径完整匹配 /subject/\\d+。答案范围不包含点击子页面、翻页或滚动后才加载的内容；不固定当前条目、顺序、价格、排名或数量。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -9200,7 +9200,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，保留这些三次独立观察均出现的稳定普通网页文字：Hotels；Restaurants；Magazine；Sign In；My Lists；MICHELIN Guide；Contact Us。同时返回至少 10 条不同的具名详情入口；每条包含有意义的名称和 HTTP(S) 链接，链接路径完整匹配 /jp/en/shanghai-municipality/shanghai/restaurant/[^/?#]+。不固定当前条目、顺序、价格、排名或数量。",
+      "task_prompt": "直接获取这个热门网站页面，保留这些三次独立观察均出现的稳定普通网页文字：Hotels；Restaurants；Magazine；Sign In；My Lists；MICHELIN Guide；Contact Us。同时返回至少 10 条不同的具名详情入口；每条包含有意义的名称和 HTTP(S) 链接，链接路径完整匹配 /jp/en/shanghai-municipality/shanghai/restaurant/[^/?#]+。答案范围不包含点击子页面、翻页或滚动后才加载的内容；不固定当前条目、顺序、价格、排名或数量。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -9289,7 +9289,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，保留这些三次独立观察均出现的稳定普通网页文字：登录；要闻；评论；关于头条；加入头条；友情链接；头条热榜；媒体合作；安全课堂；广告合作；用户协议；隐私政策；下载今日头条APP；营业执照；网上有害信息举报；网络谣言曝光台。同时返回至少 10 条不同的具名详情入口；每条包含有意义的名称和 HTTP(S) 链接，链接路径完整匹配 /article/\\d+。不固定当前条目、顺序、价格、排名或数量。",
+      "task_prompt": "直接获取这个热门网站页面，保留这些三次独立观察均出现的稳定普通网页文字：登录；要闻；评论；关于头条；加入头条；友情链接；头条热榜；媒体合作；安全课堂；广告合作；用户协议；隐私政策；下载今日头条APP；营业执照；网上有害信息举报；网络谣言曝光台。同时返回至少 10 条不同的具名详情入口；每条包含有意义的名称和 HTTP(S) 链接，链接路径完整匹配 /article/\\d+。答案范围不包含点击子页面、翻页或滚动后才加载的内容；不固定当前条目、顺序、价格、排名或数量。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -9436,7 +9436,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，保留这些三次独立观察均出现的稳定普通网页文字：Home；New；Popular；Movies；TV shows；Sports；Lists；Filters；All；Free。同时返回至少 5 条不同的具名详情入口；每条包含有意义的名称和 HTTP(S) 链接，链接路径完整匹配 /us/tv-show/[^/]+。不固定当前条目、顺序、价格、排名或数量。",
+      "task_prompt": "直接获取这个热门网站页面，保留这些三次独立观察均出现的稳定普通网页文字：Home；New；Popular；Movies；TV shows；Sports；Lists；Filters；All；Free。同时返回至少 5 条不同的具名详情入口；每条包含有意义的名称和 HTTP(S) 链接，链接路径完整匹配 /us/tv-show/[^/]+。答案范围不包含点击子页面、翻页或滚动后才加载的内容；不固定当前条目、顺序、价格、排名或数量。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -9546,7 +9546,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，并保留这些三次独立观察都出现的稳定普通网页文字：更多；最近；新对话；为你推荐；关于豆包；新工作任务；API 服务；有什么我能帮你的吗？。图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
+      "task_prompt": "直接获取这个热门网站页面，并保留这些三次独立观察都出现的稳定普通网页文字：更多；最近；新对话；为你推荐；关于豆包；新工作任务；API 服务；有什么我能帮你的吗？。答案范围不包含点击子页面、翻页或滚动后才加载的内容；图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -9631,7 +9631,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，并保留这些三次独立观察都出现的稳定普通网页文字：定价；审批；邮箱；云文档；知识库；下载飞书；产品功能；企业服务；关于飞书；加入我们；协同办公；博客中心；即时消息；友情链接；合作伙伴；多维表格；安全合规；帮助中心；应用目录；开放平台；技术支持；探索飞书；更新日志；服务协议；查看案例/了解更多客户案例；管理后台；组织管理；联系我们；联系销售；营业执照；视频会议；解决方案；隐私政策；飞书人事；飞书招聘；飞书绩效；飞书项目；举报与反馈；飞书 AI；智能会议纪要；字节跳动旗下 AI 工作平台。图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
+      "task_prompt": "直接获取这个热门网站页面，并保留这些三次独立观察都出现的稳定普通网页文字：定价；审批；邮箱；云文档；知识库；下载飞书；产品功能；企业服务；关于飞书；加入我们；协同办公；博客中心；即时消息；友情链接；合作伙伴；多维表格；安全合规；帮助中心；应用目录；开放平台；技术支持；探索飞书；更新日志；服务协议；查看案例/了解更多客户案例；管理后台；组织管理；联系我们；联系销售；营业执照；视频会议；解决方案；隐私政策；飞书人事；飞书招聘；飞书绩效；飞书项目；举报与反馈；飞书 AI；智能会议纪要；字节跳动旗下 AI 工作平台。答案范围不包含点击子页面、翻页或滚动后才加载的内容；图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -9915,7 +9915,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，保留这些三次独立观察均出现的稳定普通网页文字：新闻；体育；娱乐；财经；科技；汽车；游戏；教育；健康；公益；房产；手机；旅游；时尚；严选；文化；应用。同时返回至少 10 条不同的具名详情入口；每条包含有意义的名称和 HTTP(S) 链接，链接路径完整匹配 /dy/article/[A-Z0-9]+\\.html。不固定当前条目、顺序、价格、排名或数量。",
+      "task_prompt": "直接获取这个热门网站页面，保留这些三次独立观察均出现的稳定普通网页文字：新闻；体育；娱乐；财经；科技；汽车；游戏；教育；健康；公益；房产；手机；旅游；时尚；严选；文化；应用。同时返回至少 10 条不同的具名详情入口；每条包含有意义的名称和 HTTP(S) 链接，链接路径完整匹配 /dy/article/[A-Z0-9]+\\.html。答案范围不包含点击子页面、翻页或滚动后才加载的内容；不固定当前条目、顺序、价格、排名或数量。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -10076,7 +10076,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，保留这些三次独立观察均出现的稳定普通网页文字：淘宝网；女装；男装；数码；美妆；家电；家具；母婴；食品；我的淘宝；购物车；收藏夹；免费开店；免费注册；帮助中心；手机淘宝；淘宝直播；司法拍卖；天猫超市。同时返回至少 10 条不同的具名详情入口；每条包含有意义的名称和 HTTP(S) 链接，链接路径完整匹配 /item\\.htm。不固定当前条目、顺序、价格、排名或数量。",
+      "task_prompt": "直接获取这个热门网站页面，保留这些三次独立观察均出现的稳定普通网页文字：淘宝网；女装；男装；数码；美妆；家电；家具；母婴；食品；我的淘宝；购物车；收藏夹；免费开店；免费注册；帮助中心；手机淘宝；淘宝直播；司法拍卖；天猫超市。同时返回至少 10 条不同的具名详情入口；每条包含有意义的名称和 HTTP(S) 链接，链接路径完整匹配 /item\\.htm。答案范围不包含点击子页面、翻页或滚动后才加载的内容；不固定当前条目、顺序、价格、排名或数量。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -10253,7 +10253,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，并保留这些独立观察中确认的稳定普通网页文字：域名；备案；存储；容器；登录；短信；计算；专有云；中间件；云市场；大模型；控制台；数据库；数据集；镜像站；防火墙；上云迁移；专业服务；主机安全；产品动态；产品定价；企业出海；企业应用；企业成长；信任中心；信息公告；免费试用；免费额度；全部产品；全部权益；公司注册；加入我们；咨询伙伴；售前咨询；售后服务；安全举报；安全合规；客户案例；帮助文档；开发工具；最佳实践；法律声明；社会招聘；精选产品；阿里云。图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
+      "task_prompt": "直接获取这个热门网站页面，并保留这些独立观察中确认的稳定普通网页文字：域名；备案；存储；容器；登录；短信；计算；专有云；中间件；云市场；大模型；控制台；数据库；数据集；镜像站；防火墙；上云迁移；专业服务；主机安全；产品动态；产品定价；企业出海；企业应用；企业成长；信任中心；信息公告；免费试用；免费额度；全部产品；全部权益；公司注册；加入我们；咨询伙伴；售前咨询；售后服务；安全举报；安全合规；客户案例；帮助文档；开发工具；最佳实践；法律声明；社会招聘；精选产品；阿里云。答案范围不包含点击子页面、翻页或滚动后才加载的内容；图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -10560,7 +10560,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，保留这些三次独立观察均出现的稳定普通网页文字：体育；文娱；生活；社会；科技；微博热搜；热门推荐；热门榜单；举报中心；关于微博；帮助中心；开放平台；微博招聘；微博营销；客户端下载；自助服务中心；微博隐私安全中心；About Weibo。同时返回至少 10 条不同的具名详情入口；每条包含有意义的名称和 HTTP(S) 链接，链接路径完整匹配 /weibo。不固定当前条目、顺序、价格、排名或数量。",
+      "task_prompt": "直接获取这个热门网站页面，保留这些三次独立观察均出现的稳定普通网页文字：体育；文娱；生活；社会；科技；微博热搜；热门推荐；热门榜单；举报中心；关于微博；帮助中心；开放平台；微博招聘；微博营销；客户端下载；自助服务中心；微博隐私安全中心；About Weibo。同时返回至少 10 条不同的具名详情入口；每条包含有意义的名称和 HTTP(S) 链接，链接路径完整匹配 /weibo。答案范围不包含点击子页面、翻页或滚动后才加载的内容；不固定当前条目、顺序、价格、排名或数量。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -10730,7 +10730,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，并保留这些三次独立观察都出现的稳定普通网页文字：注册；游戏；登录；社区；产品动态；产品支持；企业安全；企业服务；免费试用；公司公告；公司简介；关注我们；安全资讯；官方客服；意见反馈；手机软件；数字安全；新闻动态；服务支持；校园招聘；热门软件；用户服务；社会招聘；立即体验；纳米AI；联系我们；投资者关系；软件下载中心；安全浏览器；360安全卫士；360极速浏览器。图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
+      "task_prompt": "直接获取这个热门网站页面，并保留这些三次独立观察都出现的稳定普通网页文字：注册；游戏；登录；社区；产品动态；产品支持；企业安全；企业服务；免费试用；公司公告；公司简介；关注我们；安全资讯；官方客服；意见反馈；手机软件；数字安全；新闻动态；服务支持；校园招聘；热门软件；用户服务；社会招聘；立即体验；纳米AI；联系我们；投资者关系；软件下载中心；安全浏览器；360安全卫士；360极速浏览器。答案范围不包含点击子页面、翻页或滚动后才加载的内容；图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -10953,7 +10953,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站首次加载后可见的稳定正文，保留产品、功能、栏目和支持入口文字。不固定轮播内容、当前条目、顺序、价格、排名或数量；图片文字、隐藏名称、网页标题和脚本文字不能代替正文。",
+      "task_prompt": "直接获取这个热门网站首次加载后可见的稳定正文，保留产品、功能、栏目和支持入口文字。不固定轮播内容、当前条目、顺序、价格、排名或数量；答案范围不包含点击子页面、翻页或滚动后才加载的内容。图片文字、隐藏名称、网页标题和脚本文字不能代替正文。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -11025,7 +11025,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，并保留这些三次独立观察都出现的稳定普通网页文字：体育；娱乐；小说；微博；抖音；推荐；搜狐；文娱；新浪；时尚；汽车；淘宝；游戏；生活；电影；电视；登录；直播；社会；科技；网易；腾讯；视频；财经；全站地图；关于本站；意见反馈；搜索热点；服务协议；百度地图；hao123。图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
+      "task_prompt": "直接获取这个热门网站页面，并保留这些三次独立观察都出现的稳定普通网页文字：体育；娱乐；小说；微博；抖音；推荐；搜狐；文娱；新浪；时尚；汽车；淘宝；游戏；生活；电影；电视；登录；直播；社会；科技；网易；腾讯；视频；财经；全站地图；关于本站；意见反馈；搜索热点；服务协议；百度地图；hao123。答案范围不包含点击子页面、翻页或滚动后才加载的内容；图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -11248,7 +11248,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，并保留这些独立观察中稳定出现的普通网页文字：女装；男装；箱包；配饰；找工厂；以图搜款；先采后付；办公文化；家用电器；家纺家饰；居家日用；收纳清洁；数码电脑；汽车用品；立即登录；精选货源；运动户外。不固定当前条目、顺序、价格、排名或数量。",
+      "task_prompt": "直接获取这个热门网站页面，并保留这些独立观察中稳定出现的普通网页文字：女装；男装；箱包；配饰；找工厂；以图搜款；先采后付；办公文化；家用电器；家纺家饰；居家日用；收纳清洁；数码电脑；汽车用品；立即登录；精选货源；运动户外。答案范围不包含点击子页面、翻页或滚动后才加载的内容；不固定当前条目、顺序、价格、排名或数量。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -11387,7 +11387,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站首次加载后可见的稳定正文，保留产品、功能、栏目和支持入口文字。不固定轮播内容、当前条目、顺序、价格、排名或数量；图片文字、隐藏名称、网页标题和脚本文字不能代替正文。",
+      "task_prompt": "直接获取这个热门网站首次加载后可见的稳定正文，保留产品、功能、栏目和支持入口文字。不固定轮播内容、当前条目、顺序、价格、排名或数量；答案范围不包含点击子页面、翻页或滚动后才加载的内容。图片文字、隐藏名称、网页标题和脚本文字不能代替正文。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -11501,7 +11501,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，并保留这些三次独立观察都出现的稳定普通网页文字：会员；微信；文字；演示；企业版；小程序；桌面端；模板库；流程图；移动端；企业专区；免费使用；多维表格；客户案例；帮助中心；开放平台；快捷方式；思维导图；意见反馈；智能表单；智能表格；标签整理；立即下载；立即体验；营业执照；解决方案；下载客户端；支持与合作；在线智能文档；WPS Docs；金山文档隐私政策；金山文档 | WPS云文档；一键分享，多人协作。图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
+      "task_prompt": "直接获取这个热门网站页面，并保留这些三次独立观察都出现的稳定普通网页文字：会员；微信；文字；演示；企业版；小程序；桌面端；模板库；流程图；移动端；企业专区；免费使用；多维表格；客户案例；帮助中心；开放平台；快捷方式；思维导图；意见反馈；智能表单；智能表格；标签整理；立即下载；立即体验；营业执照；解决方案；下载客户端；支持与合作；在线智能文档；WPS Docs；金山文档隐私政策；金山文档 | WPS云文档；一键分享，多人协作。答案范围不包含点击子页面、翻页或滚动后才加载的内容；图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -11736,7 +11736,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，并保留这些独立观察中确认的稳定普通网页文字：Docs；Chats；Swarm；Design；Sheets；Slides；My Kimi；Plugins；New chat；Websites；Kimi Code；Kimi Work；Scheduled；Deep Research；Ask anything, or task an agent…；AI-generated, for reference only；About Us；Get Help。图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
+      "task_prompt": "直接获取这个热门网站页面，并保留这些独立观察中确认的稳定普通网页文字：Docs；Chats；Swarm；Design；Sheets；Slides；My Kimi；Plugins；New chat；Websites；Kimi Code；Kimi Work；Scheduled；Deep Research；Ask anything, or task an agent…；AI-generated, for reference only；About Us；Get Help。答案范围不包含点击子页面、翻页或滚动后才加载的内容；图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -11881,7 +11881,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，保留这些三次独立观察均出现的稳定普通网页文字：天猫；商品；女装；女鞋；内衣；男装；男鞋；手机；数码；家电；家具；家居；母婴；美妆；汽车；食品；运动；箱包；珠宝；电脑；购物车；收藏夹；聚划算；商家中心；商家支持。同时返回至少 10 条不同的具名详情入口；每条包含有意义的名称和 HTTP(S) 链接，链接路径完整匹配 /item\\.htm。不固定当前条目、顺序、价格、排名或数量。",
+      "task_prompt": "直接获取这个热门网站页面，保留这些三次独立观察均出现的稳定普通网页文字：天猫；商品；女装；女鞋；内衣；男装；男鞋；手机；数码；家电；家具；家居；母婴；美妆；汽车；食品；运动；箱包；珠宝；电脑；购物车；收藏夹；聚划算；商家中心；商家支持。同时返回至少 10 条不同的具名详情入口；每条包含有意义的名称和 HTTP(S) 链接，链接路径完整匹配 /item\\.htm。答案范围不包含点击子页面、翻页或滚动后才加载的内容；不固定当前条目、顺序、价格、排名或数量。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -12100,7 +12100,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，并保留这些独立观察中稳定出现的普通网页文字：首页；产品；供应商；中文站；更多；视频。同时返回至少 10 条不同的具名详情入口；每条包含有意义的名称和 HTTP(S) 链接，链接路径完整匹配 /product/[0-9]+\\.html。不固定当前条目、顺序、价格、排名或数量。",
+      "task_prompt": "直接获取这个热门网站页面，并保留这些独立观察中稳定出现的普通网页文字：首页；产品；供应商；中文站；更多；视频。同时返回至少 10 条不同的具名详情入口；每条包含有意义的名称和 HTTP(S) 链接，链接路径完整匹配 /product/[0-9]+\\.html。答案范围不包含点击子页面、翻页或滚动后才加载的内容；不固定当前条目、顺序、价格、排名或数量。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -12184,7 +12184,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "依据独立参考保留普通页面文字要求；已移除一项辅助标签，其他要求沿用既有证据，未重新认证全部历史页面状态。",
-      "task_prompt": "直接获取这个热门网站页面，并保留这些独立参考中保留的普通网页文字：云空间；千问创作；定时任务；暂无对话；用户协议；隐私政策；向千问提问；你好，我是千问。图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
+      "task_prompt": "直接获取这个热门网站页面，并保留这些独立参考中保留的普通网页文字：云空间；千问创作；定时任务；暂无对话；用户协议；隐私政策；向千问提问；你好，我是千问。答案范围不包含点击子页面、翻页或滚动后才加载的内容；图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -12269,7 +12269,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站首次加载后可见的稳定正文，保留产品、功能、栏目和支持入口文字。不固定轮播内容、当前条目、顺序、价格、排名或数量；图片文字、隐藏名称、网页标题和脚本文字不能代替正文。同时返回至少 10 条不同的具名详情入口；每条包含有意义的名称和 HTTP(S) 链接，链接路径完整匹配 /[0-9]+。",
+      "task_prompt": "直接获取这个热门网站首次加载后可见的稳定正文，保留产品、功能、栏目和支持入口文字。不固定轮播内容、当前条目、顺序、价格、排名或数量；答案范围不包含点击子页面、翻页或滚动后才加载的内容。图片文字、隐藏名称、网页标题和脚本文字不能代替正文。同时返回至少 10 条不同的具名详情入口；每条包含有意义的名称和 HTTP(S) 链接，链接路径完整匹配 /[0-9]+。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -12479,7 +12479,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，并保留这些三次独立观察都出现的稳定普通网页文字：Docs；More；News；Codex；Academy；Careers；Company；Podcast；Support；About Us；Apps SDK；Download；Overview；Products；Security；Resources；Solutions；API Log In；Developers；Foundation；Engineering；Help Center；Open Models；Our Charter；Try ChatGPT；API Platform；Terms of Use；Contact Sales；Release Notes；Other Policies；Privacy Policy；Research Index；Developer Forum；Safety Approach；ChatGPT Business；Customer Stories；Terms & Policies；OpenAI。图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
+      "task_prompt": "直接获取这个热门网站页面，并保留这些三次独立观察都出现的稳定普通网页文字：Docs；More；News；Codex；Academy；Careers；Company；Podcast；Support；About Us；Apps SDK；Download；Overview；Products；Security；Resources；Solutions；API Log In；Developers；Foundation；Engineering；Help Center；Open Models；Our Charter；Try ChatGPT；API Platform；Terms of Use；Contact Sales；Release Notes；Other Policies；Privacy Policy；Research Index；Developer Forum；Safety Approach；ChatGPT Business；Customer Stories；Terms & Policies；OpenAI。答案范围不包含点击子页面、翻页或滚动后才加载的内容；图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -12744,7 +12744,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，并保留这些三次独立观察都出现的稳定普通网页文字：余额宝；开放平台；快速登录；网商银行；联系我们；芝麻信用；蚂蚁微贷；蚂蚁集团；诚征英才；我是开发者；我是服务商；服务商平台；我是个人用户；我是商家用户；我是机构用户；蚂蚁商家中心；我已有支付宝账户。图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
+      "task_prompt": "直接获取这个热门网站页面，并保留这些三次独立观察都出现的稳定普通网页文字：余额宝；开放平台；快速登录；网商银行；联系我们；芝麻信用；蚂蚁微贷；蚂蚁集团；诚征英才；我是开发者；我是服务商；服务商平台；我是个人用户；我是商家用户；我是机构用户；蚂蚁商家中心；我已有支付宝账户。答案范围不包含点击子页面、翻页或滚动后才加载的内容；图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -12883,7 +12883,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，保留这些三次独立观察均出现的稳定普通网页文字：新闻；体育；娱乐；财经；科技；汽车；游戏；教育；健康；公益；军事；文化；旅游；时尚；房产；手机；家居；博客。同时返回至少 10 条不同的具名详情入口；每条包含有意义的名称和 HTTP(S) 链接，链接路径完整匹配 /a/[0-9]+_[0-9]+。不固定当前条目、顺序、价格、排名或数量。",
+      "task_prompt": "直接获取这个热门网站页面，保留这些三次独立观察均出现的稳定普通网页文字：新闻；体育；娱乐；财经；科技；汽车；游戏；教育；健康；公益；军事；文化；旅游；时尚；房产；手机；家居；博客。同时返回至少 10 条不同的具名详情入口；每条包含有意义的名称和 HTTP(S) 链接，链接路径完整匹配 /a/[0-9]+_[0-9]+。答案范围不包含点击子页面、翻页或滚动后才加载的内容；不固定当前条目、顺序、价格、排名或数量。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -13051,7 +13051,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，保留这些三次独立观察均出现的稳定普通网页文字：首页；直播；分类；赛事；视频；游戏；体育；户外；星秀；登录；历史；任务；下载；更多。同时返回至少 10 条不同的具名详情入口；每条包含有意义的名称和 HTTP(S) 链接，链接路径完整匹配 /video/u/[0-9]+。不固定当前条目、顺序、价格、排名或数量。",
+      "task_prompt": "直接获取这个热门网站页面，保留这些三次独立观察均出现的稳定普通网页文字：首页；直播；分类；赛事；视频；游戏；体育；户外；星秀；登录；历史；任务；下载；更多。同时返回至少 10 条不同的具名详情入口；每条包含有意义的名称和 HTTP(S) 链接，链接路径完整匹配 /video/u/[0-9]+。答案范围不包含点击子页面、翻页或滚动后才加载的内容；不固定当前条目、顺序、价格、排名或数量。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -13191,7 +13191,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，保留这些三次独立观察均出现的稳定普通网页文字：主题；专利；会议；图书；年鉴；报纸；文库；标准；工具书；音频；会员；充值；帮助；手机版；检 索。同时返回至少 10 条不同的具名详情入口；每条包含有意义的名称和 HTTP(S) 链接，链接路径完整匹配 /(?:kcms2/article/abstract|rankinglist/article)。不固定当前条目、顺序、价格、排名或数量。",
+      "task_prompt": "直接获取这个热门网站页面，保留这些三次独立观察均出现的稳定普通网页文字：主题；专利；会议；图书；年鉴；报纸；文库；标准；工具书；音频；会员；充值；帮助；手机版；检 索。同时返回至少 10 条不同的具名详情入口；每条包含有意义的名称和 HTTP(S) 链接，链接路径完整匹配 /(?:kcms2/article/abstract|rankinglist/article)。答案范围不包含点击子页面、翻页或滚动后才加载的内容；不固定当前条目、顺序、价格、排名或数量。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -13342,7 +13342,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，并保留这些三次独立观察都出现的稳定普通网页文字：FAQs；NIH Home；Follow Us；Contact Us；En Español；Press Room；Disclaimers；Jobs at NIH；Labs at NIH；No Fear Act；www.nih.gov；Virtual Tour；Accessibility；Visit USA.gov；Privacy Policy；Clinical Trials；NIH at a Glance；Training at NIH；The NIH Director；NIH HEAL Initiative；NIH on Social Media；Visitor Information；Funding for Research；NIH Website Archives；Impact of NIH Research；Nondiscrimination Notice；Freedom of Information Act；Office of Inspector General；Medical Research Initiatives；National Institutes of Health。图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
+      "task_prompt": "直接获取这个热门网站页面，并保留这些三次独立观察都出现的稳定普通网页文字：FAQs；NIH Home；Follow Us；Contact Us；En Español；Press Room；Disclaimers；Jobs at NIH；Labs at NIH；No Fear Act；www.nih.gov；Virtual Tour；Accessibility；Visit USA.gov；Privacy Policy；Clinical Trials；NIH at a Glance；Training at NIH；The NIH Director；NIH HEAL Initiative；NIH on Social Media；Visitor Information；Funding for Research；NIH Website Archives；Impact of NIH Research；Nondiscrimination Notice；Freedom of Information Act；Office of Inspector General；Medical Research Initiatives；National Institutes of Health。答案范围不包含点击子页面、翻页或滚动后才加载的内容；图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -13559,7 +13559,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，并保留这些独立观察中稳定出现的普通网页文字：关于花瓣；设计师在花瓣；发现&收集灵感；登录/注册；探索你感兴趣的灵感；查看更多；收藏整理。同时返回至少 10 条不同的具名详情入口；每条包含有意义的名称和 HTTP(S) 链接，链接路径完整匹配 /boards/[0-9]+。不固定当前条目、顺序、价格、排名或数量。",
+      "task_prompt": "直接获取这个热门网站页面，并保留这些独立观察中稳定出现的普通网页文字：关于花瓣；设计师在花瓣；发现&收集灵感；登录/注册；探索你感兴趣的灵感；查看更多；收藏整理。同时返回至少 10 条不同的具名详情入口；每条包含有意义的名称和 HTTP(S) 链接，链接路径完整匹配 /boards/[0-9]+。答案范围不包含点击子页面、翻页或滚动后才加载的内容；不固定当前条目、顺序、价格、排名或数量。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -13649,7 +13649,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，并保留这些三次独立观察都出现的稳定普通网页文字：蒙版；专业版；关键帧；多机位；电脑端；移动端；AI补帧；专业剪辑；创作课堂；剪映AI；即梦AI；图片设计；多时间线；政企宣传；智能抠像；智能调色；美颜美体；营业执照；营销推广；超清画质；隐私协议；音频剪辑；影视综二创；自媒体口播；用户协议 |。图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
+      "task_prompt": "直接获取这个热门网站页面，并保留这些三次独立观察都出现的稳定普通网页文字：蒙版；专业版；关键帧；多机位；电脑端；移动端；AI补帧；专业剪辑；创作课堂；剪映AI；即梦AI；图片设计；多时间线；政企宣传；智能抠像；智能调色；美颜美体；营业执照；营销推广；超清画质；隐私协议；音频剪辑；影视综二创；自媒体口播；用户协议 |。答案范围不包含点击子页面、翻页或滚动后才加载的内容；图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -13836,7 +13836,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，保留这些三次独立观察均出现的稳定普通网页文字：财经；股票；基金；行情；数据；资讯；债券；保险；期货；外汇；银行；博客；股吧；财富号；举报；反馈。同时返回至少 10 条不同的具名详情入口；每条包含有意义的名称和 HTTP(S) 链接，链接路径完整匹配 /a/[0-9]+\\.html。不固定当前条目、顺序、价格、排名或数量。",
+      "task_prompt": "直接获取这个热门网站页面，保留这些三次独立观察均出现的稳定普通网页文字：财经；股票；基金；行情；数据；资讯；债券；保险；期货；外汇；银行；博客；股吧；财富号；举报；反馈。同时返回至少 10 条不同的具名详情入口；每条包含有意义的名称和 HTTP(S) 链接，链接路径完整匹配 /a/[0-9]+\\.html。答案范围不包含点击子页面、翻页或滚动后才加载的内容；不固定当前条目、顺序、价格、排名或数量。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -13989,7 +13989,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，保留这些三次独立观察均出现的稳定普通网页文字：新闻；体育；娱乐；财经；科技；汽车；游戏；教育；军事；国内；国际；图片；博客；房产；时尚；女性。同时返回至少 10 条不同的具名详情入口；每条包含有意义的名称和 HTTP(S) 链接，链接路径完整匹配 /.*/[0-9]{4}-[0-9]{2}-[0-9]{2}/[^/]+\\.shtml。不固定当前条目、顺序、价格、排名或数量。",
+      "task_prompt": "直接获取这个热门网站页面，保留这些三次独立观察均出现的稳定普通网页文字：新闻；体育；娱乐；财经；科技；汽车；游戏；教育；军事；国内；国际；图片；博客；房产；时尚；女性。同时返回至少 10 条不同的具名详情入口；每条包含有意义的名称和 HTTP(S) 链接，链接路径完整匹配 /.*/[0-9]{4}-[0-9]{2}-[0-9]{2}/[^/]+\\.shtml。答案范围不包含点击子页面、翻页或滚动后才加载的内容；不固定当前条目、顺序、价格、排名或数量。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -14143,7 +14143,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，保留这些三次独立观察均出现的稳定普通网页文字：首页；PC游戏；PC修改器；模拟器大全；Switch；PS4&5专区；IGN必玩推荐榜；免费；语言。同时返回至少 10 条不同的具名详情入口；每条包含有意义的名称和 HTTP(S) 链接，链接路径完整匹配 /[0-9]+\\.html。不固定当前条目、顺序、价格、排名或数量。",
+      "task_prompt": "直接获取这个热门网站页面，保留这些三次独立观察均出现的稳定普通网页文字：首页；PC游戏；PC修改器；模拟器大全；Switch；PS4&5专区；IGN必玩推荐榜；免费；语言。同时返回至少 10 条不同的具名详情入口；每条包含有意义的名称和 HTTP(S) 链接，链接路径完整匹配 /[0-9]+\\.html。答案范围不包含点击子页面、翻页或滚动后才加载的内容；不固定当前条目、顺序、价格、排名或数量。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -14248,7 +14248,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，并保留这些三次独立观察都出现的稳定普通网页文字：中文；价格；咨询；演示；首页；登录；白皮书；免费试用；关于领星；加入我们；快速响应；新闻中心；服务中心；核心功能；案例中心；物流追踪；获取报价；解决方案；跨境资讯；全周期服务；全方位保障；全生态产品；资源与支持；亚马逊ERP；多平台ERP；海外仓WMS；财务精准管理；进销存一体管理；领星ERP。图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
+      "task_prompt": "直接获取这个热门网站页面，并保留这些三次独立观察都出现的稳定普通网页文字：中文；价格；咨询；演示；首页；登录；白皮书；免费试用；关于领星；加入我们；快速响应；新闻中心；服务中心；核心功能；案例中心；物流追踪；获取报价；解决方案；跨境资讯；全周期服务；全方位保障；全生态产品；资源与支持；亚马逊ERP；多平台ERP；海外仓WMS；财务精准管理；进销存一体管理；领星ERP。答案范围不包含点击子页面、翻页或滚动后才加载的内容；图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -14459,7 +14459,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，保留这些三次独立观察均出现的稳定普通网页文字：Products；Manufacturers；Services；Worldwide；Sign in；Create account；Help Center；Top Ranking；Dropshipping；All categories；About Alibaba.com。同时返回至少 10 条不同的具名详情入口；每条包含有意义的名称和 HTTP(S) 链接，链接路径完整匹配 /product-detail/.+。不固定当前条目、顺序、价格、排名或数量。",
+      "task_prompt": "直接获取这个热门网站页面，保留这些三次独立观察均出现的稳定普通网页文字：Products；Manufacturers；Services；Worldwide；Sign in；Create account；Help Center；Top Ranking；Dropshipping；All categories；About Alibaba.com。同时返回至少 10 条不同的具名详情入口；每条包含有意义的名称和 HTTP(S) 链接，链接路径完整匹配 /product-detail/.+。答案范围不包含点击子页面、翻页或滚动后才加载的内容；不固定当前条目、顺序、价格、排名或数量。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -14578,7 +14578,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，并保留这些三次独立观察都出现的稳定普通网页文字：下载；企业；登录；全部产品；关于有道；加入有道；同道计划；廉正举报；有道介绍；有道宝库；有道小P；有道智选；有道领世；有道龙虾；服务条款；查看详情；校园招聘；用户资质；相关资质；社会招聘；社会责任；联系我们；营业执照；隐私政策；投资者关系；有道小图灵；有道精品课；有道词典笔；网易云课堂；不良信息举报；网易有道翻译；有道AI硬件；有道人工翻译；有道智慧教育。图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
+      "task_prompt": "直接获取这个热门网站页面，并保留这些三次独立观察都出现的稳定普通网页文字：下载；企业；登录；全部产品；关于有道；加入有道；同道计划；廉正举报；有道介绍；有道宝库；有道小P；有道智选；有道领世；有道龙虾；服务条款；查看详情；校园招聘；用户资质；相关资质；社会招聘；社会责任；联系我们；营业执照；隐私政策；投资者关系；有道小图灵；有道精品课；有道词典笔；网易云课堂；不良信息举报；网易有道翻译；有道AI硬件；有道人工翻译；有道智慧教育。答案范围不包含点击子页面、翻页或滚动后才加载的内容；图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -14819,7 +14819,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，保留这些三次独立观察均出现的稳定普通网页文字：主站；新闻；攻略；下载；单机；手游；网游；商城；娱乐；原创；专栏；安卓。同时返回至少 10 条不同的具名详情入口；每条包含有意义的名称和 HTTP(S) 链接，链接路径完整匹配 /games/[A-Za-z0-9_-]+。不固定当前条目、顺序、价格、排名或数量。",
+      "task_prompt": "直接获取这个热门网站页面，保留这些三次独立观察均出现的稳定普通网页文字：主站；新闻；攻略；下载；单机；手游；网游；商城；娱乐；原创；专栏；安卓。同时返回至少 10 条不同的具名详情入口；每条包含有意义的名称和 HTTP(S) 链接，链接路径完整匹配 /games/[A-Za-z0-9_-]+。答案范围不包含点击子页面、翻页或滚动后才加载的内容；不固定当前条目、顺序、价格、排名或数量。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -14945,7 +14945,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，保留这些三次独立观察均出现的稳定普通网页文字：AI；办公；体育；动漫；娱乐；学习；小说；影视；招聘；汽车；游戏；反馈；天气。同时返回至少 10 条不同的具名详情入口；每条包含有意义的名称和 HTTP(S) 链接，链接路径完整匹配 /p/[0-9]{8}/[0-9]+\\.html。不固定当前条目、顺序、价格、排名或数量。",
+      "task_prompt": "直接获取这个热门网站页面，保留这些三次独立观察均出现的稳定普通网页文字：AI；办公；体育；动漫；娱乐；学习；小说；影视；招聘；汽车；游戏；反馈；天气。同时返回至少 10 条不同的具名详情入口；每条包含有意义的名称和 HTTP(S) 链接，链接路径完整匹配 /p/[0-9]{8}/[0-9]+\\.html。答案范围不包含点击子页面、翻页或滚动后才加载的内容；不固定当前条目、顺序、价格、排名或数量。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -15078,7 +15078,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，保留这些三次独立观察均出现的稳定普通网页文字：央视网；新闻；体育；财经；科教；文化；文娱；军事；健康；公益；国内；国际；地方；少儿；汽车；科技；纪录；综艺；直播；视频；栏目；片库；节目单；主持人；关于我们；帮助中心；网站声明；人才招聘；无障碍；繁体。同时返回至少 10 条不同的具名详情入口；每条包含有意义的名称和 HTTP(S) 链接，链接路径完整匹配 /[0-9]{4}/[0-9]{2}/[0-9]{2}/(?:ARTI|VIDE)[A-Za-z0-9]+\\.shtml。不固定当前条目、顺序、价格、排名或数量。",
+      "task_prompt": "直接获取这个热门网站页面，保留这些三次独立观察均出现的稳定普通网页文字：央视网；新闻；体育；财经；科教；文化；文娱；军事；健康；公益；国内；国际；地方；少儿；汽车；科技；纪录；综艺；直播；视频；栏目；片库；节目单；主持人；关于我们；帮助中心；网站声明；人才招聘；无障碍；繁体。同时返回至少 10 条不同的具名详情入口；每条包含有意义的名称和 HTTP(S) 链接，链接路径完整匹配 /[0-9]{4}/[0-9]{2}/[0-9]{2}/(?:ARTI|VIDE)[A-Za-z0-9]+\\.shtml。答案范围不包含点击子页面、翻页或滚动后才加载的内容；不固定当前条目、顺序、价格、排名或数量。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -15330,7 +15330,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，并保留这些三次独立观察都出现的稳定普通网页文字：图片；地图；文库；更多；登录；百科；良医；视频；设置；资讯；问答；AI写作；AI绘图；AI论文；使用协议；免责声明；意见反馈；推广合作；违法举报；隐私条款；隐私管理；工商营业执照；未成年人举报；360搜索。图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
+      "task_prompt": "直接获取这个热门网站页面，并保留这些三次独立观察都出现的稳定普通网页文字：图片；地图；文库；更多；登录；百科；良医；视频；设置；资讯；问答；AI写作；AI绘图；AI论文；使用协议；免责声明；意见反馈；推广合作；违法举报；隐私条款；隐私管理；工商营业执照；未成年人举报；360搜索。答案范围不包含点击子页面、翻页或滚动后才加载的内容；图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -15511,7 +15511,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，并保留这些三次独立观察都出现的稳定普通网页文字：体验；可信；可控；安全；定价；应用；推理；更多；注册；登录；训练；运营；API；控制台；智能体；举报平台；云服务器；人才招聘；优惠活动；全部产品；关于我们；友情链接；在线咨询；备案服务；对象存储；文档中心；服务咨询；服务条款；模型广场；火山方舟；联系我们；营业执照；解决方案；隐私政策；云信任中心；建议与反馈；服务与支持；豆包大模型；机器学习平台；火山引擎。图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
+      "task_prompt": "直接获取这个热门网站页面，并保留这些三次独立观察都出现的稳定普通网页文字：体验；可信；可控；安全；定价；应用；推理；更多；注册；登录；训练；运营；API；控制台；智能体；举报平台；云服务器；人才招聘；优惠活动；全部产品；关于我们；友情链接；在线咨询；备案服务；对象存储；文档中心；服务咨询；服务条款；模型广场；火山方舟；联系我们；营业执照；解决方案；隐私政策；云信任中心；建议与反馈；服务与支持；豆包大模型；机器学习平台；火山引擎。答案范围不包含点击子页面、翻页或滚动后才加载的内容；图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -15788,7 +15788,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，保留这些三次独立观察均出现的稳定普通网页文字：首页；注册；登录；游戏综合；主机电竞；手机游戏；暴雪游戏；玩家生活；论坛热帖；论坛活动；精品栏目；移动端；友情链接；商务合作；销售合作；NGA社区。同时返回至少 10 条不同的具名详情入口；每条包含有意义的名称和 HTTP(S) 链接，链接路径完整匹配 /read\\.php。不固定当前条目、顺序、价格、排名或数量。",
+      "task_prompt": "直接获取这个热门网站页面，保留这些三次独立观察均出现的稳定普通网页文字：首页；注册；登录；游戏综合；主机电竞；手机游戏；暴雪游戏；玩家生活；论坛热帖；论坛活动；精品栏目；移动端；友情链接；商务合作；销售合作；NGA社区。同时返回至少 10 条不同的具名详情入口；每条包含有意义的名称和 HTTP(S) 链接，链接路径完整匹配 /read\\.php。答案范围不包含点击子页面、翻页或滚动后才加载的内容；不固定当前条目、顺序、价格、排名或数量。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -15944,7 +15944,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，并保留这些三次独立观察都出现的稳定普通网页文字：Mail；Maps；Video；Images；Weather；Services；Translate；Search with Yandex AI。图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
+      "task_prompt": "直接获取这个热门网站页面，并保留这些三次独立观察都出现的稳定普通网页文字：Mail；Maps；Video；Images；Weather；Services；Translate；Search with Yandex AI。答案范围不包含点击子页面、翻页或滚动后才加载的内容；图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -16029,7 +16029,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，并保留这些三次独立观察都出现的稳定普通网页文字：Embase；Health；Knovel；Reaxys；Scopus；Careers；Industry；Open access；Useful links；Accessibility；Cookie Policy；ScienceDirect；About Elsevier；Privacy policy；Publish a book；Publish with us；Customer support；Elsevier Connect；Submit your paper；View all products；More from Elsevier；Terms & Conditions；Researcher & Author；Academic & Government；Discover our products；Resources for Editors；Shop Books & Journals；Resources for Reviewers；Advancing human progress；Publish your article in a journal。图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
+      "task_prompt": "直接获取这个热门网站页面，并保留这些三次独立观察都出现的稳定普通网页文字：Embase；Health；Knovel；Reaxys；Scopus；Careers；Industry；Open access；Useful links；Accessibility；Cookie Policy；ScienceDirect；About Elsevier；Privacy policy；Publish a book；Publish with us；Customer support；Elsevier Connect；Submit your paper；View all products；More from Elsevier；Terms & Conditions；Researcher & Author；Academic & Government；Discover our products；Resources for Editors；Shop Books & Journals；Resources for Reviewers；Advancing human progress；Publish your article in a journal。答案范围不包含点击子页面、翻页或滚动后才加载的内容；图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -16246,7 +16246,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站页面，并保留这些三次独立观察都出现的稳定普通网页文字：Home；Careers；Contact；Cookies；Privacy；Products；Corporate；Worldwide；Executives；HuaweiTech；What We Do；What's New；Huawei Blog；Latest News；Our Company；About Huawei；Media Center；Publications；Terms of Use；Trust Center；Digital Power；News & Events；Sustainability；Carrier Support；Consumer Support；Enterprise Support；Huawei Cloud Support；Partners & Developers。图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
+      "task_prompt": "直接获取这个热门网站页面，并保留这些三次独立观察都出现的稳定普通网页文字：Home；Careers；Contact；Cookies；Privacy；Products；Corporate；Worldwide；Executives；HuaweiTech；What We Do；What's New；Huawei Blog；Latest News；Our Company；About Huawei；Media Center；Publications；Terms of Use；Trust Center；Digital Power；News & Events；Sustainability；Carrier Support；Consumer Support；Enterprise Support；Huawei Cloud Support；Partners & Developers。答案范围不包含点击子页面、翻页或滚动后才加载的内容；图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -16451,7 +16451,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "依据独立参考保留普通页面文字要求；已移除一项辅助标签，其他要求沿用既有证据，未重新认证全部历史页面状态。",
-      "task_prompt": "直接获取这个热门网站页面，并保留这些独立参考中保留的普通网页文字：Imagine；Sign in；Sign up；What should we explore?；Terms；Privacy Policy；By messaging Grok, you agree to our。图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
+      "task_prompt": "直接获取这个热门网站页面，并保留这些独立参考中保留的普通网页文字：Imagine；Sign in；Sign up；What should we explore?；Terms；Privacy Policy；By messaging Grok, you agree to our。答案范围不包含点击子页面、翻页或滚动后才加载的内容；图片文字、按钮控件文字、隐藏名称、网页标题和脚本文字不能代替这些文字。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -16530,7 +16530,7 @@
       "track": "challenge",
       "task_kind": "structure",
       "description": "经三次独立访问复核后冻结；规则只使用页面文字或具名详情链接结构。",
-      "task_prompt": "直接获取这个热门网站首次加载后可见的稳定正文，保留产品、功能、栏目和支持入口文字。不固定轮播内容、当前条目、顺序、价格、排名或数量；图片文字、隐藏名称、网页标题和脚本文字不能代替正文。",
+      "task_prompt": "直接获取这个热门网站首次加载后可见的稳定正文，保留产品、功能、栏目和支持入口文字。不固定轮播内容、当前条目、顺序、价格、排名或数量；答案范围不包含点击子页面、翻页或滚动后才加载的内容。图片文字、隐藏名称、网页标题和脚本文字不能代替正文。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [

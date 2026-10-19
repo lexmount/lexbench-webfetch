@@ -10,7 +10,7 @@
       "track": "dynamic",
       "task_kind": "body",
       "description": "少数派首页文章列表 first automatically loaded content",
-      "task_prompt": "返回声明 URL 中的目标内容。",
+      "task_prompt": "返回声明 URL 初次加载后的目标内容；不包含点击、输入、搜索、滚动或翻页后才出现的内容。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -120,7 +120,7 @@
       "track": "dynamic",
       "task_kind": "body",
       "description": "Falabella Chile Equipos de música y karaokes first automatically loaded content",
-      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。返回页面中的稳定文字。动态成员不固定历史名单；同条目字段须对应完整。",
+      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。保留页面初次加载后的稳定文字；不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。动态成员不固定历史名单；同条目字段须对应完整。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -239,7 +239,7 @@
       "track": "dynamic",
       "task_kind": "body",
       "description": "롯데ON 홈 상품 목록 first automatically loaded content",
-      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。返回页面中的稳定文字。动态成员不固定历史名单；同条目字段须对应完整。",
+      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。保留页面初次加载后的稳定文字；不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。动态成员不固定历史名单；同条目字段须对应完整。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -348,7 +348,7 @@
       "track": "dynamic",
       "task_kind": "body",
       "description": "Resultados de juegos de Mario generados tras la carga automática",
-      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。返回页面中的稳定文字。动态成员不固定历史名单；同条目字段须对应完整。",
+      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。保留页面初次加载后的稳定文字；不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。动态成员不固定历史名单；同条目字段须对应完整。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -477,7 +477,7 @@
       "track": "dynamic",
       "task_kind": "body",
       "description": "Resultados de Nintendo Switch 2 generados tras la carga automática",
-      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。返回页面中的稳定文字。动态成员不固定历史名单；同条目字段须对应完整。",
+      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。保留页面初次加载后的稳定文字；不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。动态成员不固定历史名单；同条目字段须对应完整。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -606,7 +606,7 @@
       "track": "dynamic",
       "task_kind": "body",
       "description": "Resultados de Nintendo Switch 2 Edition generados tras la carga automática",
-      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。返回页面中的稳定文字。动态成员不固定历史名单；同条目字段须对应完整。",
+      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。保留页面初次加载后的稳定文字；不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。动态成员不固定历史名单；同条目字段须对应完整。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -735,7 +735,7 @@
       "track": "dynamic",
       "task_kind": "body",
       "description": "KaBuM Hardware first automatically loaded content",
-      "task_prompt": "返回声明 URL 中的目标内容。",
+      "task_prompt": "返回声明 URL 初次加载后的目标内容；不包含点击、输入、搜索、滚动或翻页后才出现的内容。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -845,7 +845,7 @@
       "track": "dynamic",
       "task_kind": "body",
       "description": "MUI Data Grid Pagination first automatically loaded content",
-      "task_prompt": "返回声明 URL 中的目标内容。",
+      "task_prompt": "返回声明 URL 初次加载后的目标内容；不包含点击、输入、搜索、滚动或翻页后才出现的内容。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -997,7 +997,7 @@
       "track": "dynamic",
       "task_kind": "body",
       "description": "Juejin homepage initially auto-loaded article list",
-      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。返回页面中的稳定文字。动态成员不固定历史名单；同条目字段须对应完整。",
+      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。保留页面初次加载后的稳定文字；不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。动态成员不固定历史名单；同条目字段须对应完整。",
       "expected_any": [],
       "forbidden_any": [
         "Access denied",
@@ -1122,7 +1122,7 @@
       "track": "dynamic",
       "task_kind": "body",
       "description": "Nintendo Switch 2 Software first automatically loaded content",
-      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。返回页面中的稳定文字。动态成员不固定历史名单；同条目字段须对应完整。",
+      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。保留页面初次加载后的稳定文字；不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。动态成员不固定历史名单；同条目字段须对应完整。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -1234,7 +1234,7 @@
       "track": "dynamic",
       "task_kind": "body",
       "description": "初回自動読み込み後に表示される任天堂ゲームソフト検索結果",
-      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。返回页面中的稳定文字。动态成员不固定历史名单；同条目字段须对应完整。",
+      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。保留页面初次加载后的稳定文字；不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。动态成员不固定历史名单；同条目字段须对应完整。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -1387,7 +1387,7 @@
       "track": "dynamic",
       "task_kind": "body",
       "description": "NutUI landing-page main body",
-      "task_prompt": "返回目标正文。",
+      "task_prompt": "返回目标页面初次加载后的正文；不包含点击、输入、搜索、滚动或翻页后才出现的内容。",
       "expected_any": [],
       "required_facts": [
         {
@@ -1607,7 +1607,7 @@
       "track": "dynamic",
       "task_kind": "body",
       "description": "Elastic UI basic table demo",
-      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。返回页面中的稳定文字。动态成员不固定历史名单；同条目字段须对应完整。",
+      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。保留页面初次加载后的稳定文字；不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。动态成员不固定历史名单；同条目字段须对应完整。",
       "expected_any": [],
       "required_facts": [
         {
@@ -2050,7 +2050,7 @@
       "track": "dynamic",
       "task_kind": "body",
       "description": "HeroUI basic table example",
-      "task_prompt": "返回声明 URL 的目标正文。导航、广告、推荐、页脚、Cookie、登录和订阅提示不属于答案。",
+      "task_prompt": "返回声明 URL 初次加载后的目标正文；不包含点击、输入、搜索、滚动或翻页后才出现的内容。导航、广告、推荐、页脚、Cookie、登录和订阅提示不属于答案。",
       "expected_any": [],
       "required_facts": [
         {
@@ -2260,7 +2260,7 @@
       "track": "dynamic",
       "task_kind": "body",
       "description": "formPage iframe complete form",
-      "task_prompt": "返回目标正文。",
+      "task_prompt": "返回目标页面初次加载后的正文；不包含点击、输入、搜索、滚动或翻页后才出现的内容。",
       "expected_any": [],
       "required_facts": [
         {
@@ -2467,7 +2467,7 @@
       "track": "dynamic",
       "task_kind": "body",
       "description": "Tablets first AJAX product batch",
-      "task_prompt": "返回目标正文。",
+      "task_prompt": "返回目标页面初次加载后的正文；不包含点击、输入、搜索、滚动或翻页后才出现的内容。",
       "expected_any": [],
       "required_facts": [
         {
@@ -2766,7 +2766,7 @@
       "track": "dynamic",
       "task_kind": "body",
       "description": "Bilibili all-site ranking first automatic batch",
-      "task_prompt": "返回目标正文。",
+      "task_prompt": "返回目标页面初次加载后的正文；不包含点击、输入、搜索、滚动或翻页后才出现的内容。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -2926,7 +2926,7 @@
       "track": "dynamic",
       "task_kind": "body",
       "description": "Syncfusion Grouping visible grid",
-      "task_prompt": "返回目标正文。",
+      "task_prompt": "返回目标页面初次加载后的正文；不包含点击、输入、搜索、滚动或翻页后才出现的内容。",
       "expected_any": [],
       "required_facts": [
         {
@@ -3105,7 +3105,7 @@
       "track": "dynamic",
       "task_kind": "body",
       "description": "Syncfusion Paging visible grid",
-      "task_prompt": "返回目标正文。",
+      "task_prompt": "返回目标页面初次加载后的正文；不包含点击、输入、搜索、滚动或翻页后才出现的内容。",
       "expected_any": [],
       "required_facts": [
         {
@@ -3284,7 +3284,7 @@
       "track": "dynamic",
       "task_kind": "body",
       "description": "Yonhap first automatic news batch",
-      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。返回页面中的稳定文字。动态成员不固定历史名单；同条目字段须对应完整。",
+      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。保留页面初次加载后的稳定文字；不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。动态成员不固定历史名单；同条目字段须对应完整。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -3420,7 +3420,7 @@
       "track": "dynamic",
       "task_kind": "body",
       "description": "Quasar Virtual Scroll first Basic example",
-      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。返回页面中的稳定文字。动态成员不固定历史名单；同条目字段须对应完整。",
+      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。保留页面初次加载后的稳定文字；不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。动态成员不固定历史名单；同条目字段须对应完整。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -3819,7 +3819,7 @@
       "track": "dynamic",
       "task_kind": "body",
       "description": "Angular Material first Basic table",
-      "task_prompt": "返回目标正文。",
+      "task_prompt": "返回目标页面初次加载后的正文；不包含点击、输入、搜索、滚动或翻页后才出现的内容。",
       "expected_any": [],
       "required_facts": [
         {
@@ -4187,7 +4187,7 @@
       "track": "dynamic",
       "task_kind": "body",
       "description": "Grid.js Hello World table",
-      "task_prompt": "返回目标正文。",
+      "task_prompt": "返回目标页面初次加载后的正文；不包含点击、输入、搜索、滚动或翻页后才出现的内容。",
       "expected_any": [],
       "required_facts": [
         {
@@ -4681,7 +4681,7 @@
       "track": "dynamic",
       "task_kind": "body",
       "description": "Vant 2 documentation main body",
-      "task_prompt": "返回目标正文。",
+      "task_prompt": "返回目标页面初次加载后的正文；不包含点击、输入、搜索、滚动或翻页后才出现的内容。",
       "expected_any": [],
       "required_facts": [
         {
@@ -4887,7 +4887,7 @@
       "track": "dynamic",
       "task_kind": "body",
       "description": "Bilibili popular first video batch",
-      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。返回页面中的稳定文字。动态成员不固定历史名单；同条目字段须对应完整。",
+      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。保留页面初次加载后的稳定文字；不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。动态成员不固定历史名单；同条目字段须对应完整。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -5017,7 +5017,7 @@
       "track": "dynamic",
       "task_kind": "body",
       "description": "Ant Design ProTable API 参数长表格",
-      "task_prompt": "返回目标正文。",
+      "task_prompt": "返回目标页面初次加载后的正文；不包含点击、输入、搜索、滚动或翻页后才出现的内容。",
       "expected_any": [],
       "required_facts": [
         {
@@ -5457,7 +5457,7 @@
       "track": "dynamic",
       "task_kind": "body",
       "description": "Arco Design Vue Basic table",
-      "task_prompt": "返回目标正文。",
+      "task_prompt": "返回目标页面初次加载后的正文；不包含点击、输入、搜索、滚动或翻页后才出现的内容。",
       "expected_any": [],
       "required_facts": [
         {
@@ -6641,7 +6641,7 @@
       "track": "dynamic",
       "task_kind": "body",
       "description": "Vant 4 documentation main body",
-      "task_prompt": "返回目标正文。",
+      "task_prompt": "返回目标页面初次加载后的正文；不包含点击、输入、搜索、滚动或翻页后才出现的内容。",
       "expected_any": [],
       "required_facts": [
         {
@@ -6919,7 +6919,7 @@
       "track": "dynamic",
       "task_kind": "body",
       "description": "Layui Vue first Basic table",
-      "task_prompt": "返回目标正文。",
+      "task_prompt": "返回目标页面初次加载后的正文；不包含点击、输入、搜索、滚动或翻页后才出现的内容。",
       "expected_any": [],
       "required_facts": [
         {
@@ -7087,7 +7087,7 @@
       "track": "dynamic",
       "task_kind": "body",
       "description": "Weibo realtime hot-search table",
-      "task_prompt": "返回目标正文。",
+      "task_prompt": "返回目标页面初次加载后的正文；不包含点击、输入、搜索、滚动或翻页后才出现的内容。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -7240,7 +7240,7 @@
       "track": "dynamic",
       "task_kind": "body",
       "description": "Initial loaded article-detail links across the page, including recommendations and mounted carousels; no interaction to load additional records.",
-      "task_prompt": "返回目标正文。",
+      "task_prompt": "返回目标页面初次加载后的正文；不包含点击、输入、搜索、滚动或翻页后才出现的内容。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -7561,7 +7561,7 @@
       "track": "dynamic",
       "task_kind": "body",
       "description": "任天堂の初回公開特集・Direct リンク一覧",
-      "task_prompt": "返回目标正文。",
+      "task_prompt": "返回目标页面初次加载后的正文；不包含点击、输入、搜索、滚动或翻页后才出现的内容。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -7714,7 +7714,7 @@
       "track": "dynamic",
       "task_kind": "body",
       "description": "Melon TOP100 first chart",
-      "task_prompt": "返回目标正文。",
+      "task_prompt": "返回目标页面初次加载后的正文；不包含点击、输入、搜索、滚动或翻页后才出现的内容。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -7861,7 +7861,7 @@
       "track": "dynamic",
       "task_kind": "body",
       "description": "AlloCiné 首批公开电影详情记录",
-      "task_prompt": "返回目标正文。",
+      "task_prompt": "返回目标页面初次加载后的正文；不包含点击、输入、搜索、滚动或翻页后才出现的内容。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -8458,7 +8458,7 @@
       "track": "dynamic",
       "task_kind": "body",
       "description": "Joyn ProSieben 首批节目与系列链接",
-      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。返回页面中的稳定文字。动态成员不固定历史名单；同条目字段须对应完整。",
+      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。保留页面初次加载后的稳定文字；不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。动态成员不固定历史名单；同条目字段须对应完整。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -8599,7 +8599,7 @@
       "track": "dynamic",
       "task_kind": "body",
       "description": "Joyn 电影页首批具名电影详情链接",
-      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。返回页面中的稳定文字。动态成员不固定历史名单；同条目字段须对应完整。",
+      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。保留页面初次加载后的稳定文字；不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。动态成员不固定历史名单；同条目字段须对应完整。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -8817,7 +8817,7 @@
       "track": "dynamic",
       "task_kind": "body",
       "description": "UOL Play stable page identity and plan cards",
-      "task_prompt": "返回目标正文。",
+      "task_prompt": "返回目标页面初次加载后的正文；不包含点击、输入、搜索、滚动或翻页后才出现的内容。",
       "expected_any": [],
       "required_facts": [
         {
@@ -9136,7 +9136,7 @@
       "track": "dynamic",
       "task_kind": "body",
       "description": "Joyn Germany first automatic media rail",
-      "task_prompt": "返回目标正文。",
+      "task_prompt": "返回目标页面初次加载后的正文；不包含点击、输入、搜索、滚动或翻页后才出现的内容。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -9277,7 +9277,7 @@
       "track": "dynamic",
       "task_kind": "body",
       "description": "Shahid Arabic hero and first rail",
-      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。返回页面中的稳定文字。动态成员不固定历史名单；同条目字段须对应完整。",
+      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。保留页面初次加载后的稳定文字；不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。动态成员不固定历史名单；同条目字段须对应完整。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -9392,7 +9392,7 @@
       "track": "dynamic",
       "task_kind": "body",
       "description": "PatternFly compact table demo",
-      "task_prompt": "返回声明 URL 的目标正文。导航、广告、推荐、页脚、Cookie、登录和订阅提示不属于答案。",
+      "task_prompt": "返回声明 URL 初次加载后的目标正文；不包含点击、输入、搜索、滚动或翻页后才出现的内容。导航、广告、推荐、页脚、Cookie、登录和订阅提示不属于答案。",
       "expected_any": [],
       "required_facts": [
         {
@@ -9677,7 +9677,7 @@
       "track": "dynamic",
       "task_kind": "body",
       "description": "RSuite basic table example",
-      "task_prompt": "返回声明 URL 的目标正文。导航、广告、推荐、页脚、Cookie、登录和订阅提示不属于答案。",
+      "task_prompt": "返回声明 URL 初次加载后的目标正文；不包含点击、输入、搜索、滚动或翻页后才出现的内容。导航、广告、推荐、页脚、Cookie、登录和订阅提示不属于答案。",
       "expected_any": [],
       "required_facts": [
         {
@@ -11052,7 +11052,7 @@
       "track": "dynamic",
       "task_kind": "body",
       "description": "iframe-list child document, excluding the parent navigation and the interactive sibling frame",
-      "task_prompt": "返回声明 URL 的目标正文。导航、广告、推荐、页脚、Cookie、登录和订阅提示不属于答案。",
+      "task_prompt": "返回声明 URL 初次加载后的目标正文；不包含点击、输入、搜索、滚动或翻页后才出现的内容。导航、广告、推荐、页脚、Cookie、登录和订阅提示不属于答案。",
       "expected_any": [],
       "required_facts": [
         {
@@ -11511,7 +11511,7 @@
       "track": "dynamic",
       "task_kind": "body",
       "description": "Angular Material tree examples catalogue",
-      "task_prompt": "返回声明 URL 的目标正文。导航、广告、推荐、页脚、Cookie、登录和订阅提示不属于答案。",
+      "task_prompt": "返回声明 URL 初次加载后的目标正文；不包含点击、输入、搜索、滚动或翻页后才出现的内容。导航、广告、推荐、页脚、Cookie、登录和订阅提示不属于答案。",
       "expected_any": [],
       "required_facts": [
         {
@@ -11674,7 +11674,7 @@
       "track": "dynamic",
       "task_kind": "body",
       "description": "Varlet English landing-page main content, not a table",
-      "task_prompt": "返回声明 URL 的目标正文。导航、广告、推荐、页脚、Cookie、登录和订阅提示不属于答案。",
+      "task_prompt": "返回声明 URL 初次加载后的目标正文；不包含点击、输入、搜索、滚动或翻页后才出现的内容。导航、广告、推荐、页脚、Cookie、登录和订阅提示不属于答案。",
       "expected_any": [],
       "required_facts": [
         {
@@ -11833,7 +11833,7 @@
       "track": "dynamic",
       "task_kind": "body",
       "description": "Scalar Hello World GET operation view, excluding editor controls and global navigation",
-      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。返回页面中的稳定文字。动态成员不固定历史名单；同条目字段须对应完整。",
+      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。保留页面初次加载后的稳定文字；不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。动态成员不固定历史名单；同条目字段须对应完整。",
       "expected_any": [],
       "required_facts": [
         {
@@ -11993,7 +11993,7 @@
       "track": "dynamic",
       "task_kind": "body",
       "description": "Syncfusion React Grid overview data grid",
-      "task_prompt": "返回声明 URL 的目标正文。导航、广告、推荐、页脚、Cookie、登录和订阅提示不属于答案。",
+      "task_prompt": "返回声明 URL 初次加载后的目标正文；不包含点击、输入、搜索、滚动或翻页后才出现的内容。导航、广告、推荐、页脚、Cookie、登录和订阅提示不属于答案。",
       "expected_any": [],
       "required_facts": [
         {
@@ -12200,7 +12200,7 @@
       "track": "dynamic",
       "task_kind": "body",
       "description": "Grid.js pagination example first page",
-      "task_prompt": "返回声明 URL 的目标正文。导航、广告、推荐、页脚、Cookie、登录和订阅提示不属于答案。",
+      "task_prompt": "返回声明 URL 初次加载后的目标正文；不包含点击、输入、搜索、滚动或翻页后才出现的内容。导航、广告、推荐、页脚、Cookie、登录和订阅提示不属于答案。",
       "expected_any": [],
       "required_facts": [
         {
@@ -12655,7 +12655,7 @@
       "track": "dynamic",
       "task_kind": "body",
       "description": "Virtual DOM - Vertical example section and its initially visible table rows",
-      "task_prompt": "返回声明 URL 的目标正文。导航、广告、推荐、页脚、Cookie、登录和订阅提示不属于答案。",
+      "task_prompt": "返回声明 URL 初次加载后的目标正文；不包含点击、输入、搜索、滚动或翻页后才出现的内容。导航、广告、推荐、页脚、Cookie、登录和订阅提示不属于答案。",
       "expected_any": [],
       "required_facts": [
         {
@@ -13480,7 +13480,7 @@
       "track": "dynamic",
       "task_kind": "body",
       "description": "PrimeVue Basic TreeTable example",
-      "task_prompt": "返回声明 URL 的目标正文。导航、广告、推荐、页脚、Cookie、登录和订阅提示不属于答案。",
+      "task_prompt": "返回声明 URL 初次加载后的目标正文；不包含点击、输入、搜索、滚动或翻页后才出现的内容。导航、广告、推荐、页脚、Cookie、登录和订阅提示不属于答案。",
       "expected_any": [],
       "required_facts": [
         {
@@ -14757,7 +14757,7 @@
       "track": "dynamic",
       "task_kind": "body",
       "description": "PrimeVue Basic VirtualScroller initial viewport",
-      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。返回页面中的稳定文字。动态成员不固定历史名单；同条目字段须对应完整。",
+      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。保留页面初次加载后的稳定文字；不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。动态成员不固定历史名单；同条目字段须对应完整。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -15941,7 +15941,7 @@
       "track": "dynamic",
       "task_kind": "body",
       "description": "PrimeNG Basic Table example",
-      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。返回页面中的稳定文字。动态成员不固定历史名单；同条目字段须对应完整。",
+      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。保留页面初次加载后的稳定文字；不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。动态成员不固定历史名单；同条目字段须对应完整。",
       "expected_any": [],
       "required_facts": [
         {
@@ -17519,7 +17519,7 @@
       "track": "dynamic",
       "task_kind": "body",
       "description": "PrimeNG Basic VirtualScroller initial viewport",
-      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。返回页面中的稳定文字。动态成员不固定历史名单；同条目字段须对应完整。",
+      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。保留页面初次加载后的稳定文字；不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。动态成员不固定历史名单；同条目字段须对应完整。",
       "expected_any": [],
       "required_facts": [],
       "forbidden_any": [
@@ -18756,7 +18756,7 @@
       "track": "dynamic",
       "task_kind": "body",
       "description": "Vuetify data table Usage section",
-      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。返回页面中的稳定文字。动态成员不固定历史名单；同条目字段须对应完整。",
+      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。保留页面初次加载后的稳定文字；不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。动态成员不固定历史名单；同条目字段须对应完整。",
       "expected_any": [],
       "required_facts": [
         {
@@ -19372,7 +19372,7 @@
       "track": "dynamic",
       "task_kind": "body",
       "description": "Server-side paginate and sort example",
-      "task_prompt": "返回声明 URL 的目标正文。导航、广告、推荐、页脚、Cookie、登录和订阅提示不属于答案。",
+      "task_prompt": "返回声明 URL 初次加载后的目标正文；不包含点击、输入、搜索、滚动或翻页后才出现的内容。导航、广告、推荐、页脚、Cookie、登录和订阅提示不属于答案。",
       "expected_any": [],
       "required_facts": [
         {
@@ -20923,7 +20923,7 @@
       "track": "dynamic",
       "task_kind": "body",
       "description": "Vuetify Basic virtual table example initial viewport",
-      "task_prompt": "返回声明 URL 的目标正文。导航、广告、推荐、页脚、Cookie、登录和订阅提示不属于答案。",
+      "task_prompt": "返回声明 URL 初次加载后的目标正文；不包含点击、输入、搜索、滚动或翻页后才出现的内容。导航、广告、推荐、页脚、Cookie、登录和订阅提示不属于答案。",
       "expected_any": [],
       "required_facts": [
         {
@@ -22468,7 +22468,7 @@
       "track": "dynamic",
       "task_kind": "body",
       "description": "Autocomplete examples catalogue, excluding suggestions that require typing",
-      "task_prompt": "返回声明 URL 的目标正文。导航、广告、推荐、页脚、Cookie、登录和订阅提示不属于答案。",
+      "task_prompt": "返回声明 URL 初次加载后的目标正文；不包含点击、输入、搜索、滚动或翻页后才出现的内容。导航、广告、推荐、页脚、Cookie、登录和订阅提示不属于答案。",
       "expected_any": [],
       "required_facts": [
         {
@@ -22681,7 +22681,7 @@
       "track": "dynamic",
       "task_kind": "body",
       "description": "Grommet DataTable example",
-      "task_prompt": "返回声明 URL 的目标正文。导航、广告、推荐、页脚、Cookie、登录和订阅提示不属于答案。",
+      "task_prompt": "返回声明 URL 初次加载后的目标正文；不包含点击、输入、搜索、滚动或翻页后才出现的内容。导航、广告、推荐、页脚、Cookie、登录和订阅提示不属于答案。",
       "expected_any": [],
       "required_facts": [
         {
@@ -23320,7 +23320,7 @@
       "track": "dynamic",
       "task_kind": "body",
       "description": "Algolia Hacker News javascript result list",
-      "task_prompt": "返回声明 URL 的目标正文。导航、广告、推荐、页脚、Cookie、登录和订阅提示不属于答案。",
+      "task_prompt": "返回声明 URL 初次加载后的目标正文；不包含点击、输入、搜索、滚动或翻页后才出现的内容。导航、广告、推荐、页脚、Cookie、登录和订阅提示不属于答案。",
       "expected_any": [],
       "forbidden_any": [
         "Access denied",
@@ -23444,7 +23444,7 @@
       "track": "dynamic",
       "task_kind": "body",
       "description": "USGS recent earthquake list loaded with the map",
-      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。返回页面中的稳定文字。动态成员不固定历史名单；同条目字段须对应完整。",
+      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。保留页面初次加载后的稳定文字；不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。动态成员不固定历史名单；同条目字段须对应完整。",
       "expected_any": [],
       "required_facts": [
         {
@@ -23587,7 +23587,7 @@
       "track": "dynamic",
       "task_kind": "body",
       "description": "TDesign 基础表格首个数据表",
-      "task_prompt": "返回声明 URL 的目标正文。导航、广告、推荐、页脚、Cookie、登录和订阅提示不属于答案。",
+      "task_prompt": "返回声明 URL 初次加载后的目标正文；不包含点击、输入、搜索、滚动或翻页后才出现的内容。导航、广告、推荐、页脚、Cookie、登录和订阅提示不属于答案。",
       "expected_any": [],
       "required_facts": [
         {
@@ -23918,7 +23918,7 @@
       "track": "dynamic",
       "task_kind": "body",
       "description": "CNN العربية قسم العالم وأول قائمة أخبار",
-      "task_prompt": "返回声明 URL 的目标正文。导航、广告、推荐、页脚、Cookie、登录和订阅提示不属于答案。",
+      "task_prompt": "返回声明 URL 初次加载后的目标正文；不包含点击、输入、搜索、滚动或翻页后才出现的内容。导航、广告、推荐、页脚、Cookie、登录和订阅提示不属于答案。",
       "expected_any": [],
       "forbidden_any": [
         "Access denied",
@@ -24376,7 +24376,7 @@
       "track": "dynamic",
       "task_kind": "body",
       "description": "源站为公开抓取练习站；核对固定练习数据，不代表生产网站分布。",
-      "task_prompt": "返回目标页面首批 10 条记录，并保留全部文字字段。",
+      "task_prompt": "返回目标页面初次加载后的 10 条记录，并保留全部文字字段；不包含滚动、翻页或点击后才出现的记录。",
       "expected_any": [],
       "required_facts": [
         {
@@ -24639,7 +24639,7 @@
       "track": "dynamic",
       "task_kind": "body",
       "description": "源站为公开抓取练习站；核对固定练习数据，不代表生产网站分布。",
-      "task_prompt": "返回目标页面首批 12 条记录，并保留全部文字字段。",
+      "task_prompt": "返回目标页面初次加载后的 12 条记录，并保留全部文字字段；不包含滚动、翻页或点击后才出现的记录。",
       "expected_any": [],
       "required_facts": [
         {
@@ -24866,7 +24866,7 @@
       "track": "dynamic",
       "task_kind": "body",
       "description": "源站为公开抓取练习站；核对固定练习数据，不代表生产网站分布。",
-      "task_prompt": "返回目标页面首批 6 条记录，并保留全部文字字段。",
+      "task_prompt": "返回目标页面初次加载后的 6 条记录，并保留全部文字字段；不包含滚动、翻页或点击后才出现的记录。",
       "expected_any": [],
       "required_facts": [
         {
@@ -25261,7 +25261,7 @@
       "track": "dynamic",
       "task_kind": "body",
       "description": "源站为公开抓取练习站；核对固定练习数据，不代表生产网站分布。",
-      "task_prompt": "返回目标页面首批 10 条记录，并保留全部文字字段。",
+      "task_prompt": "返回目标页面初次加载后的 10 条记录，并保留全部文字字段；不包含滚动、翻页或点击后才出现的记录。",
       "expected_any": [],
       "required_facts": [
         {
@@ -25533,7 +25533,7 @@
       "track": "dynamic",
       "task_kind": "body",
       "description": "公开练习站及应用示例；核对声明范围内固定示例数据，不代表生产网站分布。",
-      "task_prompt": "返回目标页面首批 20 条评论的日期和全文；星级图形不属于文字答案。",
+      "task_prompt": "返回目标页面初次加载后的 20 条评论的日期和全文；不包含点击 Load More 后的评论，星级图形不属于文字答案。",
       "expected_any": [],
       "required_facts": [
         {
@@ -26456,7 +26456,7 @@
       "track": "dynamic",
       "task_kind": "body",
       "description": "公开练习站及应用示例；核对声明范围内固定示例数据，不代表生产网站分布。",
-      "task_prompt": "返回默认手机列表全部 20 条名称与描述。",
+      "task_prompt": "返回默认手机列表全部 20 条名称与描述；搜索、排序和详情页结果不属于答案。",
       "expected_any": [],
       "required_facts": [
         {
@@ -27528,7 +27528,7 @@
       "track": "dynamic",
       "task_kind": "body",
       "description": "公开练习站及应用示例；核对声明范围内固定示例数据，不代表生产网站分布。",
-      "task_prompt": "返回商品页首批 5 条评论的日期和全文；星级图形和商品推荐不属于答案。",
+      "task_prompt": "返回商品页初次加载后的 5 条评论的日期和全文；不包含点击 Load More 后的评论，星级图形和商品推荐不属于答案。",
       "expected_any": [],
       "required_facts": [
         {
@@ -28036,7 +28036,7 @@
       "track": "dynamic",
       "task_kind": "body",
       "description": "MUI 主说明正文和首次自动渲染网格",
-      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。返回页面中的稳定文字。动态成员不固定历史名单；同条目字段须对应完整。",
+      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。保留页面初次加载后的稳定文字；不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。动态成员不固定历史名单；同条目字段须对应完整。",
       "expected_any": [],
       "required_facts": [
         {
@@ -28949,7 +28949,7 @@
       "track": "dynamic",
       "task_kind": "body",
       "description": "Blueprint documentation main content after initial automatic load",
-      "task_prompt": "返回 Blueprint 文档首页 main 区域的完整正文。顶栏、侧栏、页脚、广告、Cookie 和登录提示不属于答案。",
+      "task_prompt": "返回 Blueprint 文档首页初次加载后的 main 区域完整正文；不包含点击、输入、搜索、滚动或翻页后才出现的内容。顶栏、侧栏、页脚、广告、Cookie 和登录提示不属于答案。",
       "expected_any": [],
       "required_facts": [
         {
@@ -29108,7 +29108,7 @@
       "track": "dynamic",
       "task_kind": "body",
       "description": "Cafe API 自动生成的完整正文和操作章节",
-      "task_prompt": "返回声明 URL 的目标正文。导航、广告、推荐、页脚、Cookie、登录和订阅提示不属于答案。",
+      "task_prompt": "返回声明 URL 初次加载后的目标正文；不包含点击、输入、搜索、滚动或翻页后才出现的内容。导航、广告、推荐、页脚、Cookie、登录和订阅提示不属于答案。",
       "expected_any": [],
       "required_facts": [
         {
@@ -29401,7 +29401,7 @@
       "track": "dynamic",
       "task_kind": "body",
       "description": "首次自动生成的全部 19 条 API 操作摘要",
-      "task_prompt": "返回声明 URL 的目标正文。导航、广告、推荐、页脚、Cookie、登录和订阅提示不属于答案。",
+      "task_prompt": "返回声明 URL 初次加载后的目标正文；不包含点击、输入、搜索、滚动或翻页后才出现的内容。导航、广告、推荐、页脚、Cookie、登录和订阅提示不属于答案。",
       "expected_any": [],
       "required_facts": [
         {
