@@ -129,8 +129,25 @@ uv run --frozen browser-harness-eval run \
 
 浏览器适配器、凭据、实测结果、报告生成器和托管配置由执行脚手架或外部证据存储管理。任务模型、确定性验收评分、文件字节校验和任务编译由本仓库维护，Browser Eval 通过固定版本的依赖直接调用。本仓库没有实测排行榜。
 
-## 参与贡献与引用
+## 参与贡献
 
 修改任务或提交结果前，请阅读 [CONTRIBUTING](../CONTRIBUTING.md)。`make check` 会检查任务定义和输入工具。安全问题请参阅 [SECURITY](../SECURITY.md)。
 
-引用 [LexBench Web Fetch](../CITATION.cff) 时，请记录具体提交版本和任务集；执行脚手架单独引用。项目自有代码和任务定义采用 [MIT 许可](../LICENSE)，第三方原始材料保留各自使用条件，详见 [THIRD_PARTY](../THIRD_PARTY.md)。
+项目自有代码和任务定义采用 [MIT 许可](../LICENSE)，第三方原始材料保留各自使用条件，详见 [THIRD_PARTY](../THIRD_PARTY.md)。
+
+## 引用 LexBench Web Fetch
+
+在公开作品中使用本仓库的任务定义或评分工具时，请引用仓库，并记录具体提交和任务集。GitHub 的引用入口读取 [CITATION.cff](../CITATION.cff)。0.3.0 版可这样引用：
+
+```bibtex
+@software{lexbench_webfetch_2026,
+  author = {{LexBench Web Fetch contributors}},
+  title = {LexBench Web Fetch},
+  year = {2026},
+  version = {0.3.0},
+  url = {https://github.com/lexmount/lexbench-webfetch}
+}
+```
+
+如果还使用了 [Browser Eval](https://github.com/lexmount/browser-eval#cite-browser-eval) 执行脚手架，请单独引用。上游来源或 benchmark 也应按各自的署名要求引用，本仓库的引用不能替代它们。使用其他版本时，请相应修改示例中的版本号和年份，并注明实际 tag 或提交。
+

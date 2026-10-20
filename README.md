@@ -129,8 +129,25 @@ These changes do not revise frozen tasks or certify historical results. Score co
 
 Browser adapters, credentials, measured runs, report renderers and hosting configuration belong to the execution harness or its evidence storage. This repository owns task models, deterministic acceptance scoring, file-byte checks and task compilation. Browser Eval imports these implementations as a pinned dependency. This repository publishes no measured leaderboard.
 
-## Contribute and cite
+## Contribute
 
 Read [CONTRIBUTING](CONTRIBUTING.md) before changing a task or proposing a result. Run `make check` to validate the definitions and test the input tools. Report security issues through [SECURITY](SECURITY.md).
 
-Cite [LexBench Web Fetch](CITATION.cff) and record the exact commit and suite. Cite any execution harness separately. Project-owned code and definitions use the [MIT license](LICENSE); third-party source material retains its own terms, described in [THIRD_PARTY](THIRD_PARTY.md).
+Project-owned code and definitions use the [MIT license](LICENSE); third-party source material retains its own terms, described in [THIRD_PARTY](THIRD_PARTY.md).
+
+## Cite LexBench Web Fetch
+
+If you use the task definitions or scoring tools in published work, cite this repository and record the exact commit and suite used. GitHub's citation menu reads [CITATION.cff](CITATION.cff). For version 0.3.0:
+
+```bibtex
+@software{lexbench_webfetch_2026,
+  author = {{LexBench Web Fetch contributors}},
+  title = {LexBench Web Fetch},
+  year = {2026},
+  version = {0.3.0},
+  url = {https://github.com/lexmount/lexbench-webfetch}
+}
+```
+
+Cite [Browser Eval](https://github.com/lexmount/browser-eval#cite-browser-eval) separately when using its execution harness, and cite upstream sources or benchmarks according to their attribution terms. This repository citation does not replace those citations. When using another version, update the version and year in the example and identify its tag or commit.
+
