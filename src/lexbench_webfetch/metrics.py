@@ -78,6 +78,8 @@ def _metadata_resource_candidates(
     if isinstance(value, dict):
         for child_key, child in value.items():
             child_key = str(child_key)
+            if child_key.casefold() in {"network", "request", "requests", "logs", "debug", "diagnostics"}:
+                continue
             candidates.extend(_metadata_resource_candidates(
                 child, key=child_key.casefold(), path=f"{path}.{child_key}",
             ))
@@ -188,7 +190,7 @@ class _VisibleInlineFrames(HTMLParser):
             return
         source = values.get("srcdoc")
         if source:
-            self.documents.append((source, values.get("data-moli-frame-url")))
+            self.documents.append((source, values.get("data-frame-url") or values.get("data-moli-frame-url")))
 
 
 def _inline_frame_candidates(
@@ -199,10 +201,9 @@ def _inline_frame_candidates(
 ) -> list[tuple[str, str]]:
     """Read resource URLs from visible native ``srcdoc`` serialization.
 
-    Moli's official ``--with-frames`` output keeps child documents inside the
-    returned HTML.  This is still provider output; the scorer only resolves
-    URLs that the browser serialized, and ignores hidden synchronization or ad
-    frames.  The same parser applies to any provider returning inline frames.
+    Returned inline documents are provider output. Resolve their declared
+    document URLs and ignore hidden synchronization or advertising frames.
+    Historical serialized attributes remain readable without rewriting evidence.
     """
     if not re.search(r'<iframe\b', content, re.I):
         return []
@@ -255,12 +256,7 @@ def _native_json_resource_candidates(
     *,
     base_url: str,
 ) -> list[tuple[str, str]]:
-    """Read URLs from a browser's native JSON page and network record.
-
-    The accepted surface is deliberately structural: serialized page HTML and
-    network entries named ``url`` or ``final_url``. It never reads expected
-    answers to choose a field or invents a URL from a playback identifier.
-    """
+    """Read declared answer fields, keeping request and network logs diagnostic."""
     try:
         payload = json.loads(content)
     except (json.JSONDecodeError, TypeError):
@@ -268,7 +264,7 @@ def _native_json_resource_candidates(
     if not isinstance(payload, dict):
         return []
     candidates: list[tuple[str, str]] = []
-    html = payload.get("html")
+    html = payload.get("html") or payload.get("content")
     if isinstance(html, str):
         candidates.extend(
             (match[1], "content.native_json_html_url")
@@ -283,17 +279,10 @@ def _native_json_resource_candidates(
         candidates.extend(_inline_frame_candidates(
             html, base_url=base_url, images_only=False,
         ))
-    pending = [payload.get("network")]
-    while pending:
-        value = pending.pop()
-        if isinstance(value, dict):
-            for key, item in value.items():
-                if key in {"url", "final_url"} and isinstance(item, str):
-                    candidates.append((item, f"content.native_json_network.{key}"))
-                elif isinstance(item, (dict, list)):
-                    pending.append(item)
-        elif isinstance(value, list):
-            pending.extend(value)
+    for key in ("resources", "links", "images", "videos", "media", "extras"):
+        if key in payload:
+            candidates.extend(_metadata_resource_candidates(
+                payload[key], key="links", path=f"content.native_json.{key}"))
     return candidates
 
 
@@ -365,17 +354,23 @@ def evaluate_resources(
         answer_fields = {key: metadata[key] for key in ('links','images','videos','media','extras') if key in metadata}
         candidates.extend(_metadata_resource_candidates(answer_fields))
         if not typed_json_answer:
-            from .reference_quality import markdown_link_destinations
-            candidates.extend((url, "content.bare_url") for url in
-                              re.findall(r"https?://[^\s<>'\")\]]+", content))
-            candidates.extend((match[1], "content.html_url") for match in
-                              re.findall(r"(?:src|href)\s*=\s*([\"'])(.*?)\1", content, re.I))
-            candidates.extend((url, "content.markdown_link")
-                              for url in markdown_link_destinations(content))
-            candidates.extend((url, "content.visible_file")
-                              for url in _visible_relative_resource_urls(content))
-            candidates.extend(_inline_frame_candidates(content, base_url=base_url, images_only=False))
-            candidates.extend(_native_json_resource_candidates(content, base_url=base_url))
+            try:
+                structured = json.loads(content)
+            except (ValueError, TypeError):
+                structured = None
+            if isinstance(structured, (dict, list)):
+                candidates.extend(_native_json_resource_candidates(content, base_url=base_url))
+            else:
+                from .reference_quality import markdown_link_destinations
+                candidates.extend((url, "content.bare_url") for url in
+                                  re.findall(r"https?://[^\s<>'\")\]]+", content))
+                candidates.extend((match[1], "content.html_url") for match in
+                                  re.findall(r"(?:src|href)\s*=\s*([\"'])(.*?)\1", content, re.I))
+                candidates.extend((url, "content.markdown_link")
+                                  for url in markdown_link_destinations(content))
+                candidates.extend((url, "content.visible_file")
+                                  for url in _visible_relative_resource_urls(content))
+                candidates.extend(_inline_frame_candidates(content, base_url=base_url, images_only=False))
     normalized_candidates, candidate_evidence = _normalized_candidates(candidates, base_url=base_url)
     results = []
     allowed_urls: set[str] = set()
@@ -474,20 +469,6 @@ def task_measured(metrics: dict, task_kind: str | None = None) -> bool:
     if metrics.get('rule_review_status') == 'unresolved':
         return False
     kind = task_kind or metrics.get('task_kind', 'body')
-    if (metrics.get('page_identity_required')
-            and metrics.get('page_identity_status') == 'unavailable'
-            and metrics.get('request_ok') is not False):
-        # Combined pass flags already include identity. Only independent
-        # failed requirements can prove failure while identity is unknown.
-        definite_failure = bool(
-            metrics.get('deadline_overrun')
-            or any(error != 'page_identity_not_verified'
-                   for error in metrics.get('stable_task_errors', []))
-            or (kind == 'body' and (metrics.get('length_pass') is False
-                                   or metrics.get('body_coverage_pass') is False))
-        )
-        if not definite_failure:
-            return False
     return kind != 'file' or isinstance(metrics.get('raw_file_pass'), bool)
 
 
@@ -594,11 +575,14 @@ def fact_in_text(text: str, fact: str, *, latin_boundaries: bool = True) -> bool
 
 
 def forbidden_in_text(text: str, phrase: str) -> bool:
-    """Match ASCII word boundaries without segmenting CJK phrases."""
+    """Match Latin word boundaries without segmenting CJK phrases."""
     if not phrase:
         return False
-    left = r'(?<![a-z0-9_])' if phrase[0].isascii() and phrase[0].isalnum() else ''
-    right = r'(?![a-z0-9_])' if phrase[-1].isascii() and phrase[-1].isalnum() else ''
+    latin_word = r'a-z0-9_\u00c0-\u024f\u1e00-\u1eff'
+    left = rf'(?<![{latin_word}])' if (phrase[0].isascii() and phrase[0].isalnum()
+            or 'LATIN' in unicodedata.name(phrase[0], '')) else ''
+    right = rf'(?![{latin_word}])' if (phrase[-1].isascii() and phrase[-1].isalnum()
+             or 'LATIN' in unicodedata.name(phrase[-1], '')) else ''
     return bool(re.search(left + re.escape(phrase) + right, text))
 
 

@@ -55100,6 +55100,169 @@
       "expected_metrics": {
         "fact_coverage": 1.0
       }
+    },
+    {
+      "id": "explicit-contract-missing-page-identity-counts-as-failure",
+      "category": "task-predicate",
+      "root_cause": "unknown_identity_masks_independent_requirement_failure",
+      "failure_mode": "false-positive",
+      "case": {
+        "url": "https://example.test/start",
+        "track": "risk_control",
+        "task_kind": "body",
+        "expected_any": [
+          "Expected body"
+        ],
+        "min_content_chars": 1,
+        "acceptance_contract": {
+          "version": 1,
+          "schema": "body_text",
+          "minimum_records": 0,
+          "stable_text_anchors": [
+            {
+              "id": "body",
+              "alternatives": [
+                "Expected body"
+              ]
+            }
+          ]
+        },
+        "source_benchmark": {
+          "risk_control": {
+            "navigation_contract": {
+              "requested_url": "https://example.test/start",
+              "observed_final_url": "https://example.test/final"
+            }
+          }
+        },
+        "page_identity_required": true
+      },
+      "artifact": "Expected body",
+      "ok": true,
+      "expected_task_pass": false,
+      "expected_task_measured": true,
+      "expected_metrics": {
+        "page_identity_status": "unavailable",
+        "length_pass": true
+      }
+    },
+    {
+      "id": "resource-log-with-no-answer",
+      "category": "answer-surface",
+      "root_cause": "resource_network_diagnostics_are_not_answers",
+      "failure_mode": "false-positive",
+      "case": {
+        "url": "https://example.test/page",
+        "task_kind": "resource",
+        "content_score_applicable": false,
+        "expected_resources": [
+          {
+            "id": "video",
+            "urls": [
+              "https://example.test/target.mp4"
+            ]
+          }
+        ]
+      },
+      "artifact": "{\"network\": [{\"url\": \"https://example.test/target.mp4\"}]}",
+      "ok": true,
+      "expected_task_pass": false
+    },
+    {
+      "id": "resource-log-with-delivered-answer",
+      "category": "answer-surface",
+      "root_cause": "resource_network_diagnostics_are_not_answers",
+      "failure_mode": "false-negative",
+      "case": {
+        "url": "https://example.test/page",
+        "task_kind": "resource",
+        "content_score_applicable": false,
+        "expected_resources": [
+          {
+            "id": "video",
+            "urls": [
+              "https://example.test/target.mp4"
+            ]
+          }
+        ]
+      },
+      "artifact": "{\"network\": [{\"url\": \"https://example.test/target.mp4\"}], \"resources\": [\"https://example.test/target.mp4\"]}",
+      "ok": true,
+      "expected_task_pass": true
+    },
+    {
+      "id": "forbidden-latin-word-fragment",
+      "category": "format-normalization",
+      "root_cause": "forbidden_accented_latin_word_boundaries",
+      "failure_mode": "false-negative",
+      "case": {
+        "url": "https://example.test/page",
+        "forbidden_any": [
+          "café"
+        ]
+      },
+      "artifact": "caféteria",
+      "ok": true,
+      "expected_task_pass": true
+    },
+    {
+      "id": "forbidden-latin-whole-word",
+      "category": "format-normalization",
+      "root_cause": "forbidden_accented_latin_word_boundaries",
+      "failure_mode": "false-positive",
+      "case": {
+        "url": "https://example.test/page",
+        "forbidden_any": [
+          "café"
+        ]
+      },
+      "artifact": "A café.",
+      "ok": true,
+      "expected_task_pass": false
+    },
+    {
+      "id": "neutral-frame-resource-absent",
+      "category": "answer-surface",
+      "root_cause": "neutral_inline_frame_document_url",
+      "failure_mode": "false-positive",
+      "case": {
+        "url": "https://example.test/page",
+        "task_kind": "resource",
+        "content_score_applicable": false,
+        "expected_resources": [
+          {
+            "id": "frame",
+            "urls": [
+              "https://frames.test/path/clip.mp4"
+            ]
+          }
+        ]
+      },
+      "artifact": "<iframe data-frame-url=\"https://frames.test/path/index.html\" srcdoc=\"&lt;video src=&quot;other.mp4&quot;&gt;&lt;/video&gt;\"></iframe>",
+      "ok": true,
+      "expected_task_pass": false
+    },
+    {
+      "id": "neutral-frame-resource-present",
+      "category": "answer-surface",
+      "root_cause": "neutral_inline_frame_document_url",
+      "failure_mode": "false-negative",
+      "case": {
+        "url": "https://example.test/page",
+        "task_kind": "resource",
+        "content_score_applicable": false,
+        "expected_resources": [
+          {
+            "id": "frame",
+            "urls": [
+              "https://frames.test/path/clip.mp4"
+            ]
+          }
+        ]
+      },
+      "artifact": "<iframe data-frame-url=\"https://frames.test/path/index.html\" srcdoc=\"&lt;video src=&quot;clip.mp4&quot;&gt;&lt;/video&gt;\"></iframe>",
+      "ok": true,
+      "expected_task_pass": true
     }
   ],
   "superseded_cases": {
@@ -55116,7 +55279,8 @@
     "body-unfenced-native-table-code-retained": "body-unfenced-table-is-markup-not-literal-code",
     "dynamic-matching-final-page-and-language-remain-eligible": "query-sensitive-dynamic-matching-final-page-and-language-remain-eligible",
     "answer-title-supplies-required-fact": "body-only-word-boundary-answer-title-supplies-required-fact",
-    "answer-title-does-not-inflate-body-length": "body-only-word-boundary-answer-title-does-not-inflate-body-length"
+    "answer-title-does-not-inflate-body-length": "body-only-word-boundary-answer-title-does-not-inflate-body-length",
+    "explicit-contract-missing-page-identity-with-valid-body-stays-unknown": "explicit-contract-missing-page-identity-counts-as-failure"
   },
   "superseded_controls": {
     "frozen_scorer_sha256": "ceb62fb821e6777d24a015ff713f406faecfff6181b0601b8e3ea2adffbf7c10",

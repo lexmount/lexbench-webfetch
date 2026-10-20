@@ -144,3 +144,54 @@ def test_tasks_can_require_the_complete_document_locale(mode, language, passed):
     metrics = score_attempt(case, b"Article", ok=True, final_url=case["url"],
         metadata={"document_language": language})
     assert task_passed(True, metrics) is passed
+
+
+@pytest.mark.parametrize("surface", ["native_json", "nested_metadata", "json_log_list"])
+@pytest.mark.parametrize("delivered", [False, True])
+def test_resource_answers_exclude_network_diagnostics(surface, delivered):
+    import json
+    target = "https://example.test/target.mp4"
+    case = {"url": "https://example.test/page", "task_kind": "resource",
+            "content_score_applicable": False,
+            "expected_resources": [{"id": "video", "urls": [target]}]}
+    diagnostics = {"network": [{"url": target, "final_url": target}]}
+    if surface in {"native_json", "json_log_list"}:
+        payload = {**diagnostics, "html": "<main>Article</main>"}
+        if delivered:
+            payload["resources"] = [target]
+        if surface == "json_log_list" and not delivered:
+            payload = diagnostics["network"]
+        artifact, metadata = json.dumps(payload).encode(), {}
+    else:
+        artifact = b"No resource URL in the answer"
+        metadata = {"extras": diagnostics}
+        if delivered:
+            metadata["videos"] = [target]
+    metrics = score_attempt(case, artifact, ok=True, metadata=metadata)
+    assert task_passed(True, metrics) is delivered
+    assert bool(metrics["resource_hits"]) is delivered
+
+
+@pytest.mark.parametrize("answer", ["caféteria", "décafé"])
+def test_forbidden_latin_words_do_not_match_fragments(answer):
+    case = {"url": "https://example.test/page", "forbidden_any": ["café"]}
+    metrics = score_attempt(case, answer.encode(), ok=True)
+    assert task_passed(True, metrics)
+    assert not task_passed(True, score_attempt(case, b"A caf\xc3\xa9.", ok=True))
+
+
+def test_required_missing_identity_is_a_failure_in_the_full_population():
+    from lexbench_webfetch.metrics import task_measured
+    case = {"url": "https://example.test/page", "page_identity_required": True}
+    metrics = score_attempt(case, b"Article", ok=True)
+    assert task_measured(metrics)
+    assert not task_passed(True, metrics)
+
+
+@pytest.mark.parametrize("attribute", ["data-frame-url", "data-moli-frame-url"])
+def test_visible_frame_relative_resources_use_the_declared_document_url(attribute):
+    case = {"url": "https://example.test/page", "task_kind": "resource",
+            "expected_resources": [{"id": "frame", "urls": ["https://frames.test/path/clip.mp4"]}]}
+    artifact = (f'<iframe {attribute}="https://frames.test/path/index.html" '
+                'srcdoc="&lt;video src=&quot;clip.mp4&quot;&gt;&lt;/video&gt;"></iframe>').encode()
+    assert task_passed(True, score_attempt(case, artifact, ok=True))
