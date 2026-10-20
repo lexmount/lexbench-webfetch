@@ -30,7 +30,7 @@ Write the summary in English, start with an imperative verb, and describe the co
 Examples:
 
 - `fix(scoring): require facts in the returned body`
-- `fix(webfetch): reject mixed executable versions before release`
+- `fix(webfetch): disclose build provenance for partial reruns`
 - `docs(contributing): define PR and commit title conventions`
 
 Avoid titles such as `Fix review feedback`, `Update code` or `Misc improvements`; name the behavior or document that changes. A PR title describes the complete diff; each commit subject describes that commit. Update the PR title when its scope changes. If squash merging is used, use a subject that follows the same format. Apply this convention to new work; do not rewrite shared commits solely to rename them.
