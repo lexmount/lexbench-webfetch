@@ -261,6 +261,10 @@ def _native_json_resource_candidates(
         payload = json.loads(content)
     except (json.JSONDecodeError, TypeError):
         return []
+    if isinstance(payload, list):
+        # A URL list is itself an answer; a list of request/log objects is not.
+        return [(value, "content.native_json_resource_list") for value in payload
+                if isinstance(value, str)] if all(isinstance(value, str) for value in payload) else []
     if not isinstance(payload, dict):
         return []
     candidates: list[tuple[str, str]] = []

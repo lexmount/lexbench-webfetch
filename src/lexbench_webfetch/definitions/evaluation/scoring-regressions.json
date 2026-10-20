@@ -55299,6 +55299,48 @@
         }
       },
       "expected_task_pass": true
+    },
+    {
+      "id": "json-url-list-answer-matches",
+      "category": "answer-surface",
+      "root_cause": "resource_network_diagnostics_are_not_answers",
+      "failure_mode": "false-negative",
+      "case": {
+        "url": "https://example.test/page",
+        "task_kind": "resource",
+        "expected_resources": [
+          {
+            "id": "video",
+            "urls": [
+              "/target.mp4"
+            ]
+          }
+        ]
+      },
+      "artifact": "[\"/target.mp4\"]",
+      "ok": true,
+      "expected_task_pass": true
+    },
+    {
+      "id": "json-url-list-answer-does-not-match",
+      "category": "answer-surface",
+      "root_cause": "resource_network_diagnostics_are_not_answers",
+      "failure_mode": "false-positive",
+      "case": {
+        "url": "https://example.test/page",
+        "task_kind": "resource",
+        "expected_resources": [
+          {
+            "id": "video",
+            "urls": [
+              "/target.mp4"
+            ]
+          }
+        ]
+      },
+      "artifact": "[\"/other.mp4\"]",
+      "ok": true,
+      "expected_task_pass": false
     }
   ],
   "superseded_cases": {

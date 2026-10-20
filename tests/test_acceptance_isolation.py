@@ -196,3 +196,11 @@ def test_visible_frame_relative_resources_use_the_declared_document_url(attribut
     artifact = (f'<iframe {attribute}="https://frames.test/path/index.html" '
                 'srcdoc="&lt;video src=&quot;clip.mp4&quot;&gt;&lt;/video&gt;"></iframe>').encode()
     assert task_passed(True, score_attempt(case, artifact, ok=True))
+
+
+@pytest.mark.parametrize("returned,passed", [("/target.mp4", True), ("/other.mp4", False)])
+def test_a_returned_json_url_list_remains_a_resource_answer(returned, passed):
+    import json
+    case = {"url": "https://example.test/page", "task_kind": "resource",
+            "expected_resources": [{"id": "video", "urls": ["/target.mp4"]}]}
+    assert task_passed(True, score_attempt(case, json.dumps([returned]).encode(), ok=True)) is passed
