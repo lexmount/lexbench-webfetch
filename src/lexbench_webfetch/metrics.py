@@ -223,8 +223,16 @@ def _inline_frame_candidates(
     URLs that the browser serialized, and ignores hidden synchronization or ad
     frames.  The same parser applies to any provider returning inline frames.
     """
+    if not re.search(r'<iframe\b', content, re.I):
+        return []
     parser = _VisibleInlineFrames()
-    parser.feed(content)
+    try:
+        parser.feed(content)
+    except AssertionError:
+        # The stdlib HTML scanner rejects XML conditional declarations that
+        # can occur in returned documents or code examples. Frame extraction
+        # is supplementary; direct resource links remain independently checked.
+        return []
     candidates: list[tuple[str, str]] = []
     for document, declared_base in parser.documents[:100]:
         try:
@@ -463,6 +471,8 @@ def task_passed(ok: bool, metrics: dict, task_kind: str | None = None) -> bool:
     if (not task_measured(metrics, task_kind) or metrics.get('deadline_overrun')
             or metrics.get('blocked_page')):
         return False
+    if metrics.get('page_identity_required') and metrics.get('page_identity_status') != 'verified':
+        return False
     if "stable_task_pass" in metrics:
         combined = (metrics.get("content_pass")
                     if ("composite_acceptance_pass" in metrics
@@ -566,6 +576,13 @@ def fact_in_text(text: str, fact: str) -> bool:
         return False
     left = r'(?<![0-9.+\-])' if fact[0].isdigit() or fact[0] in '$£€¥' else ''
     right = r'(?![0-9]|\.[0-9])' if fact[-1].isdigit() else ''
+    # Latin words must not match fragments of longer words. Keep CJK phrase
+    # matching and the stricter numeric/currency boundaries intact.
+    latin_word = r'a-z0-9_\u00c0-\u024f\u1e00-\u1eff'
+    if 'LATIN' in unicodedata.name(fact[0], ''):
+        left = rf'(?<![{latin_word}])'
+    if 'LATIN' in unicodedata.name(fact[-1], ''):
+        right = rf'(?![{latin_word}])'
     for match in re.finditer(left + re.escape(fact) + right, text):
         if fact[0] in '$£€¥' and text[:match.start()].rstrip().endswith(('-', '+')):
             continue
@@ -645,16 +662,17 @@ def evaluate_content(
     truncation_hits = declared_truncation_hits(answer_text)
     folded = normalize_for_match(answer_text)
     content_folded = normalize_for_match(visible_content)
-    matched = [marker for marker in expected if (text := normalize_for_match(marker)) and text in content_folded]
+    matched = [marker for marker in expected
+               if fact_in_text(content_folded, normalize_for_match(marker))]
     facts = required_facts or []
     from .dynamic_entry_matching import matching_entry_facts
-    entry_hits = matching_entry_facts(folded, facts, normalize_for_match, fact_in_text)
+    entry_hits = matching_entry_facts(content_folded, facts, normalize_for_match, fact_in_text)
     fact_results = []
     for index, fact in enumerate(facts):
         alternatives = [str(item) for item in fact.get("alternatives", [])]
         identifier = str(fact.get("id") or f"fact-{index + 1}")
         hits = (entry_hits[identifier] if identifier in entry_hits else
-                [item for item in alternatives if fact_in_text(folded, normalize_for_match(item))])
+                [item for item in alternatives if fact_in_text(content_folded, normalize_for_match(item))])
         fact_results.append({
             "id": identifier,
             "alternatives": alternatives,
@@ -872,6 +890,8 @@ def summarize(records: list[dict[str, Any]]) -> dict[str, Any]:
             "mean_content_ms": round(statistics.mean(content_successful_elapsed), 2) if content_successful_elapsed else None,
             "transport_p50_ms": percentile(transport_successful_elapsed, 0.50),
             "transport_p95_ms": percentile(transport_successful_elapsed, 0.95),
+            "mean_all_attempts_ms": round(statistics.mean(elapsed), 2),
+            "all_attempts_p50_ms": percentile(elapsed, 0.50),
             "all_attempts_p95_ms": percentile(elapsed, 0.95),
             "median_content_chars": round(
                 statistics.median(item["metrics"]["content_chars"] for item in items), 1

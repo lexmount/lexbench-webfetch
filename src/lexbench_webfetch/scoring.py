@@ -42,39 +42,37 @@ def load_list_reference(case: EvalCase | dict[str, Any], source: Path) -> dict |
     return None
 
 
-# These conditional outputs must not survive a change of acceptance mode. All
-# unconditional content/resource fields are overwritten below. Other evidence
-# (e.g. raw_file_*, original reference binding and deadline) is retained, not
-# re-certified by text scoring.
-_CONDITIONAL_FIELDS = {
-    "acceptance_contract_sha256", "content_decision_basis", "factual_correctness",
-    "resource_acceptance_contract_sha256",
-    "structure_pass", "named_entry_count", "minimum_entries", "snapshot_f1",
-    "dynamic_titles", "verification_note", "confirmed_entries", "checked_entries",
-    "page_identity_required", "page_identity_status", "final_url_consistent",
-    "document_language_required",
-    "language_consistent", "observed_document_language",
-    "acceptable_final_urls",
-    "ordered_tree", "ordered_tree_similarity",
-    "composite_acceptance_sha256",
-    "body_requirements_sha256",
+# Only collection evidence survives an offline score. Derived acceptance fields
+# are recomputed, including fields no longer emitted by the current scorer.
+# File fingerprints stay readable; a verdict needs current file verification.
+_RETAINED_EVIDENCE_FIELDS = {
+    "reference_sha256", "deadline_overrun", "deadline_budget_ms", "file_evidence",
+    "raw_file_sha256",
 }
 
 
 def _same_page_url(actual: str, expected: str) -> bool:
-    actual_parts, expected_parts = urlsplit(actual), urlsplit(expected)
+    if not isinstance(actual, str) or not isinstance(expected, str):
+        return False
+    try:
+        actual_parts, expected_parts = urlsplit(actual), urlsplit(expected)
+        actual_port = actual_parts.port or {"http": 80, "https": 443}.get(actual_parts.scheme)
+        expected_port = expected_parts.port or {"http": 80, "https": 443}.get(expected_parts.scheme)
+    except ValueError:
+        return False
     actual_path = actual_parts.path.rstrip("/") or "/"
     expected_path = expected_parts.path.rstrip("/") or "/"
-    if ((actual_parts.scheme, actual_parts.hostname, actual_path)
-            != (expected_parts.scheme, expected_parts.hostname, expected_path)):
+    if ((actual_parts.scheme, actual_parts.hostname, actual_port, actual_path)
+            != (expected_parts.scheme, expected_parts.hostname, expected_port, expected_path)):
         return False
     # A declared query can select a different page on the same path (for
     # example, two distinct search results). Compare its decoded parameters;
     # a fragment does not change the fetched page.
-    expected_query = parse_qsl(expected_parts.query, keep_blank_values=True)
-    return (not expected_query or
-            sorted(parse_qsl(actual_parts.query, keep_blank_values=True))
-            == sorted(expected_query))
+    def page_query(parts):
+        return sorted((key, value) for key, value in parse_qsl(parts.query, keep_blank_values=True)
+                      if not key.casefold().startswith('utm_')
+                      and key.casefold() not in {'gclid', 'fbclid'})
+    return page_query(actual_parts) == page_query(expected_parts)
 
 
 def score_attempt(
@@ -100,14 +98,19 @@ def score_attempt(
     evidence is preserved; the caller must have validated its artifact binding.
     """
     case = _case_dict(case)
+    identity_required = case.get("page_identity_required", False)
+    if not isinstance(identity_required, bool):
+        raise ValueError("page_identity_required must be boolean")
+    language_match = case.get("document_language_match", "primary")
+    if language_match not in {"primary", "exact"}:
+        raise ValueError("document_language_match must be primary or exact")
     from .response_input import answer_input
     # Live callers forward the conversion completed inside the timed boundary.
     # Offline callers reconstruct it from immutable evidence by the same function.
     content, links, ok, status_basis = (prepared_answer if prepared_answer is not None else
         answer_input(artifact, metadata, ok=ok, status_code=status_code))
     result = {key: value for key, value in (previous_metrics or {}).items()
-              if key not in _CONDITIONAL_FIELDS
-              and not key.startswith(("stable_", "list_", "page_context_"))}
+              if key in _RETAINED_EVIDENCE_FIELDS}
     keys = ("required_facts", "forbidden_any", "min_content_chars",
             "fact_coverage_threshold", "ground_truth_main_content", "required_patterns",
             "acceptance_contract", "body_requirements", "composite_acceptance")
@@ -143,7 +146,6 @@ def score_attempt(
                   normalized_named_link_count=len(links))
     dynamic_page_identity = bool(
         case.get("track") == "dynamic"
-        and (metadata or {}).get("route") == "dynamic_selected_text"
         and case.get("evaluation_url")
         and case.get("expected_final_url")
         and case.get("target_language")
@@ -178,8 +180,10 @@ def score_attempt(
         language_consistent = (
             observed_language == "" if not language_present else bool(
                 isinstance(observed_language, str) and observed_language.strip()
-                and observed_language.split("-", 1)[0].casefold()
-                == expected_document_language.split("-", 1)[0].casefold()
+                and (observed_language.casefold() == expected_document_language.casefold()
+                     if language_match == "exact" else
+                     observed_language.split("-", 1)[0].casefold()
+                     == expected_document_language.split("-", 1)[0].casefold())
             )
         )
         identity_status = (
@@ -189,7 +193,7 @@ def score_attempt(
             else "unavailable"
         )
         result.update(
-            page_identity_required=False,
+            page_identity_required=identity_required,
             page_identity_status=identity_status,
             final_url_consistent=final_consistent,
             language_consistent=language_consistent,
@@ -207,13 +211,19 @@ def score_attempt(
             and any(_same_page_url(final_url, expected) for expected in acceptable_urls)
         )
         result.update(
-            page_identity_required=False,
+            page_identity_required=identity_required,
             page_identity_status=(
                 "verified" if final_consistent else "mismatch" if final_url else "unavailable"
             ),
             final_url_consistent=final_consistent,
             acceptable_final_urls=acceptable_urls,
         )
+    elif identity_required:
+        consistent = bool(final_url and _same_page_url(
+            final_url, case.get("expected_final_url") or case["url"]))
+        result.update(page_identity_required=True, final_url_consistent=consistent,
+                      page_identity_status="verified" if consistent else
+                      "mismatch" if final_url else "unavailable")
     else:
         result.update(page_identity_required=False, page_identity_status="not_required")
     result["task_kind"] = task_kind
@@ -242,7 +252,7 @@ def score_attempt(
             if "declared_truncation" not in result["stable_task_errors"]:
                 result["stable_task_errors"].append("declared_truncation")
     file_evaluation = (metadata or {}).get('file_evaluation')
-    if result['task_kind'] == 'file' and isinstance(file_evaluation, dict) and 'raw_file_pass' not in result:
+    if result['task_kind'] == 'file' and isinstance(file_evaluation, dict):
         result['raw_file_pass'] = bool(file_evaluation.get('pass'))
     result["content_score_applicable"] = case.get("content_score_applicable", True)
     contract = scoring_values.get("acceptance_contract")

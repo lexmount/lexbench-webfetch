@@ -46,7 +46,9 @@ class EvalCase:
     source_review_url: str = ""
     evaluation_url: str = ""
     expected_final_url: str = ""
+    page_identity_required: bool = False
     expected_document_language: str = ""
+    document_language_match: str = "primary"
     expected_document_language_present: bool = True
     target_language: str = ""
     target_region: str = ""
