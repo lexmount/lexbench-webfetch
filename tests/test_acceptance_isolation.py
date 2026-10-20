@@ -180,9 +180,10 @@ def test_forbidden_latin_words_do_not_match_fragments(answer):
     assert not task_passed(True, score_attempt(case, b"A caf\xc3\xa9.", ok=True))
 
 
-def test_required_missing_identity_is_a_failure_in_the_full_population():
+@pytest.mark.parametrize("kind", ["body", "resource", "file"])
+def test_required_missing_identity_is_a_failure_in_the_full_population(kind):
     from lexbench_webfetch.metrics import task_measured
-    case = {"url": "https://example.test/page", "page_identity_required": True}
+    case = {"url": "https://example.test/page", "page_identity_required": True, "task_kind": kind}
     metrics = score_attempt(case, b"Article", ok=True)
     assert task_measured(metrics)
     assert not task_passed(True, metrics)

@@ -55263,6 +55263,42 @@
       "artifact": "<iframe data-frame-url=\"https://frames.test/path/index.html\" srcdoc=\"&lt;video src=&quot;clip.mp4&quot;&gt;&lt;/video&gt;\"></iframe>",
       "ok": true,
       "expected_task_pass": true
+    },
+    {
+      "category": "acceptance-contract",
+      "root_cause": "required_file_identity_missing_must_not_shrink_population",
+      "case": {
+        "url": "https://example.test/file",
+        "task_kind": "file",
+        "page_identity_required": true
+      },
+      "artifact": "File delivered",
+      "ok": true,
+      "expected_task_measured": true,
+      "id": "file-missing-required-identity-is-measured-failure",
+      "failure_mode": "false-positive",
+      "expected_task_pass": false
+    },
+    {
+      "category": "acceptance-contract",
+      "root_cause": "required_file_identity_missing_must_not_shrink_population",
+      "case": {
+        "url": "https://example.test/file",
+        "task_kind": "file",
+        "page_identity_required": true
+      },
+      "artifact": "File delivered",
+      "ok": true,
+      "expected_task_measured": true,
+      "id": "file-with-required-identity-and-current-verdict-passes",
+      "failure_mode": "false-negative",
+      "final_url": "https://example.test/file",
+      "metadata": {
+        "file_evaluation": {
+          "pass": true
+        }
+      },
+      "expected_task_pass": true
     }
   ],
   "superseded_cases": {
