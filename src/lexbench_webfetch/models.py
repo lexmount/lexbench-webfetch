@@ -48,7 +48,9 @@ class EvalCase:
     evaluation_url: str = ""
     page_identity_required: bool = field(default=False, kw_only=True)
     expected_final_url: str = ""
+    page_identity_required: bool = False
     expected_document_language: str = ""
+    document_language_match: str = "primary"
     expected_document_language_present: bool = True
     target_language: str = ""
     target_region: str = ""

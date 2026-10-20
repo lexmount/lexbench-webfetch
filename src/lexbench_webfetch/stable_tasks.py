@@ -706,7 +706,8 @@ def _stable_literal_match(surface, value, registered_words=()):
     from .metrics import fact_in_text, normalize_for_match
     expected = normalize_for_match(_visible(value))
     folded = normalize_for_match(surface)
-    if not fact_in_text(folded, expected):
+    if not fact_in_text(folded, expected, latin_boundaries=bool(
+            re.search(r"[^\x00-\x7f]", value))):
         return False
     # Arabic labels are whitespace-delimited words too. A longer inflected
     # word cannot supply an independently registered ordinary navigation label.

@@ -1,6 +1,6 @@
 [project]
 name = "lexbench-webfetch"
-version = "0.2.0"
+version = "0.3.0"
 description = "Versioned Web Fetch tasks, acceptance contracts and frozen reference bindings"
 readme = "README.md"
 requires-python = ">=3.11"

@@ -20,7 +20,8 @@ PUBLIC_TASK_FIELDS = (
     "fact_coverage_threshold", "expected_resources", "resource_output_contract",
     "content_score_applicable", "required_patterns", "acceptance_contract",
     "composite_acceptance", "mutable_body_policy", "body_requirements", "retrieval_hints",
-    "source_review_url", "evaluation_url", "expected_final_url", "expected_document_language",
+    "source_review_url", "evaluation_url", "expected_final_url", "page_identity_required",
+    "expected_document_language", "document_language_match",
     "expected_document_language_present", "target_language", "target_region",
 )
 

@@ -106,6 +106,16 @@ uv run --frozen browser-harness-eval run \
 
 Run these two commands from Browser Eval. Ordinary runs are diagnostic; a formal live-site comparison additionally requires its pre-call/post-call reference certification. The benchmark input checker verifies frozen bytes, not present-day website validity. See the [Browser Eval integration guide](https://github.com/lexmount/browser-eval/blob/main/docs/benchmarks.md).
 
+## Scoring behavior
+
+Version 0.3 matches Latin words at word boundaries for facts, markers and stable anchors. Required body facts use the returned content; a separate document title cannot supply missing body text. Chinese phrases retain literal matching, and numeric and currency checks keep their value boundaries.
+
+A task can set `page_identity_required: true` to require its final URL observations. Missing or mismatched observations then fail acceptance. Dynamic tasks can also set `document_language_match: "exact"` when the complete language tag matters; the default is `"primary"`. These checks apply across interfaces. Frozen tasks that do not require URL metadata keep their content-based acceptance rules.
+
+Offline scoring recomputes derived fields. It retains the original reference hash, deadline evidence and file fingerprints. A file verdict requires current file verification; an old pass flag cannot certify a rescore. Summaries expose `mean_all_attempts_ms`, `all_attempts_p50_ms` and `all_attempts_p95_ms` alongside the existing successful-call timings. The all-attempt population includes failed calls and timeouts.
+
+These changes do not revise frozen tasks or certify historical results. Score corrections require a new evidence revision tied to the scorer and its regression controls.
+
 ## Repository contents
 
 | Path | Purpose |
