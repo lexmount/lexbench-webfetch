@@ -176,6 +176,16 @@ class _VisibleInlineFrames(HTMLParser):
         super().__init__(convert_charrefs=True)
         self.documents: list[tuple[str, str | None]] = []
 
+    def parse_marked_section(self, i: int, report: int = 1) -> int:
+        # HTMLParser rejects XML conditional sections that are valid opaque
+        # declarations in returned documents. Skip their declared extent while
+        # retaining visible frames both before and after them.
+        try:
+            return super().parse_marked_section(i, report)
+        except AssertionError:
+            end = self.rawdata.find("]>", i + 3)
+            return end + 2 if end >= 0 else -1
+
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
         if tag.casefold() != "iframe":
             return
@@ -208,13 +218,8 @@ def _inline_frame_candidates(
     if not re.search(r'<iframe\b', content, re.I):
         return []
     parser = _VisibleInlineFrames()
-    try:
-        parser.feed(content)
-    except AssertionError:
-        # The stdlib HTML scanner rejects XML conditional declarations that
-        # can occur in returned documents or code examples. Frame extraction
-        # is supplementary; direct resource links remain independently checked.
-        return []
+    parser.feed(content)
+    parser.close()
     candidates: list[tuple[str, str]] = []
     for document, declared_base in parser.documents[:100]:
         try:
@@ -560,6 +565,15 @@ def normalize_for_match(value: str) -> str:
     return re.sub(r'(?<=\w) *> *(?=\w)', '>', normalized)
 
 
+# Alphabets whose adjacent letters form a word. CJK keeps declared phrase
+# containment because those writing systems do not require word separators.
+WORD_CHARACTERS = r'a-z0-9_\u00c0-\u024f\u1e00-\u1eff\u0370-\u052f\u1f00-\u1fff\u2de0-\u2dff\ua640-\ua69f'
+
+
+def _word_letter(char: str) -> bool:
+    return any(script in unicodedata.name(char, '') for script in ('LATIN', 'GREEK', 'CYRILLIC'))
+
+
 def fact_in_text(text: str, fact: str, *, latin_boundaries: bool = True) -> bool:
     """Match an explicitly registered normalized fact without fuzzy semantics."""
     if not fact:
@@ -568,10 +582,10 @@ def fact_in_text(text: str, fact: str, *, latin_boundaries: bool = True) -> bool
     right = r'(?![0-9]|\.[0-9])' if fact[-1].isdigit() else ''
     # Latin words must not match fragments of longer words. Keep CJK phrase
     # matching and the stricter numeric/currency boundaries intact.
-    latin_word = r'a-z0-9_\u00c0-\u024f\u1e00-\u1eff'
-    if latin_boundaries and 'LATIN' in unicodedata.name(fact[0], ''):
+    latin_word = WORD_CHARACTERS
+    if latin_boundaries and _word_letter(fact[0]):
         left = rf'(?<![{latin_word}])'
-    if latin_boundaries and 'LATIN' in unicodedata.name(fact[-1], ''):
+    if latin_boundaries and _word_letter(fact[-1]):
         right = rf'(?![{latin_word}])'
     for match in re.finditer(left + re.escape(fact) + right, text):
         if fact[0] in '$£€¥' and text[:match.start()].rstrip().endswith(('-', '+')):
@@ -584,11 +598,11 @@ def forbidden_in_text(text: str, phrase: str) -> bool:
     """Match Latin word boundaries without segmenting CJK phrases."""
     if not phrase:
         return False
-    latin_word = r'a-z0-9_\u00c0-\u024f\u1e00-\u1eff'
+    latin_word = WORD_CHARACTERS
     left = rf'(?<![{latin_word}])' if (phrase[0].isascii() and phrase[0].isalnum()
-            or 'LATIN' in unicodedata.name(phrase[0], '')) else ''
+            or _word_letter(phrase[0])) else ''
     right = rf'(?![{latin_word}])' if (phrase[-1].isascii() and phrase[-1].isalnum()
-             or 'LATIN' in unicodedata.name(phrase[-1], '')) else ''
+             or _word_letter(phrase[-1])) else ''
     return bool(re.search(left + re.escape(phrase) + right, text))
 
 

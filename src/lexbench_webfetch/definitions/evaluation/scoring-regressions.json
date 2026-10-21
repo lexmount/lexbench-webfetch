@@ -55341,6 +55341,168 @@
       "artifact": "[\"/other.mp4\"]",
       "ok": true,
       "expected_task_pass": false
+    },
+    {
+      "id": "word-boundary-mixed-script-complete",
+      "category": "format-normalization",
+      "root_cause": "alphabetic_boundary_omits_greek_cyrillic",
+      "failure_mode": "false-negative",
+      "case": {
+        "url": "https://example.test/article",
+        "required_facts": [
+          {
+            "id": "answer",
+            "alternatives": [
+              "stats"
+            ]
+          }
+        ]
+      },
+      "artifact": "(stats)",
+      "ok": true,
+      "expected_task_pass": true
+    },
+    {
+      "id": "word-boundary-mixed-script-fragment",
+      "category": "format-normalization",
+      "root_cause": "alphabetic_boundary_omits_greek_cyrillic",
+      "failure_mode": "false-positive",
+      "case": {
+        "url": "https://example.test/article",
+        "required_facts": [
+          {
+            "id": "answer",
+            "alternatives": [
+              "stats"
+            ]
+          }
+        ]
+      },
+      "artifact": "αstats",
+      "ok": true,
+      "expected_task_pass": false
+    },
+    {
+      "id": "word-boundary-greek-complete",
+      "category": "format-normalization",
+      "root_cause": "alphabetic_boundary_omits_greek_cyrillic",
+      "failure_mode": "false-negative",
+      "case": {
+        "url": "https://example.test/article",
+        "required_facts": [
+          {
+            "id": "answer",
+            "alternatives": [
+              "Αθήνα"
+            ]
+          }
+        ]
+      },
+      "artifact": "(Αθήνα)",
+      "ok": true,
+      "expected_task_pass": true
+    },
+    {
+      "id": "word-boundary-greek-fragment",
+      "category": "format-normalization",
+      "root_cause": "alphabetic_boundary_omits_greek_cyrillic",
+      "failure_mode": "false-positive",
+      "case": {
+        "url": "https://example.test/article",
+        "required_facts": [
+          {
+            "id": "answer",
+            "alternatives": [
+              "Αθήνα"
+            ]
+          }
+        ]
+      },
+      "artifact": "Αθήνας",
+      "ok": true,
+      "expected_task_pass": false
+    },
+    {
+      "id": "word-boundary-cyrillic-complete",
+      "category": "format-normalization",
+      "root_cause": "alphabetic_boundary_omits_greek_cyrillic",
+      "failure_mode": "false-negative",
+      "case": {
+        "url": "https://example.test/article",
+        "required_facts": [
+          {
+            "id": "answer",
+            "alternatives": [
+              "новости"
+            ]
+          }
+        ]
+      },
+      "artifact": "(новости)",
+      "ok": true,
+      "expected_task_pass": true
+    },
+    {
+      "id": "word-boundary-cyrillic-fragment",
+      "category": "format-normalization",
+      "root_cause": "alphabetic_boundary_omits_greek_cyrillic",
+      "failure_mode": "false-positive",
+      "case": {
+        "url": "https://example.test/article",
+        "required_facts": [
+          {
+            "id": "answer",
+            "alternatives": [
+              "новости"
+            ]
+          }
+        ]
+      },
+      "artifact": "новостик",
+      "ok": true,
+      "expected_task_pass": false
+    },
+    {
+      "id": "xml-declaration-frame-target",
+      "category": "structured-extraction",
+      "root_cause": "xml_declaration_discards_visible_frame_resources",
+      "failure_mode": "false-negative",
+      "case": {
+        "url": "https://example.test/spec",
+        "task_kind": "resource",
+        "expected_resources": [
+          {
+            "id": "image",
+            "urls": [
+              "/target.png"
+            ]
+          }
+        ]
+      },
+      "artifact": "<![UNRECOGNIZED[ XML source ]]><iframe srcdoc=\"&lt;img src=&quot;/target.png&quot;&gt;\"></iframe>",
+      "ok": true,
+      "expected_task_pass": true
+    },
+    {
+      "id": "xml-declaration-frame-non-target",
+      "category": "structured-extraction",
+      "root_cause": "xml_declaration_discards_visible_frame_resources",
+      "failure_mode": "false-positive",
+      "case": {
+        "url": "https://example.test/spec",
+        "task_kind": "resource",
+        "expected_resources": [
+          {
+            "id": "image",
+            "urls": [
+              "/target.png"
+            ]
+          }
+        ]
+      },
+      "artifact": "<![UNRECOGNIZED[ XML source ]]><iframe srcdoc=\"&lt;img src=&quot;/other.png&quot;&gt;\"></iframe>",
+      "ok": true,
+      "expected_task_pass": false
     }
   ],
   "superseded_cases": {

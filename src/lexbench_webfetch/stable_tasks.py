@@ -703,7 +703,7 @@ def _stable_literal_match(surface, value, registered_words=()):
     preserve adjacent UI text without accepting arbitrary word fragments.
     Longer declared text retains the existing exact-phrase containment rule.
     """
-    from .metrics import fact_in_text, normalize_for_match
+    from .metrics import WORD_CHARACTERS, fact_in_text, normalize_for_match
     expected = normalize_for_match(_visible(value))
     folded = normalize_for_match(surface)
     if not fact_in_text(folded, expected, latin_boundaries=bool(
@@ -717,7 +717,7 @@ def _stable_literal_match(surface, value, registered_words=()):
     if not re.fullmatch(r"[A-Za-z]+", value):
         return True
     boundary = lambda needle, text: bool(re.search(
-        r"(?<![a-z])" + re.escape(needle) + r"(?![a-z])", text))
+        rf"(?<![{WORD_CHARACTERS}])" + re.escape(needle) + rf"(?![{WORD_CHARACTERS}])", text))
     if boundary(expected, folded):
         return True
     camel = lambda text: re.sub(
@@ -726,7 +726,7 @@ def _stable_literal_match(surface, value, registered_words=()):
                 normalize_for_match(camel(surface))):
         return True
     labels = {normalize_for_match(word) for word in registered_words}
-    for token in set(re.findall(r"[a-z]+", folded)):
+    for token in set(re.findall(rf"[{WORD_CHARACTERS}]+", folded)):
         if expected not in token:
             continue
         states = {(0, False)}

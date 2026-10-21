@@ -8,6 +8,9 @@ from lexbench_webfetch.scoring import score_attempt
 @pytest.mark.parametrize("literal,other", [
     ("Home", "homepage"), ("Live", "deliver"), ("News", "newsletter"),
     ("Print", "blueprint"), ("url", "curl"), ("café", "caféteria"),
+    ("Clone", "Cloned"), ("stats", "statsmodels"),
+    ("stats", "αstats"), ("stats", "statsя"),
+    ("Αθήνα", "Αθήνας"), ("новости", "новостик"),
 ])
 @pytest.mark.parametrize("gate", ["fact", "marker", "anchor"])
 def test_whole_word_requirements_reject_longer_words(literal, other, gate):
@@ -204,3 +207,23 @@ def test_a_returned_json_url_list_remains_a_resource_answer(returned, passed):
     case = {"url": "https://example.test/page", "task_kind": "resource",
             "expected_resources": [{"id": "video", "urls": ["/target.mp4"]}]}
     assert task_passed(True, score_attempt(case, json.dumps([returned]).encode(), ok=True)) is passed
+
+
+@pytest.mark.parametrize("declaration", ["<?xml version=\"1.0\"?>",
+    "<![UNRECOGNIZED[ XML source ]]>", "<![%draft;[<!ELEMENT note ANY>]]>"])
+@pytest.mark.parametrize("position", ["before", "after"])
+def test_xml_declarations_preserve_visible_frame_resource_answers(declaration, position):
+    case = {"url": "https://example.test/spec", "task_kind": "resource",
+            "expected_resources": [{"id": "image", "urls": ["/target.png"]}]}
+    for filename, passed in [("target.png", True), ("other.png", False)]:
+        frame = '<iframe srcdoc="&lt;img src=&quot;/' + filename + '&quot;&gt;"></iframe>'
+        answer = declaration + frame if position == "before" else frame + declaration
+        assert task_passed(True, score_attempt(case, answer.encode(), ok=True)) is passed
+
+
+@pytest.mark.parametrize("literal,fragment", [("stats", "αstats"), ("stats", "statsя"),
+    ("Αθήνα", "Αθήνας"), ("новости", "новостик")])
+def test_forbidden_words_use_the_same_alphabetic_boundaries(literal, fragment):
+    case = {"url": "https://example.test/article", "forbidden_any": [literal]}
+    for answer, passed in [(fragment, True), ('(' + literal + ')', False)]:
+        assert task_passed(True, score_attempt(case, answer.encode(), ok=True)) is passed
