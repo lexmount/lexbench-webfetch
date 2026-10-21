@@ -5,6 +5,21 @@ from dataclasses import dataclass
 from html import unescape
 
 
+# Cover the alphabets whose word boundaries the literal scorer enforces.
+_CASE_CODEPOINTS = (*range(0x0250), *range(0x0370, 0x0530), *range(0x1E00, 0x2000),
+                    *range(0x2DE0, 0x2E00), *range(0xA640, 0xA6A0))
+_LOWER_LETTERS = re.escape(''.join(chr(n) for n in _CASE_CODEPOINTS if chr(n).islower()))
+_UPPER_LETTERS = re.escape(''.join(chr(n) for n in _CASE_CODEPOINTS if chr(n).isupper()))
+_CASE_BOUNDARY = re.compile(
+    rf'(?<=[{_LOWER_LETTERS}])(?=[{_UPPER_LETTERS}])|'
+    rf'(?<=[{_UPPER_LETTERS}])(?=[{_UPPER_LETTERS}][{_LOWER_LETTERS}])')
+
+
+def separate_case_labels(text: str) -> str:
+    """Restore cased label boundaries without splitting lowercase word fragments."""
+    return _CASE_BOUNDARY.sub(' ', text)
+
+
 HTML_BLOCK_ELEMENTS = frozenset({
     "address", "article", "aside", "blockquote", "caption", "colgroup", "dd",
     "details", "dialog", "div", "dl", "dt", "fieldset", "figcaption", "figure",
@@ -253,7 +268,9 @@ def markdown_links(text: str) -> list[MarkdownLink]:
             titled = re.match(r"(?s)^(.*?)\s+(['\"])(.*)\2$", raw_destination)
             destination = re.sub(r"\s+", "", titled[1] if titled else raw_destination)
             native_title = titled[3] if titled else ""
-        links.append(MarkdownLink(raw_label, destination, image, index, destination_end + 1, native_title))
+        # Character references in a Markdown destination are rendered URL
+        # syntax. Decode once here; bare URL answers retain their literal bytes.
+        links.append(MarkdownLink(raw_label, unescape(destination), image, index, destination_end + 1, native_title))
         index = destination_end + 1
     return links
 
@@ -288,6 +305,9 @@ def visible_markdown_links(text: str) -> str:
         if match.start < start:
             continue
         label = re.sub(r"\s+", " ", visible_markdown_links(match.label)).strip()
+        # A native carousel can append its accessibility position directly
+        # to the label. Keep both values but restore their observable boundary.
+        label = re.sub(r'(?<=[^\W\d_])(?=\d+\s+of\s+\d+$)', ' ', label)
         # Distinct adjacent link labels retain a token boundary. Some native
         # serializers also drop a real DOM text boundary immediately before a
         # path link or a multi-word link label (``out[/r/x]`` / ``or[Stack

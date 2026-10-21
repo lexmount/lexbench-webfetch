@@ -263,7 +263,7 @@ def _note_malformed_markdown_destinations(content, base_url, diagnostics):
             break
 
 
-def _text_scope_boundary(content, pattern):
+def _text_scope_boundary(content, pattern, *, prefer_heading=False):
     """Match literal text or an equivalent standalone Markdown heading.
 
     Return offsets in the original answer so record syntax and boundaries are
@@ -272,6 +272,7 @@ def _text_scope_boundary(content, pattern):
     """
     from .reference_quality import visible_markdown_links
     candidates=[]
+    headings=[]
     raw=re.search(pattern,content,re.M)
     if raw:candidates.append((raw.start(),raw.end()))
     offset=0
@@ -285,8 +286,13 @@ def _text_scope_boundary(content, pattern):
         visible=re.sub(r'([*_]{1,2})(.+?)\1',r'\2',visible)
         visible=re.sub(r'\s+#+\s*$','',visible).strip()
         if re.match(pattern,visible,re.M):
-            candidates.append((offset,offset+len(line)))
+            candidate = (offset, offset + len(line))
+            candidates.append(candidate)
+            if re.match(r"^[ \t]{0,3}#{1,6}[ \t]+", decoded_line):
+                headings.append(candidate)
         offset+=len(line)
+    if prefer_heading and headings:
+        return min(headings)
     return min(candidates) if candidates else None
 
 
@@ -430,7 +436,7 @@ def _scope_named_content(content, scope, *, contract=None, base_url=''):
                     owned_items.append((destinations.pop(), titles[0].get_text(' ', strip=True)))
             return '', owned_items, True
     if scope.get('start_pattern'):
-        start = _text_scope_boundary(content, scope['start_pattern'])
+        start = _text_scope_boundary(content, scope['start_pattern'], prefer_heading=True)
         if not start:
             return '', [], False
         content = content[start[1]:]

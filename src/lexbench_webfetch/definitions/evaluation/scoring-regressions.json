@@ -55503,6 +55503,650 @@
       "artifact": "<![UNRECOGNIZED[ XML source ]]><iframe srcdoc=\"&lt;img src=&quot;/other.png&quot;&gt;\"></iframe>",
       "ok": true,
       "expected_task_pass": false
+    },
+    {
+      "id": "native-serialization-complete-notice",
+      "category": "format-normalization",
+      "root_cause": "visible_label_boundaries_in_native_serialization",
+      "failure_mode": "false-negative",
+      "case": {
+        "url": "https://example.test/",
+        "required_facts": [
+          {
+            "id": "label",
+            "alternatives": [
+              "Example Corp. Avenida N°5, Santiago de Chile"
+            ]
+          }
+        ]
+      },
+      "artifact": "ALL RIGHTS RESERVEDExample Corp. Avenida N°5, Santiago de Chile",
+      "ok": true,
+      "expected_task_pass": true
+    },
+    {
+      "id": "native-serialization-changed-notice",
+      "category": "format-normalization",
+      "root_cause": "visible_label_boundaries_in_native_serialization",
+      "failure_mode": "false-positive",
+      "case": {
+        "url": "https://example.test/",
+        "required_facts": [
+          {
+            "id": "label",
+            "alternatives": [
+              "Example Corp. Avenida N°5, Santiago de Chile"
+            ]
+          }
+        ]
+      },
+      "artifact": "ALL RIGHTS RESERVEDExample Corp. Avenida N°6, Santiago de Chile",
+      "ok": true,
+      "expected_task_pass": false
+    },
+    {
+      "id": "native-serialization-stock-label",
+      "category": "format-normalization",
+      "root_cause": "visible_label_boundaries_in_native_serialization",
+      "failure_mode": "false-negative",
+      "case": {
+        "url": "https://example.test/",
+        "required_facts": [
+          {
+            "id": "label",
+            "alternatives": [
+              "In stock"
+            ]
+          }
+        ]
+      },
+      "artifact": "In stockAdd to basket",
+      "ok": true,
+      "expected_task_pass": true
+    },
+    {
+      "id": "native-serialization-stock-word-fragment",
+      "category": "format-normalization",
+      "root_cause": "visible_label_boundaries_in_native_serialization",
+      "failure_mode": "false-positive",
+      "case": {
+        "url": "https://example.test/",
+        "required_facts": [
+          {
+            "id": "label",
+            "alternatives": [
+              "In stock"
+            ]
+          }
+        ]
+      },
+      "artifact": "In stockholders",
+      "ok": true,
+      "expected_task_pass": false
+    },
+    {
+      "id": "native-serialization-carousel-label",
+      "category": "format-normalization",
+      "root_cause": "visible_label_boundaries_in_native_serialization",
+      "failure_mode": "false-negative",
+      "case": {
+        "url": "https://example.test/",
+        "required_facts": [
+          {
+            "id": "label",
+            "alternatives": [
+              "Careers"
+            ]
+          }
+        ]
+      },
+      "artifact": "[Careers9 of 9](/careers)",
+      "ok": true,
+      "expected_task_pass": true
+    },
+    {
+      "id": "native-serialization-carousel-digit-word",
+      "category": "format-normalization",
+      "root_cause": "visible_label_boundaries_in_native_serialization",
+      "failure_mode": "false-positive",
+      "case": {
+        "url": "https://example.test/",
+        "required_facts": [
+          {
+            "id": "label",
+            "alternatives": [
+              "Careers"
+            ]
+          }
+        ]
+      },
+      "artifact": "[Careers9](/careers)",
+      "ok": true,
+      "expected_task_pass": false
+    },
+    {
+      "id": "native-serialization-cyrillic-label",
+      "category": "format-normalization",
+      "root_cause": "visible_label_boundaries_in_native_serialization",
+      "failure_mode": "false-negative",
+      "case": {
+        "url": "https://example.test/",
+        "required_facts": [
+          {
+            "id": "label",
+            "alternatives": [
+              "Наука"
+            ]
+          }
+        ]
+      },
+      "artifact": "[Технологии](/technology)[Наука](/science)Все темы",
+      "ok": true,
+      "expected_task_pass": true
+    },
+    {
+      "id": "native-serialization-cyrillic-word-fragment",
+      "category": "format-normalization",
+      "root_cause": "visible_label_boundaries_in_native_serialization",
+      "failure_mode": "false-positive",
+      "case": {
+        "url": "https://example.test/",
+        "required_facts": [
+          {
+            "id": "label",
+            "alternatives": [
+              "Наука"
+            ]
+          }
+        ]
+      },
+      "artifact": "Наукам",
+      "ok": true,
+      "expected_task_pass": false
+    },
+    {
+      "id": "native-serialization-punctuation-markup",
+      "category": "format-normalization",
+      "root_cause": "visible_label_boundaries_in_native_serialization",
+      "failure_mode": "false-negative",
+      "case": {
+        "url": "https://example.test/",
+        "required_facts": [
+          {
+            "id": "label",
+            "alternatives": [
+              "toute l’actu dès 7h30"
+            ]
+          }
+        ]
+      },
+      "artifact": "_:_toute l’actu dès 7h30",
+      "ok": true,
+      "expected_task_pass": true
+    },
+    {
+      "id": "resource-serialization-markup-entity",
+      "category": "format-normalization",
+      "root_cause": "markdown_destination_entities_decoded_once",
+      "failure_mode": "false-negative",
+      "case": {
+        "url": "https://example.test/gallery",
+        "task_kind": "resource",
+        "expected_resources": [
+          {
+            "id": "photo",
+            "urls": [
+              "https://cdn.example.test/photo.jpg?width=640&height=480"
+            ]
+          }
+        ],
+        "resource_output_contract": {
+          "candidate_scope": "image_answer_fields",
+          "unexpected": "reject"
+        }
+      },
+      "artifact": "![Photo](https://cdn.example.test/photo.jpg?width=640&amp;height=480)",
+      "ok": true,
+      "expected_task_pass": true
+    },
+    {
+      "id": "resource-serialization-different-size",
+      "category": "format-normalization",
+      "root_cause": "markdown_destination_entities_decoded_once",
+      "failure_mode": "false-positive",
+      "case": {
+        "url": "https://example.test/gallery",
+        "task_kind": "resource",
+        "expected_resources": [
+          {
+            "id": "photo",
+            "urls": [
+              "https://cdn.example.test/photo.jpg?width=640&height=480"
+            ]
+          }
+        ],
+        "resource_output_contract": {
+          "candidate_scope": "image_answer_fields",
+          "unexpected": "reject"
+        }
+      },
+      "artifact": "![Photo](https://cdn.example.test/photo.jpg?width=641&amp;height=480)",
+      "ok": true,
+      "expected_task_pass": false
+    },
+    {
+      "id": "named-scope-heading-owns-records",
+      "category": "structured-extraction",
+      "root_cause": "heading_scope_and_empty_nested_card_layout",
+      "failure_mode": "false-negative",
+      "case": {
+        "url": "https://example.test/search",
+        "acceptance_contract": {
+          "version": 1,
+          "schema": "named_link",
+          "minimum_records": 2,
+          "hosts": [
+            "example.test"
+          ],
+          "entry_path": "/item/[0-9]+",
+          "entry_scope": {
+            "html_selector": ".results a[href]",
+            "start_pattern": "^Find games$",
+            "end_pattern": "^See all"
+          }
+        }
+      },
+      "artifact": "Find games\n[Help](/help)\nSee all\n### Find games\n[Alpha](/item/1)\n[Beta](/item/2)\nSee all",
+      "ok": true,
+      "expected_task_pass": true
+    },
+    {
+      "id": "named-scope-navigation-cannot-supply-records",
+      "category": "structured-extraction",
+      "root_cause": "heading_scope_and_empty_nested_card_layout",
+      "failure_mode": "false-positive",
+      "case": {
+        "url": "https://example.test/search",
+        "acceptance_contract": {
+          "version": 1,
+          "schema": "named_link",
+          "minimum_records": 2,
+          "hosts": [
+            "example.test"
+          ],
+          "entry_path": "/item/[0-9]+",
+          "entry_scope": {
+            "html_selector": ".results a[href]",
+            "start_pattern": "^Find games$",
+            "end_pattern": "^See all"
+          }
+        }
+      },
+      "artifact": "Find games\n[Alpha](/item/1)\n[Beta](/item/2)\nSee all\n### Find games\n[Gamma](/item/3)\nSee all\n[Delta](/item/4)",
+      "ok": true,
+      "expected_task_pass": false
+    },
+    {
+      "id": "named-scope-empty-layout-is-not-name",
+      "category": "structured-extraction",
+      "root_cause": "heading_scope_and_empty_nested_card_layout",
+      "failure_mode": "false-negative",
+      "case": {
+        "url": "https://example.test/search",
+        "acceptance_contract": {
+          "version": 1,
+          "schema": "named_link",
+          "minimum_records": 2,
+          "hosts": [
+            "example.test"
+          ],
+          "entry_path": "/item/[0-9]+",
+          "entry_scope": {
+            "html_selector": ".results a[href]",
+            "start_pattern": "^Find games$",
+            "end_pattern": "^See all"
+          }
+        }
+      },
+      "artifact": "### Find games\n- [![](/cover.jpg)\n\n - **\n\nAlpha game\n2026.3.26\n8,500円\nPublisher\n**](/item/1)\n- [Beta](/item/2)\nSee all",
+      "ok": true,
+      "expected_task_pass": true
+    },
+    {
+      "id": "named-scope-image-without-visible-name",
+      "category": "structured-extraction",
+      "root_cause": "heading_scope_and_empty_nested_card_layout",
+      "failure_mode": "false-positive",
+      "case": {
+        "url": "https://example.test/search",
+        "acceptance_contract": {
+          "version": 1,
+          "schema": "named_link",
+          "minimum_records": 2,
+          "hosts": [
+            "example.test"
+          ],
+          "entry_path": "/item/[0-9]+",
+          "entry_scope": {
+            "html_selector": ".results a[href]",
+            "start_pattern": "^Find games$",
+            "end_pattern": "^See all"
+          }
+        }
+      },
+      "artifact": "### Find games\n- [![](/cover.jpg)\n\n - **\n\n2026.3.26\n**](/item/1)\n- [Beta](/item/2)\nSee all",
+      "ok": true,
+      "expected_task_pass": false
+    },
+    {
+      "id": "native-card-bullet-complete",
+      "category": "structured-extraction",
+      "root_cause": "typed_card_fields_serialized_as_sibling_bullets",
+      "failure_mode": "false-negative",
+      "case": {
+        "url": "https://example.test/",
+        "composite_acceptance": {
+          "version": 1,
+          "groups": [
+            {
+              "id": "homes",
+              "kind": "named_link",
+              "hosts": [
+                "example.test"
+              ],
+              "entry_path": "/item/[0-9]+",
+              "minimum_records": 1,
+              "required_fields": [
+                {
+                  "id": "price",
+                  "kind": "price"
+                },
+                {
+                  "id": "bedrooms",
+                  "kind": "integer",
+                  "pattern": "\\bbds\\b"
+                },
+                {
+                  "id": "bathrooms",
+                  "kind": "integer",
+                  "pattern": "\\bba\\b"
+                },
+                {
+                  "id": "area",
+                  "kind": "area"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "artifact": "- [$900](/item/1)\n- **3** bds\n- **2** ba\n- **900** sqft\nActive[House A](/item/1)",
+      "ok": true,
+      "expected_task_pass": true
+    },
+    {
+      "id": "native-card-bullet-missing-area",
+      "category": "structured-extraction",
+      "root_cause": "typed_card_fields_serialized_as_sibling_bullets",
+      "failure_mode": "false-positive",
+      "case": {
+        "url": "https://example.test/",
+        "composite_acceptance": {
+          "version": 1,
+          "groups": [
+            {
+              "id": "homes",
+              "kind": "named_link",
+              "hosts": [
+                "example.test"
+              ],
+              "entry_path": "/item/[0-9]+",
+              "minimum_records": 1,
+              "required_fields": [
+                {
+                  "id": "price",
+                  "kind": "price"
+                },
+                {
+                  "id": "bedrooms",
+                  "kind": "integer",
+                  "pattern": "\\bbds\\b"
+                },
+                {
+                  "id": "bathrooms",
+                  "kind": "integer",
+                  "pattern": "\\bba\\b"
+                },
+                {
+                  "id": "area",
+                  "kind": "area"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "artifact": "- [House A](/item/1)\n- [House B](/item/2)\n- $900\n- 3 bds\n- 2 ba",
+      "ok": true,
+      "expected_task_pass": false
+    },
+    {
+      "id": "native-card-bullet-other-section",
+      "category": "structured-extraction",
+      "root_cause": "typed_card_fields_serialized_as_sibling_bullets",
+      "failure_mode": "false-positive",
+      "case": {
+        "url": "https://example.test/",
+        "composite_acceptance": {
+          "version": 1,
+          "groups": [
+            {
+              "id": "homes",
+              "kind": "named_link",
+              "hosts": [
+                "example.test"
+              ],
+              "entry_path": "/item/[0-9]+",
+              "minimum_records": 1,
+              "required_fields": [
+                {
+                  "id": "price",
+                  "kind": "price"
+                },
+                {
+                  "id": "bedrooms",
+                  "kind": "integer",
+                  "pattern": "\\bbds\\b"
+                },
+                {
+                  "id": "bathrooms",
+                  "kind": "integer",
+                  "pattern": "\\bba\\b"
+                },
+                {
+                  "id": "area",
+                  "kind": "area"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "artifact": "- [House A](/item/1)\n# Other section\n- $900\n- 3 bds\n- 2 ba\n- 900 sqft",
+      "ok": true,
+      "expected_task_pass": false
+    },
+    {
+      "id": "native-card-text-same-line-region",
+      "category": "structured-extraction",
+      "root_cause": "declared_text_patterns_consume_distinct_value_spans",
+      "failure_mode": "false-negative",
+      "case": {
+        "url": "https://example.test/",
+        "composite_acceptance": {
+          "version": 1,
+          "groups": [
+            {
+              "id": "events",
+              "kind": "named_link",
+              "hosts": [
+                "example.test"
+              ],
+              "entry_path": "/item/[0-9]+",
+              "minimum_records": 1,
+              "required_fields": [
+                {
+                  "id": "venue",
+                  "kind": "text",
+                  "minimum_chars": 2
+                },
+                {
+                  "id": "region",
+                  "kind": "text",
+                  "pattern": ",\\s*(?:TX|AL)\\b"
+                },
+                {
+                  "id": "date",
+                  "kind": "date_or_time"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "artifact": "[Concert](/item/1)\n2026-10-16\nExample Hall Tuscaloosa, AL",
+      "ok": true,
+      "expected_task_pass": true
+    },
+    {
+      "id": "native-card-text-region-without-venue",
+      "category": "structured-extraction",
+      "root_cause": "declared_text_patterns_consume_distinct_value_spans",
+      "failure_mode": "false-positive",
+      "case": {
+        "url": "https://example.test/",
+        "composite_acceptance": {
+          "version": 1,
+          "groups": [
+            {
+              "id": "events",
+              "kind": "named_link",
+              "hosts": [
+                "example.test"
+              ],
+              "entry_path": "/item/[0-9]+",
+              "minimum_records": 1,
+              "required_fields": [
+                {
+                  "id": "venue",
+                  "kind": "text",
+                  "minimum_chars": 2
+                },
+                {
+                  "id": "region",
+                  "kind": "text",
+                  "pattern": ",\\s*(?:TX|AL)\\b"
+                },
+                {
+                  "id": "date",
+                  "kind": "date_or_time"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "artifact": "[Concert](/item/1)\n2026-10-16\n, AL",
+      "ok": true,
+      "expected_task_pass": false
+    },
+    {
+      "id": "native-card-text-no-region",
+      "category": "structured-extraction",
+      "root_cause": "declared_text_patterns_consume_distinct_value_spans",
+      "failure_mode": "false-positive",
+      "case": {
+        "url": "https://example.test/",
+        "composite_acceptance": {
+          "version": 1,
+          "groups": [
+            {
+              "id": "events",
+              "kind": "named_link",
+              "hosts": [
+                "example.test"
+              ],
+              "entry_path": "/item/[0-9]+",
+              "minimum_records": 1,
+              "required_fields": [
+                {
+                  "id": "venue",
+                  "kind": "text",
+                  "minimum_chars": 2
+                },
+                {
+                  "id": "region",
+                  "kind": "text",
+                  "pattern": ",\\s*(?:TX|AL)\\b"
+                },
+                {
+                  "id": "date",
+                  "kind": "date_or_time"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "artifact": "[Concert](/item/1)\n2026-10-16\nExample Hall",
+      "ok": true,
+      "expected_task_pass": false
+    },
+    {
+      "id": "source-backed-diagnostic-source-discusses-status",
+      "category": "acceptance-contract",
+      "root_cause": "source_body_term_is_not_an_explicit_exclusion",
+      "failure_mode": "false-negative",
+      "case": {
+        "url": "https://example.test/spec",
+        "required_facts": [
+          {
+            "id": "content",
+            "alternatives": [
+              "response specification"
+            ]
+          }
+        ],
+        "diagnostic_any": [
+          "404 Not Found"
+        ]
+      },
+      "artifact": "The HTTP standard explains 404 Not Found in the response specification.",
+      "ok": true,
+      "expected_task_pass": true
+    },
+    {
+      "id": "source-backed-diagnostic-status-heading",
+      "category": "acceptance-contract",
+      "root_cause": "source_body_term_is_not_an_explicit_exclusion",
+      "failure_mode": "false-positive",
+      "case": {
+        "url": "https://example.test/spec",
+        "required_facts": [
+          {
+            "id": "content",
+            "alternatives": [
+              "response specification"
+            ]
+          }
+        ],
+        "diagnostic_any": [
+          "404 Not Found"
+        ]
+      },
+      "artifact": "404 Not Found",
+      "ok": true,
+      "expected_task_pass": false
     }
   ],
   "superseded_cases": {

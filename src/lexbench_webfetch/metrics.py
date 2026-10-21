@@ -156,7 +156,14 @@ def _image_content_candidates(content: str) -> list[tuple[str, str]]:
                           for url in srcset_urls(html.unescape(match[1])))
     # HTML attributes are decoded above. Do not also admit their raw entity
     # spelling as a second bare candidate; plain URL answers remain literal.
+    from .reference_quality import markdown_links
     bare_content = re.sub(r"<img\b[^>]*>", "", content, flags=re.I | re.S)
+    markup_links = markdown_links(bare_content)
+    for link in markup_links:
+        if not link.is_image and _looks_like_image_url(link.destination):
+            candidates.append((link.destination, "content.markdown_image_file"))
+    for link in reversed(markup_links):
+        bare_content = bare_content[:link.start] + " " + bare_content[link.end:]
     # Explicit image markup is typed evidence. A standalone HTTP URL may also
     # be the entire answer, including an extensionless CDN address. Every URL
     # with that syntax is admitted alike, without consulting target resources.
@@ -499,6 +506,9 @@ def normalize_for_match(value: str) -> str:
     # escapes are presentation syntax, not part of the page's wording.
     normalized = re.sub(r'\\([!"#$%&\'()*+,\-./:;<=>?@\[\\\]^_`{|}~])', r'\1', normalized)
     normalized = re.sub(r'`([^`\n]+)`', r'\1', normalized)
+    # Standalone punctuation emitted with emphasis is formatting, including
+    # when the following word is adjacent. Preserve numeric/operator syntax.
+    normalized = re.sub(r'(?<!\w)([_*])([:;,.!?])\1(?=\w)', r'\2 ', normalized)
     normalized = re.sub(r'\*\*(?=\S)([^*\n]*\S)\*\*', r'\1', normalized)
     def strip_single_emphasis(match: re.Match) -> str:
         inner = match.group(2)
@@ -704,8 +714,9 @@ def evaluate_content(
     truncation_hits = declared_truncation_hits(answer_text)
     folded = normalize_for_match(answer_text)
     content_folded = normalize_for_match(visible_content)
+    from .stable_tasks import _stable_literal_match
     matched = [marker for marker in expected
-               if fact_in_text(content_folded, normalize_for_match(marker))]
+               if _stable_literal_match(visible_content, marker, phrase_boundaries=True)]
     facts = required_facts or []
     from .dynamic_entry_matching import matching_entry_facts
     entry_hits = matching_entry_facts(content_folded, facts, normalize_for_match, fact_in_text)
@@ -719,9 +730,7 @@ def evaluate_content(
         identifier = str(fact.get("id") or f"fact-{index + 1}")
         hits = (entry_hits[identifier] if identifier in entry_hits else
                 [item for item in alternatives
-                 if (_stable_literal_match(visible_content, item, registered_fact_words)
-                     if re.fullmatch(r'[A-Za-z]+|[\u0600-\u06ff]+', item)
-                     else fact_in_text(content_folded, normalize_for_match(item)))])
+                 if _stable_literal_match(visible_content, item, registered_fact_words, phrase_boundaries=True)])
         fact_results.append({
             "id": identifier,
             "alternatives": alternatives,
