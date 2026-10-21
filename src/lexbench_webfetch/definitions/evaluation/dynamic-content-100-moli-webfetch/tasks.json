@@ -30581,7 +30581,7 @@
         "entry_scope": {
           "html_selector": ".nc3-as-result--soft:not(.is-loading) a[href]",
           "start_pattern": "^ゲームソフトをさがす\\s*$",
-          "end_pattern": "^すべて見る"
+          "end_pattern": "^(?:すべて見る|ページをさがす)"
         }
       },
       "body_requirements": {},
@@ -30643,7 +30643,7 @@
         "entry_scope": {
           "html_selector": ".nc3-as-result--soft:not(.is-loading) a[href]",
           "start_pattern": "^ゲームソフトをさがす\\s*$",
-          "end_pattern": "^すべて見る"
+          "end_pattern": "^(?:すべて見る|ページをさがす)"
         }
       },
       "body_requirements": {},

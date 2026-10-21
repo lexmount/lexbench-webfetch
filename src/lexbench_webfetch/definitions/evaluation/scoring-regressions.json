@@ -56541,6 +56541,58 @@
       "artifact": "---\ntitle: \"Example video\"\nkeywords: \"Example Channel\"\n---\nOther body",
       "ok": true,
       "expected_task_pass": false
+    },
+    {
+      "id": "named-section-boundary-complete-software",
+      "category": "acceptance-contract",
+      "root_cause": "declared_result_section_ends_at_the_next_independent_section",
+      "failure_mode": "false-negative",
+      "case": {
+        "url": "https://example.test/search",
+        "acceptance_contract": {
+          "version": 1,
+          "schema": "named_link",
+          "minimum_records": 2,
+          "hosts": [
+            "example.test"
+          ],
+          "entry_path": "/item/[0-9]+",
+          "entry_scope": {
+            "html_selector": ".results a[href]",
+            "start_pattern": "^Find games$",
+            "end_pattern": "^Find pages$"
+          }
+        }
+      },
+      "artifact": "### Find games\n[Alpha](/item/1)\n[Beta](/item/2)\n### Find pages\n[Other page](/item/3)",
+      "ok": true,
+      "expected_task_pass": true
+    },
+    {
+      "id": "named-section-boundary-next-section-not-software",
+      "category": "acceptance-contract",
+      "root_cause": "declared_result_section_ends_at_the_next_independent_section",
+      "failure_mode": "false-positive",
+      "case": {
+        "url": "https://example.test/search",
+        "acceptance_contract": {
+          "version": 1,
+          "schema": "named_link",
+          "minimum_records": 2,
+          "hosts": [
+            "example.test"
+          ],
+          "entry_path": "/item/[0-9]+",
+          "entry_scope": {
+            "html_selector": ".results a[href]",
+            "start_pattern": "^Find games$",
+            "end_pattern": "^Find pages$"
+          }
+        }
+      },
+      "artifact": "### Find games\n[Alpha](/item/1)\n### Find pages\n[Other page](/item/2)",
+      "ok": true,
+      "expected_task_pass": false
     }
   ],
   "superseded_cases": {
