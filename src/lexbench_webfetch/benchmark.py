@@ -2,13 +2,14 @@
 from __future__ import annotations
 
 import hashlib
+from copy import deepcopy
 import json
 import os
 import re
 import shutil
 import tempfile
 from pathlib import Path
-from .paths import contained_path
+from .paths import contained_path, safe_identifier
 from .inputs import digest, load_manifest, verify_catalog
 
 SUITES = Path(__file__).parent / "definitions"
@@ -16,7 +17,7 @@ SUITES = Path(__file__).parent / "definitions"
 # Full reference bodies and source-capture/review payloads stay in frozen inputs.
 PUBLIC_TASK_FIELDS = (
     "id", "name", "url", "category", "track", "task_kind", "description", "task_prompt",
-    "expected_any", "required_facts", "forbidden_any", "min_content_chars",
+    "expected_any", "required_facts", "forbidden_any", "diagnostic_any", "min_content_chars",
     "fact_coverage_threshold", "expected_resources", "resource_output_contract",
     "content_score_applicable", "required_patterns", "acceptance_contract",
     "composite_acceptance", "mutable_body_policy", "body_requirements", "retrieval_hints",
@@ -122,6 +123,10 @@ def validate(identifier: str) -> dict:
         contained_path(root, relative, reject_symlinks=True)
         if not re.fullmatch(r"[0-9a-f]{64}", expected):
             raise ValueError(f"Invalid input SHA-256: {relative}")
+    for path in sorted((SUITES/'annotation-revisions').glob('*.json')):
+        revision = read(path)
+        if identifier in revision.get('parents', {}):
+            apply_annotation_revision(identifier, tasks, revision['id'])
     return {"suite": identifier, "case_count": len(ids), "dataset_sha256": catalog["dataset_sha256"]}
 
 
@@ -153,7 +158,53 @@ def verify_inputs(identifier: str, source: Path) -> dict:
     return result
 
 
-def export(identifier: str, source: Path, output: Path) -> Path:
+def apply_annotation_revision(identifier: str, dataset: dict, revision: str) -> dict:
+    """Apply an explicit score-only version; keep its frozen parent unchanged."""
+    safe_identifier(revision)
+    path = contained_path(SUITES, f'annotation-revisions/{revision}.json', reject_symlinks=True)
+    definition = read(path)
+    if (definition.get('schema_version') != 1
+            or definition.get('kind') != 'score_only_annotation_revision'
+            or definition.get('id') != revision):
+        raise ValueError('Unsupported annotation revision')
+    from .scoring_regressions import load_scoring_regressions
+    controls = definition.get('regression_ids', [])
+    if not controls or set(controls) - load_scoring_regressions().keys():
+        raise ValueError('Annotation revision requires registered regression controls')
+    entry, root = suite(identifier)
+    parent = definition.get('parents', {}).get(identifier)
+    if parent != {'tasks_sha256': digest(root/'tasks.json'),
+                  'source_inputs_sha256': digest(root/'source-inputs.json')}:
+        raise ValueError('Annotation revision has a different frozen parent')
+    if dataset.get('id') != entry['dataset_id']:
+        raise ValueError('Annotation revision dataset identity differs')
+    result = deepcopy(dataset)
+    cases = {case['id']: case for case in result['cases']}
+    allowed = {'expected_resources', 'required_facts', 'forbidden_any', 'diagnostic_any',
+               'composite_acceptance', 'acceptance_contract', 'required_patterns'}
+    changes = [row for row in definition['changes'] if row['suite'] == identifier]
+    if not changes or len({row['case_id'] for row in changes}) != len(changes):
+        raise ValueError('Annotation revision has an invalid task inventory')
+    for change in changes:
+        case = cases.get(change['case_id'])
+        public = public_task(case) if case is not None else None
+        encoded = json.dumps(public, ensure_ascii=False, sort_keys=True, separators=(',', ':')).encode()
+        if hashlib.sha256(encoded).hexdigest() != change['before_sha256']:
+            raise ValueError('Annotation revision task differs from frozen parent')
+        if (set(change['set']) | set(change['remove'])) - allowed:
+            raise ValueError('Annotation revision cannot change collection inputs')
+        case.update(deepcopy(change['set']))
+        for field in change['remove']:
+            case.pop(field, None)
+    result['id'] = dataset['id'] + '--' + revision
+    result['definition_revision'] = {
+        'id': revision, 'sha256': digest(path), 'parent_dataset_id': dataset['id'],
+        'parent_tasks_sha256': parent['tasks_sha256'], 'provider_calls_added': 0,
+    }
+    return result
+
+
+def export(identifier: str, source: Path, output: Path, *, revision: str | None = None) -> Path:
     """Copy only declared inputs after verification; never overwrite a run or input tree."""
     verify_inputs(identifier, source)
     if output.exists() or output.is_symlink():
@@ -169,6 +220,10 @@ def export(identifier: str, source: Path, output: Path) -> Path:
             target.parent.mkdir(parents=True, exist_ok=True)
             shutil.copyfile(contained_path(source, relative, reject_symlinks=True), target)
         verify_inputs(identifier, stage)
+        if revision is not None:
+            dataset_path = stage / manifest['dataset']
+            revised = apply_annotation_revision(identifier, read(dataset_path), revision)
+            dataset_path.write_text(json.dumps(revised, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
         # A materialized dataset is intentionally independent of the historical
         # Browser Eval external-input resolver; do not copy source-inputs.json.
         os.rename(stage, output)

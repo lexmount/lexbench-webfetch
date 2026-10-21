@@ -19,3 +19,22 @@ An approved input directory contains the exact `dataset.json` and, when listed b
 The exported directory intentionally has no `source-inputs.json`: it is a directly materialized, verified input tree. Browser Eval can consume its dataset through `--dataset` without relying on Browser Eval's historical storage paths. Keep the suite manifest and benchmark revision with your experiment metadata.
 
 Complete third-party text, PDFs, media, rendered pages and provider outputs are excluded from this repository. Obtain required inputs under their original terms. There is currently no hosted public input bundle; the public definitions can be inspected independently, while exact historical runs require separately acquired matching inputs. A new capture is a new version and must not be presented as the old frozen suite.
+
+## Score-only annotation versions
+
+Frozen `tasks.json`, catalogs and input manifests retain their original bytes.
+Corrections live in `definitions/annotation-revisions/` with a distinct revision
+ID, parent task and source-manifest hashes, per-task predecessor hashes and
+registered scoring controls. They change acceptance annotations, not collection
+URLs, prompts or saved provider outputs.
+
+To export a corrected definition, select its version explicitly:
+
+```sh
+uv run --frozen lexbench-webfetch export --suite webfetch --source /path/to/frozen-inputs --output /path/to/new-inputs --revision serialization-20261021
+```
+
+The exported dataset receives a new ID and a `definition_revision` binding.
+Without `--revision`, export reproduces the original frozen dataset exactly.
+A score recomputed with revised annotations must retain both definition hashes
+and its original call identities; it is not a new browser run.

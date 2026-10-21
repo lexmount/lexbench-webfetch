@@ -18,6 +18,7 @@ def main() -> None:
         command.add_argument("--source", type=Path, required=True)
         if name == "export":
             command.add_argument("--output", type=Path, required=True)
+            command.add_argument("--revision", help="Apply a registered score-only annotation version")
     score = sub.add_parser("score", help="Evaluate a saved response and delivered files")
     score.add_argument("--task", type=Path, required=True,
                        help="Complete task JSON including its frozen reference requirements")
@@ -60,7 +61,7 @@ def main() -> None:
         elif args.command == "verify-inputs":
             result = verify_inputs(args.suite, args.source)
         else:
-            result = {"dataset": str(export(args.suite, args.source, args.output).resolve())}
+            result = {"dataset": str(export(args.suite, args.source, args.output, revision=args.revision).resolve())}
     except (ValueError, KeyError, OSError) as error:
         parser.exit(1, f"{error}\n")
     print(json.dumps(result, ensure_ascii=False, indent=2))

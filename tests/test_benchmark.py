@@ -44,6 +44,20 @@ class PublicDefinitions(unittest.TestCase):
         self.assertEqual(public['source_verification'], {'mime': 'image/png', 'file_sha256': 'a'*64})
         self.assertNotIn('private source capture', json.dumps(public))
 
+    def test_registered_revision_keeps_original_suites_and_has_new_dataset_ids(self):
+        import copy
+        revision = bench.read(bench.SUITES/'annotation-revisions/serialization-20261021.json')
+        changed = 0
+        for identifier in revision['parents']:
+            _, root = bench.suite(identifier)
+            data = bench.read(root/'tasks.json');before=copy.deepcopy(data)
+            new = bench.apply_annotation_revision(identifier, data, revision['id'])
+            self.assertEqual(data, before)
+            self.assertNotEqual(new['id'], data['id'])
+            self.assertEqual(len(new['cases']), len(data['cases']))
+            changed += sum(a != b for a,b in zip(new['cases'],data['cases']))
+        self.assertEqual(changed, len(revision['changes']))
+
     def test_unknown_suite_is_rejected(self):
         with self.assertRaisesRegex(ValueError, 'Unknown suite'):
             bench.validate('not-a-suite')
@@ -95,6 +109,51 @@ class FrozenInputs(unittest.TestCase):
         self.assertEqual({p.relative_to(output).as_posix() for p in output.rglob('*') if p.is_file()},
                          {'dataset.json', 'sources/article.json'})
         self.assertEqual(bench.verify_inputs('synthetic', output)['case_count'], 1)
+
+    def annotation_revision(self):
+        from lexbench_webfetch.scoring_regressions import load_scoring_regressions
+        task = bench.read(self.suites/'synthetic/tasks.json')['cases'][0]
+        encoded = json.dumps(task, ensure_ascii=False, sort_keys=True, separators=(',', ':')).encode()
+        data = {'schema_version': 1, 'kind': 'score_only_annotation_revision',
+                'id': 'source-annotation-v2', 'parents': {'synthetic': {
+                    'tasks_sha256': bench.digest(self.suites/'synthetic/tasks.json'),
+                    'source_inputs_sha256': bench.digest(self.suites/'synthetic/source-inputs.json')}},
+                'regression_ids': [next(iter(load_scoring_regressions()))],
+                'changes': [{'suite': 'synthetic', 'case_id': 'article',
+                             'before_sha256': hashlib.sha256(encoded).hexdigest(),
+                             'set': {'required_facts': [{'id': 'main', 'alternatives': ['unique fact']}]},
+                             'remove': []}]}
+        write(self.suites/'annotation-revisions/source-annotation-v2.json', data)
+        return data
+
+    def test_revised_export_has_a_distinct_identity_and_preserves_frozen_inputs(self):
+        self.annotation_revision()
+        before = (self.source/'dataset.json').read_bytes()
+        path = bench.export('synthetic', self.source, self.root/'revised', revision='source-annotation-v2')
+        revised = bench.read(path)
+        self.assertEqual(revised['id'], 'test--source-annotation-v2')
+        self.assertEqual(revised['definition_revision']['parent_dataset_id'], 'test')
+        self.assertEqual(revised['cases'][0]['required_facts'][0]['alternatives'], ['unique fact'])
+        self.assertEqual((self.source/'dataset.json').read_bytes(), before)
+        self.assertEqual(bench.verify_inputs('synthetic', self.source)['case_count'], 1)
+        old = bench.export('synthetic', self.source, self.root/'unchanged')
+        self.assertEqual(old.read_bytes(), before)
+
+    def test_revised_export_rejects_wrong_parent_unknown_controls_and_collection_changes(self):
+        import copy
+        definition = self.annotation_revision()
+        for defect in ['parent', 'task', 'controls', 'collection']:
+            with self.subTest(defect=defect):
+                bad = copy.deepcopy(definition)
+                if defect == 'parent': bad['parents']['synthetic']['tasks_sha256'] = '0'*64
+                elif defect == 'task': bad['changes'][0]['before_sha256'] = '0'*64
+                elif defect == 'controls': bad['regression_ids'] = ['unknown']
+                else: bad['changes'][0]['set']['url'] = 'https://other.test/'
+                write(self.suites/'annotation-revisions/source-annotation-v2.json', bad)
+                output = self.root/defect
+                with self.assertRaises(ValueError):
+                    bench.export('synthetic', self.source, output, revision='source-annotation-v2')
+                self.assertFalse(output.exists())
 
     def test_existing_output_is_preserved(self):
         output = self.root / 'existing'

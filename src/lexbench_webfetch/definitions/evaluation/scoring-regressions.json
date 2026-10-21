@@ -56593,6 +56593,183 @@
       "artifact": "### Find games\n[Alpha](/item/1)\n### Find pages\n[Other page](/item/2)",
       "ok": true,
       "expected_task_pass": false
+    },
+    {
+      "id": "declared-photo-query-unsplash-resize",
+      "category": "acceptance-contract",
+      "root_cause": "resource_alias_must_bind_asset_and_declared_presentation_parameters",
+      "failure_mode": "false-negative",
+      "case": {
+        "url": "https://example.test/photo",
+        "task_kind": "resource",
+        "expected_resources": [
+          {
+            "id": "main-image",
+            "kind": "image",
+            "urls": [
+              "https://images.unsplash.com/photo-1493673272479-a20888bcee10",
+              "https://unsplash.com/photos/mSK5nNsAsLY/download"
+            ],
+            "url_patterns": [
+              "^https://images\\.unsplash\\.com/photo\\-1493673272479\\-a20888bcee10(?:\\?(?:(?:w|h)=[1-9][0-9]*|q=(?:100|[1-9][0-9]?)|dpr=[1-9][0-9]*(?:\\.[0-9]+)?|fm=(?:jpg|jpeg|png|webp|avif|gif)|fit=(?:crop|clip|fill|fillmax|max|min|scale)|crop=(?:faces|edges|entropy|top|bottom|left|right|focalpoint)|cs=(?:srgb|tinysrgb)|auto=format|ixlib=[A-Za-z0-9._-]+|ixid=[A-Za-z0-9_+/=%-]+)(?:&(?:(?:w|h)=[1-9][0-9]*|q=(?:100|[1-9][0-9]?)|dpr=[1-9][0-9]*(?:\\.[0-9]+)?|fm=(?:jpg|jpeg|png|webp|avif|gif)|fit=(?:crop|clip|fill|fillmax|max|min|scale)|crop=(?:faces|edges|entropy|top|bottom|left|right|focalpoint)|cs=(?:srgb|tinysrgb)|auto=format|ixlib=[A-Za-z0-9._-]+|ixid=[A-Za-z0-9_+/=%-]+))*)?$"
+            ]
+          }
+        ],
+        "resource_output_contract": {
+          "candidate_scope": "image_answer_fields",
+          "unexpected": "allow"
+        }
+      },
+      "artifact": "![Photo](https://images.unsplash.com/photo-1493673272479-a20888bcee10?auto=format&w=640&q=80)",
+      "ok": true,
+      "expected_task_pass": true
+    },
+    {
+      "id": "declared-photo-query-unsplash-overlay",
+      "category": "acceptance-contract",
+      "root_cause": "resource_alias_must_bind_asset_and_declared_presentation_parameters",
+      "failure_mode": "false-positive",
+      "case": {
+        "url": "https://example.test/photo",
+        "task_kind": "resource",
+        "expected_resources": [
+          {
+            "id": "main-image",
+            "kind": "image",
+            "urls": [
+              "https://images.unsplash.com/photo-1493673272479-a20888bcee10",
+              "https://unsplash.com/photos/mSK5nNsAsLY/download"
+            ],
+            "url_patterns": [
+              "^https://images\\.unsplash\\.com/photo\\-1493673272479\\-a20888bcee10(?:\\?(?:(?:w|h)=[1-9][0-9]*|q=(?:100|[1-9][0-9]?)|dpr=[1-9][0-9]*(?:\\.[0-9]+)?|fm=(?:jpg|jpeg|png|webp|avif|gif)|fit=(?:crop|clip|fill|fillmax|max|min|scale)|crop=(?:faces|edges|entropy|top|bottom|left|right|focalpoint)|cs=(?:srgb|tinysrgb)|auto=format|ixlib=[A-Za-z0-9._-]+|ixid=[A-Za-z0-9_+/=%-]+)(?:&(?:(?:w|h)=[1-9][0-9]*|q=(?:100|[1-9][0-9]?)|dpr=[1-9][0-9]*(?:\\.[0-9]+)?|fm=(?:jpg|jpeg|png|webp|avif|gif)|fit=(?:crop|clip|fill|fillmax|max|min|scale)|crop=(?:faces|edges|entropy|top|bottom|left|right|focalpoint)|cs=(?:srgb|tinysrgb)|auto=format|ixlib=[A-Za-z0-9._-]+|ixid=[A-Za-z0-9_+/=%-]+))*)?$"
+            ]
+          }
+        ],
+        "resource_output_contract": {
+          "candidate_scope": "image_answer_fields",
+          "unexpected": "allow"
+        }
+      },
+      "artifact": "![Photo](https://images.unsplash.com/photo-1493673272479-a20888bcee10?w=640&mark=https://other.test/logo.png)",
+      "ok": true,
+      "expected_task_pass": false
+    },
+    {
+      "id": "declared-photo-query-unsplash-other-asset",
+      "category": "acceptance-contract",
+      "root_cause": "resource_alias_must_bind_asset_and_declared_presentation_parameters",
+      "failure_mode": "false-positive",
+      "case": {
+        "url": "https://example.test/photo",
+        "task_kind": "resource",
+        "expected_resources": [
+          {
+            "id": "main-image",
+            "kind": "image",
+            "urls": [
+              "https://images.unsplash.com/photo-1493673272479-a20888bcee10",
+              "https://unsplash.com/photos/mSK5nNsAsLY/download"
+            ],
+            "url_patterns": [
+              "^https://images\\.unsplash\\.com/photo\\-1493673272479\\-a20888bcee10(?:\\?(?:(?:w|h)=[1-9][0-9]*|q=(?:100|[1-9][0-9]?)|dpr=[1-9][0-9]*(?:\\.[0-9]+)?|fm=(?:jpg|jpeg|png|webp|avif|gif)|fit=(?:crop|clip|fill|fillmax|max|min|scale)|crop=(?:faces|edges|entropy|top|bottom|left|right|focalpoint)|cs=(?:srgb|tinysrgb)|auto=format|ixlib=[A-Za-z0-9._-]+|ixid=[A-Za-z0-9_+/=%-]+)(?:&(?:(?:w|h)=[1-9][0-9]*|q=(?:100|[1-9][0-9]?)|dpr=[1-9][0-9]*(?:\\.[0-9]+)?|fm=(?:jpg|jpeg|png|webp|avif|gif)|fit=(?:crop|clip|fill|fillmax|max|min|scale)|crop=(?:faces|edges|entropy|top|bottom|left|right|focalpoint)|cs=(?:srgb|tinysrgb)|auto=format|ixlib=[A-Za-z0-9._-]+|ixid=[A-Za-z0-9_+/=%-]+))*)?$"
+            ]
+          }
+        ],
+        "resource_output_contract": {
+          "candidate_scope": "image_answer_fields",
+          "unexpected": "allow"
+        }
+      },
+      "artifact": "![Photo](https://images.unsplash.com/photo-1493673272480-a20888bcee10?w=640)",
+      "ok": true,
+      "expected_task_pass": false
+    },
+    {
+      "id": "declared-photo-query-pexels-resize",
+      "category": "acceptance-contract",
+      "root_cause": "resource_alias_must_bind_asset_and_declared_presentation_parameters",
+      "failure_mode": "false-negative",
+      "case": {
+        "url": "https://example.test/photo",
+        "task_kind": "resource",
+        "expected_resources": [
+          {
+            "id": "main-image",
+            "kind": "image",
+            "urls": [
+              "https://images.pexels.com/photos/12377231/pexels-photo-12377231.jpeg"
+            ],
+            "url_patterns": [
+              "^https://images\\.pexels\\.com/photos/12377231/pexels\\-photo\\-12377231\\.jpeg(?:\\?(?:(?:w|h)=[1-9][0-9]*|q=(?:100|[1-9][0-9]?)|dpr=[1-9][0-9]*(?:\\.[0-9]+)?|fm=(?:jpg|jpeg|png|webp|avif|gif)|fit=(?:crop|clip|fill|fillmax|max|min|scale)|crop=(?:faces|edges|entropy|top|bottom|left|right|focalpoint)|cs=(?:srgb|tinysrgb)|auto=(?:compress|format|compress,format)|dl=[A-Za-z0-9._-]+)(?:&(?:(?:w|h)=[1-9][0-9]*|q=(?:100|[1-9][0-9]?)|dpr=[1-9][0-9]*(?:\\.[0-9]+)?|fm=(?:jpg|jpeg|png|webp|avif|gif)|fit=(?:crop|clip|fill|fillmax|max|min|scale)|crop=(?:faces|edges|entropy|top|bottom|left|right|focalpoint)|cs=(?:srgb|tinysrgb)|auto=(?:compress|format|compress,format)|dl=[A-Za-z0-9._-]+))*)?$"
+            ]
+          }
+        ],
+        "resource_output_contract": {
+          "candidate_scope": "image_answer_fields",
+          "unexpected": "allow"
+        }
+      },
+      "artifact": "![Photo](https://images.pexels.com/photos/12377231/pexels-photo-12377231.jpeg?auto=compress&w=640&q=80)",
+      "ok": true,
+      "expected_task_pass": true
+    },
+    {
+      "id": "declared-photo-query-pexels-overlay",
+      "category": "acceptance-contract",
+      "root_cause": "resource_alias_must_bind_asset_and_declared_presentation_parameters",
+      "failure_mode": "false-positive",
+      "case": {
+        "url": "https://example.test/photo",
+        "task_kind": "resource",
+        "expected_resources": [
+          {
+            "id": "main-image",
+            "kind": "image",
+            "urls": [
+              "https://images.pexels.com/photos/12377231/pexels-photo-12377231.jpeg"
+            ],
+            "url_patterns": [
+              "^https://images\\.pexels\\.com/photos/12377231/pexels\\-photo\\-12377231\\.jpeg(?:\\?(?:(?:w|h)=[1-9][0-9]*|q=(?:100|[1-9][0-9]?)|dpr=[1-9][0-9]*(?:\\.[0-9]+)?|fm=(?:jpg|jpeg|png|webp|avif|gif)|fit=(?:crop|clip|fill|fillmax|max|min|scale)|crop=(?:faces|edges|entropy|top|bottom|left|right|focalpoint)|cs=(?:srgb|tinysrgb)|auto=(?:compress|format|compress,format)|dl=[A-Za-z0-9._-]+)(?:&(?:(?:w|h)=[1-9][0-9]*|q=(?:100|[1-9][0-9]?)|dpr=[1-9][0-9]*(?:\\.[0-9]+)?|fm=(?:jpg|jpeg|png|webp|avif|gif)|fit=(?:crop|clip|fill|fillmax|max|min|scale)|crop=(?:faces|edges|entropy|top|bottom|left|right|focalpoint)|cs=(?:srgb|tinysrgb)|auto=(?:compress|format|compress,format)|dl=[A-Za-z0-9._-]+))*)?$"
+            ]
+          }
+        ],
+        "resource_output_contract": {
+          "candidate_scope": "image_answer_fields",
+          "unexpected": "allow"
+        }
+      },
+      "artifact": "![Photo](https://images.pexels.com/photos/12377231/pexels-photo-12377231.jpeg?w=640&mark=https://other.test/logo.png)",
+      "ok": true,
+      "expected_task_pass": false
+    },
+    {
+      "id": "declared-photo-query-pexels-other-asset",
+      "category": "acceptance-contract",
+      "root_cause": "resource_alias_must_bind_asset_and_declared_presentation_parameters",
+      "failure_mode": "false-positive",
+      "case": {
+        "url": "https://example.test/photo",
+        "task_kind": "resource",
+        "expected_resources": [
+          {
+            "id": "main-image",
+            "kind": "image",
+            "urls": [
+              "https://images.pexels.com/photos/12377231/pexels-photo-12377231.jpeg"
+            ],
+            "url_patterns": [
+              "^https://images\\.pexels\\.com/photos/12377231/pexels\\-photo\\-12377231\\.jpeg(?:\\?(?:(?:w|h)=[1-9][0-9]*|q=(?:100|[1-9][0-9]?)|dpr=[1-9][0-9]*(?:\\.[0-9]+)?|fm=(?:jpg|jpeg|png|webp|avif|gif)|fit=(?:crop|clip|fill|fillmax|max|min|scale)|crop=(?:faces|edges|entropy|top|bottom|left|right|focalpoint)|cs=(?:srgb|tinysrgb)|auto=(?:compress|format|compress,format)|dl=[A-Za-z0-9._-]+)(?:&(?:(?:w|h)=[1-9][0-9]*|q=(?:100|[1-9][0-9]?)|dpr=[1-9][0-9]*(?:\\.[0-9]+)?|fm=(?:jpg|jpeg|png|webp|avif|gif)|fit=(?:crop|clip|fill|fillmax|max|min|scale)|crop=(?:faces|edges|entropy|top|bottom|left|right|focalpoint)|cs=(?:srgb|tinysrgb)|auto=(?:compress|format|compress,format)|dl=[A-Za-z0-9._-]+))*)?$"
+            ]
+          }
+        ],
+        "resource_output_contract": {
+          "candidate_scope": "image_answer_fields",
+          "unexpected": "allow"
+        }
+      },
+      "artifact": "![Photo](https://images.pexels.com/photos/12377232/pexels-photo-12377232.jpeg?w=640)",
+      "ok": true,
+      "expected_task_pass": false
     }
   ],
   "superseded_cases": {

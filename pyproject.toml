@@ -26,4 +26,4 @@ build-backend = "setuptools.build_meta"
 where = ["src"]
 
 [tool.setuptools.package-data]
-lexbench_webfetch = ["definitions/*.json", "definitions/evaluation/*.json", "definitions/evaluation/*/*.json", "definitions/evaluation/*/*.md", "definitions/evaluation/*/*/*.json", "definitions/evaluation/*/*/*/*.json"]
+lexbench_webfetch = ["definitions/*.json", "definitions/annotation-revisions/*.json", "definitions/evaluation/*.json", "definitions/evaluation/*/*.json", "definitions/evaluation/*/*.md", "definitions/evaluation/*/*/*.json", "definitions/evaluation/*/*/*/*.json"]

@@ -2142,6 +2142,7 @@
       "forbidden_any": [
         "Access denied",
         "Attention Required! | Cloudflare",
+        "CAPTCHA",
         "Page not found",
         "404 Not Found",
         "无法访问此站点"
@@ -2190,10 +2191,7 @@
             }
           }
         ]
-      },
-      "diagnostic_any": [
-        "CAPTCHA"
-      ]
+      }
     },
     {
       "id": "live-012-navigation-menu",
@@ -3148,6 +3146,7 @@
       "forbidden_any": [
         "Access denied",
         "Attention Required! | Cloudflare",
+        "CAPTCHA",
         "Page not found",
         "404 Not Found",
         "无法访问此站点"
@@ -3196,10 +3195,7 @@
             }
           }
         ]
-      },
-      "diagnostic_any": [
-        "CAPTCHA"
-      ]
+      }
     },
     {
       "id": "live-024-cascading-style-sheets-level-2-r",
@@ -3739,6 +3735,7 @@
         "Attention Required! | Cloudflare",
         "CAPTCHA",
         "Page not found",
+        "404 Not Found",
         "无法访问此站点"
       ],
       "min_content_chars": 300,
@@ -3785,10 +3782,7 @@
             }
           }
         ]
-      },
-      "diagnostic_any": [
-        "404 Not Found"
-      ]
+      }
     },
     {
       "id": "stable-xml10-recommendation",
@@ -9425,9 +9419,7 @@
           "urls": [
             "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/A_Man_on_the_Moon%2C_AS11-40-5903_%28cropped%29.jpg/330px-A_Man_on_the_Moon%2C_AS11-40-5903_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
           ],
-          "url_patterns": [
-            "^(?:https://upload\\.wikimedia\\.org/wikipedia/commons/4/41/A_Man_on_the_Moon,_AS11\\-40\\-5903_\\(cropped\\)\\.jpg|https://(?:upload|thumb)\\.wikimedia\\.org/wikipedia/commons/thumb/4/41/A_Man_on_the_Moon,_AS11\\-40\\-5903_\\(cropped\\)\\.jpg/[1-9][0-9]*px-A_Man_on_the_Moon,_AS11\\-40\\-5903_\\(cropped\\)\\.jpg)(?:\\?(?:utm_source=(?:en\\.wikipedia\\.org|commons\\.wikimedia\\.org)|utm_campaign=(?:parser|index)|utm_content=thumbnail|_=[0-9]+)(?:&(?:utm_source=(?:en\\.wikipedia\\.org|commons\\.wikimedia\\.org)|utm_campaign=(?:parser|index)|utm_content=thumbnail|_=[0-9]+))*)?$"
-          ]
+          "url_patterns": []
         },
         {
           "id": "image-2",
@@ -9435,9 +9427,7 @@
           "urls": [
             "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Apollo_11_insignia.png/250px-Apollo_11_insignia.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
           ],
-          "url_patterns": [
-            "^(?:https://upload\\.wikimedia\\.org/wikipedia/commons/2/27/Apollo_11_insignia\\.png|https://(?:upload|thumb)\\.wikimedia\\.org/wikipedia/commons/thumb/2/27/Apollo_11_insignia\\.png/[1-9][0-9]*px-Apollo_11_insignia\\.png)(?:\\?(?:utm_source=(?:en\\.wikipedia\\.org|commons\\.wikimedia\\.org)|utm_campaign=(?:parser|index)|utm_content=thumbnail|_=[0-9]+)(?:&(?:utm_source=(?:en\\.wikipedia\\.org|commons\\.wikimedia\\.org)|utm_campaign=(?:parser|index)|utm_content=thumbnail|_=[0-9]+))*)?$"
-          ]
+          "url_patterns": []
         }
       ],
       "resource_output_contract": {
@@ -9536,9 +9526,7 @@
             "https://images.unsplash.com/photo-1493673272479-a20888bcee10",
             "https://unsplash.com/photos/mSK5nNsAsLY/download"
           ],
-          "url_patterns": [
-            "^https://images\\.unsplash\\.com/photo\\-1493673272479\\-a20888bcee10(?:\\?[^#]*)?$"
-          ]
+          "url_patterns": []
         }
       ],
       "resource_output_contract": {
@@ -9571,9 +9559,7 @@
           "urls": [
             "https://images.pexels.com/photos/12377231/pexels-photo-12377231.jpeg"
           ],
-          "url_patterns": [
-            "^https://images\\.pexels\\.com/photos/12377231/pexels\\-photo\\-12377231\\.jpeg(?:\\?[^#]*)?$"
-          ]
+          "url_patterns": []
         }
       ],
       "resource_output_contract": {
@@ -9869,8 +9855,7 @@
           "id": "视频标题",
           "alternatives": [
             "Me at the zoo"
-          ],
-          "match_scope": "body_or_title"
+          ]
         },
         {
           "id": "发布者",

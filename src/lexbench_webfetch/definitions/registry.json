@@ -6,7 +6,7 @@
       "dataset_id": "webfetch",
       "case_count": 150,
       "files": {
-        "tasks.json": "02f887ae8645102eb780a456fd2ee4c0c00b8855c9ea9b1043218225dcc5a834",
+        "tasks.json": "ae3aec6eab8d2d470cdeb18c4f80d238e5dd79e1108a729589b77a80fe869405",
         "dataset-catalog.json": "994fa53f7fc7c3170692a7bb493ebc5af9ad8ffb5b576c022fa123e6e6fb3838",
         "source-inputs.json": "c202abc4624811b938a837402bbaf0ecbe716e375fbca70567346d2edb3b1708"
       },
@@ -28,7 +28,7 @@
       "dataset_id": "dynamic-qualified-100-moli-native-local-audit-20260924",
       "case_count": 100,
       "files": {
-        "tasks.json": "f76077e57746e942932f5eee1914e4286bcdd97c4ba23f4038dbe8bf7f9b82a0",
+        "tasks.json": "139c62a141183d305d8fa9c3658c546927731461d86aeba5ad3091649bd4ecd7",
         "dataset-catalog.json": "ca1572aa80fc2324b2f00800a79b053cfd584d1831ffb16e6906ae0981522c6c",
         "source-inputs.json": "710f9c91705b29bb9e4aa15af97dcc856e64e406baa4b9966446408d7e3d26a8"
       },
@@ -39,7 +39,7 @@
       "dataset_id": "risk-control-audited-100",
       "case_count": 100,
       "files": {
-        "tasks.json": "23c2c7e0b470527dfd848146dd94bb47188d2dbdeb7b9105d04664b9b02b9085",
+        "tasks.json": "c67b60ccf5ee0b14e4e23b3efc282e625005f8e096f0bfc978772d312e8f50c2",
         "dataset-catalog.json": "52ec968b2ada26e5e061ccb25cbe4a73747539e556fa88f31bece6d7fb79b3cb",
         "source-inputs.json": "c61d6825abbff2a92098592f83055347cd0b0101374794023046c0fd0323dd5f"
       },
