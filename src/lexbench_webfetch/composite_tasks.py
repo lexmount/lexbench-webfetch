@@ -154,6 +154,8 @@ def _validate_group(group: dict) -> None:
         "link_base_url",
         "record_name_exclusions",
         "record_line_pattern",
+        "record_start_pattern",
+        "markdown_label_pattern",
         "start_pattern",
         "end_pattern",
         "required_fields",
@@ -180,11 +182,13 @@ def _validate_group(group: dict) -> None:
         }
     ):
         raise ValueError("Invalid composite record group")
-    for key in ("start_pattern", "end_pattern", "record_line_pattern"):
+    for key in ("start_pattern", "end_pattern", "record_line_pattern", "record_start_pattern", "markdown_label_pattern"):
         if key in group:
             if not isinstance(group[key], str) or not group[key]:
                 raise ValueError("Invalid composite scope pattern")
-            re.compile(group[key])
+            compiled = re.compile(group[key])
+            if key == "markdown_label_pattern" and "label" not in compiled.groupindex:
+                raise ValueError("Markdown card label pattern requires a label group")
     kind = group["kind"]
     if "combined_columns" in group and kind != "table":
         raise ValueError("Combined columns require a table group")
@@ -694,6 +698,12 @@ def _named_link_group(content: str, group: dict, base_url: str, links: list | No
             return previous_start, scalar
 
         def visible_label(link):
+            if pattern := group.get("markdown_label_pattern"):
+                surface = link.label
+                for image in reversed([item for item in markdown_links(surface) if item.is_image]):
+                    surface = surface[:image.start] + surface[image.end:]
+                if match := re.search(pattern, visible_markdown_links(surface)):
+                    return match["label"].strip()
             card_fields = serialized_link_card_fields(link)
             label = card_fields[0] if card_fields else link.label
             for image in reversed([item for item in markdown_links(label) if item.is_image]):
@@ -806,6 +816,16 @@ def _named_link_group(content: str, group: dict, base_url: str, links: list | No
             if index and ordered[index - 1][6] > line_start:
                 line_start = start
             next_line = max(next_line, link_end)
+            if not owner and group.get("record_start_pattern"):
+                starts = list(re.finditer(group["record_start_pattern"], content[:link_start], re.M))
+                if starts:
+                    marker = starts[-1].start()
+                    prior_end = ordered[index - 1][6] if index else 0
+                    if marker >= prior_end:
+                        line_start = marker
+                following = re.search(group["record_start_pattern"], content[link_end:], re.M)
+                if following:
+                    next_line = min(next_line, link_end + following.start())
             if owner:
                 begin, end = owner
                 # The first link can have fields before it in the same card.
@@ -959,7 +979,9 @@ def _context_lines(context: str, title: str) -> list[str]:
         for image in reversed(markdown_links(label)):
             if image.is_image:
                 label = label[:image.start] + " " + label[image.end:]
-        if _key(visible_markdown_links(label)) != title_key:
+        visible_label = visible_markdown_links(label)
+        if (_key(visible_label) != title_key
+                and title_key not in {_key(line) for line in visible_label.splitlines()}):
             continue
         header = re.match(r"[ \t]*(?P<mark>\*\*|__)(?P<title>[^\n]+?)(?P=mark)(?:\\)*[ \t]*\n", label)
         if not header:
@@ -1039,6 +1061,9 @@ def _field_token_pattern(spec: dict):
 def _text_role_value(value: str, spec: dict) -> str | None:
     """Explicit metadata belongs to its declared role, not another text field."""
     value = value.strip()
+    if (re.fullmatch(r"today|tomorrow|yesterday", value, re.I)
+            and spec["id"] not in {"date", "date_or_time", "time", "status"}):
+        return None
     roles = {"title", "name", "author", "creator", "owner", "source", "publisher",
              "description", "summary", "date", "time", "version", "downloads",
              "views", "likes", "count", "price", "rating", "size"}
