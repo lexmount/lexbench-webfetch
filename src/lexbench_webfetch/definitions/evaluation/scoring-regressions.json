@@ -56460,6 +56460,87 @@
       "artifact": "- 2026-10-16\nVenue: Hall A\n[Concert](/item/1)\n- 2026-10-17\nRegion: Alabama\n[Other](/item/2)",
       "ok": true,
       "expected_task_pass": false
+    },
+    {
+      "id": "declared-information-explicit-title",
+      "category": "acceptance-contract",
+      "root_cause": "information_title_scope_does_not_promote_unrelated_metadata",
+      "failure_mode": "false-negative",
+      "case": {
+        "url": "https://example.test/video",
+        "required_facts": [
+          {
+            "id": "video-title",
+            "alternatives": [
+              "Example video"
+            ],
+            "match_scope": "body_or_title"
+          },
+          {
+            "id": "publisher",
+            "alternatives": [
+              "Example Channel"
+            ]
+          }
+        ]
+      },
+      "artifact": "---\ntitle: \"Example video\"\n---\nExample Channel",
+      "ok": true,
+      "expected_task_pass": true
+    },
+    {
+      "id": "declared-information-keywords-not-title",
+      "category": "acceptance-contract",
+      "root_cause": "information_title_scope_does_not_promote_unrelated_metadata",
+      "failure_mode": "false-positive",
+      "case": {
+        "url": "https://example.test/video",
+        "required_facts": [
+          {
+            "id": "video-title",
+            "alternatives": [
+              "Example video"
+            ],
+            "match_scope": "body_or_title"
+          },
+          {
+            "id": "publisher",
+            "alternatives": [
+              "Example Channel"
+            ]
+          }
+        ]
+      },
+      "artifact": "---\ntitle: \"Other video\"\nkeywords: \"Example video\"\n---\nExample Channel",
+      "ok": true,
+      "expected_task_pass": false
+    },
+    {
+      "id": "declared-information-keywords-not-publisher",
+      "category": "acceptance-contract",
+      "root_cause": "information_title_scope_does_not_promote_unrelated_metadata",
+      "failure_mode": "false-positive",
+      "case": {
+        "url": "https://example.test/video",
+        "required_facts": [
+          {
+            "id": "video-title",
+            "alternatives": [
+              "Example video"
+            ],
+            "match_scope": "body_or_title"
+          },
+          {
+            "id": "publisher",
+            "alternatives": [
+              "Example Channel"
+            ]
+          }
+        ]
+      },
+      "artifact": "---\ntitle: \"Example video\"\nkeywords: \"Example Channel\"\n---\nOther body",
+      "ok": true,
+      "expected_task_pass": false
     }
   ],
   "superseded_cases": {

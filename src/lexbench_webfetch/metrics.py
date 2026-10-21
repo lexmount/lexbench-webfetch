@@ -728,15 +728,22 @@ def evaluate_content(
     for index, fact in enumerate(facts):
         alternatives = [str(item) for item in fact.get("alternatives", [])]
         identifier = str(fact.get("id") or f"fact-{index + 1}")
+        scope = fact.get("match_scope", "body")
+        if scope not in {"body", "body_or_title"}:
+            raise ValueError("Unknown required-fact matching scope")
+        targets = [visible_content]
+        if scope == "body_or_title":
+            from .reference_quality import delivered_page_title
+            targets.append(delivered_page_title(content, title))
         hits = (entry_hits[identifier] if identifier in entry_hits else
                 [item for item in alternatives
-                 if _stable_literal_match(visible_content, item, registered_fact_words, phrase_boundaries=True)])
+                 if any(_stable_literal_match(target, item, registered_fact_words, phrase_boundaries=True) for target in targets)])
         fact_results.append({
             "id": identifier,
             "alternatives": alternatives,
             "matched": hits,
             "pass": bool(hits),
-            **({'match_scope': 'entry'} if identifier in entry_hits else {}),
+            **({'match_scope': 'entry'} if identifier in entry_hits else {'match_scope': scope} if scope != 'body' else {}),
         })
     fact_hits = sum(item["pass"] for item in fact_results)
     fact_coverage = round(fact_hits / len(fact_results), 4) if fact_results else 1.0

@@ -9869,7 +9869,8 @@
           "id": "视频标题",
           "alternatives": [
             "Me at the zoo"
-          ]
+          ],
+          "match_scope": "body_or_title"
         },
         {
           "id": "发布者",

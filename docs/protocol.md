@@ -42,4 +42,6 @@ A named-link group may declare `markdown_label_pattern` with a named `label` cap
 
 Text field patterns consume their matched spans, so distinct declared fields may share a physical line. Matching one field cannot reuse its value for a second requirement. Unlabeled text still needs its own evidence; relative-date controls such as “Today” do not establish a venue or source.
 
+Required facts use body text by default. An information task may declare `match_scope: "body_or_title"` for a fact that explicitly requests a page title. This permits the delivered title field, an HTML document title, or a scalar top-level Markdown front-matter title. Keywords and descriptions cannot supply the title, and title metadata cannot supply other facts.
+
 Contract-declared field aliases support Unicode labels. The built-in English metadata-role recognition is a limited legacy fallback, not an automatic translation dictionary. Declare the language-specific labels needed by a task rather than treating every colon in prose as a metadata separator. Body matching treats unfenced table tags as HTML, including in mixed prose. Literal code needs an explicit code fence or escape; a standalone table tag cannot disable HTML visibility rules for hidden elements or attributes.

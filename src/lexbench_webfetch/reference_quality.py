@@ -60,6 +60,36 @@ def markdown_body_content(text: str) -> str:
 
 
 
+def delivered_page_title(content: str, explicit_title: str | None = None) -> str:
+    """Read a declared title field, never keywords or a description snippet."""
+    if explicit_title and explicit_title.strip():
+        return explicit_title.strip()
+    if is_html_document_or_fragment(content):
+        from bs4 import BeautifulSoup
+        title = BeautifulSoup(content, "html.parser").find("title")
+        return title.get_text(" ", strip=True) if title else ""
+    body = markdown_body_content(content)
+    if body == content:
+        return ""
+    header = content[:len(content)-len(body)]
+    values = re.findall(r"(?m)^title:[ \t]*([^\r\n]*)$", header)
+    if len(values) != 1:
+        return ""
+    value = values[0].strip()
+    if value.startswith('"'):
+        import json
+        try:
+            parsed = json.loads(value)
+        except ValueError:
+            return ""
+        return parsed if isinstance(parsed, str) else ""
+    if value.startswith("'"):
+        return value[1:-1].replace("''", "'") if value.endswith("'") else ""
+    if not value or value[0] in "[{|>" or value.casefold() in {"null", "true", "false", "~"}:
+        return ""
+    return value.split(" #", 1)[0].strip()
+
+
 def markdown_heading_text(text: str) -> str:
     """Remove ATX presentation markers while retaining visible heading words."""
     output = []
