@@ -59,7 +59,7 @@ def _is_named_label(title,url,parts,nonempty=False):
     return label not in {_label_key(value) for value in route_labels}
 
 
-def _canonical_entry_path(path):
+def canonical_entry_path(path):
     """Normalize IRI text without decoding path separators or delimiters."""
     def decode(match):
         encoded = match[0]
@@ -92,7 +92,7 @@ def _markdown_safe_destination(destination):
 def named_entry_identity(url, contract):
     """Return the contract's canonical linked-record identity."""
     parts = urlsplit(url)
-    identity = _canonical_entry_path(parts.path).rstrip('/')
+    identity = canonical_entry_path(parts.path).rstrip('/')
     if pattern := contract.get('entry_identity_pattern'):
         match = re.search(pattern, identity)
         if not match or not match.groups():
@@ -119,7 +119,7 @@ def named_entry_source_pair_hash(title, url, contract):
     return hashlib.sha256((_label_key(title) + '\0' + identity).encode()).hexdigest()
 
 
-def _scoped_html(content):
+def scoped_html(content):
     """Exclude explicitly hidden nodes and image metadata from visible names.
 
     This is not a CSS renderer: external stylesheet visibility still needs
@@ -149,6 +149,15 @@ def _scoped_html(content):
                 or declarations.get('visibility') in {'hidden', 'collapse'}
                 or declarations.get('opacity') in {'0', '0.0', '0%'}):
             node.decompose()
+    # Native closed disclosures render only the first direct summary. Apply
+    # this before extracting any body, anchor or record text.
+    for details in list(soup.select('details:not([open])')):
+        if details.parent is None:
+            continue
+        summary = details.find('summary', recursive=False)
+        for child in list(details.contents):
+            if child is not summary:
+                child.extract()
     # An image description is not a visible news/product title. Explicit
     # title_selector extraction below already uses actual text nodes only.
     for node in soup.select('img'):
@@ -170,7 +179,7 @@ def visible_html_text(
 
     blocks = HTML_BLOCK_ELEMENTS
     parts = []
-    stack = [(_scoped_html(content), False, False)]
+    stack = [(scoped_html(content), False, False)]
     while stack:
         node, closing, preformatted = stack.pop()
         if isinstance(node, Comment):
@@ -223,7 +232,7 @@ def _named_candidate(url, title, contract, base_url, excluded_titles, diagnostic
             or parts.hostname not in contract['hosts']
             or not re.fullmatch(
                 contract['entry_path'],
-                _canonical_entry_path(parts.path).rstrip('/'),
+                canonical_entry_path(parts.path).rstrip('/'),
             )):
         return None
     title = re.sub(r'<[^>]+>', ' ', unescape(title))
@@ -364,7 +373,7 @@ def _breadcrumb_scope_end(content, contract, base_url):
     from .reference_quality import markdown_links, visible_markdown_links
     page = urlsplit(base_url)
     def route(path):
-        return re.sub(r'/index\.html?$', '', _canonical_entry_path(path)).rstrip('/')
+        return re.sub(r'/index\.html?$', '', canonical_entry_path(path)).rstrip('/')
     current = route(page.path)
     offset = 0
     chain = []
@@ -413,7 +422,7 @@ def _scope_named_content(content, scope, *, contract=None, base_url=''):
     """Apply one declared HTML or text scope and return owned name/link pairs."""
     owned_items = []
     if _has_scoped_html(content):
-        soup = _scoped_html(content)
+        soup = scoped_html(content)
         owners = soup.select(scope['html_selector'])
         # Inline HTML labels in Markdown do not make a document HTML.
         # A real document still owns its entries through the HTML selector.
@@ -546,12 +555,12 @@ def _owned_model_caption(content, links, index):
     finish = next((other.start for other in links[index + 1:]
                    if not other.is_image), len(content))
     block = content[link.end:finish]
-    identity = _canonical_entry_path(urlsplit(link.destination).path).rstrip('/').rsplit('/', 1)[-1]
+    identity = canonical_entry_path(urlsplit(link.destination).path).rstrip('/').rsplit('/', 1)[-1]
     if not identity or re.search(r"`+|~{3,}", block):
         return ''
     images = [image for image in markdown_links(block) if image.is_image
               and re.search(rf"(?<![A-Za-z0-9]){re.escape(identity)}(?![A-Za-z0-9])",
-                            _canonical_entry_path(urlsplit(image.destination).path))]
+                            canonical_entry_path(urlsplit(image.destination).path))]
     if not images:
         return ''
     captions = []
@@ -935,7 +944,7 @@ def extract_linked_products(content, contract, base_url, diagnostics=None):
     """Extract title/link/price triples from one owned product segment."""
     scope = contract.get('entry_scope')
     if scope and scope.get('price_selector') and _has_scoped_html(content):
-        soup = _scoped_html(content)
+        soup = scoped_html(content)
         allowed = [re.compile(p, re.I) for p in contract['price_patterns']]
         excluded = [re.compile(p, re.I) for p in contract.get('price_exclusion_patterns', [])]
         unavailable = [re.compile(p, re.I) for p in contract.get('price_unavailable_patterns', [])]

@@ -1,0 +1,13 @@
+{
+  "schema_version": 2,
+  "kind": "frozen_reference_inputs",
+  "id": "articles-v11-1929d5f702a2",
+  "catalog": "dataset-catalog.json",
+  "catalog_sha256": "8e413e683c309674abf3d297df3f378e76d65ead1e2aa343828e4b0e1d90764a",
+  "dataset": "dataset.json",
+  "dataset_sha256": "1929d5f702a2f7a0a1248694ca6843fba02ecaf7c559c6bf232865a8fb3c4bb6",
+  "files": {
+    "dataset.json": "1929d5f702a2f7a0a1248694ca6843fba02ecaf7c559c6bf232865a8fb3c4bb6"
+  },
+  "trees": {}
+}

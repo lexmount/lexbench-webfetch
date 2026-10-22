@@ -35,10 +35,13 @@ flowchart LR
 | `dynamic-content` | 100 | 初始页面响应后加载的正文与记录 |
 | `popular-sites` | 100 | 常用网站上与任务相关的内容 |
 | `access-restrictions` | 100 | 曾观察到访问限制的网址 |
+| `articles` | 100 | 已展示的文章正文；固定的初始评论和帖子覆盖规则 |
 
-四组任务分别固定版本，共 450 条任务记录，不代表去重后的 450 个网站，也不直接合成总榜。访问限制描述的是历史观察，网址今天的表现可能不同。WebMainBench、WCXB 和 WebArena 仍是各自独立的上游 benchmark。
+五组任务分别固定版本，共 550 条任务记录，不代表去重后的 550 个网站，也不直接合成总榜。访问限制描述的是历史观察，网址今天的表现可能不同。WebMainBench、WCXB 和 WebArena 仍是各自独立的上游 benchmark。
 
 每组提供可读的 `tasks.json`、包含原始完整任务哈希的目录，以及绑定可执行数据集和参考文件的清单。详见[数据结构与使用权](data.md)。任务原文和冻结的验收规则保留原语言。
+
+[文章分类](../src/lexbench_webfetch/definitions/evaluation/articles/README.md)的 `articles-v11` 增加了 95 个固定文章和 5 个变化的帖子集合案例。它检查已展示的文章内容及必需页面组成部分，包括初始评论和帖子覆盖，识别只抓到标题或只抓到正文的遗漏。固定文章要求每个正文分区及核对过的正文结尾均达到 80% 覆盖率。这允许格式差异，但不保证每个小节及其顺序完整。变化的评论和帖子列表检查记录数量、作者及非空正文等基本结构，不验证每条记录的正文是否完整。完整参考保存在 Git 之外。
 
 ## 快速开始
 
@@ -76,6 +79,7 @@ uv run --frozen lexbench-webfetch score --task examples/task.json --response exa
 ```
 
 第一份响应通过，第二份失败。若回答含有结构化链接或图片等字段，可通过 `--metadata /absolute/path/metadata.json` 提供，文件内容须为 JSON 对象。元数据不能指定文件验收结果。实际评分时，请使用已校验数据集中的完整任务 JSON。公开任务文件中的参考正文只有哈希绑定，不能替代完整验收输入。文件任务通过可重复的 `--file /absolute/path/file` 提供真实文件；评分器检查字节签名、长度和声明的哈希，不接受调用者自报的通过标记。可选的树结构任务需要先运行 `uv sync --frozen --extra tree`。
+
 
 使用独立采集的参考输入编译已审定的访问受限任务规则：
 

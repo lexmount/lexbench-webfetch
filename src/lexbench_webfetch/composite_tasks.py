@@ -14,7 +14,7 @@ import unicodedata
 from urllib.parse import parse_qsl, unquote, urljoin, urlsplit
 
 from .structured_tables import _pipe_cells, table_text_surface
-from .dynamic_lists import _canonical_entry_path, _named_candidate, extract_named_entries
+from .dynamic_lists import canonical_entry_path, _named_candidate, extract_named_entries
 from .reference_quality import clean_reference_text, markdown_links, visible_markdown_links
 
 
@@ -351,7 +351,7 @@ def _link_identity(url: str, group: dict) -> str | None:
         and parts.hostname not in group["hosts"]
     ):
         return None
-    path = _canonical_entry_path(parts.path).rstrip("/")
+    path = canonical_entry_path(parts.path).rstrip("/")
     if not re.fullmatch(group["entry_path"], path):
         return None
     identity = f"{parts.hostname}::{path}"
@@ -378,8 +378,8 @@ def _html_table_record_contexts(content: str, group: dict, base_url: str, allowe
     One linked cell owns its row's fields. Multiple linked cells are separate
     records; extra links nested in one cell do not create additional records.
     """
-    from .dynamic_lists import _scoped_html, visible_html_text
-    soup = _scoped_html(content)
+    from .dynamic_lists import scoped_html, visible_html_text
+    soup = scoped_html(content)
     contexts, table_ids = {}, set()
     for row in soup.select('tr'):
         owners = []
@@ -473,9 +473,9 @@ def _card_section_context(content: str, begin: int, end: int, title_start: int,
 def _html_field_surface(content: str, group: dict, base_url: str) -> tuple[str, str]:
     """Keep real DOM ownership while projecting visible links and field text."""
     from bs4 import Comment, NavigableString, Tag
-    from .dynamic_lists import _scoped_html, visible_html_text
+    from .dynamic_lists import scoped_html, visible_html_text
 
-    soup = _scoped_html(content)
+    soup = scoped_html(content)
     identity_cache = {}
     def target_identities(node):
         if id(node) not in identity_cache:

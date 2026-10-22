@@ -21,7 +21,8 @@ SCORING_SOURCE_FILES = tuple(Path(__file__).with_name(name) for name in (
     "list_verification.py", "reference_quality.py", "dynamic_entry_matching.py",
     "response_input.py", "body_coverage.py", "structured_tables.py",
     "ordered_tree.py", "composite_tasks.py", "dynamic_reference.py",
-    "file_acceptance.py", "evaluation.py", "models.py", "paths.py",
+    "file_acceptance.py", "evaluation.py", "models.py", "paths.py", "article_posts.py",
+    "article_comments.py", "article_title.py", "article_text.py", "required_components.py",
     "resource_urls.py",
 ))
 SCORING_SOURCE_SHA256 = hashlib.sha256(b"\0".join(
@@ -33,7 +34,7 @@ def _case_dict(case: EvalCase | dict[str, Any]) -> dict[str, Any]:
 
 
 def load_list_reference(case: EvalCase | dict[str, Any], source: Path) -> dict | None:
-    """Load only evidence required by the legacy list verifier, never by stable tasks."""
+    """Load declared independent list/post evidence, never infer it from an answer."""
     case = _case_dict(case)
     benchmark = case.get("source_benchmark", {})
     if (not case.get("acceptance_contract")
@@ -49,6 +50,7 @@ def load_list_reference(case: EvalCase | dict[str, Any], source: Path) -> dict |
 _RETAINED_EVIDENCE_FIELDS = {
     "reference_sha256", "deadline_overrun", "deadline_budget_ms", "file_evidence",
     "raw_file_sha256",
+
 }
 
 
@@ -124,6 +126,7 @@ def score_attempt(
         answer_input(artifact, metadata, ok=ok, status_code=status_code))
     result = {key: value for key, value in (previous_metrics or {}).items()
               if key in _RETAINED_EVIDENCE_FIELDS}
+
     keys = ("required_facts", "forbidden_any", "diagnostic_any", "min_content_chars",
             "fact_coverage_threshold", "ground_truth_main_content", "required_patterns",
             "acceptance_contract", "body_requirements", "composite_acceptance")
@@ -303,6 +306,22 @@ def score_attempt(
         result["resource_acceptance_contract_sha256"] = hashlib.sha256(json.dumps(
             resource_contract, sort_keys=True, ensure_ascii=False).encode()).hexdigest()
     benchmark = case.get("source_benchmark", {})
+    if rule_review.get("status") != "unresolved":
+        from .required_components import COMPONENTS
+        required = {}
+        for field, component in COMPONENTS.items():
+            if field not in benchmark:
+                continue
+            component_contract = benchmark[field]
+            component_result = component.verify(content, component_contract, case["url"])
+            result.update(component_result)
+            required[component.name] = component_result[component.pass_metric] is True
+            result[component.digest_metric] = hashlib.sha256(json.dumps(
+                component_contract, sort_keys=True, ensure_ascii=False).encode()).hexdigest()
+        if required:
+            result["content_decision_basis"] = "base_acceptance_and_required_components"
+            result["required_components"] = required
+            result["content_pass"] = bool(result["content_pass"] and all(required.values()))
     if (rule_review.get("status") != "unresolved" and not contract
             and benchmark.get("mode") == "dynamic_list_structure"):
         result.update(evaluate_dynamic_list(content, benchmark, base_url, ok, links))

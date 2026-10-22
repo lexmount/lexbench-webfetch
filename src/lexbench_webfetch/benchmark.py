@@ -53,6 +53,10 @@ def public_task(case: dict) -> dict:
     routing = {key: benchmark[key] for key in
                ("mode", "hosts", "entry_path", "minimum_entries", "verification_scope")
                if key in benchmark}
+    from .required_components import COMPONENTS
+    for component in COMPONENTS:
+        if component in benchmark:
+            routing[component] = benchmark[component]
     navigation = benchmark.get("risk_control", {}).get("navigation_contract")
     if navigation is not None:
         routing["risk_control"] = {"navigation_contract": navigation}

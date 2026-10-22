@@ -464,6 +464,8 @@ def task_passed(ok: bool, metrics: dict, task_kind: str | None = None) -> bool:
     if (metrics.get('page_identity_required')
             and metrics.get('page_identity_status') != 'verified'):
         return False
+    if any(value is not True for value in metrics.get('required_components', {}).values()):
+        return False
     if not task_measured(metrics, task_kind) or metrics.get('deadline_overrun'):
         return False
     if "acceptance_checks" in metrics:

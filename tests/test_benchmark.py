@@ -18,8 +18,8 @@ def write(path, value):
 class PublicDefinitions(unittest.TestCase):
     def test_all_shipped_suites_are_consistent(self):
         rows = [bench.validate(row['id']) for row in bench.registry()['suites']]
-        self.assertEqual(len(rows), 4)
-        self.assertEqual(sum(row['case_count'] for row in rows), 450)
+        self.assertEqual(len(rows), 5)
+        self.assertEqual(sum(row['case_count'] for row in rows), 550)
 
     def test_nested_reference_bodies_are_bound_without_being_distributed(self):
         body = 'Third-party reference paragraph. ' * 400

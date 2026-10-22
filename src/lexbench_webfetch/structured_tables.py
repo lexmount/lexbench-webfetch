@@ -221,8 +221,8 @@ def table_text_surface(content):
     from bs4 import BeautifulSoup
     content = _without_example_fences(content)
     if _contains_rendered_html_table(content):
-        from .dynamic_lists import _scoped_html
-        content = str(_scoped_html(content))
+        from .dynamic_lists import scoped_html
+        content = str(scoped_html(content))
         content = re.sub(
             r"<h([1-6])\b[^>]*>[\s\S]*?</h\1\s*>",
             lambda m: "\n" + BeautifulSoup(m[0], "html.parser").get_text(" ", strip=True) + "\n",
@@ -343,8 +343,8 @@ def parse_table_records(content, visible, contract):
     root = None
     if (re.search(r'<(?:html|body|main|div|section|article|ul|ol)\b', content, re.I)
             or _contains_rendered_html_table(content)):
-        from .dynamic_lists import _scoped_html
-        soup = _scoped_html(content)
+        from .dynamic_lists import scoped_html
+        soup = scoped_html(content)
         root = soup
         if scope.get('root_selector'):
             roots = soup.select(scope['root_selector'])
