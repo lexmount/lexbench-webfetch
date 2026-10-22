@@ -1,12 +1,6 @@
 <div align="center">
 
-<img src="assets/overview.svg" alt="LexBench Web Fetch task suites and acceptance rules" width="100%">
-
-# LexBench Web Fetch
-
-### 抓取成功后，究竟拿到了什么？
-
-为网页正文、结构化记录和文件抓取提供版本固定的任务与验收规则。
+<img src="assets/overview.png" alt="LexBench Web Fetch — Measure what comes back." width="100%">
 
 [English](../README.md) · 简体中文
 
