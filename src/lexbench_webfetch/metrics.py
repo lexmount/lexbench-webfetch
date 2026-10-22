@@ -459,6 +459,8 @@ def task_passed(ok: bool, metrics: dict, task_kind: str | None = None) -> bool:
     if ('acceptance_policy_version' in metrics or 'forbidden_hits' in metrics
             or ('blocked_page' in metrics and 'forbidden_requirement_hits' not in metrics)):
         raise ValueError('Historical scoring metrics require their frozen scorer or a complete offline rescore')
+    if metrics.get('request_ok') is False:
+        return False
     if metrics.get('forbidden_requirement_hits') or metrics.get('forbidden_requirement_pass') is False:
         return False
     if (metrics.get('page_identity_required')
@@ -466,14 +468,13 @@ def task_passed(ok: bool, metrics: dict, task_kind: str | None = None) -> bool:
         return False
     if not task_measured(metrics, task_kind) or metrics.get('deadline_overrun'):
         return False
+    if "acceptance_checks" in metrics:
+        checks = metrics["acceptance_checks"]
+        return bool(ok and checks and all(value is True for value in checks.values()))
     if "stable_task_pass" in metrics:
         combined = (metrics.get("content_pass")
-                    if ("composite_acceptance_pass" in metrics
-                        or metrics.get("body_region_results")
-                        or metrics.get("pattern_results"))
-                    else True)
-        return bool(ok and metrics["stable_task_pass"]
-                    and combined
+                    if metrics.get("content_score_applicable", True) else True)
+        return bool(ok and metrics["stable_task_pass"] and combined
                     and metrics.get("body_coverage_pass") is not False)
     field = {'structure':'list_task_pass', 'resource':'resource_pass', 'file':'raw_file_pass'}.get(task_kind, 'content_pass')
     return bool(ok and metrics.get(field))
@@ -487,6 +488,9 @@ def task_measured(metrics: dict, task_kind: str | None = None) -> bool:
     kind = task_kind or metrics.get('task_kind', 'body')
     if metrics.get('page_identity_required') and metrics.get('page_identity_status') != 'verified':
         return True
+    if 'acceptance_checks' in metrics and any(
+            value is None for value in metrics['acceptance_checks'].values()):
+        return False
     return kind != 'file' or isinstance(metrics.get('raw_file_pass'), bool)
 
 
@@ -810,6 +814,8 @@ def evaluate_content(
         "fact_total": len(fact_results),
         "fact_coverage": fact_coverage,
         "fact_coverage_threshold": fact_coverage_threshold,
+        "fact_coverage_pass": fact_coverage >= fact_coverage_threshold,
+        "pattern_pass": all(item["pass"] for item in pattern_results),
         "forbidden_requirement_hits": forbidden,
         "diagnostic_hits": [item for item in (diagnostic_any or [])
                             if (text := normalize_for_match(item)) and forbidden_in_text(folded, text)],
@@ -883,7 +889,8 @@ def evaluate_content(
             if "content_too_short" not in result["stable_task_errors"]:
                 result["stable_task_errors"].append("content_too_short")
         result["content_pass"] = bool(
-            declared_body_pass and declared_pattern_pass and result["stable_task_pass"] and not forbidden
+            declared_body_pass and declared_pattern_pass and result["stable_task_pass"]
+            and result["fact_coverage_pass"] and not forbidden
         )
         result["content_decision_basis"] = (
             "declared_content_requirements_with_stable_text_diagnostics"

@@ -321,8 +321,41 @@ def score_attempt(
         # A threshold is only an explicit task requirement, not a benchmark-wide
         # interpretation of continuous similarity as a pass rate.
         if 'ordered_tree_min_similarity' in case:
+            result['ordered_tree_pass'] = bool(
+                tree_result['score'] >= case['ordered_tree_min_similarity'])
             result['content_pass'] = bool(
-                ok and tree_result['score'] >= case['ordered_tree_min_similarity']
+                result['content_pass'] and ok and result['ordered_tree_pass']
                 and not result['forbidden_requirement_hits'])
+    result["acceptance_checks"] = acceptance_checks(case, result)
     result["scoring_source_sha256"] = SCORING_SOURCE_SHA256
     return result
+
+
+def acceptance_checks(case: dict, metrics: dict) -> dict[str, bool | None]:
+    """Select declared requirements, never a website- or provider-specific scorer.
+
+    Missing evidence for a selected requirement remains unavailable. Undeclared
+    requirements are omitted; similarity diagnostics never become pass gates.
+    """
+    kind = case.get('task_kind', 'body')
+    checks = {}
+    if case.get('acceptance_contract'):
+        checks['records_and_anchors'] = metrics.get('stable_task_pass')
+    elif kind in {'body', 'structure'}:
+        checks['content' if kind == 'body' else 'records'] = metrics.get(
+            'content_pass' if kind == 'body' else 'list_task_pass')
+    if case.get('required_facts'):
+        checks['facts'] = metrics.get('fact_coverage_pass')
+    if case.get('required_patterns'):
+        checks['patterns'] = metrics.get('pattern_pass')
+    if case.get('body_requirements'):
+        checks['body'] = metrics.get('body_coverage_pass')
+    if case.get('composite_acceptance'):
+        checks['composite'] = metrics.get('composite_acceptance_pass')
+    if case.get('expected_resources') or case.get('resource_output_contract') or kind == 'resource':
+        checks['resources'] = metrics.get('resource_pass')
+    if kind == 'file':
+        checks['file'] = metrics.get('raw_file_pass')
+    if 'ordered_tree_min_similarity' in case:
+        checks['tree'] = metrics.get('ordered_tree_pass')
+    return checks

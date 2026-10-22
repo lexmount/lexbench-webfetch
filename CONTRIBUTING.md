@@ -53,3 +53,36 @@ uv run --frozen lexbench-webfetch inspect-revision \
 `export --revision` writes `annotation-review.json` beside the dataset, including
 the field differences, source hashes and executed controls. It preserves the
 original input files and the revision's existing dataset identity.
+
+## Main content and shared acceptance
+
+Choose the required content from the reader's task and an independent page
+observation before writing matchers. An article needs its substantive sections;
+a feed needs the visible entries and their task-relevant fields; a product list
+needs the information the task asks to retrieve. A search landing page can
+legitimately have no article body. Navigation and footer words do not establish
+that a news feed or article was retrieved.
+
+Use the existing fact, body-region, record, pattern, resource and file checks.
+Combine the applicable requirements in the task definition. Do not implement a
+separate scorer for a site or report family. `score_attempt` exposes the selected
+`acceptance_checks`; `task_passed` requires all of them. Undeclared checks are
+omitted. Missing evidence for a declared requirement is unavailable and cannot
+pass. Full-text overlap remains diagnostic unless an explicit acceptance rule
+requires the content.
+
+`required_facts` are requirements even when a stable record contract is present.
+Do not put obsolete prices, rankings or changing membership in this field just
+to obtain diagnostic overlap metrics. Keep historical reference text in its
+reference field and declare current, independently supported requirements.
+A contract can select stable field rules for changing records without freezing
+old membership, but nonempty labels alone do not prove the records are truthful
+or that all main page sections are covered.
+
+Test a complete answer, the page shell without its main content, and an answer
+missing each required section or record field. Include equivalent supported
+serializations. Compare source, reference and output separately; an extractor's
+own output cannot qualify its reference. Preserve frozen task versions when
+adding coverage: new source observations do not retroactively describe an old
+provider call. A scoring change requires a fresh scoring identity and an audited
+offline recomputation before any published numbers change.

@@ -56770,6 +56770,357 @@
       "artifact": "![Photo](https://images.pexels.com/photos/12377232/pexels-photo-12377232.jpeg?w=640)",
       "ok": true,
       "expected_task_pass": false
+    },
+    {
+      "id": "unified-body-complete-delivery-passes",
+      "category": "structured-extraction",
+      "root_cause": "declared_requirement_ignored_by_task_kind",
+      "failure_mode": "false-negative",
+      "case": {
+        "url": "https://example.test/",
+        "acceptance_contract": {
+          "version": 1,
+          "schema": "named_link",
+          "minimum_records": 1,
+          "hosts": [
+            "example.test"
+          ],
+          "entry_path": "/item/\\d+",
+          "stable_text_anchors": []
+        },
+        "required_facts": [
+          {
+            "id": "description",
+            "alternatives": [
+              "Battery lasts twelve hours"
+            ]
+          }
+        ],
+        "expected_resources": [
+          {
+            "id": "manual",
+            "urls": [
+              "/manual.pdf"
+            ]
+          }
+        ],
+        "task_kind": "body"
+      },
+      "artifact": "[Portable speaker](/item/1)\nBattery lasts twelve hours\n[Manual](/manual.pdf)",
+      "ok": true,
+      "expected_task_pass": true
+    },
+    {
+      "id": "unified-body-missing-fact-fails",
+      "category": "structured-extraction",
+      "root_cause": "declared_requirement_ignored_by_task_kind",
+      "failure_mode": "false-positive",
+      "case": {
+        "url": "https://example.test/",
+        "acceptance_contract": {
+          "version": 1,
+          "schema": "named_link",
+          "minimum_records": 1,
+          "hosts": [
+            "example.test"
+          ],
+          "entry_path": "/item/\\d+",
+          "stable_text_anchors": []
+        },
+        "required_facts": [
+          {
+            "id": "description",
+            "alternatives": [
+              "Battery lasts twelve hours"
+            ]
+          }
+        ],
+        "expected_resources": [
+          {
+            "id": "manual",
+            "urls": [
+              "/manual.pdf"
+            ]
+          }
+        ],
+        "task_kind": "body"
+      },
+      "artifact": "[Portable speaker](/item/1)\n[Manual](/manual.pdf)",
+      "ok": true,
+      "expected_task_pass": false
+    },
+    {
+      "id": "unified-body-missing-resource-fails",
+      "category": "structured-extraction",
+      "root_cause": "declared_requirement_ignored_by_task_kind",
+      "failure_mode": "false-positive",
+      "case": {
+        "url": "https://example.test/",
+        "acceptance_contract": {
+          "version": 1,
+          "schema": "named_link",
+          "minimum_records": 1,
+          "hosts": [
+            "example.test"
+          ],
+          "entry_path": "/item/\\d+",
+          "stable_text_anchors": []
+        },
+        "required_facts": [
+          {
+            "id": "description",
+            "alternatives": [
+              "Battery lasts twelve hours"
+            ]
+          }
+        ],
+        "expected_resources": [
+          {
+            "id": "manual",
+            "urls": [
+              "/manual.pdf"
+            ]
+          }
+        ],
+        "task_kind": "body"
+      },
+      "artifact": "[Portable speaker](/item/1)\nBattery lasts twelve hours",
+      "ok": true,
+      "expected_task_pass": false
+    },
+    {
+      "id": "unified-structure-complete-delivery-passes",
+      "category": "structured-extraction",
+      "root_cause": "declared_requirement_ignored_by_task_kind",
+      "failure_mode": "false-negative",
+      "case": {
+        "url": "https://example.test/",
+        "acceptance_contract": {
+          "version": 1,
+          "schema": "named_link",
+          "minimum_records": 1,
+          "hosts": [
+            "example.test"
+          ],
+          "entry_path": "/item/\\d+",
+          "stable_text_anchors": []
+        },
+        "required_facts": [
+          {
+            "id": "description",
+            "alternatives": [
+              "Battery lasts twelve hours"
+            ]
+          }
+        ],
+        "expected_resources": [
+          {
+            "id": "manual",
+            "urls": [
+              "/manual.pdf"
+            ]
+          }
+        ],
+        "task_kind": "structure"
+      },
+      "artifact": "[Portable speaker](/item/1)\nBattery lasts twelve hours\n[Manual](/manual.pdf)",
+      "ok": true,
+      "expected_task_pass": true
+    },
+    {
+      "id": "unified-structure-missing-fact-fails",
+      "category": "structured-extraction",
+      "root_cause": "declared_requirement_ignored_by_task_kind",
+      "failure_mode": "false-positive",
+      "case": {
+        "url": "https://example.test/",
+        "acceptance_contract": {
+          "version": 1,
+          "schema": "named_link",
+          "minimum_records": 1,
+          "hosts": [
+            "example.test"
+          ],
+          "entry_path": "/item/\\d+",
+          "stable_text_anchors": []
+        },
+        "required_facts": [
+          {
+            "id": "description",
+            "alternatives": [
+              "Battery lasts twelve hours"
+            ]
+          }
+        ],
+        "expected_resources": [
+          {
+            "id": "manual",
+            "urls": [
+              "/manual.pdf"
+            ]
+          }
+        ],
+        "task_kind": "structure"
+      },
+      "artifact": "[Portable speaker](/item/1)\n[Manual](/manual.pdf)",
+      "ok": true,
+      "expected_task_pass": false
+    },
+    {
+      "id": "unified-structure-missing-resource-fails",
+      "category": "structured-extraction",
+      "root_cause": "declared_requirement_ignored_by_task_kind",
+      "failure_mode": "false-positive",
+      "case": {
+        "url": "https://example.test/",
+        "acceptance_contract": {
+          "version": 1,
+          "schema": "named_link",
+          "minimum_records": 1,
+          "hosts": [
+            "example.test"
+          ],
+          "entry_path": "/item/\\d+",
+          "stable_text_anchors": []
+        },
+        "required_facts": [
+          {
+            "id": "description",
+            "alternatives": [
+              "Battery lasts twelve hours"
+            ]
+          }
+        ],
+        "expected_resources": [
+          {
+            "id": "manual",
+            "urls": [
+              "/manual.pdf"
+            ]
+          }
+        ],
+        "task_kind": "structure"
+      },
+      "artifact": "[Portable speaker](/item/1)\nBattery lasts twelve hours",
+      "ok": true,
+      "expected_task_pass": false
+    },
+    {
+      "id": "unified-resource-complete-delivery-passes",
+      "category": "structured-extraction",
+      "root_cause": "declared_requirement_ignored_by_task_kind",
+      "failure_mode": "false-negative",
+      "case": {
+        "url": "https://example.test/",
+        "acceptance_contract": {
+          "version": 1,
+          "schema": "named_link",
+          "minimum_records": 1,
+          "hosts": [
+            "example.test"
+          ],
+          "entry_path": "/item/\\d+",
+          "stable_text_anchors": []
+        },
+        "required_facts": [
+          {
+            "id": "description",
+            "alternatives": [
+              "Battery lasts twelve hours"
+            ]
+          }
+        ],
+        "expected_resources": [
+          {
+            "id": "manual",
+            "urls": [
+              "/manual.pdf"
+            ]
+          }
+        ],
+        "task_kind": "resource"
+      },
+      "artifact": "[Portable speaker](/item/1)\nBattery lasts twelve hours\n[Manual](/manual.pdf)",
+      "ok": true,
+      "expected_task_pass": true
+    },
+    {
+      "id": "unified-resource-missing-fact-fails",
+      "category": "structured-extraction",
+      "root_cause": "declared_requirement_ignored_by_task_kind",
+      "failure_mode": "false-positive",
+      "case": {
+        "url": "https://example.test/",
+        "acceptance_contract": {
+          "version": 1,
+          "schema": "named_link",
+          "minimum_records": 1,
+          "hosts": [
+            "example.test"
+          ],
+          "entry_path": "/item/\\d+",
+          "stable_text_anchors": []
+        },
+        "required_facts": [
+          {
+            "id": "description",
+            "alternatives": [
+              "Battery lasts twelve hours"
+            ]
+          }
+        ],
+        "expected_resources": [
+          {
+            "id": "manual",
+            "urls": [
+              "/manual.pdf"
+            ]
+          }
+        ],
+        "task_kind": "resource"
+      },
+      "artifact": "[Portable speaker](/item/1)\n[Manual](/manual.pdf)",
+      "ok": true,
+      "expected_task_pass": false
+    },
+    {
+      "id": "unified-resource-missing-resource-fails",
+      "category": "structured-extraction",
+      "root_cause": "declared_requirement_ignored_by_task_kind",
+      "failure_mode": "false-positive",
+      "case": {
+        "url": "https://example.test/",
+        "acceptance_contract": {
+          "version": 1,
+          "schema": "named_link",
+          "minimum_records": 1,
+          "hosts": [
+            "example.test"
+          ],
+          "entry_path": "/item/\\d+",
+          "stable_text_anchors": []
+        },
+        "required_facts": [
+          {
+            "id": "description",
+            "alternatives": [
+              "Battery lasts twelve hours"
+            ]
+          }
+        ],
+        "expected_resources": [
+          {
+            "id": "manual",
+            "urls": [
+              "/manual.pdf"
+            ]
+          }
+        ],
+        "task_kind": "resource"
+      },
+      "artifact": "[Portable speaker](/item/1)\nBattery lasts twelve hours",
+      "ok": true,
+      "expected_task_pass": false
     }
   ],
   "superseded_cases": {
