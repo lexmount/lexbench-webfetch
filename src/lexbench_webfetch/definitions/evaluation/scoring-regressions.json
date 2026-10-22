@@ -57353,6 +57353,48 @@
       "artifact": "Account Privacy Terms",
       "ok": true,
       "expected_task_pass": false
+    },
+    {
+      "id": "facts-without-undeclared-records-complete",
+      "category": "structured-extraction",
+      "root_cause": "undeclared_record_check_from_output_kind",
+      "failure_mode": "false-negative",
+      "case": {
+        "url": "https://example.test/",
+        "task_kind": "structure",
+        "required_facts": [
+          {
+            "id": "duration",
+            "alternatives": [
+              "Battery lasts twelve hours"
+            ]
+          }
+        ]
+      },
+      "artifact": "Battery lasts twelve hours",
+      "ok": true,
+      "expected_task_pass": true
+    },
+    {
+      "id": "facts-without-undeclared-records-missing",
+      "category": "structured-extraction",
+      "root_cause": "undeclared_record_check_from_output_kind",
+      "failure_mode": "false-positive",
+      "case": {
+        "url": "https://example.test/",
+        "task_kind": "structure",
+        "required_facts": [
+          {
+            "id": "duration",
+            "alternatives": [
+              "Battery lasts twelve hours"
+            ]
+          }
+        ]
+      },
+      "artifact": "Home Terms",
+      "ok": true,
+      "expected_task_pass": false
     }
   ],
   "superseded_cases": {

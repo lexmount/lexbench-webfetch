@@ -185,3 +185,13 @@ def test_imported_tasks_apply_the_same_record_owned_acceptance_role():
     case = {'acceptance_contract': {**CONTRACT, 'stable_text_role': 'diagnostic'}}
     assign_content_acceptance_roles([case])
     assert case['acceptance_contract']['stable_text_role'] == 'diagnostic'
+
+
+@pytest.mark.parametrize('kind', ['body', 'structure'])
+@pytest.mark.parametrize('answer,passed', [('Battery lasts twelve hours', True), ('Home Terms', False)])
+def test_facts_do_not_require_an_undeclared_record_check(kind, answer, passed):
+    case = {'url': 'https://example.test/', 'task_kind': kind,
+            'required_facts': [{'id': 'duration', 'alternatives': ['Battery lasts twelve hours']}]}
+    result = score_attempt(case, answer.encode(), ok=True)
+    assert task_passed(True, result) is passed
+    assert 'records' not in result['acceptance_checks']

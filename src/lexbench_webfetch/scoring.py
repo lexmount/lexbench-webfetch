@@ -339,9 +339,10 @@ def acceptance_checks(case: dict, metrics: dict) -> dict[str, bool | None]:
     checks = {}
     if case.get('acceptance_contract'):
         checks['records_and_anchors'] = metrics.get('stable_task_pass')
-    elif kind in {'body', 'structure'}:
-        checks['content' if kind == 'body' else 'records'] = metrics.get(
-            'content_pass' if kind == 'body' else 'list_task_pass')
+    elif (case.get('source_benchmark') or {}).get('mode') == 'dynamic_list_structure':
+        checks['records'] = metrics.get('list_task_pass')
+    elif kind == 'body':
+        checks['content'] = metrics.get('content_pass')
     if case.get('content_score_applicable', True):
         if case.get('expected_any'):
             checks['literals'] = metrics.get('legacy_marker_pass')
