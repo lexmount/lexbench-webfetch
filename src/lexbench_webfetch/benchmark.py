@@ -210,7 +210,7 @@ def _review_annotation(definition, revision_path, identifier, root, changes):
         records.append({'suite': identifier, 'case_id': change['case_id'],
                         'reason': item['reason'], 'sources': sources, 'changes': delta,
                         'regression_ids': controls,
-                        'source_coverage': ('page_bytes_declared' if any(source['path'] != 'dataset.json' for source in sources)
+                        'source_coverage': ('reference_source_declared' if any(source['path'] != 'dataset.json' for source in sources)
                                             else 'task_and_source_hashes_only')})
     return {'revision': definition['id'], 'revision_sha256': digest(revision_path),
             'review_sha256': digest(reviews_path), 'changes': records}
@@ -324,7 +324,8 @@ def check_revision_references(dataset: dict, review: dict, source: Path) -> dict
         negative = b'<html><body>Verify you are human. Access Denied. CAPTCHA.</body></html>'
         metrics = score_attempt(case, negative, ok=True)
         negative_pass = task_passed(True, metrics, case.get('task_kind', 'body'))
-        status = ('passed' if any(control['passed'] for control in controls) and not negative_pass
+        status = ('failed' if negative_pass
+                  else 'passed' if any(control['passed'] for control in controls)
                   else 'failed' if controls else 'unavailable')
         results.append({'case_id': case['id'], 'status': status, 'reference_candidates': controls,
                         'error_page_passed': negative_pass,
