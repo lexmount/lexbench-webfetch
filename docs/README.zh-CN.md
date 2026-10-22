@@ -5,7 +5,7 @@
 [English](../README.md) · 简体中文
 
 [![CI](https://github.com/lexmount/lexbench-webfetch/actions/workflows/ci.yml/badge.svg)](https://github.com/lexmount/lexbench-webfetch/actions/workflows/ci.yml)
-[![License: MIT](https://img.shields.io/badge/code-MIT-51735b)](../LICENSE)
+[![License: Apache 2.0](https://img.shields.io/badge/code-Apache--2.0-51735b)](../LICENSE)
 [![Python 3.11+](https://img.shields.io/badge/Python-3.11%2B-356a91)](../pyproject.toml)
 
 [任务集](#任务集) · [快速开始](#快速开始) · [评测协议](protocol.md) · [参与贡献](../CONTRIBUTING.md)
@@ -131,7 +131,7 @@ uv run --frozen browser-harness-eval run \
 
 修改任务或提交结果前，请阅读 [CONTRIBUTING](../CONTRIBUTING.md)。`make check` 会检查任务定义和输入工具。安全问题请参阅 [SECURITY](../SECURITY.md)。
 
-项目自有代码和任务定义采用 [MIT 许可](../LICENSE)，第三方原始材料保留各自使用条件，详见 [THIRD_PARTY](../THIRD_PARTY.md)。
+项目自有代码和任务定义采用 [Apache 2.0 许可](../LICENSE)，第三方原始材料保留各自使用条件，详见 [THIRD_PARTY](../THIRD_PARTY.md)。
 
 ## 引用 LexBench Web Fetch
 

@@ -380,4 +380,5 @@ def acceptance_checks(case: dict, metrics: dict) -> dict[str, bool | None]:
         checks['file'] = metrics.get('raw_file_pass')
     if 'ordered_tree_min_similarity' in case:
         checks['tree'] = metrics.get('ordered_tree_pass')
+    checks.update(metrics.get('required_components', {}))
     return checks

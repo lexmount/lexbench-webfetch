@@ -195,3 +195,31 @@ def test_facts_do_not_require_an_undeclared_record_check(kind, answer, passed):
     result = score_attempt(case, answer.encode(), ok=True)
     assert task_passed(True, result) is passed
     assert 'records' not in result['acceptance_checks']
+
+
+@pytest.mark.parametrize('track', ['web', 'dynamic', 'challenge', 'risk_control', 'articles', 'document'])
+@pytest.mark.parametrize('kind', ['body', 'structure', 'resource', 'file'])
+@pytest.mark.parametrize('missing', [None, 'title', 'comments'])
+def test_optional_content_components_share_the_declared_acceptance_inventory(track, kind, missing):
+    from article_contract_fixtures import comment_labels
+    from lexbench_webfetch.evaluation import evaluate_response
+    case = {
+        'url': 'https://example.test/', 'track': track, 'task_kind': kind,
+        'min_content_chars': 1, 'acceptance_contract': CONTRACT,
+        'expected_resources': [{'id': 'manual', 'urls': ['/manual.pdf']}],
+        'source_benchmark': {
+            'title_contract': {'version': 1, 'alternatives': ['Why We Read'], 'html_selector': 'h1'},
+            'comment_contract': {**comment_labels(), 'version': 2, 'record_selector': '.comment',
+                'author_selector': '.author', 'body_selector': '.text',
+                'section_markers': ['Comments'], 'minimum_comments': 1},
+        },
+    }
+    title = '# Another article' if missing == 'title' else '# Why We Read'
+    answer = title + '\n\nArticle body.\n\n[Portable speaker](/item/1)\n\n[Manual](/manual.pdf)'
+    if missing != 'comments':
+        answer += '\n\nComments\n\n## Reader\nA thoughtful book.'
+    result = evaluate_response(case, answer.encode(), files=[b'\x89PNG\r\n\x1a\n' + b'x' * 32])
+    checks = result['metrics']['acceptance_checks']
+    assert checks['article_title'] is (missing != 'title')
+    assert checks['article_comments'] is (missing != 'comments')
+    assert result['passed'] is (missing is None)

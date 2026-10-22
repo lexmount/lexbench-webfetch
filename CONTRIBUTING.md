@@ -93,3 +93,7 @@ own output cannot qualify its reference. Preserve frozen task versions when
 adding coverage: new source observations do not retroactively describe an old
 provider call. A scoring change requires a fresh scoring identity and an audited
 offline recomputation before any published numbers change.
+
+## License
+
+Contributions use the [Apache License 2.0](LICENSE). Preserve third-party licenses, copyright notices and source attributions described in [THIRD_PARTY](THIRD_PARTY.md).

@@ -4,7 +4,8 @@ version = "0.3.0"
 description = "Versioned Web Fetch tasks, acceptance contracts and frozen reference bindings"
 readme = "README.md"
 requires-python = ">=3.11"
-license = "MIT"
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE", "THIRD_PARTY.md"]
 dependencies = ["beautifulsoup4==4.14.2", "soupsieve==2.9.2"]
 
 [project.optional-dependencies]
