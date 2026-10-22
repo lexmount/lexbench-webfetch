@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import json
+import re
 from pathlib import Path
 from typing import Any
 
@@ -173,3 +174,27 @@ def valid_correction_provenance(receipt: dict[str, Any]) -> bool:
              or provenance.get("root_cause_categories") == source_categories)
         and provenance.get("verdict_corrections") == expected
     )
+
+
+def check_scoring_regressions(identifiers):
+    """Execute declared acceptance controls before applying an input revision."""
+    from .scoring import score_attempt
+    from .metrics import task_passed, task_measured
+    registry = load_scoring_regressions()
+    rows = [registry[key] for key in require_scoring_regressions(identifiers)]
+    if {row['expected_task_pass'] for row in rows} != {False, True}:
+        raise ValueError('Annotation controls require accepted and rejected scenarios')
+    for row in rows:
+        kwargs = {key: row.get(key) for key in ('metadata', 'title', 'final_url')}
+        try:
+            metrics = score_attempt(row['case'], row['artifact'].encode(), ok=row['ok'], **kwargs)
+        except ValueError as error:
+            if row.get('expected_validation_error') and re.search(row['expected_validation_error'], str(error)):
+                continue
+            raise ValueError('Annotation regression failed: ' + row['id']) from error
+        expected_error = row.get('expected_validation_error')
+        if (expected_error or task_passed(row['ok'], metrics, row['case'].get('task_kind', 'body')) != row['expected_task_pass']
+                or ('expected_task_measured' in row and task_measured(metrics) != row['expected_task_measured'])
+                or any(metrics.get(key) != value for key, value in row.get('expected_metrics', {}).items())):
+            raise ValueError('Annotation regression failed: ' + row['id'])
+    return list(dict.fromkeys(identifiers))

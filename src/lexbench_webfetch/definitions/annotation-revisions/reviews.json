@@ -1,0 +1,242 @@
+{
+  "schema_version": 1,
+  "revisions": {
+    "serialization-20261021": {
+      "revision_sha256": "e0fe42179e584abb73782cbc459f521cab9cb09d3442de1ec4a6ff54d1b1235a",
+      "changes": [
+        {
+          "suite": "webfetch",
+          "case_id": "stable-browser-use-readme",
+          "reason": "The frozen README discusses CAPTCHA as a feature; that source term must not reject otherwise complete content. Missing source content still fails.",
+          "changes_sha256": "0d6d2572e0a1fbd6e5900689f32c36041c4460fb60a67c99a55793ec18b57ddb",
+          "sources": [
+            {
+              "path": "dataset.json",
+              "sha256": "5f751146143dcbe9daf46f0fb2511da1147508b3c8c4cd3377a6f3cceb82264e",
+              "scope": "Frozen task and independently captured reference inputs for stable-browser-use-readme"
+            },
+            {
+              "path": "sources/stable-browser-use-readme/current-source.html.txt",
+              "sha256": "0b77929bbdff3b79a3e41cad10e005a834855787945d3ced295bc81fda1561d4",
+              "scope": "Frozen source/reference for https://github.com/browser-use/browser-use/blob/2b1f9d377999a59fe7627c1a5aa88c12aa42e11f/README.md"
+            },
+            {
+              "path": "sources/stable-browser-use-readme/reference.txt",
+              "sha256": "e0125e5233473fcf1266c1bdfb5fb3d5e3545ae027b5f954dcceb3d874e50765",
+              "scope": "Frozen source/reference for https://github.com/browser-use/browser-use/blob/2b1f9d377999a59fe7627c1a5aa88c12aa42e11f/README.md"
+            }
+          ],
+          "regression_ids": [
+            "source-backed-diagnostic-source-discusses-status",
+            "source-backed-diagnostic-status-heading"
+          ]
+        },
+        {
+          "suite": "webfetch",
+          "case_id": "stable-wcag21-recommendation",
+          "reason": "The recommendation discusses CAPTCHA accessibility. Keep that source term diagnostic while retaining its independent content requirements.",
+          "changes_sha256": "0d6d2572e0a1fbd6e5900689f32c36041c4460fb60a67c99a55793ec18b57ddb",
+          "sources": [
+            {
+              "path": "dataset.json",
+              "sha256": "5f751146143dcbe9daf46f0fb2511da1147508b3c8c4cd3377a6f3cceb82264e",
+              "scope": "Frozen task and independently captured reference inputs for stable-wcag21-recommendation"
+            },
+            {
+              "path": "sources/stable-wcag21-recommendation/current-source.html.txt",
+              "sha256": "a8793e95937866bacd03d9b421e4e889bc7811b84d0ddec6ed8c790f8e7f67dd",
+              "scope": "Frozen source/reference for https://www.w3.org/TR/2018/REC-WCAG21-20180605/"
+            },
+            {
+              "path": "sources/stable-wcag21-recommendation/reference.txt",
+              "sha256": "4e427c638b8372ae21dec876596004451c1bfe43a23ac4331fc3ce8e6f1a1a5c",
+              "scope": "Frozen source/reference for https://www.w3.org/TR/2018/REC-WCAG21-20180605/"
+            }
+          ],
+          "regression_ids": [
+            "source-backed-diagnostic-source-discusses-status",
+            "source-backed-diagnostic-status-heading"
+          ]
+        },
+        {
+          "suite": "webfetch",
+          "case_id": "live-030-rfc-9110",
+          "reason": "RFC 9110 defines 404 Not Found. Its occurrence in the declared source is content, while a standalone error page lacks the required specification text.",
+          "changes_sha256": "16deb54070e7a3124c1a27b3e202579e33f0cd6e7860bb320b05cd7e2ff445c0",
+          "sources": [
+            {
+              "path": "dataset.json",
+              "sha256": "5f751146143dcbe9daf46f0fb2511da1147508b3c8c4cd3377a6f3cceb82264e",
+              "scope": "Frozen task and independently captured reference inputs for live-030-rfc-9110"
+            },
+            {
+              "path": "sources/live-030-rfc-9110/current-source.html.txt",
+              "sha256": "d431760660ea44e130f6e919dab216df2d0b3a490567a98089267523368fe1e5",
+              "scope": "Frozen source/reference for https://www.rfc-editor.org/rfc/rfc9110.html"
+            },
+            {
+              "path": "sources/live-030-rfc-9110/reference.txt",
+              "sha256": "f8ca256a4b0c0c0dce03f544daf37930fdcd78ef90fd28b506a3b7684f9f5df2",
+              "scope": "Frozen source/reference for https://www.rfc-editor.org/rfc/rfc9110.html"
+            },
+            {
+              "path": "sources/live-030-rfc-9110/source.html.txt",
+              "sha256": "d431760660ea44e130f6e919dab216df2d0b3a490567a98089267523368fe1e5",
+              "scope": "Frozen source/reference for https://www.rfc-editor.org/rfc/rfc9110.html"
+            }
+          ],
+          "regression_ids": [
+            "source-backed-diagnostic-source-discusses-status",
+            "source-backed-diagnostic-status-heading"
+          ]
+        },
+        {
+          "suite": "webfetch",
+          "case_id": "image-04",
+          "reason": "The declared image asset and dimensions are unchanged. Accept serialized equivalents of its explicit frozen URL aliases, not a different image size.",
+          "changes_sha256": "8b5f8ce6244bbf32574c1a30eaf58f3b97c13f0e9207a3f676a418f356b5128c",
+          "sources": [
+            {
+              "path": "dataset.json",
+              "sha256": "5f751146143dcbe9daf46f0fb2511da1147508b3c8c4cd3377a6f3cceb82264e",
+              "scope": "Frozen task and independently captured reference inputs for image-04"
+            },
+            {
+              "path": "sources/image-04/source.html.txt",
+              "sha256": "a88a957464642829b46cd764ab99a8baac990cf200eed516c88282de3310405a",
+              "scope": "Frozen source/reference for https://en.wikipedia.org/wiki/Apollo_11"
+            }
+          ],
+          "regression_ids": [
+            "resource-serialization-markup-entity",
+            "resource-serialization-different-size"
+          ]
+        },
+        {
+          "suite": "webfetch",
+          "case_id": "image-unsplash-detail",
+          "reason": "Accept documented presentation parameters for the same Unsplash photo. Asset identity and unsupported overlay transformations remain restricted.",
+          "changes_sha256": "6ed1819e40083d373591d289e8c32a9e27b577bcc6207fe603c2270770068fff",
+          "sources": [
+            {
+              "path": "dataset.json",
+              "sha256": "5f751146143dcbe9daf46f0fb2511da1147508b3c8c4cd3377a6f3cceb82264e",
+              "scope": "Frozen task and independently captured reference inputs for image-unsplash-detail"
+            },
+            {
+              "path": "sources/image-unsplash-detail/browser-observation.json",
+              "sha256": "1d4824d1f09b8deeef0f846b07d95fefa74ae15ed6a2d70e563d064ae531f84b",
+              "scope": "Frozen source/reference for https://unsplash.com/photos/green-leaf-plants-mSK5nNsAsLY"
+            }
+          ],
+          "regression_ids": [
+            "declared-photo-query-unsplash-resize",
+            "declared-photo-query-unsplash-overlay",
+            "declared-photo-query-unsplash-other-asset"
+          ]
+        },
+        {
+          "suite": "webfetch",
+          "case_id": "image-pexels-detail",
+          "reason": "Accept documented presentation parameters for the same Pexels photo. A different photo or unsupported overlay remains invalid.",
+          "changes_sha256": "2145ee63ff8a5fcdfa5bc8705743bc0fd29b1e0c5b840367f0b543ae0a280de7",
+          "sources": [
+            {
+              "path": "dataset.json",
+              "sha256": "5f751146143dcbe9daf46f0fb2511da1147508b3c8c4cd3377a6f3cceb82264e",
+              "scope": "Frozen task and independently captured reference inputs for image-pexels-detail"
+            },
+            {
+              "path": "sources/image-pexels-detail/browser-observation.json",
+              "sha256": "5a74a7ad4d78609a9163ce6addc3f4542d287b8e09c88a5cb8cdf22a01bc178d",
+              "scope": "Frozen source/reference for https://www.pexels.com/photo/a-green-trees-in-the-forest-12377231/"
+            }
+          ],
+          "regression_ids": [
+            "declared-photo-query-pexels-resize",
+            "declared-photo-query-pexels-overlay",
+            "declared-photo-query-pexels-other-asset"
+          ]
+        },
+        {
+          "suite": "webfetch",
+          "case_id": "video-09",
+          "reason": "The frozen task requests video title and publisher. Its actual title field may supply the title; keywords cannot supply the publisher.",
+          "changes_sha256": "300626be546a061612fc8ce029a0b7ea33443996df7c0919c298f541d06bbd23",
+          "sources": [
+            {
+              "path": "dataset.json",
+              "sha256": "5f751146143dcbe9daf46f0fb2511da1147508b3c8c4cd3377a6f3cceb82264e",
+              "scope": "Frozen task and independently captured reference inputs for video-09"
+            },
+            {
+              "path": "sources/video-09/source.html.txt",
+              "sha256": "000cd8ff3290a2c5f2446cf339c7dea1afb4faedbfa57f8467eaaf2103c6f380",
+              "scope": "Frozen source/reference for https://www.youtube.com/watch?v=jNQXAC9IVRw"
+            }
+          ],
+          "regression_ids": [
+            "declared-information-explicit-title",
+            "declared-information-keywords-not-title",
+            "declared-information-keywords-not-publisher"
+          ]
+        },
+        {
+          "suite": "dynamic-content",
+          "case_id": "replacement-ja-nintendo-mario",
+          "reason": "The frozen task selects Mario software results. The next independent page-search section ends that scope; it cannot contribute records. Keep seven required records, hosts and detail paths unchanged.",
+          "changes_sha256": "77f55cf810ebf779775ea9e31bbdb682ee14854fc0d471e229c5a4af1f510aa6",
+          "sources": [
+            {
+              "path": "dataset.json",
+              "sha256": "0da2bb30aaabe3ca2b93ec17b4cb88cdc1cf3ea46336bb3777fdb21c1f211b84",
+              "scope": "Frozen task and independently captured reference inputs for replacement-ja-nintendo-mario"
+            }
+          ],
+          "regression_ids": [
+            "named-section-boundary-complete-software",
+            "named-section-boundary-next-section-not-software"
+          ]
+        },
+        {
+          "suite": "dynamic-content",
+          "case_id": "replacement-ja-nintendo-zelda",
+          "reason": "The frozen task selects Zelda software results. The next independent page-search section ends that scope; it cannot contribute records. Keep eight required records, hosts and detail paths unchanged.",
+          "changes_sha256": "77f55cf810ebf779775ea9e31bbdb682ee14854fc0d471e229c5a4af1f510aa6",
+          "sources": [
+            {
+              "path": "dataset.json",
+              "sha256": "0da2bb30aaabe3ca2b93ec17b4cb88cdc1cf3ea46336bb3777fdb21c1f211b84",
+              "scope": "Frozen task and independently captured reference inputs for replacement-ja-nintendo-zelda"
+            }
+          ],
+          "regression_ids": [
+            "named-section-boundary-complete-software",
+            "named-section-boundary-next-section-not-software"
+          ]
+        },
+        {
+          "suite": "access-restrictions",
+          "case_id": "risk-diverse-074",
+          "reason": "Keep 26 named event links with date, venue and region. Their fields may share a visible card or line; fields from another card cannot complete an event.",
+          "changes_sha256": "dce4c44e8a5a5867ebdebf6a04fc1f954a00b40875cd1e975a6fb36a12b1d25f",
+          "sources": [
+            {
+              "path": "dataset.json",
+              "sha256": "165b888133e859304b035d74183dd40bf7ab609cac78bb6ae6e75b645c1de426",
+              "scope": "Frozen task and independently captured reference inputs for risk-diverse-074"
+            }
+          ],
+          "regression_ids": [
+            "declared-whole-card-complete",
+            "declared-whole-card-no-name",
+            "declared-whole-card-no-venue",
+            "declared-whole-card-no-region",
+            "native-card-text-same-line-region",
+            "native-card-text-region-without-venue"
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -34,3 +34,22 @@ Examples:
 - `docs(contributing): define PR and commit title conventions`
 
 Avoid titles such as `Fix review feedback`, `Update code` or `Misc improvements`; name the behavior or document that changes. A PR title describes the complete diff; each commit subject describes that commit. Update the PR title when its scope changes. If squash merging is used, use a subject that follows the same format. Apply this convention to new work; do not rewrite shared commits solely to rename them.
+
+## Score-only annotation revisions
+
+Keep an existing revision's bytes unchanged. Bind each new correction in
+`definitions/annotation-revisions/reviews.json` to its revision hash, exact field
+difference, frozen source inputs, reason, and accepted/rejected regression controls.
+These controls run before a revision is applied. Changing another field requires
+updating its review binding; a registered control ID alone is insufficient.
+
+Inspect a revision without private measured outputs:
+
+```sh
+uv run --frozen lexbench-webfetch inspect-revision \
+  --suite dynamic-content --revision serialization-20261021
+```
+
+`export --revision` writes `annotation-review.json` beside the dataset, including
+the field differences, source hashes and executed controls. It preserves the
+original input files and the revision's existing dataset identity.

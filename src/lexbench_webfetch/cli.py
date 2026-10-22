@@ -3,7 +3,7 @@ import argparse
 import json
 from pathlib import Path
 
-from .benchmark import export, registry, validate, verify_inputs
+from .benchmark import export, inspect_annotation_revision, registry, validate, verify_inputs
 
 
 def main() -> None:
@@ -19,6 +19,9 @@ def main() -> None:
         if name == "export":
             command.add_argument("--output", type=Path, required=True)
             command.add_argument("--revision", help="Apply a registered score-only annotation version")
+    inspect = sub.add_parser("inspect-revision", help="Show reviewed field differences, sources and acceptance controls")
+    inspect.add_argument("--suite", required=True)
+    inspect.add_argument("--revision", required=True)
     score = sub.add_parser("score", help="Evaluate a saved response and delivered files")
     score.add_argument("--task", type=Path, required=True,
                        help="Complete task JSON including its frozen reference requirements")
@@ -36,7 +39,9 @@ def main() -> None:
     compile_rules.add_argument("--evidence-home", type=Path, required=True)
     args = parser.parse_args()
     try:
-        if args.command == "score":
+        if args.command == "inspect-revision":
+            result = inspect_annotation_revision(args.suite, args.revision)
+        elif args.command == "score":
             from .evaluation import evaluate_response
             metadata = json.loads(args.metadata.read_text(encoding="utf-8")) if args.metadata else None
             if args.metadata and not isinstance(metadata, dict):

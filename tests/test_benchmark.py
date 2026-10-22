@@ -123,7 +123,21 @@ class FrozenInputs(unittest.TestCase):
                              'before_sha256': hashlib.sha256(encoded).hexdigest(),
                              'set': {'required_facts': [{'id': 'main', 'alternatives': ['unique fact']}]},
                              'remove': []}]}
-        write(self.suites/'annotation-revisions/source-annotation-v2.json', data)
+        revision_path = self.suites/'annotation-revisions/source-annotation-v2.json'
+        write(revision_path, data)
+        delta = [{'path': '/required_facts', 'after': [{'id': 'main', 'alternatives': ['unique fact']}]}]
+        data['regression_ids'] = ['source-backed-diagnostic-source-discusses-status',
+                                  'source-backed-diagnostic-status-heading']
+        write(revision_path, data)
+        write(self.suites/'annotation-revisions/reviews.json', {'schema_version': 1, 'revisions': {
+            data['id']: {'revision_sha256': bench.digest(revision_path), 'changes': [{
+                'suite': 'synthetic', 'case_id': 'article',
+                'reason': 'The frozen independent reference explicitly requires unique fact.',
+                'changes_sha256': hashlib.sha256(json.dumps(delta, ensure_ascii=False, sort_keys=True, separators=(',', ':')).encode()).hexdigest(),
+                'sources': [{'path': 'sources/article.json',
+                             'sha256': bench.digest(self.source/'sources/article.json'),
+                             'scope': 'Independent synthetic article reference'}],
+                'regression_ids': data['regression_ids']}]} }})
         return data
 
     def test_revised_export_has_a_distinct_identity_and_preserves_frozen_inputs(self):
@@ -134,6 +148,9 @@ class FrozenInputs(unittest.TestCase):
         self.assertEqual(revised['id'], 'test--source-annotation-v2')
         self.assertEqual(revised['definition_revision']['parent_dataset_id'], 'test')
         self.assertEqual(revised['cases'][0]['required_facts'][0]['alternatives'], ['unique fact'])
+        review = bench.read(path.parent/'annotation-review.json')
+        self.assertEqual(review['changes'][0]['changes'][0]['path'], '/required_facts')
+        self.assertTrue(review['changes'][0]['sources'])
         self.assertEqual((self.source/'dataset.json').read_bytes(), before)
         self.assertEqual(bench.verify_inputs('synthetic', self.source)['case_count'], 1)
         old = bench.export('synthetic', self.source, self.root/'unchanged')
@@ -153,6 +170,37 @@ class FrozenInputs(unittest.TestCase):
                 output = self.root/defect
                 with self.assertRaises(ValueError):
                     bench.export('synthetic', self.source, output, revision='source-annotation-v2')
+                self.assertFalse(output.exists())
+
+    def test_revised_export_rejects_unreviewed_or_unproven_changes(self):
+        import copy
+        definition = self.annotation_revision()
+        for defect in ('missing-review', 'diff', 'source', 'missing-source-binding', 'reason', 'one-direction', 'failing-control'):
+            with self.subTest(defect=defect):
+                self.annotation_revision()
+                review_path = self.suites/'annotation-revisions/reviews.json'
+                review = bench.read(review_path) if review_path.exists() else {'revisions': {}}
+                if defect == 'missing-review':
+                    if review_path.exists(): review_path.unlink()
+                elif review['revisions']:
+                    item = review['revisions']['source-annotation-v2']['changes'][0]
+                    if defect == 'diff': item['changes_sha256'] = '0'*64
+                    elif defect == 'source': item['sources'][0]['sha256'] = '0'*64
+                    elif defect == 'missing-source-binding': item['sources'] = [{'scope': 'No bound input'}]
+                    elif defect == 'reason': item['reason'] = ''
+                    elif defect == 'one-direction': item['regression_ids'] = ['source-backed-diagnostic-status-heading']
+                    write(review_path, review)
+                output = self.root/('invalid-'+defect)
+                if defect == 'failing-control':
+                    from lexbench_webfetch.scoring_regressions import load_scoring_regressions
+                    controls = copy.deepcopy(load_scoring_regressions())
+                    controls['source-backed-diagnostic-source-discusses-status']['expected_task_pass'] = False
+                    with patch('lexbench_webfetch.scoring_regressions.load_scoring_regressions', return_value=controls):
+                        with self.assertRaises(ValueError):
+                            bench.export('synthetic', self.source, output, revision=definition['id'])
+                else:
+                    with self.assertRaises(ValueError):
+                        bench.export('synthetic', self.source, output, revision=definition['id'])
                 self.assertFalse(output.exists())
 
     def test_existing_output_is_preserved(self):

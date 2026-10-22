@@ -158,8 +158,74 @@ def verify_inputs(identifier: str, source: Path) -> dict:
     return result
 
 
+def annotation_changes(before, after, path=''):
+    """Describe changed leaves; lists retain their order and exact values."""
+    if isinstance(before, dict) and isinstance(after, dict):
+        rows = []
+        for key in sorted(before.keys() | after.keys()):
+            child = path + '/' + key.replace('~', '~0').replace('/', '~1')
+            if key not in before: rows.append({'path': child, 'after': after[key]})
+            elif key not in after: rows.append({'path': child, 'before': before[key]})
+            else: rows.extend(annotation_changes(before[key], after[key], child))
+        return rows
+    if isinstance(before, list) and isinstance(after, list) and len(before) == len(after):
+        return [row for index, (old, new) in enumerate(zip(before, after))
+                for row in annotation_changes(old, new, path + '/' + str(index))]
+    return [] if before == after else [{'path': path, 'before': before, 'after': after}]
+
+
+def _review_annotation(definition, revision_path, identifier, root, changes):
+    from .scoring_regressions import check_scoring_regressions
+    reviews_path = contained_path(SUITES, 'annotation-revisions/reviews.json', reject_symlinks=True)
+    if not reviews_path.is_file():
+        raise ValueError('Annotation revision requires per-task evidence and controls')
+    reviews = read(reviews_path)
+    review = reviews.get('revisions', {}).get(definition['id'], {})
+    if reviews.get('schema_version') != 1 or review.get('revision_sha256') != digest(revision_path):
+        raise ValueError('Annotation review differs from the declared revision')
+    entries = review.get('changes', [])
+    keys = [(item['suite'], item['case_id']) for item in entries]
+    if len(keys) != len(set(keys)) or set(keys) != {(item['suite'], item['case_id']) for item in definition['changes']}:
+        raise ValueError('Annotation review task inventory differs')
+    declared_inputs = input_files(read(root/'source-inputs.json'))
+    records = []
+    for change, old, new in changes:
+        item = entries[keys.index((identifier, change['case_id']))]
+        delta = annotation_changes(public_task(old), public_task(new))
+        encoded = json.dumps(delta, ensure_ascii=False, sort_keys=True, separators=(',', ':')).encode()
+        if item.get('changes_sha256') != hashlib.sha256(encoded).hexdigest():
+            raise ValueError('Annotation includes unreviewed field changes: ' + change['case_id'])
+        if not isinstance(item.get('reason'), str) or not item['reason'].strip():
+            raise ValueError('Annotation requires a per-task reason')
+        sources = item.get('sources', [])
+        if not sources or any(source.get('path') not in declared_inputs
+                              or declared_inputs[source['path']] != source.get('sha256')
+                              or not isinstance(source.get('scope'), str) or not source['scope'].strip()
+                              for source in sources):
+            raise ValueError('Annotation source is not bound by its frozen inputs')
+        controls = item.get('regression_ids', [])
+        if not controls or set(controls) - set(definition['regression_ids']):
+            raise ValueError('Annotation controls differ from its declared revision')
+        check_scoring_regressions(controls)
+        records.append({'suite': identifier, 'case_id': change['case_id'],
+                        'reason': item['reason'], 'sources': sources, 'changes': delta,
+                        'regression_ids': controls})
+    return {'revision': definition['id'], 'revision_sha256': digest(revision_path),
+            'review_sha256': digest(reviews_path), 'changes': records}
+
+
 def apply_annotation_revision(identifier: str, dataset: dict, revision: str) -> dict:
-    """Apply an explicit score-only version; keep its frozen parent unchanged."""
+    """Apply a reviewed score-only version without changing its frozen parent."""
+    return _apply_annotation_revision(identifier, dataset, revision)[0]
+
+
+def inspect_annotation_revision(identifier: str, revision: str) -> dict:
+    """Inspect exact field differences, frozen sources and passing controls."""
+    _, root = suite(identifier)
+    return _apply_annotation_revision(identifier, read(root/'tasks.json'), revision)[1]
+
+
+def _apply_annotation_revision(identifier: str, dataset: dict, revision: str):
     safe_identifier(revision)
     path = contained_path(SUITES, f'annotation-revisions/{revision}.json', reject_symlinks=True)
     definition = read(path)
@@ -185,6 +251,7 @@ def apply_annotation_revision(identifier: str, dataset: dict, revision: str) -> 
     changes = [row for row in definition['changes'] if row['suite'] == identifier]
     if not changes or len({row['case_id'] for row in changes}) != len(changes):
         raise ValueError('Annotation revision has an invalid task inventory')
+    reviewed_changes = []
     for change in changes:
         case = cases.get(change['case_id'])
         public = public_task(case) if case is not None else None
@@ -193,15 +260,18 @@ def apply_annotation_revision(identifier: str, dataset: dict, revision: str) -> 
             raise ValueError('Annotation revision task differs from frozen parent')
         if (set(change['set']) | set(change['remove'])) - allowed:
             raise ValueError('Annotation revision cannot change collection inputs')
+        old = deepcopy(case)
         case.update(deepcopy(change['set']))
         for field in change['remove']:
             case.pop(field, None)
+        reviewed_changes.append((change, old, case))
+    review = _review_annotation(definition, path, identifier, root, reviewed_changes)
     result['id'] = dataset['id'] + '--' + revision
     result['definition_revision'] = {
         'id': revision, 'sha256': digest(path), 'parent_dataset_id': dataset['id'],
         'parent_tasks_sha256': parent['tasks_sha256'], 'provider_calls_added': 0,
     }
-    return result
+    return result, review
 
 
 def export(identifier: str, source: Path, output: Path, *, revision: str | None = None) -> Path:
@@ -222,7 +292,8 @@ def export(identifier: str, source: Path, output: Path, *, revision: str | None 
         verify_inputs(identifier, stage)
         if revision is not None:
             dataset_path = stage / manifest['dataset']
-            revised = apply_annotation_revision(identifier, read(dataset_path), revision)
+            revised, review = _apply_annotation_revision(identifier, read(dataset_path), revision)
+            (stage/'annotation-review.json').write_text(json.dumps(review, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
             dataset_path.write_text(json.dumps(revised, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
         # A materialized dataset is intentionally independent of the historical
         # Browser Eval external-input resolver; do not copy source-inputs.json.
