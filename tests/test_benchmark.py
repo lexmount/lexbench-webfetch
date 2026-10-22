@@ -151,6 +151,8 @@ class FrozenInputs(unittest.TestCase):
         review = bench.read(path.parent/'annotation-review.json')
         self.assertEqual(review['changes'][0]['changes'][0]['path'], '/required_facts')
         self.assertTrue(review['changes'][0]['sources'])
+        self.assertTrue(review['reference_controls']['complete'])
+        self.assertEqual(review['reference_controls']['cases'][0]['status'], 'passed')
         self.assertEqual((self.source/'dataset.json').read_bytes(), before)
         self.assertEqual(bench.verify_inputs('synthetic', self.source)['case_count'], 1)
         old = bench.export('synthetic', self.source, self.root/'unchanged')
@@ -286,6 +288,40 @@ class FrozenInputs(unittest.TestCase):
         for value in ('../secret', '/absolute', 'sources/../../secret', 'sources\\secret'):
             with self.subTest(value=value), self.assertRaises(ValueError):
                 bench.contained_path(self.source, value, reject_symlinks=True)
+
+
+
+class ReferenceControls(unittest.TestCase):
+    def test_reference_checks_reject_missing_required_content_and_report_missing_sources(self):
+        with tempfile.TemporaryDirectory() as directory:
+            source = Path(directory)
+            case = {'id': 'article', 'url': 'https://example.test/',
+                    'required_facts': [{'id': 'body', 'alternatives': ['substantive article']}],
+                    'ground_truth_main_content': 'substantive article'}
+            review = {'changes': [{'case_id': 'article', 'sources': [{'path': 'dataset.json'}]}]}
+            result = bench.check_revision_references({'cases': [case]}, review, source)
+            self.assertTrue(result['complete'])
+            self.assertFalse(result['cases'][0]['error_page_passed'])
+            case['ground_truth_main_content'] = 'Home Terms Privacy'
+            self.assertEqual(bench.check_revision_references({'cases': [case]}, review, source)['cases'][0]['status'], 'failed')
+            del case['ground_truth_main_content']
+            missing = bench.check_revision_references({'cases': [case]}, review, source)
+            self.assertFalse(missing['complete'])
+            self.assertEqual(missing['cases'][0]['status'], 'unavailable')
+
+    def test_media_reference_uses_observed_urls_in_an_image_answer(self):
+        with tempfile.TemporaryDirectory() as directory:
+            source = Path(directory)
+            digest = write(source / 'observed.json', {'resource_candidates': [
+                {'tag': 'a', 'attribute': 'href', 'url': 'https://example.test/download/42'}]})
+            case = {'id': 'image', 'url': 'https://example.test/', 'task_kind': 'resource',
+                    'content_score_applicable': False,
+                    'expected_resources': [{'id': 'image', 'kind': 'image', 'urls': ['https://example.test/download/42']}],
+                    'resource_output_contract': {'candidate_scope': 'image_answer_fields', 'unexpected': 'allow'}}
+            review = {'changes': [{'case_id': 'image', 'sources': [{'path': 'observed.json', 'sha256': digest}]}]}
+            self.assertTrue(bench.check_revision_references({'cases': [case]}, review, source)['complete'])
+            case['expected_resources'][0]['urls'] = ['https://example.test/download/99']
+            self.assertFalse(bench.check_revision_references({'cases': [case]}, review, source)['complete'])
 
 
 if __name__ == '__main__':
