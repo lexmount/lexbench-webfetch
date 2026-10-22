@@ -309,6 +309,15 @@ class ReferenceControls(unittest.TestCase):
             self.assertFalse(missing['complete'])
             self.assertEqual(missing['cases'][0]['status'], 'unavailable')
 
+    def test_missing_reference_cannot_hide_an_accepted_error_page(self):
+        with tempfile.TemporaryDirectory() as directory:
+            case = {'id': 'unchecked', 'url': 'https://example.test/', 'min_content_chars': 1}
+            review = {'changes': [{'case_id': 'unchecked', 'sources': [{'path': 'dataset.json'}]}]}
+            result = bench.check_revision_references({'cases': [case]}, review, Path(directory))
+            self.assertTrue(result['cases'][0]['error_page_passed'])
+            self.assertEqual(result['cases'][0]['status'], 'failed')
+            self.assertFalse(result['complete'])
+
     def test_media_reference_uses_observed_urls_in_an_image_answer(self):
         with tempfile.TemporaryDirectory() as directory:
             source = Path(directory)
