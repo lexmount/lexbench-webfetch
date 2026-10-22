@@ -1,12 +1,6 @@
 <div align="center">
 
-<img src="docs/assets/overview.svg" alt="LexBench Web Fetch task suites and acceptance rules" width="100%">
-
-# LexBench Web Fetch
-
-### What does a fetch actually return?
-
-Versioned tasks and acceptance rules for retrieving web content, structured records and files.
+<img src="docs/assets/overview.png" alt="LexBench Web Fetch — Measure what comes back." width="100%">
 
 [English](README.md) · [简体中文](docs/README.zh-CN.md)
 
