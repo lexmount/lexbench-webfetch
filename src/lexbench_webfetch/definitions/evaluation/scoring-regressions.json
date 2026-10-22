@@ -57121,6 +57121,142 @@
       "artifact": "[Portable speaker](/item/1)\nBattery lasts twelve hours",
       "ok": true,
       "expected_task_pass": false
+    },
+    {
+      "id": "unified-expected_any-complete-passes",
+      "category": "structured-extraction",
+      "root_cause": "declared_requirement_ignored_by_task_kind",
+      "failure_mode": "false-negative",
+      "case": {
+        "url": "https://example.test/",
+        "acceptance_contract": {
+          "version": 1,
+          "schema": "named_link",
+          "minimum_records": 1,
+          "hosts": [
+            "example.test"
+          ],
+          "entry_path": "/item/\\d+",
+          "stable_text_anchors": []
+        },
+        "expected_any": [
+          "Required introduction"
+        ]
+      },
+      "artifact": "Required introduction\n[Item](/item/1)",
+      "ok": true,
+      "expected_task_pass": true
+    },
+    {
+      "id": "unified-expected_any-missing-fails",
+      "category": "structured-extraction",
+      "root_cause": "declared_requirement_ignored_by_task_kind",
+      "failure_mode": "false-positive",
+      "case": {
+        "url": "https://example.test/",
+        "acceptance_contract": {
+          "version": 1,
+          "schema": "named_link",
+          "minimum_records": 1,
+          "hosts": [
+            "example.test"
+          ],
+          "entry_path": "/item/\\d+",
+          "stable_text_anchors": []
+        },
+        "expected_any": [
+          "Required introduction"
+        ]
+      },
+      "artifact": "[Item](/item/1)",
+      "ok": true,
+      "expected_task_pass": false
+    },
+    {
+      "id": "unified-min_content_chars-complete-passes",
+      "category": "structured-extraction",
+      "root_cause": "declared_requirement_ignored_by_task_kind",
+      "failure_mode": "false-negative",
+      "case": {
+        "url": "https://example.test/",
+        "acceptance_contract": {
+          "version": 1,
+          "schema": "named_link",
+          "minimum_records": 1,
+          "hosts": [
+            "example.test"
+          ],
+          "entry_path": "/item/\\d+",
+          "stable_text_anchors": []
+        },
+        "min_content_chars": 80
+      },
+      "artifact": "Required introduction and a substantive explanation of a portable device lasting twelve hours.\n[Item](/item/1)",
+      "ok": true,
+      "expected_task_pass": true
+    },
+    {
+      "id": "unified-min_content_chars-missing-fails",
+      "category": "structured-extraction",
+      "root_cause": "declared_requirement_ignored_by_task_kind",
+      "failure_mode": "false-positive",
+      "case": {
+        "url": "https://example.test/",
+        "acceptance_contract": {
+          "version": 1,
+          "schema": "named_link",
+          "minimum_records": 1,
+          "hosts": [
+            "example.test"
+          ],
+          "entry_path": "/item/\\d+",
+          "stable_text_anchors": []
+        },
+        "min_content_chars": 80
+      },
+      "artifact": "[Item](/item/1)",
+      "ok": true,
+      "expected_task_pass": false
+    },
+    {
+      "id": "unified-document-language-matching-passes",
+      "category": "structured-extraction",
+      "root_cause": "declared_requirement_ignored_by_task_kind",
+      "failure_mode": "false-negative",
+      "case": {
+        "url": "https://example.test/",
+        "track": "web",
+        "expected_final_url": "https://example.test/",
+        "expected_document_language": "en",
+        "page_identity_required": true
+      },
+      "artifact": "Article body",
+      "metadata": {
+        "document_language": "en"
+      },
+      "final_url": "https://example.test/",
+      "ok": true,
+      "expected_task_pass": true
+    },
+    {
+      "id": "unified-document-language-wrong-fails",
+      "category": "structured-extraction",
+      "root_cause": "declared_requirement_ignored_by_task_kind",
+      "failure_mode": "false-positive",
+      "case": {
+        "url": "https://example.test/",
+        "track": "web",
+        "expected_final_url": "https://example.test/",
+        "expected_document_language": "en",
+        "page_identity_required": true
+      },
+      "artifact": "Article body",
+      "metadata": {
+        "document_language": "fr"
+      },
+      "final_url": "https://example.test/",
+      "ok": true,
+      "expected_task_pass": false
     }
   ],
   "superseded_cases": {

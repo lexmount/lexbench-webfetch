@@ -804,6 +804,7 @@ def evaluate_content(
         "content_pass": content_pass,
         "pattern_results": pattern_results,
         "legacy_marker_pass": legacy_pass,
+        "content_length_pass": length_pass,
         "matched_markers": matched,
         "expected_markers": expected,
         "marker_hits": len(matched),

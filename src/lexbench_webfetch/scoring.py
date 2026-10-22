@@ -157,26 +157,21 @@ def score_attempt(
     ))
     result.update(request_ok=ok, request_status_basis=status_basis,
                   normalized_named_link_count=len(links))
-    dynamic_page_identity = bool(
-        case.get("track") == "dynamic"
-        and case.get("evaluation_url")
-        and case.get("expected_final_url")
-        and case.get("target_language")
-        and case.get("target_region")
+    language_page_identity = bool(
+        case.get("expected_final_url")
+        and (case.get("expected_document_language") or case.get("target_language"))
     )
     risk_navigation = (
         ((case.get("source_benchmark") or {}).get("risk_control") or {}).get(
             "navigation_contract"
         )
-        if case.get("track") == "risk_control"
-        else None
     )
     risk_page_identity = bool(
         isinstance(risk_navigation, dict)
         and isinstance(risk_navigation.get("requested_url"), str)
         and isinstance(risk_navigation.get("observed_final_url"), str)
     )
-    if dynamic_page_identity:
+    if language_page_identity:
         observed_language = (metadata or {}).get("document_language")
         language_present = case.get("expected_document_language_present", True)
         if not isinstance(language_present, bool):
@@ -184,7 +179,7 @@ def score_attempt(
         if not language_present and case.get("expected_document_language"):
             raise ValueError("An absent source language cannot have an expected language tag")
         expected_document_language = (
-            case.get("expected_document_language") or case["target_language"]
+            case.get("expected_document_language") or case.get("target_language")
         )
         final_consistent = bool(
             isinstance(final_url, str) and final_url
@@ -256,7 +251,8 @@ def score_attempt(
         and result.get("content_pass")
         and (not case.get("acceptance_contract") or result.get("stable_task_pass"))
     )
-    if (result["task_kind"] == "body" and result["declared_truncation_hits"]
+    if ((result["task_kind"] == "body" or declared_regions)
+            and result["declared_truncation_hits"]
             and not exact_body_proven):
         result["content_pass"] = False
         if contract := case.get("acceptance_contract"):
@@ -264,6 +260,9 @@ def score_attempt(
             result["stable_content_pass"] = False
             if "declared_truncation" not in result["stable_task_errors"]:
                 result["stable_task_errors"].append("declared_truncation")
+    result['body_delivery_pass'] = bool(
+        result['body_coverage_pass']
+        and (not result['declared_truncation_hits'] or exact_body_proven))
     file_evaluation = (metadata or {}).get('file_evaluation')
     if result['task_kind'] == 'file' and isinstance(file_evaluation, dict) and ('raw_file_pass' not in result or delivered_files is not None):
         result['raw_file_pass'] = bool(file_evaluation.get('pass'))
@@ -344,12 +343,17 @@ def acceptance_checks(case: dict, metrics: dict) -> dict[str, bool | None]:
     elif kind in {'body', 'structure'}:
         checks['content' if kind == 'body' else 'records'] = metrics.get(
             'content_pass' if kind == 'body' else 'list_task_pass')
+    if case.get('content_score_applicable', True):
+        if case.get('expected_any'):
+            checks['literals'] = metrics.get('legacy_marker_pass')
+        if 'min_content_chars' in case:
+            checks['length'] = metrics.get('content_length_pass')
     if case.get('required_facts'):
         checks['facts'] = metrics.get('fact_coverage_pass')
     if case.get('required_patterns'):
         checks['patterns'] = metrics.get('pattern_pass')
     if case.get('body_requirements'):
-        checks['body'] = metrics.get('body_coverage_pass')
+        checks['body'] = metrics.get('body_delivery_pass')
     if case.get('composite_acceptance'):
         checks['composite'] = metrics.get('composite_acceptance_pass')
     if case.get('expected_resources') or case.get('resource_output_contract') or kind == 'resource':
