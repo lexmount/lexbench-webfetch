@@ -25,12 +25,16 @@ def test_current_collection_coverage_without_runtime_reference(number, minimum):
     assert case['source_benchmark']['post_contract']['minimum_posts'] == minimum
     full = evaluate_response(case, (stable+'\n\n'+'\n\n'.join(posts)).encode())
     assert full['passed'] and full['measured']
+    assert full['metrics']['acceptance_checks']['article_posts'] is True
     assert 'article_reference_status' not in full['metrics']
     assert full['metrics']['content_decision_basis'] == 'base_acceptance_and_required_components'
-    for text in (stable, stable+'\n\n'+'\n\n'.join(posts[:-1]), '\n\n'.join(posts)):
+    for text, posts_pass in ((stable, False),
+                             (stable+'\n\n'+'\n\n'.join(posts[:-1]), False),
+                             ('\n\n'.join(posts), True)):
         result = evaluate_response(case, text.encode())
         assert not result['passed']
         assert result['measured']
+        assert result['metrics']['acceptance_checks']['article_posts'] is posts_pass
 
 
 def test_cli_accepts_collection_without_reference_arguments(tmp_path):
