@@ -459,6 +459,8 @@ def task_passed(ok: bool, metrics: dict, task_kind: str | None = None) -> bool:
     if ('acceptance_policy_version' in metrics or 'forbidden_hits' in metrics
             or ('blocked_page' in metrics and 'forbidden_requirement_hits' not in metrics)):
         raise ValueError('Historical scoring metrics require their frozen scorer or a complete offline rescore')
+    if 'scoring_source_sha256' in metrics and 'acceptance_checks' not in metrics:
+        raise ValueError('Stored metrics require their frozen scorer or a complete offline rescore')
     if metrics.get('request_ok') is False:
         return False
     if metrics.get('forbidden_requirement_hits') or metrics.get('forbidden_requirement_pass') is False:
@@ -473,7 +475,10 @@ def task_passed(ok: bool, metrics: dict, task_kind: str | None = None) -> bool:
         return bool(ok and checks and all(value is True for value in checks.values()))
     if "stable_task_pass" in metrics:
         combined = (metrics.get("content_pass")
-                    if metrics.get("content_score_applicable", True) else True)
+                    if ("fact_coverage_pass" in metrics
+                        or "composite_acceptance_pass" in metrics
+                        or metrics.get("body_region_results") or metrics.get("pattern_results"))
+                    else True)
         return bool(ok and metrics["stable_task_pass"] and combined
                     and metrics.get("body_coverage_pass") is not False)
     field = {'structure':'list_task_pass', 'resource':'resource_pass', 'file':'raw_file_pass'}.get(task_kind, 'content_pass')

@@ -154,3 +154,11 @@ def test_omitted_literal_check_cannot_invalidate_proven_complete_body():
                 'minimum_coverage': 0.8, 'regions': [{'id': 'body', 'text': 'alpha beta gamma delta epsilon'}]}}
     result = evaluate_response(case, b'alpha beta gamma delta epsilon\n[Speaker](/item/1)\n(Content truncated. Fetch a more specific URL or section for the full text.)')
     assert result['passed']
+
+
+def test_stored_metrics_without_declared_check_results_require_the_frozen_scorer():
+    with pytest.raises(ValueError, match='frozen scorer'):
+        task_passed(True, {'scoring_source_sha256': 'a' * 64,
+                           'stable_task_pass': True, 'content_pass': True})
+    metrics = score_attempt({'url': 'https://example.test/'}, b'Article body', ok=True)
+    assert task_passed(True, metrics)
