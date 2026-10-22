@@ -35,10 +35,13 @@ flowchart LR
 | `dynamic-content` | 100 | Content and records loaded after the initial page response |
 | `popular-sites` | 100 | Task-relevant content on widely used websites |
 | `access-restrictions` | 100 | URLs where access restrictions were previously observed |
+| `articles` | 100 | Displayed article bodies; fixed initial comment and post coverage rules |
 
-These are four separately versioned populations, with 450 task entries in total. They are not a deduplicated 450-site leaderboard. The access-restriction label describes historical observations; a URL may behave differently today. WebMainBench, WCXB and WebArena remain separate upstream benchmarks.
+These are five separately versioned populations, with 550 task entries in total. They are not a deduplicated 550-site leaderboard. The access-restriction label describes historical observations; a URL may behave differently today. WebMainBench, WCXB and WebArena remain separate upstream benchmarks.
 
 Each suite ships a readable `tasks.json`, a catalog with original task-definition hashes, and a manifest binding the exact executable dataset and reference files. See [data layout and rights](docs/data.md). Task wording and frozen acceptance rules retain their original language.
+
+The [article suite](src/lexbench_webfetch/definitions/evaluation/articles/README.md), `articles-v11`, adds 95 fixed articles and five changing post collections. It checks displayed article content and required page components, including initial comment and post coverage, to catch title-only or body-only extraction. Fixed articles require 80% coverage in every declared body region and the reviewed ending. This tolerates formatting differences but does not prove every small module or its order. Changing comments and post lists use structural checks (record counts, attribution and nonempty text), not verification of the full contents of each record. Complete references remain outside Git.
 
 ## Quickstart
 
@@ -76,6 +79,7 @@ uv run --frozen lexbench-webfetch score --task examples/task.json --response exa
 ```
 
 The first answer passes; the second fails. Use `--metadata /absolute/path/metadata.json` to include structured answer fields such as `links` or `images`; the file must contain a JSON object. Metadata cannot supply a file-acceptance verdict. Supply the complete task JSON from a verified dataset for a real result. Public task projections bind reference bodies by hash and cannot replace those complete rules. File tasks use repeated `--file /absolute/path/file` arguments; acceptance is derived from the actual bytes, signature, length and declared hash, not a supplied pass flag. Optional ordered-tree tasks require `uv sync --frozen --extra tree`.
+
 
 Compile the audited access-restriction rules with independently captured references:
 

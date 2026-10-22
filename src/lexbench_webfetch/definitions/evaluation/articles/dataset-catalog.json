@@ -1,0 +1,1011 @@
+{
+  "schema_version": 1,
+  "kind": "frozen_dataset_catalog",
+  "id": "articles-v11",
+  "name": "Article retrieval",
+  "case_count": 100,
+  "dataset": "dataset.json",
+  "dataset_sha256": "1929d5f702a2f7a0a1248694ca6843fba02ecaf7c559c6bf232865a8fb3c4bb6",
+  "cases": [
+    {
+      "id": "article-001",
+      "name": "脑电合成自然语音！LeCun转发Nature子刊新成果，代码开源",
+      "url": "https://mp.weixin.qq.com/s/BcV3-3glmdsVF--fpPRU2g",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "0fbd630b8e99c055841336604f6c789a0bc9688e832e5abe640170d8425919c2",
+      "reference_sha256": "47ce6626ced3ab1aaf907df1b1bab1f4e6f94eac959264e19437c329bb529093"
+    },
+    {
+      "id": "article-002",
+      "name": "龙虾冲浪终于不迷路了！网页智能体新框架Avenir-Web开源即SOTA",
+      "url": "https://mp.weixin.qq.com/s?__biz=MzIzNjc1NzUzMw==&mid=2247887827&idx=3&sn=6f15e73e3e9766986b064a1fce6fe955",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "aba00202f270bfd3ef442291212231a3df69c3db0fac5e587276027ddc037cec",
+      "reference_sha256": "aa0b767cc6bd3e25effac4e1fe3a8baa2010e9450eea0190b2b81a94d6c4ead4"
+    },
+    {
+      "id": "article-003",
+      "name": "200+推文涨粉8000：我的推特增长策略",
+      "url": "https://mp.weixin.qq.com/s/2y463r9G4hnsIc0c2ig7dA",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "bca3d3a91a7103a227494229b6e96438ac357bf848b69b7643f9bd67de12d3d1",
+      "reference_sha256": "d1bc3046a1401a37a7ceaddb6c25415391d17cac7c3563f552bc3dd809f485b8"
+    },
+    {
+      "id": "article-005",
+      "name": "Karpathy：vibe coding 长帖",
+      "url": "https://x.com/karpathy/status/1886192184808149383",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "0b7307147674b93407be3c5d1f919ce1576e0a2e6b7e6e4d3d22bf15c9d33ab2",
+      "reference_sha256": "ce58f6c719a695db06ff0cf7751662f9add982f2cf2aabfef80d5958bdb8205b"
+    },
+    {
+      "id": "article-006",
+      "name": "How We Made Cloud Browsers 3x Cheaper and Faster",
+      "url": "https://x.com/browser_use/status/2066911791360422071",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "61ecd502a6666ae71d40463ec76bd9723d990ea42ba25f2fac063b43a432d44e",
+      "reference_sha256": "9ca928954a05551979ec86adc340fd84208c74b7ff38d9ff83394bf3bfecc903"
+    },
+    {
+      "id": "article-007",
+      "name": "How to Authenticate AI Web Agents",
+      "url": "https://x.com/browser_use/status/2031045678411981115",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "17a7755981fe1406e1b95ce2903d85b4fe6eab878d716d2c23dec352efeb1524",
+      "reference_sha256": "12d63cbe41b61ad880c5fc9dc0a29698706dcf6e0c1e413c31054d904e0b3eb1"
+    },
+    {
+      "id": "article-008",
+      "name": "25个全球最佳旅游目的地（2025年珍藏版）",
+      "url": "https://www.weibo.com/ttarticle/p/show?id=2309405133590391554059",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "b188de14fdc024bd53366d58b87b5a221ec23144aa69e9d46ada61f6eeb43cfa",
+      "reference_sha256": "78ef46911f62d18aa988c124c714ed92a256fb2476b88fcfb5666612230cce2b"
+    },
+    {
+      "id": "article-009",
+      "name": "从产业细微处，看见周期起落",
+      "url": "https://xueqiu.com/8007330530/409060327",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "80970670c00fdd54f4644452bf7275ad850d080abaf7f6c57660dee13e0dd324",
+      "reference_sha256": "711eca574fe502bc28280fa59e95ff1c9a2bab53dd4dd55af29a4579a79826f1"
+    },
+    {
+      "id": "article-010",
+      "name": "人工智能的细分方向及学习路线",
+      "url": "https://zhuanlan.zhihu.com/p/1938981107581280917",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "736fcb6ebb11f7825aa4d7e976b9f4a567528c52622e040f02b4ec6c6e0dde0c",
+      "reference_sha256": "aa886d865159264d573990aeb04ebe80c04f4437d60774154241e67a84450fe3"
+    },
+    {
+      "id": "article-011",
+      "name": "深度学习应该从哪里开始学起来？",
+      "url": "https://www.zhihu.com/question/1908123292520408101/answer/2029584834092184706",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "49ea47b302adcd025576fe158893db0923c98d95a0a0793717eddac0df629f4b",
+      "reference_sha256": "8132a96497d6b35201e2ba9c0babc0ad03b06d8b47675276f982cafacfb015d1"
+    },
+    {
+      "id": "article-012",
+      "name": "数字花园之问",
+      "url": "https://sspai.com/post/80238",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "f2636d2f89729ded7effeb6d6c604d636c14335e7b657bc59ef758ea266e262e",
+      "reference_sha256": "a0c7d524ac59f83abbb265c991d0dd4fe3cdba339ffb1043bd1ffeec1955f59e"
+    },
+    {
+      "id": "article-013",
+      "name": "建造你的数字小森林",
+      "url": "https://sspai.com/post/81705",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "e5bd50e55994b2bb492d8ca7c9bc49bf321849871da28b4da2f2ce32346ab6bb",
+      "reference_sha256": "59d3b64720fdd565807e3d0396797cabde914419041074df4790c7092468528e"
+    },
+    {
+      "id": "article-014",
+      "name": "javascript事件循环（浏览器/node）",
+      "url": "https://juejin.cn/post/6844903734036676622",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "feb2e69b9cb763677ad306e2eb86eb5fc8f072251794623bcdad6edfd3fcffbc",
+      "reference_sha256": "095d44071cb07b3682397f09bea75ce9e282de6c4029cbbc50bb38653aec5502"
+    },
+    {
+      "id": "article-015",
+      "name": "Avenir-Web 开源相关报道",
+      "url": "https://blog.csdn.net/QbitAI/article/details/160638160",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "249921331bbd3106da27ce25532446184fd7dfeb99ca39caa35c30616b931b7c",
+      "reference_sha256": "b8df6f208d1238e9fc0212d7153d6afda7842145b45143c0d752e39c35e2bcb2"
+    },
+    {
+      "id": "article-016",
+      "name": "区级又怎样？这个博物馆拿捏了数十万人的心",
+      "url": "https://www.sohu.com/a/770951465_121119379",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "ce67305fcfa223014ed995729afcba51fac7cdcd4da130e0aa72749f0e6585e0",
+      "reference_sha256": "bbc6d3bb26c1f47f378597aba3bc85451117f136e68127fd410c730e5d25b874"
+    },
+    {
+      "id": "article-017",
+      "name": "馆长对话录：从上博东馆开始",
+      "url": "https://www.thepaper.cn/newsDetail_forward_26223402",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "82f62bcc9a8b7987942b53679babdd5d6a040799ebf1419c0aa3612030cfc821",
+      "reference_sha256": "f7187d9f132a8a05a5d7e4f901b94b44d4192d438da2959d0bb0e141e42b4bcb"
+    },
+    {
+      "id": "article-018",
+      "name": "嫦娥六号拍摄月背系列影像图公布",
+      "url": "https://www.ithome.com/0/772/941.htm",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "b89f7a9dbf37f642ce185e1e8778c0987537bc3329e0b461bf440cbb19ccc190",
+      "reference_sha256": "7dadded4665a52308017022fc186fd00c3c8c4eba3a1f420addd9625abdbc179"
+    },
+    {
+      "id": "article-019",
+      "name": "《如何阅读一本书》读书笔记",
+      "url": "https://www3.jianshu.com/p/4fad54d5b510",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "91ac8e070be0f00fc28730f11fe484a18a2da5bd60b3ebdedc17c13553ca5d9f",
+      "reference_sha256": "1aac5ac46dc92a8945f48cb5ba32832134654c86ab8fcde6b90893923ee0a6ef"
+    },
+    {
+      "id": "article-020",
+      "name": "事务隔离机制",
+      "url": "https://www.cnblogs.com/wuqiuyin/p/15403538.html",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "e3923cc2c364407b43cc134d0563243e92fdf243ed9cef24696a84ed8d667eaa",
+      "reference_sha256": "a2f5d0443b869fd3d25e2bca4051c326502c29d7f29349e8bbe193c7751acd6e"
+    },
+    {
+      "id": "article-021",
+      "name": "添加解析时提示 DNS 不正确如何处理？",
+      "url": "https://developer.cloud.tencent.com/article/1927047",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "7005ac405a765ae643b0a1bc635019d9f9ae3617fb02fcd41f9f4c0c07499482",
+      "reference_sha256": "4e52d1f3e55410b6c0c1efeb02d1a1f63c582d3ca19766db804b73dff4ffe80e"
+    },
+    {
+      "id": "article-022",
+      "name": "项目开发规范",
+      "url": "https://developer.aliyun.com/article/659453",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "793041091b1671e0b4901111b8fafc7069d11f0f86bd9e8e02e8ac1e80203a24",
+      "reference_sha256": "64ace2c1bdea38aa4f9c2bc0a749c7785e31053697201c4a01697daa077198bf"
+    },
+    {
+      "id": "article-023",
+      "name": "星巴克在中国这20年",
+      "url": "https://www.huxiu.com/article/280829.html",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "96d45898aefb8cf1309a08162e25e8d2e3cd1eaf0538e8d6d1ff70411ce6b6c8",
+      "reference_sha256": "1039045e7edb09189024fc336bba5e2c539faeb9b1d4a59d295e6e72380ee8d1"
+    },
+    {
+      "id": "article-024",
+      "name": "参观国博实用攻略",
+      "url": "https://www.chnmuseum.cn/zx/gbxw/202609/t20260923_282658.shtml",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "a9c1d7288a81a11256886b2e6b06eba0ea67674b98ddb7bf64eccf114608d4d7",
+      "reference_sha256": "124b6229c21b7c66300166cf3304c626662e9d1d09d7600b9e7fc95e10a0b8bb"
+    },
+    {
+      "id": "article-025",
+      "name": "Flex 布局教程：语法篇",
+      "url": "https://www.ruanyifeng.com/blog/2015/07/flex-grammar.html",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "92f67306b0f1fe1c5f63105684b889c6cfb6e713bc309bb8191bf9eb91ed4614",
+      "reference_sha256": "9694bcff3d4be8fae94b56e48217a44bef553eb1a062aea57dcf69b8824d894f"
+    },
+    {
+      "id": "article-026",
+      "name": "The Illustrated Transformer",
+      "url": "https://shekhar14.medium.com/the-illustrated-transformer-5ae5230f4cd7",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "6287bdc3270fed56f697ad18af8f2e8508944a82c72ea237b22a386fbe18195a",
+      "reference_sha256": "e02f8e7668404d2047c3f3b03d01e512eb0420b27fea38ea9c26108ab6d274a6"
+    },
+    {
+      "id": "article-027",
+      "name": "How to Write",
+      "url": "https://bradleytusk.substack.com/p/how-to-write",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "ad3ce34c7d9df4827d29eb8464849a0c9de19383896bd74c73bf3c8ea6bbe8c8",
+      "reference_sha256": "d7371e524f400aaa643d143387405fc469b0e1029bdb1294b6a6681b0bfaad8f"
+    },
+    {
+      "id": "article-028",
+      "name": "AIがチャットから仕事を代行する存在へ",
+      "url": "https://note.com/ai_gpt_take/n/n85e2a2b98456",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "b4c44d5cd0576e7b7079a5a152ad2c6cb31c71205fa7372614d4d820b124d4c9",
+      "reference_sha256": "54b3c65ffcc1d0ee7a0da4853c42557ab908cc9f56ae8f1539ba149525a7cace"
+    },
+    {
+      "id": "article-029",
+      "name": "Writes and Write-Nots",
+      "url": "https://www.paulgraham.com/writes.html",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "e516b14ecf178f902d98c8f1d0bddf8543713afd660144416f6113b2f8eed0c3",
+      "reference_sha256": "a658cd686fb6948f2ba7fbd2d95d5cc4c3787e3bde9ecd3a37600882e5b2fac6"
+    },
+    {
+      "id": "article-030",
+      "name": "A cartoon intro to WebAssembly",
+      "url": "https://hacks.mozilla.org/2017/02/a-cartoon-intro-to-webassembly/",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "de6e5522f0cfb0f1f71494c352950e18d9196237fb09c5028fb829ef9a147b20",
+      "reference_sha256": "45d23ee0057f84d01e96258eaa11806cebc50a1b36d4e33fbf72dfeed689486a"
+    },
+    {
+      "id": "article-031",
+      "name": "Cloudflare outage on June 21, 2022",
+      "url": "https://blog.cloudflare.com/cloudflare-outage-on-june-21-2022/",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "d3bc4e108b3ec13571cce801a299bc784bae183a75703225717d1697edcb4826",
+      "reference_sha256": "81b38b0f76b591f9899567b1b772ba0a4dcc3a1c7721830141e1d53336e88abd"
+    },
+    {
+      "id": "article-032",
+      "name": "JavaScript Visualized: Event Loop",
+      "url": "https://dev.to/lydiahallie/javascript-visualized-event-loop-3dif",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "f395d3dbf76bcc431258698b9246de10009d9de8fb18180032c4f1dece9bbdcf",
+      "reference_sha256": "7c506c5fb203cb69a61e1f2c474a19d6b04fe7d950a4b4d133b09f9c0a6638ed"
+    },
+    {
+      "id": "article-033",
+      "name": "New AI model could streamline operations in a robotic warehouse",
+      "url": "https://news.mit.edu/2024/new-ai-model-could-streamline-operations-robotic-warehouse-0227",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "3db0fdf943898541a5071849fe7bc6228e81a1f21c078cb047cdeca2532f6943",
+      "reference_sha256": "914fc5cde3ac6b016926e10278ac4ddee24708d52d4ed89d3c2ba9541c45b974"
+    },
+    {
+      "id": "article-034",
+      "name": "NASA’s Webb Delivers Deepest Infrared Image of Universe Yet",
+      "url": "https://science.nasa.gov/missions/webb/nasas-webb-delivers-deepest-infrared-image-of-universe-yet/",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "f5d9f93119b359043b2ba8a0a6626214370ca49f547df77bb225fedbc8255e6a",
+      "reference_sha256": "2158197e9b59456a20e0cb786461d878de8111d44facfca63fad22262e6dfc5f"
+    },
+    {
+      "id": "article-035",
+      "name": "The Mimic Octopus",
+      "url": "https://www.smithsonianmag.com/science-nature/the-mimic-octopus-34059594/",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "bb0e7b1f3ee212d29afd9212a3d6871555ea04918b54f3cc13e71ca856982c5d",
+      "reference_sha256": "a4aa08510d8c8698569108d65014fd8336f44d7b66c0634088ecb5e1d476559c"
+    },
+    {
+      "id": "article-036",
+      "name": "与普通章鱼相遇",
+      "url": "https://www.theguardian.com/environment/2024/apr/04/the-finger-touch-sent-shivers-down-my-spine-my-encounter-with-a-common-octopus",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "49c62f8c6ba1031372d5cc8f71cacd7e356a4de568924bfeb7caef3e1c686a2b",
+      "reference_sha256": "24d74a5d1e22caaec4760a668b99971cfdf6406d415e62f932b99e9480373300"
+    },
+    {
+      "id": "article-037",
+      "name": "The Perfect Belgrade Itinerary",
+      "url": "https://www.bbc.com/storyworks/travel/experience-serbia/the-perfect-belgrade-itinerary",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "f01021ae65a7e4dffaf9e3eb2e32fff2582a447b51c774ad87866f4c93f682e3",
+      "reference_sha256": "1a8df2e5630356e721e02fce536f4652b0677ca27721a69576da11c58a7b5b8f"
+    },
+    {
+      "id": "article-038",
+      "name": "Browser Use 主页",
+      "url": "https://x.com/browser_use",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "aa79dd1da9ce56a9262e2943ef04b57f5d579d968b10df814a3445844cc0bb0f",
+      "reference_sha256": null
+    },
+    {
+      "id": "article-039",
+      "name": "Browser Use 回复页",
+      "url": "https://x.com/browser_use/with_replies",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "7e5ac089f1085632be1ceadc7433e536f3e16e29908e6ae4879defcee4522e12",
+      "reference_sha256": null
+    },
+    {
+      "id": "article-040",
+      "name": "Browser Use 转发页",
+      "url": "https://x.com/browser_use/reposts",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "4506631d5e9796c153f7091a00897daadeeb105292332846aa6188af27dcee6c",
+      "reference_sha256": null
+    },
+    {
+      "id": "article-041",
+      "name": "Browser Use 媒体页",
+      "url": "https://x.com/browser_use/media",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "43eb7a7f04e0b43b701ffe0c294ed3c58a19d761371896bb2b3d730cf9eeeaf0",
+      "reference_sha256": null
+    },
+    {
+      "id": "article-044",
+      "name": "入行二十年，有知有畏，但求称职",
+      "url": "https://www.xueqiu.com/2245748859/383327076",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "da0f0ee4a32245d024a8fe1692617b37cd631454495a5eba0d5958e34a05dc49",
+      "reference_sha256": "8c63ddec3ca091af5ac35fde9219339733b40f717faf3f7dfe3dc314c1b4a364"
+    },
+    {
+      "id": "article-045",
+      "name": "大模型基础应用框架创新及零售业务落地",
+      "url": "https://www.infoq.cn/article/bixpxztgivpmgwwkli77",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "bb22dd1d8412e8e95c040225af326752ffbd146c80768efc087133f9984ef0bb",
+      "reference_sha256": "5126625fd01e85711fa3ddacf20321d5bc3a69cd8458375be3bfb426b445649b"
+    },
+    {
+      "id": "article-046",
+      "name": "复杂场景下的 RAG 架构演进",
+      "url": "https://www.infoq.cn/article/d6zsusmd6pydv88qh6gz",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "8cb59228842a7ec158467e5c79b6679bc462cba1818d921bb161c5cc172fb697",
+      "reference_sha256": "dfda57544b882d8989e244c5801d62a0e96daff75e2f21e00d2d41240e14cfb5"
+    },
+    {
+      "id": "article-047",
+      "name": "JavaScript深入之闭包",
+      "url": "https://segmentfault.com/a/1190000009215716?sort=newest",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "25963c1f7fa174a34a83be10adff098ec5457b7d894f53617b5d543d4bb1690b",
+      "reference_sha256": "6eb925acebf2276e96748e99086abec11a56815aa2f04d254ccd03fdf57c9602"
+    },
+    {
+      "id": "article-048",
+      "name": "技术周刊 Vol.46：JavaScript 的那些事",
+      "url": "https://segmentfault.com/a/1190000041921498",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "4650b0c418871dde1cd38d32a615dd2b5a7238de1bea573aa9793d32e4538651",
+      "reference_sha256": "2335fb060b32a94c56c706c71a62b731a320dfe78929163c94a2e5cb36eb33e2"
+    },
+    {
+      "id": "article-049",
+      "name": "开源日报：PostgreSQL 17 等",
+      "url": "https://www.oschina.net/news/313870",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "f1b1acf91fc9f3c153d3d0f8b5a8a748715289ecb026ab80323c4cbcd976e95b",
+      "reference_sha256": "de466a27efb840dbb9d0e4ec1c7591ee4006ba8b573fde094b915b16ad2b31b0"
+    },
+    {
+      "id": "article-050",
+      "name": "PostgreSQL 17 Released!",
+      "url": "https://www.postgresql.org/about/news/postgresql-17-released-2936/",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "8218cefbf1e78f1d48bb550e1147e50da3562bc09ced2070446c50fbedb9273e",
+      "reference_sha256": "71a2f2c426e2f8c81858096d1f01590176f7436d07bdcc5f4194197ec34dfb2b"
+    },
+    {
+      "id": "article-051",
+      "name": "PostgreSQL 17 中文发布说明",
+      "url": "https://www.postgresql.org/about/press/presskit17/zh/",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "b03ed1b92b64d524a513035cff592a19b047ee0d5b921c6f355fb34bb32fbaaf",
+      "reference_sha256": "15cb23e5b71af1c63842617e4b298fb6fd7daaa23cf5ca74c1cfa65b5eb563b0"
+    },
+    {
+      "id": "article-052",
+      "name": "从小喝到大的三合一咖啡，怎么成了咖啡鄙视链最底端",
+      "url": "https://www.ifanr.com/1409353",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "04ae73a04ec3d7198bac9f23ede7ecbd742378a224db104100bb2e295451e8a7",
+      "reference_sha256": "5b1528a31a8952fda2312855f5d3fe54a2c9ab3836c135b044f8dbb9f132bdf4"
+    },
+    {
+      "id": "article-053",
+      "name": "我们采访了十几个人，发现基本没人想「报复性消费」",
+      "url": "https://www.ifanr.com/1312711",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "345d7512e07e303b5975c619c5aac13a0edf5136b02f797bcfd9cda6d73141a7",
+      "reference_sha256": "15e71f82646a1e4bd09b1d702148879f16d6feca213826a3c944a617c334c072"
+    },
+    {
+      "id": "article-054",
+      "name": "How we scaled the GitHub API with a sharded, replicated rate limiter in Redis",
+      "url": "https://github.blog/engineering/how-we-scaled-github-api-sharded-replicated-rate-limiter-redis/",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "08864b6db9e7c5d0ab2aba37c6cdfac5b4e7f85b98ad167394ac22e194c0c23b",
+      "reference_sha256": "a2fdca182dd18cbb1e5a1a88bc8d3449ab4c81e3043f16d4321ea7c4b5875eaf"
+    },
+    {
+      "id": "article-055",
+      "name": "Reducing Slack’s memory footprint",
+      "url": "https://slack.engineering/reducing-slacks-memory-footprint/",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "350f43d8db137c23c5b5c783da5edb5156b48dbb2673ef06694676116bab7d1f",
+      "reference_sha256": "c0afe95db4715ab183769b015b7f17f945f055f8c98e61d10ac982cf96fceb2c"
+    },
+    {
+      "id": "article-056",
+      "name": "How Discord Stores Trillions of Messages",
+      "url": "https://discord.com/blog/how-discord-stores-trillions-of-messages",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "761177fcd826d7896d8679a9114d41893ec6cc7a073bdfc3ed29384d632bdc85",
+      "reference_sha256": "02b2c58fd84a8e0ff8ef61751d30633da38e7e4bf9bfe0e1b683265f31fdc93d"
+    },
+    {
+      "id": "article-057",
+      "name": "How Discord Indexes Trillions of Messages",
+      "url": "https://discord.com/blog/how-discord-indexes-trillions-of-messages",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "61dc13806a7a2e25127eaf92680732b9652008bb8fd66d27bd5e445d48633da2",
+      "reference_sha256": "80c9fe3686676de5de0b4a24b6b3e5d2a05e1dcecf474b3388a6b60ac8008296"
+    },
+    {
+      "id": "article-058",
+      "name": "Celebrating Five Years of Backstage",
+      "url": "https://engineering.atspotify.com/2025/4/celebrating-five-years-of-backstage",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "9a2133095dd83954194df4784c323a8fbbe1d3eeb3cf8d75e47f28511002354c",
+      "reference_sha256": "1bde23b5891458394ebdd585d3a955db20a1ff4277de3ebe345df694b37be014"
+    },
+    {
+      "id": "article-059",
+      "name": "龙舟漾遗风 粽情系家国——品端午情怀新气象",
+      "url": "https://www.xinhuanet.com/politics/20240610/f9bd687cb6734380a42d224d2ef23c90/c.html",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "7a79db57db521166ddb8af1583c1bda354b9b464673f25a1e36cc086b8f54930",
+      "reference_sha256": "fb2514a20593c26ccd8e7f77cad22b2767d0ffd604f3cabf0088b52048d15e6f"
+    },
+    {
+      "id": "article-060",
+      "name": "2024年端午节假期文化和旅游市场情况",
+      "url": "https://www.mct.gov.cn/whzx/whyw/202406/t20240610_953396.htm",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "e4ca488bad5da80da433f1ff2946fb836dfacc6576474e740857db6dfa6fc096",
+      "reference_sha256": "3439d335b931e0ea764abd24ae86f8718abe3aee5563260e657952e851329984"
+    },
+    {
+      "id": "article-061",
+      "name": "What Is Impressionism? 4 Things to Know",
+      "url": "https://www.nga.gov/stories/articles/what-impressionism-4-things-know",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "e487d151a0e2bfee64ac11833102d04f66d44d98b59195685d397673c74bdb15",
+      "reference_sha256": "c7111cfec1d60f0c9fc4d33479bdd6875b009a1b3f90deb2a1fc606beae7707f"
+    },
+    {
+      "id": "article-063",
+      "name": "7 Things We Learned From 1,000+ Conversations With AI Founders",
+      "url": "https://about.geekpark.net/7-things-we-learned-from-1-000-conversations-with-ai-founders/",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "75fe682d163b001033b056d4fbc34f2fbf55acb80cd32aa3ad5425ceed508c8b",
+      "reference_sha256": "d21ebeaf19f1252cdf520a5514361a3276dcd3e59c9345956ca778c8a31d3650"
+    },
+    {
+      "id": "article-064",
+      "name": "The Year in Math（2024）",
+      "url": "https://www.quantamagazine.org/the-year-in-math-20241216/",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "22a64d1a1d2255b3c9e2e1c394c76ed991eea2cc51e2f1dd60ace750e4af8b37",
+      "reference_sha256": "39fd118719d00f6ede45d03a66ca5bbcff784626fa3c773bef4b6b92d3f7a292"
+    },
+    {
+      "id": "article-065",
+      "name": "Learn CSS Grid by Building 5 Layouts",
+      "url": "https://www.freecodecamp.org/news/learn-css-grid-by-building-5-layouts",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "16f254a6ab200c2e65e4dbf41c5bdfef1fa7ff9cb2141e5a35dfb33a214fe2bf",
+      "reference_sha256": "d0633255dcc4a801604a570e5409be2d2315974455e69984a837df6a44d20035"
+    },
+    {
+      "id": "article-066",
+      "name": "A Complete CSS Flexbox Layout Guide",
+      "url": "https://css-tricks.com/snippets/css/a-guide-to-flexbox/",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "3eaaf215521918a32e83a56a1edfc23316be2855c97dbe150fc2ba63a787e6ae",
+      "reference_sha256": "78f97323e629df763864809724d6f0c589cbf8ae56cf8d1a368a56ce1239c95d"
+    },
+    {
+      "id": "article-067",
+      "name": "Designing Better Error Messages UX",
+      "url": "https://shop.smashingmagazine.com/2022/08/error-messages-ux-design/",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "11d60b6bf31109c1d37ef6831989847d7203eca49c80d2737fb4c98387cb2ba6",
+      "reference_sha256": "b9b48e643bc857c03475c6c8d04753d178de6775bb2f5c13dd072d62a3b6e62b"
+    },
+    {
+      "id": "article-068",
+      "name": "Responsive Web Design",
+      "url": "https://alistapart.com/article/responsive-web-design/?no_head=1",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "8592b7f923afc0ec8e08ebb7640c7e4a7b7c94a2de2a78952249947e519b07a0",
+      "reference_sha256": "2a534d1fe9d90d8b1b622fcf7904caaedffb2d8b1318f86eb460929ca11001f8"
+    },
+    {
+      "id": "article-069",
+      "name": "The Reformer: Pushing the limits of language modeling",
+      "url": "https://huggingface.co/blog/reformer",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "50073782720a963de08baaaf0f3324eb4bd3d924a5539060644ae0583db73efe",
+      "reference_sha256": "9b186b5b481ab44d1e28270aacd3001195398f6e90e8e72f8914c0ed0a4d3327"
+    },
+    {
+      "id": "article-070",
+      "name": "Transformer: A Novel Neural Network Architecture for Language Understanding",
+      "url": "https://research.google/blog/transformer-a-novel-neural-network-architecture-for-language-understanding/",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "d2e2557e8346f1edabd879d8654c83c56496565dcee7628bb30e68880d0a25a6",
+      "reference_sha256": "7899bba6b324cd8b06168954c2f5c1ec55cda08893bdf7385948671263d2dae7"
+    },
+    {
+      "id": "article-071",
+      "name": "GraphRAG: Unlocking LLM discovery on narrative private data",
+      "url": "https://www.microsoft.com/en-us/research/blog/graphrag-unlocking-llm-discovery-on-narrative-private-data//",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "297d6fa14f92253bfc3c3f03a03aa20962b9904433537141c94ecc42a233d2ed",
+      "reference_sha256": "eab38c453b8ed7e8a2b99b6b521f0244c48fa314ae59e558c3a5d6629376e7e9"
+    },
+    {
+      "id": "article-072",
+      "name": "PyTorch 2.0 release",
+      "url": "https://pytorch.org/blog/pytorch-2.0-release/",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "c4d60738cf559baaff7ba912c3b117301d500dfc45fc0e4eff37d23f2d4d237b",
+      "reference_sha256": "32dd1f59d3b77c39e02ac20d166537961117e36a14ed9ce8d5a9764a132ce512"
+    },
+    {
+      "id": "article-073",
+      "name": "Scaling your API with rate limiters",
+      "url": "https://stripe.com/blog/rate-limiters?trk=public_post_comment-text",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "26bc26c8685622ba5af2758c3a425e98f5c1dbfaecae032c10adfd151eca958a",
+      "reference_sha256": "851314c3ee07d8439e2be439fc72f027bfd58ca0160d5863796047d5c28a0738"
+    },
+    {
+      "id": "article-074",
+      "name": "Scaling to exabytes and beyond",
+      "url": "https://dropbox.tech/infrastructure/magic-pocket-infrastructure",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "9233bf317f69431cc0c3a0fdedbe24ee088a074e8fb0f48673b020da9222d467",
+      "reference_sha256": "a45b818c23a3e256fa612f239d78b5a3d0035980c1c89a804030f202fd7eeaab"
+    },
+    {
+      "id": "article-075",
+      "name": "H3: Uber’s Hexagonal Hierarchical Spatial Index",
+      "url": "https://www.uber.com/us/en/blog/h3/",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "b9f6bf3a3055f15b8b8682211ffb524e85d21ed9373f7d97937dbfc8098bf95f",
+      "reference_sha256": "36196d9b299cb9cb8743e20714ae584cc8bd1ce21d60e37723655d61f925bd85"
+    },
+    {
+      "id": "article-076",
+      "name": "Introducing the Amazon Builders’ Library（Part I）",
+      "url": "https://aws.amazon.com/blogs/architecture/reinvent-2019-introducing-the-amazon-builders-library-part-i/",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "14ec6885f5c4239acc2d69c4d67382fafcb2cef01e9382f59ba1d511b1a4a61c",
+      "reference_sha256": "bfe522f80151853f221b94ccfe77f9250c02bb1d27e985cb181c190b458dda63"
+    },
+    {
+      "id": "article-077",
+      "name": "乔姆斯基：ChatGPT 的虚假承诺",
+      "url": "https://mp.weixin.qq.com/s/e9KDOZ3vwd10PFvH6hbtmg",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "d677ae103ee1b4e520c8b7273daefe5311e236edd6a350730896c1732053d907",
+      "reference_sha256": "b429d030c9cc2aab1dcf9cce3a7b8fd1b85b6cd7dc6f0188d9fb72e260c53406"
+    },
+    {
+      "id": "article-078",
+      "name": "Does reading do us any good?",
+      "url": "https://aeon.co/essays/the-role-of-literature-as-the-key-to-personal-freedom",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "c719dc3dd1a160cbae0778ab682a2d1adf764315b6d459df0f2341a73c178872",
+      "reference_sha256": "2f89da1d4119c7d415de65c8846b954e049ff28e9a826a342050069a3a5cd270"
+    },
+    {
+      "id": "article-079",
+      "name": "The Roosevelt Family Built a New York Coffee Chain 50 Years Before Starbucks",
+      "url": "https://www.smithsonianmag.com/history/roosevelt-family-built-new-york-coffee-chain-50-years-starbucks-180953398/",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "163430d9918e4c91d69792e556b3ef58856d4009eafc48b708d5847e576c3c49",
+      "reference_sha256": "e36044602709aa5b8ca7a7a35ed735a55e35038cc3ae21e7b46633f674ca7932"
+    },
+    {
+      "id": "article-080",
+      "name": "How an octopus’s cleverness may have evolved",
+      "url": "https://www.sciencenews.org/article/how-octopuss-cleverness-may-have-evolved",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "da656a65481faf5813f06f93b4daa9257ad2b5b3ef8e0b03a377575951fd6415",
+      "reference_sha256": "ca505902b9f51afd96d96ed56d804be97587956c3df5fe13c22df25492556e94"
+    },
+    {
+      "id": "article-081",
+      "name": "The short history of global living conditions",
+      "url": "https://ourworldindata.org/a-history-of-global-living-conditions",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "9e897d45e64986d543e2b0a201a0be51b918491f33171fd9d2549a5258f335fa",
+      "reference_sha256": "75714628566ee75c9b393ad4013466cc220206c8e7c5ce6a88e23cace6d78e93"
+    },
+    {
+      "id": "article-082",
+      "name": "How sex chromosomes get trapped into nonrecombination",
+      "url": "https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3001718",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "3e0a42a0231d4d72027f2ca0a84e0fa9850f311b6c939fd5f2bcb40773f63144",
+      "reference_sha256": "1e5ff4e80ae4815d09c7ea6ffd07d6231ff9b6204bffd6415d3e99ad7bc3f8e9"
+    },
+    {
+      "id": "article-084",
+      "name": "影智XBOT通用餐饮服务机器人发布报道",
+      "url": "https://www.leiphone.com/category/industrynews/bn6JrENVQGf1G9tU.html",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "86bc2d78dae36c64c66bb08842d3007499b70e46745d9b32fc5b46cdc7bf0c86",
+      "reference_sha256": "204e6b92ccd2b4959cbd01cd97e501a4c741d7caa4c0c2dd96d2f00dad887748"
+    },
+    {
+      "id": "article-085",
+      "name": "县城咖啡低调火热，培养土著喝咖啡才是关键",
+      "url": "https://www.tmtpost.com/7893079.html",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "4451121f542617e6de0f464cf862f26525fb4efbad40ee8d2918ae63d672a7ef",
+      "reference_sha256": "1600f43c80dcf6979e222894a9f2b5ded186bd380527793a20b9f1460c165247"
+    },
+    {
+      "id": "article-086",
+      "name": "Announcing Rust 1.0",
+      "url": "https://blog.rust-lang.org/2015/05/15/Rust-1.0/",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "0cd5e73bb3ea402ebe55a0817491f1d0ef7130fde6dc4fea185499d283af97b2",
+      "reference_sha256": "2b603c17fbfaf03652b0b71e1a30e784b3b1e318e42907084031b01318a644a7"
+    },
+    {
+      "id": "article-087",
+      "name": "Go Concurrency Patterns: Context",
+      "url": "https://go.dev/blog/context",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "b00fa407edca40dd9bd1943784f280bff102687273a15c1fc670d08ef7276180",
+      "reference_sha256": "f65f46da439b203616fbaab8eae597fb7816883d0d50cb1a7eb1eaa92b5e920f"
+    },
+    {
+      "id": "article-088",
+      "name": "Attention and Augmented Recurrent Neural Networks",
+      "url": "https://distill.pub/2016/augmented-rnns/",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "ce2eb046d8b870e5b70241f2bf05c98945af14c7510370c5d32d2a65ce7ce52f",
+      "reference_sha256": "b6ebd7c43e94b00b72a5f2b03f52a3352b7fbf1eb3f3f6736d8ba0c1cb04c757"
+    },
+    {
+      "id": "article-089",
+      "name": "The Scaling Hypothesis",
+      "url": "https://gwern.net/scaling-hypothesis",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "27b11a7558e90409a49bac2f5dc2d7393bf1e1df41be1ee2e93df267489730a7",
+      "reference_sha256": "c714ec752171931a48da145be26e221c912f116d5ddf7877ba2eb82d35b93594"
+    },
+    {
+      "id": "article-090",
+      "name": "Americans’ Use of Social Media in 2026",
+      "url": "https://www.pewresearch.org/internet/fact-sheet/social-media/?level=0",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "33f228397bb3fe98111732da673cad5023696b09485da98786b86ac0d99a0df5",
+      "reference_sha256": "6f06ef5bdb5ba95d0516cdb97b2bb4a4fb46eff201c23b83fe987b40246139b9"
+    },
+    {
+      "id": "article-091",
+      "name": "The Year in Computer Science",
+      "url": "https://www.quantamagazine.org/the-year-in-computer-science-20241219/",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "97f02089d04497d8b39752bc73932663b526dda3575e428fd9f0d4bf0b818793",
+      "reference_sha256": "020f678bc58d39df114b4363d94ccedcff4a96a8fcc069c4e48ee7d9a644b83a"
+    },
+    {
+      "id": "article-092",
+      "name": "A crash course in just-in-time (JIT) compilers",
+      "url": "https://hacks.mozilla.org/2017/02/a-crash-course-in-just-in-time-jit-compilers/",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "ac105f0e2b251a0ef353c9adb23809222890a1a48e6e800859f8581452803fff",
+      "reference_sha256": "88a96e043508b79ca4e4fc8e3ccd2d66942588f7cf79b49b95e3679ee2b7a123"
+    },
+    {
+      "id": "article-093",
+      "name": "JavaScript Visualized: Promises & Async/Await",
+      "url": "https://dev.to/lydiahallie/javascript-visualized-promises-async-await-5gke",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "96ecae67b35c79ef6f0c1e3bb5f6e15fcbaa2f695f325c70b8452f0ee03c0288",
+      "reference_sha256": "d1028f4ddb02cd0fa2db41930b1b2d48f034e2b740074ccacc991acfe3ccbf60"
+    },
+    {
+      "id": "article-094",
+      "name": "LLMs develop their own understanding of reality",
+      "url": "https://news.mit.edu/2024/llms-develop-own-understanding-of-reality-as-language-abilities-improve-0814",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "83fd9120381f158e822ab088d5b2f02a906dfc864252987a327eab678e24a547",
+      "reference_sha256": "360ce73c6ee35171c0de62ec4eeda9470e6fda09e57110d685efdd2b5b98757e"
+    },
+    {
+      "id": "article-095",
+      "name": "科技爱好者周刊第300期",
+      "url": "https://www.ruanyifeng.com/blog/2024/05/weekly-issue-300.html",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "ca36838d521b210e2f13d603555688b4e9f61592a8610d14e9a19587c71062bb",
+      "reference_sha256": "26ac7d21c9a65cf003e4ffae2365895bcb5950264d94d1d4a7695ad894a623fd"
+    },
+    {
+      "id": "article-096",
+      "name": "LLM Powered Autonomous Agents",
+      "url": "https://lilianweng.github.io/posts/2023-06-23-agent/",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "2872ef06fa159730666ee0a1835b816118706cd66c597d1e422374221e95132d",
+      "reference_sha256": "1e3b68264682cde18e868d670548af9d84d8f2331ba48ceaa6156b151b54edb8"
+    },
+    {
+      "id": "article-098",
+      "name": "人之所以活着，人之只好活着",
+      "url": "https://book.douban.com/review/1016514/",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "b794820e2973a5d997b164d39ea230eb118fa94b1e8ab05698a8cc8be0dc502d",
+      "reference_sha256": "1c99385870a7644ba97de98f4f540c74a09e3ecbcab962a0adc18a6ea3009edb"
+    },
+    {
+      "id": "article-099",
+      "name": "Announcing English Wikipedia’s most popular articles of 2024",
+      "url": "https://wikimediafoundation.org/news/2024/12/03/announcing-english-wikipedias-most-popular-articles-of-2024/",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "a347c055f94ee77f5a8e69d346c3032951c40b475646fa6989e7762592ee7ab9",
+      "reference_sha256": "5aa7803470d8593a36c8a9521042cdc64d0cc2792f84da276e7f24d92ce40999"
+    },
+    {
+      "id": "article-100",
+      "name": "Unpacking the 2024 Developer Survey results",
+      "url": "https://stackoverflow.blog/2024/08/06/2024-developer-survey/",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "b7b22715057093ccbca6cafc9d5b71cb49eb7e751b1637dde3db1eeaa38ad522",
+      "reference_sha256": "9e2c85f8d0cd1a1d93dd4e6925827f2e547b0a12a2d052726c91246af1d9acb9"
+    },
+    {
+      "id": "article-101",
+      "name": "大道无形我有型：个人帖子首页",
+      "url": "https://www.xueqiu.com/u/1247347556",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "6e2cfe53227d8aaed5a0b4a675c7c5c7eaabccb217cfaceea41f72e3cc685fe0",
+      "reference_sha256": null
+    },
+    {
+      "id": "article-102",
+      "name": "大道无形我有型：短帖与引用原帖",
+      "url": "https://www.xueqiu.com/1247347556/412864128",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "ce78e3b6eefbacc17b046d2cbcae97e9757dbf396096d0181498697ad4dc8d06",
+      "reference_sha256": "7450de1c2d2d44b72a090333355b2bebbd503989412b78fda62fa218065cae9f"
+    },
+    {
+      "id": "article-103",
+      "name": "段永平谈CRWV：不懂不碰，但别把不可持续当成马上暴雷",
+      "url": "https://www.xueqiu.com/7736566551/412842048",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "46ac6802ffa081287be6dc360ebaef0b33c9ef181281b124a346b60f97417e03",
+      "reference_sha256": "de63089eba5018d63283ce2ebc08a06fc1c500c12865a43c700104d45d932c89"
+    },
+    {
+      "id": "article-104",
+      "name": "能力圈不在于多大，在于敢说“我不懂”",
+      "url": "https://www.xueqiu.com/7736566551/409968041",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "09461288559cd3cc911067175f6a5ea46a372381979e69fd22086e7081ea1ee4",
+      "reference_sha256": "b71d32db8d271fd0839023980b9792a98bd1cf8071adb99ec1d65b3daa3b6bf7"
+    },
+    {
+      "id": "article-106",
+      "name": "人民日报海外版导读：中国车企发力线控底盘",
+      "url": "https://m.weibo.cn/2/detail/5354200254911308",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "f98fc34c4bdd43481024f7e955efff3c245b07dc11f7e2198b688107099a5ce6",
+      "reference_sha256": "4c453a1e0a8deeb4a482902cb7043ca3c943aa9a5cb2a50e859c878efb472478"
+    },
+    {
+      "id": "article-107",
+      "name": "中控技术：工业AI成果发布会",
+      "url": "https://weibo.com/2/detail/5355734640363402",
+      "category": "article",
+      "track": "articles",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。",
+      "definition_sha256": "a4e7592dc8a6044c67e678f308f5a1127ec561370f2a87100757b731982d50be",
+      "reference_sha256": "a2c18ae9d76c7ea0f3d534102d7870b8fbf8d92558f674c20ae38e192db557b8"
+    }
+  ]
+}

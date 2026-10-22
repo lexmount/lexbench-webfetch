@@ -1,6 +1,6 @@
 # Evaluation protocol
 
-A sample is one declared method–task logical result. Choose the complete task population, methods, versions, repetitions, timeout, concurrency and retry policy before calls. Keep the four suites separate unless a combined population and deduplication policy were declared in advance.
+A sample is one declared method–task logical result. Choose the complete task population, methods, versions, repetitions, timeout, concurrency and retry policy before calls. Keep the suites separate unless a combined population and deduplication policy were declared in advance.
 
 ## Inputs and delivery
 

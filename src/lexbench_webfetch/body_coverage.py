@@ -19,7 +19,7 @@ def native_markup_body_text(content, fallback):
         protected[token] = html.unescape(match[0])
         return token
     masked = re.sub(r"(`+|~{3,}).*?\1|\\<[^>\n]+>", protect, content, flags=re.S)
-    if not re.search(r"<(?:table|thead|tbody|tfoot|tr|th|td|ul|ol|li|h[1-6]|p|div|section|article|br|span|strong|em|b|a)\b", masked, re.I):
+    if not re.search(r"<(?:table|thead|tbody|tfoot|tr|th|td|ul|ol|li|h[1-6]|p|div|section|article|details|summary|br|span|strong|em|b|a)\b", masked, re.I):
         return fallback
     from bs4 import ParserRejectedMarkup
     try:
@@ -418,11 +418,12 @@ def _evaluate_body_surface(content, contract):
     unit = contract.get('unit')
     valid_units = {(1, 'region_token_recall'),
                    (2, 'region_compact_trigram_recall'),
-                   (3, 'region_compact_hexagram_recall')}
+                   (3, 'region_compact_hexagram_recall'),
+                   (4, 'region_compact_hexagram_recall')}
     if ((version, unit) not in valid_units
             or not 0 < contract.get('minimum_coverage', 0) <= 1 or not contract.get('regions')):
         raise ValueError('Invalid distributed body requirements')
-    if version == 3:
+    if version in (3, 4):
         floor = contract.get('minimum_floor')
         required_regions = contract.get('minimum_region_passes')
         if (not isinstance(required_regions, int)
@@ -433,11 +434,18 @@ def _evaluate_body_surface(content, contract):
     else:
         floor = contract['minimum_coverage']
         required_regions = len(contract['regions'])
-    units = tokens(content) if version == 1 else compact_ngrams(content, 6 if version == 3 else 3)
+    if version == 4:
+        ending = contract.get('ending')
+        if (not isinstance(ending, dict) or not isinstance(ending.get('text'), str)
+                or not compact_ngrams(ending['text'], 6)
+                or required_regions != len(contract['regions'])
+                or floor != contract['minimum_coverage']):
+            raise ValueError('Strict body requirements need every region and a nonempty ending')
+    units = tokens(content) if version == 1 else compact_ngrams(content, 6 if version in (3, 4) else 3)
     predicted = Counter(units)
     expected_by_id = {}
     regions_by_id = {}
-    if version == 3:
+    if version in (3, 4):
         for region in contract['regions']:
             identifier = region.get('id')
             if not isinstance(identifier, str) or not identifier or identifier in regions_by_id:
@@ -458,11 +466,11 @@ def _evaluate_body_surface(content, contract):
     checks = []
     for region in contract['regions']:
         expected_units = (region['text'].split() if version == 1
-                          else compact_ngrams(region['text'], 6 if version == 3 else 3))
+                          else compact_ngrams(region['text'], 6 if version in (3, 4) else 3))
         expected = Counter(expected_units)
         if not expected:
             raise ValueError('Empty body region')
-        matched = assigned_by_id[region['id']] if version == 3 else predicted & expected
+        matched = assigned_by_id[region['id']] if version in (3, 4) else predicted & expected
         missing = expected - matched
         coverage = sum(matched.values()) / sum(expected.values())
         label = 'token' if version == 1 else 'fragment'
@@ -477,7 +485,7 @@ def _evaluate_body_surface(content, contract):
                        'minimum': contract['minimum_coverage'], 'floor': floor,
                        'target_pass': target_pass, 'floor_pass': floor_pass,
                        'pass': target_pass})
-        if version == 3:
+        if version in (3, 4):
             reference_matching_text, reference_spans = _reference_match_spans(
                 region.get('text', ''), matched)
             output_spans = output_spans_by_id[region['id']]
@@ -497,14 +505,26 @@ def _evaluate_body_surface(content, contract):
             checks[-1].update(expected_tokens=checks[-1]['expected_units'],
                               matched_tokens=checks[-1]['matched_units'],
                               missing_tokens=checks[-1]['missing_units'])
-    if version != 3:
+    if version not in (3, 4):
         coverage_pass = (all(c['floor_pass'] for c in checks)
                          and sum(c['target_pass'] for c in checks) >= required_regions)
+    ending_result = None
+    if version == 4:
+        ending_result = _evaluate_body_surface(content, {
+            'version': 3, 'unit': unit,
+            'regions': [{'id': 'body-ending', 'text': ending['text']}],
+            'minimum_coverage': contract['minimum_coverage'],
+            'minimum_floor': contract['minimum_coverage'],
+            'minimum_region_passes': 1,
+        })
+        coverage_pass = coverage_pass and ending_result['body_coverage_pass']
     return {'body_coverage_pass': coverage_pass,
+            **({'body_ending_result': ending_result['body_region_results'][0]}
+               if ending_result is not None else {}),
             'body_target_regions': sum(c['target_pass'] for c in checks),
             'body_required_target_regions': required_regions,
             **({'body_matching_text_sha256': hashlib.sha256(
-                matching_text.encode()).hexdigest()} if version == 3 else {}),
+                matching_text.encode()).hexdigest()} if version in (3, 4) else {}),
             'body_region_results': checks}
 
 

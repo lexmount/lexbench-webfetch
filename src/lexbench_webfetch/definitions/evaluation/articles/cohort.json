@@ -1,0 +1,2930 @@
+{
+  "schema_version": 1,
+  "id": "articles-v11",
+  "status": "qualified",
+  "case_count": 100,
+  "approved_on": "2026-10-20",
+  "provenance": {
+    "candidate_inventory_sha256": "7f1338595f7c1cc3dc634253b24a637d0a38138b49c5e75ac1cf88668da27005",
+    "removed_candidate_ids": [
+      "article-candidate-043",
+      "article-candidate-105"
+    ],
+    "approval": "The user approved the initial inventory, revisions 2 and 3, and subsequently authorized autonomous replacement of unsuitable cases to complete exactly 100 qualified cases.",
+    "candidate_inventory_scope": "Initial approved inventory; separately approved replacements and removals are recorded in revisions."
+  },
+  "cases": [
+    {
+      "id": "article-001",
+      "candidate_id": "article-001-weixin-v10",
+      "name": "脑电合成自然语音！LeCun转发Nature子刊新成果，代码开源",
+      "url": "https://mp.weixin.qq.com/s/BcV3-3glmdsVF--fpPRU2g",
+      "platform": "微信公众号",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-002",
+      "candidate_id": "article-002-weixin-v10",
+      "name": "龙虾冲浪终于不迷路了！网页智能体新框架Avenir-Web开源即SOTA",
+      "url": "https://mp.weixin.qq.com/s?__biz=MzIzNjc1NzUzMw==&mid=2247887827&idx=3&sn=6f15e73e3e9766986b064a1fce6fe955",
+      "platform": "微信公众号",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-003",
+      "candidate_id": "article-003-weixin-v10",
+      "name": "200+推文涨粉8000：我的推特增长策略",
+      "url": "https://mp.weixin.qq.com/s/2y463r9G4hnsIc0c2ig7dA",
+      "platform": "微信公众号",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-005",
+      "candidate_id": "article-candidate-005",
+      "name": "Karpathy：vibe coding 长帖",
+      "url": "https://x.com/karpathy/status/1886192184808149383",
+      "platform": "X",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-006",
+      "candidate_id": "article-candidate-006",
+      "name": "How We Made Cloud Browsers 3x Cheaper and Faster",
+      "url": "https://x.com/browser_use/status/2066911791360422071",
+      "platform": "X",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-007",
+      "candidate_id": "article-candidate-007",
+      "name": "How to Authenticate AI Web Agents",
+      "url": "https://x.com/browser_use/status/2031045678411981115",
+      "platform": "X",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-008",
+      "candidate_id": "article-candidate-008",
+      "name": "25个全球最佳旅游目的地（2025年珍藏版）",
+      "url": "https://www.weibo.com/ttarticle/p/show?id=2309405133590391554059",
+      "platform": "微博",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-009",
+      "candidate_id": "article-candidate-009",
+      "name": "从产业细微处，看见周期起落",
+      "url": "https://xueqiu.com/8007330530/409060327",
+      "platform": "雪球",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-010",
+      "candidate_id": "article-candidate-010",
+      "name": "人工智能的细分方向及学习路线",
+      "url": "https://zhuanlan.zhihu.com/p/1938981107581280917",
+      "platform": "知乎",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-011",
+      "candidate_id": "article-candidate-011",
+      "name": "深度学习应该从哪里开始学起来？",
+      "url": "https://www.zhihu.com/question/1908123292520408101/answer/2029584834092184706",
+      "platform": "知乎",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-012",
+      "candidate_id": "article-candidate-012",
+      "name": "数字花园之问",
+      "url": "https://sspai.com/post/80238",
+      "platform": "少数派",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-013",
+      "candidate_id": "article-candidate-013",
+      "name": "建造你的数字小森林",
+      "url": "https://sspai.com/post/81705",
+      "platform": "少数派",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-014",
+      "candidate_id": "article-candidate-014",
+      "name": "javascript事件循环（浏览器/node）",
+      "url": "https://juejin.cn/post/6844903734036676622",
+      "platform": "掘金",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-015",
+      "candidate_id": "article-candidate-015",
+      "name": "Avenir-Web 开源相关报道",
+      "url": "https://blog.csdn.net/QbitAI/article/details/160638160",
+      "platform": "CSDN",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-016",
+      "candidate_id": "article-candidate-016",
+      "name": "区级又怎样？这个博物馆拿捏了数十万人的心",
+      "url": "https://www.sohu.com/a/770951465_121119379",
+      "platform": "搜狐",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-017",
+      "candidate_id": "article-candidate-017",
+      "name": "馆长对话录：从上博东馆开始",
+      "url": "https://www.thepaper.cn/newsDetail_forward_26223402",
+      "platform": "澎湃",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-018",
+      "candidate_id": "article-candidate-018",
+      "name": "嫦娥六号拍摄月背系列影像图公布",
+      "url": "https://www.ithome.com/0/772/941.htm",
+      "platform": "IT之家",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-019",
+      "candidate_id": "article-candidate-019",
+      "name": "《如何阅读一本书》读书笔记",
+      "url": "https://www3.jianshu.com/p/4fad54d5b510",
+      "platform": "简书",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-020",
+      "candidate_id": "article-candidate-020",
+      "name": "事务隔离机制",
+      "url": "https://www.cnblogs.com/wuqiuyin/p/15403538.html",
+      "platform": "博客园",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-021",
+      "candidate_id": "article-candidate-021",
+      "name": "添加解析时提示 DNS 不正确如何处理？",
+      "url": "https://developer.cloud.tencent.com/article/1927047",
+      "platform": "腾讯云开发者社区",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-022",
+      "candidate_id": "article-candidate-022",
+      "name": "项目开发规范",
+      "url": "https://developer.aliyun.com/article/659453",
+      "platform": "阿里云开发者社区",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-023",
+      "candidate_id": "article-candidate-023",
+      "name": "星巴克在中国这20年",
+      "url": "https://www.huxiu.com/article/280829.html",
+      "platform": "虎嗅",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-024",
+      "candidate_id": "article-candidate-024",
+      "name": "参观国博实用攻略",
+      "url": "https://www.chnmuseum.cn/zx/gbxw/202609/t20260923_282658.shtml",
+      "platform": "国家博物馆",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-025",
+      "candidate_id": "article-candidate-025",
+      "name": "Flex 布局教程：语法篇",
+      "url": "https://www.ruanyifeng.com/blog/2015/07/flex-grammar.html",
+      "platform": "阮一峰",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-026",
+      "candidate_id": "article-candidate-026",
+      "name": "The Illustrated Transformer",
+      "url": "https://shekhar14.medium.com/the-illustrated-transformer-5ae5230f4cd7",
+      "platform": "Medium",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-027",
+      "candidate_id": "article-candidate-027",
+      "name": "How to Write",
+      "url": "https://bradleytusk.substack.com/p/how-to-write",
+      "platform": "Substack",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-028",
+      "candidate_id": "article-candidate-028",
+      "name": "AIがチャットから仕事を代行する存在へ",
+      "url": "https://note.com/ai_gpt_take/n/n85e2a2b98456",
+      "platform": "note",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-029",
+      "candidate_id": "article-candidate-029",
+      "name": "Writes and Write-Nots",
+      "url": "https://www.paulgraham.com/writes.html",
+      "platform": "Paul Graham",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-030",
+      "candidate_id": "article-candidate-030",
+      "name": "A cartoon intro to WebAssembly",
+      "url": "https://hacks.mozilla.org/2017/02/a-cartoon-intro-to-webassembly/",
+      "platform": "Mozilla Hacks",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-031",
+      "candidate_id": "article-candidate-031",
+      "name": "Cloudflare outage on June 21, 2022",
+      "url": "https://blog.cloudflare.com/cloudflare-outage-on-june-21-2022/",
+      "platform": "Cloudflare",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-032",
+      "candidate_id": "article-candidate-032",
+      "name": "JavaScript Visualized: Event Loop",
+      "url": "https://dev.to/lydiahallie/javascript-visualized-event-loop-3dif",
+      "platform": "DEV Community",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-033",
+      "candidate_id": "article-candidate-033",
+      "name": "New AI model could streamline operations in a robotic warehouse",
+      "url": "https://news.mit.edu/2024/new-ai-model-could-streamline-operations-robotic-warehouse-0227",
+      "platform": "MIT News",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-034",
+      "candidate_id": "article-candidate-034",
+      "name": "NASA’s Webb Delivers Deepest Infrared Image of Universe Yet",
+      "url": "https://science.nasa.gov/missions/webb/nasas-webb-delivers-deepest-infrared-image-of-universe-yet/",
+      "platform": "NASA",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-035",
+      "candidate_id": "article-candidate-035",
+      "name": "The Mimic Octopus",
+      "url": "https://www.smithsonianmag.com/science-nature/the-mimic-octopus-34059594/",
+      "platform": "Smithsonian",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-036",
+      "candidate_id": "article-candidate-036",
+      "name": "与普通章鱼相遇",
+      "url": "https://www.theguardian.com/environment/2024/apr/04/the-finger-touch-sent-shivers-down-my-spine-my-encounter-with-a-common-octopus",
+      "platform": "The Guardian",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-037",
+      "candidate_id": "article-candidate-037",
+      "name": "The Perfect Belgrade Itinerary",
+      "url": "https://www.bbc.com/storyworks/travel/experience-serbia/the-perfect-belgrade-itinerary",
+      "platform": "BBC StoryWorks",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-038",
+      "candidate_id": "article-candidate-038",
+      "name": "Browser Use 主页",
+      "url": "https://x.com/browser_use",
+      "platform": "X",
+      "page_type": "collection",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-039",
+      "candidate_id": "article-candidate-039",
+      "name": "Browser Use 回复页",
+      "url": "https://x.com/browser_use/with_replies",
+      "platform": "X",
+      "page_type": "collection",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-040",
+      "candidate_id": "article-candidate-040",
+      "name": "Browser Use 转发页",
+      "url": "https://x.com/browser_use/reposts",
+      "platform": "X",
+      "page_type": "collection",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-041",
+      "candidate_id": "article-candidate-041",
+      "name": "Browser Use 媒体页",
+      "url": "https://x.com/browser_use/media",
+      "platform": "X",
+      "page_type": "collection",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-044",
+      "candidate_id": "article-candidate-044-r2",
+      "name": "入行二十年，有知有畏，但求称职",
+      "url": "https://www.xueqiu.com/2245748859/383327076",
+      "platform": "雪球",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-045",
+      "candidate_id": "article-candidate-045",
+      "name": "大模型基础应用框架创新及零售业务落地",
+      "url": "https://www.infoq.cn/article/bixpxztgivpmgwwkli77",
+      "platform": "InfoQ",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-046",
+      "candidate_id": "article-candidate-046",
+      "name": "复杂场景下的 RAG 架构演进",
+      "url": "https://www.infoq.cn/article/d6zsusmd6pydv88qh6gz",
+      "platform": "InfoQ",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-047",
+      "candidate_id": "article-candidate-047",
+      "name": "JavaScript深入之闭包",
+      "url": "https://segmentfault.com/a/1190000009215716?sort=newest",
+      "platform": "SegmentFault",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-048",
+      "candidate_id": "article-candidate-048",
+      "name": "技术周刊 Vol.46：JavaScript 的那些事",
+      "url": "https://segmentfault.com/a/1190000041921498",
+      "platform": "SegmentFault",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-049",
+      "candidate_id": "article-candidate-049",
+      "name": "开源日报：PostgreSQL 17 等",
+      "url": "https://www.oschina.net/news/313870",
+      "platform": "OSCHINA",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-050",
+      "candidate_id": "article-candidate-050",
+      "name": "PostgreSQL 17 Released!",
+      "url": "https://www.postgresql.org/about/news/postgresql-17-released-2936/",
+      "platform": "PostgreSQL",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-051",
+      "candidate_id": "article-candidate-051",
+      "name": "PostgreSQL 17 中文发布说明",
+      "url": "https://www.postgresql.org/about/press/presskit17/zh/",
+      "platform": "PostgreSQL",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-052",
+      "candidate_id": "article-candidate-052",
+      "name": "从小喝到大的三合一咖啡，怎么成了咖啡鄙视链最底端",
+      "url": "https://www.ifanr.com/1409353",
+      "platform": "爱范儿",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-053",
+      "candidate_id": "article-candidate-053-r2",
+      "name": "我们采访了十几个人，发现基本没人想「报复性消费」",
+      "url": "https://www.ifanr.com/1312711",
+      "platform": "爱范儿",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-054",
+      "candidate_id": "article-candidate-054",
+      "name": "How we scaled the GitHub API with a sharded, replicated rate limiter in Redis",
+      "url": "https://github.blog/engineering/how-we-scaled-github-api-sharded-replicated-rate-limiter-redis/",
+      "platform": "GitHub Blog",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-055",
+      "candidate_id": "article-candidate-055",
+      "name": "Reducing Slack’s memory footprint",
+      "url": "https://slack.engineering/reducing-slacks-memory-footprint/",
+      "platform": "Slack Engineering",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-056",
+      "candidate_id": "article-candidate-056",
+      "name": "How Discord Stores Trillions of Messages",
+      "url": "https://discord.com/blog/how-discord-stores-trillions-of-messages",
+      "platform": "Discord",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-057",
+      "candidate_id": "article-candidate-057",
+      "name": "How Discord Indexes Trillions of Messages",
+      "url": "https://discord.com/blog/how-discord-indexes-trillions-of-messages",
+      "platform": "Discord",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-058",
+      "candidate_id": "article-candidate-058",
+      "name": "Celebrating Five Years of Backstage",
+      "url": "https://engineering.atspotify.com/2025/4/celebrating-five-years-of-backstage",
+      "platform": "Spotify Engineering",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-059",
+      "candidate_id": "article-candidate-059",
+      "name": "龙舟漾遗风 粽情系家国——品端午情怀新气象",
+      "url": "https://www.xinhuanet.com/politics/20240610/f9bd687cb6734380a42d224d2ef23c90/c.html",
+      "platform": "新华网",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-060",
+      "candidate_id": "article-candidate-060",
+      "name": "2024年端午节假期文化和旅游市场情况",
+      "url": "https://www.mct.gov.cn/whzx/whyw/202406/t20240610_953396.htm",
+      "platform": "文化和旅游部",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-061",
+      "candidate_id": "article-candidate-061-r5",
+      "name": "What Is Impressionism? 4 Things to Know",
+      "url": "https://www.nga.gov/stories/articles/what-impressionism-4-things-know",
+      "platform": "National Gallery of Art",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-063",
+      "candidate_id": "article-candidate-063-r2",
+      "name": "7 Things We Learned From 1,000+ Conversations With AI Founders",
+      "url": "https://about.geekpark.net/7-things-we-learned-from-1-000-conversations-with-ai-founders/",
+      "platform": "极客公园",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-064",
+      "candidate_id": "article-candidate-064",
+      "name": "The Year in Math（2024）",
+      "url": "https://www.quantamagazine.org/the-year-in-math-20241216/",
+      "platform": "Quanta",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-065",
+      "candidate_id": "article-candidate-065",
+      "name": "Learn CSS Grid by Building 5 Layouts",
+      "url": "https://www.freecodecamp.org/news/learn-css-grid-by-building-5-layouts",
+      "platform": "freeCodeCamp",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-066",
+      "candidate_id": "article-candidate-066",
+      "name": "A Complete CSS Flexbox Layout Guide",
+      "url": "https://css-tricks.com/snippets/css/a-guide-to-flexbox/",
+      "platform": "CSS-Tricks",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-067",
+      "candidate_id": "article-candidate-067",
+      "name": "Designing Better Error Messages UX",
+      "url": "https://shop.smashingmagazine.com/2022/08/error-messages-ux-design/",
+      "platform": "Smashing Magazine",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-068",
+      "candidate_id": "article-candidate-068",
+      "name": "Responsive Web Design",
+      "url": "https://alistapart.com/article/responsive-web-design/?no_head=1",
+      "platform": "A List Apart",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-069",
+      "candidate_id": "article-candidate-069",
+      "name": "The Reformer: Pushing the limits of language modeling",
+      "url": "https://huggingface.co/blog/reformer",
+      "platform": "Hugging Face",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-070",
+      "candidate_id": "article-candidate-070",
+      "name": "Transformer: A Novel Neural Network Architecture for Language Understanding",
+      "url": "https://research.google/blog/transformer-a-novel-neural-network-architecture-for-language-understanding/",
+      "platform": "Google Research",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-071",
+      "candidate_id": "article-candidate-071",
+      "name": "GraphRAG: Unlocking LLM discovery on narrative private data",
+      "url": "https://www.microsoft.com/en-us/research/blog/graphrag-unlocking-llm-discovery-on-narrative-private-data//",
+      "platform": "Microsoft Research",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-072",
+      "candidate_id": "article-candidate-072",
+      "name": "PyTorch 2.0 release",
+      "url": "https://pytorch.org/blog/pytorch-2.0-release/",
+      "platform": "PyTorch",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-073",
+      "candidate_id": "article-candidate-073",
+      "name": "Scaling your API with rate limiters",
+      "url": "https://stripe.com/blog/rate-limiters?trk=public_post_comment-text",
+      "platform": "Stripe",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-074",
+      "candidate_id": "article-candidate-074",
+      "name": "Scaling to exabytes and beyond",
+      "url": "https://dropbox.tech/infrastructure/magic-pocket-infrastructure",
+      "platform": "Dropbox Tech",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-075",
+      "candidate_id": "article-candidate-075",
+      "name": "H3: Uber’s Hexagonal Hierarchical Spatial Index",
+      "url": "https://www.uber.com/us/en/blog/h3/",
+      "platform": "Uber Engineering",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-076",
+      "candidate_id": "article-candidate-076",
+      "name": "Introducing the Amazon Builders’ Library（Part I）",
+      "url": "https://aws.amazon.com/blogs/architecture/reinvent-2019-introducing-the-amazon-builders-library-part-i/",
+      "platform": "AWS Architecture Blog",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-077",
+      "candidate_id": "article-077-weixin-v10",
+      "name": "乔姆斯基：ChatGPT 的虚假承诺",
+      "url": "https://mp.weixin.qq.com/s/e9KDOZ3vwd10PFvH6hbtmg",
+      "platform": "微信公众号",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-078",
+      "candidate_id": "article-candidate-078",
+      "name": "Does reading do us any good?",
+      "url": "https://aeon.co/essays/the-role-of-literature-as-the-key-to-personal-freedom",
+      "platform": "Aeon",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-079",
+      "candidate_id": "article-candidate-079-r4",
+      "name": "The Roosevelt Family Built a New York Coffee Chain 50 Years Before Starbucks",
+      "url": "https://www.smithsonianmag.com/history/roosevelt-family-built-new-york-coffee-chain-50-years-starbucks-180953398/",
+      "platform": "Smithsonian Magazine",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-080",
+      "candidate_id": "article-candidate-080",
+      "name": "How an octopus’s cleverness may have evolved",
+      "url": "https://www.sciencenews.org/article/how-octopuss-cleverness-may-have-evolved",
+      "platform": "Science News",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-081",
+      "candidate_id": "article-candidate-081",
+      "name": "The short history of global living conditions",
+      "url": "https://ourworldindata.org/a-history-of-global-living-conditions",
+      "platform": "Our World in Data",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-082",
+      "candidate_id": "article-candidate-082-r4",
+      "name": "How sex chromosomes get trapped into nonrecombination",
+      "url": "https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3001718",
+      "platform": "PLOS Biology",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-084",
+      "candidate_id": "article-candidate-084",
+      "name": "影智XBOT通用餐饮服务机器人发布报道",
+      "url": "https://www.leiphone.com/category/industrynews/bn6JrENVQGf1G9tU.html",
+      "platform": "雷峰网",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-085",
+      "candidate_id": "article-candidate-085",
+      "name": "县城咖啡低调火热，培养土著喝咖啡才是关键",
+      "url": "https://www.tmtpost.com/7893079.html",
+      "platform": "钛媒体",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-086",
+      "candidate_id": "article-candidate-086",
+      "name": "Announcing Rust 1.0",
+      "url": "https://blog.rust-lang.org/2015/05/15/Rust-1.0/",
+      "platform": "Rust Blog",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-087",
+      "candidate_id": "article-candidate-087",
+      "name": "Go Concurrency Patterns: Context",
+      "url": "https://go.dev/blog/context",
+      "platform": "Go Blog",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-088",
+      "candidate_id": "article-candidate-088",
+      "name": "Attention and Augmented Recurrent Neural Networks",
+      "url": "https://distill.pub/2016/augmented-rnns/",
+      "platform": "Distill",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-089",
+      "candidate_id": "article-candidate-089",
+      "name": "The Scaling Hypothesis",
+      "url": "https://gwern.net/scaling-hypothesis",
+      "platform": "Gwern",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-090",
+      "candidate_id": "article-candidate-090",
+      "name": "Americans’ Use of Social Media in 2026",
+      "url": "https://www.pewresearch.org/internet/fact-sheet/social-media/?level=0",
+      "platform": "Pew Research",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-091",
+      "candidate_id": "article-candidate-091-r2",
+      "name": "The Year in Computer Science",
+      "url": "https://www.quantamagazine.org/the-year-in-computer-science-20241219/",
+      "platform": "Quanta",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-092",
+      "candidate_id": "article-candidate-092",
+      "name": "A crash course in just-in-time (JIT) compilers",
+      "url": "https://hacks.mozilla.org/2017/02/a-crash-course-in-just-in-time-jit-compilers/",
+      "platform": "Mozilla Hacks",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-093",
+      "candidate_id": "article-candidate-093",
+      "name": "JavaScript Visualized: Promises & Async/Await",
+      "url": "https://dev.to/lydiahallie/javascript-visualized-promises-async-await-5gke",
+      "platform": "DEV Community",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-094",
+      "candidate_id": "article-candidate-094",
+      "name": "LLMs develop their own understanding of reality",
+      "url": "https://news.mit.edu/2024/llms-develop-own-understanding-of-reality-as-language-abilities-improve-0814",
+      "platform": "MIT News",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-095",
+      "candidate_id": "article-candidate-095",
+      "name": "科技爱好者周刊第300期",
+      "url": "https://www.ruanyifeng.com/blog/2024/05/weekly-issue-300.html",
+      "platform": "阮一峰",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-096",
+      "candidate_id": "article-candidate-096",
+      "name": "LLM Powered Autonomous Agents",
+      "url": "https://lilianweng.github.io/posts/2023-06-23-agent/",
+      "platform": "Lilian Weng",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-098",
+      "candidate_id": "article-candidate-098",
+      "name": "人之所以活着，人之只好活着",
+      "url": "https://book.douban.com/review/1016514/",
+      "platform": "豆瓣读书",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-099",
+      "candidate_id": "article-candidate-099",
+      "name": "Announcing English Wikipedia’s most popular articles of 2024",
+      "url": "https://wikimediafoundation.org/news/2024/12/03/announcing-english-wikipedias-most-popular-articles-of-2024/",
+      "platform": "Wikimedia Foundation",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-100",
+      "candidate_id": "article-candidate-100",
+      "name": "Unpacking the 2024 Developer Survey results",
+      "url": "https://stackoverflow.blog/2024/08/06/2024-developer-survey/",
+      "platform": "Stack Overflow Blog",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-101",
+      "candidate_id": "article-candidate-101",
+      "name": "大道无形我有型：个人帖子首页",
+      "url": "https://www.xueqiu.com/u/1247347556",
+      "platform": "雪球",
+      "page_type": "collection",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-102",
+      "candidate_id": "article-candidate-102",
+      "name": "大道无形我有型：短帖与引用原帖",
+      "url": "https://www.xueqiu.com/1247347556/412864128",
+      "platform": "雪球",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-103",
+      "candidate_id": "article-candidate-103",
+      "name": "段永平谈CRWV：不懂不碰，但别把不可持续当成马上暴雷",
+      "url": "https://www.xueqiu.com/7736566551/412842048",
+      "platform": "雪球",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-104",
+      "candidate_id": "article-candidate-104-r2",
+      "name": "能力圈不在于多大，在于敢说“我不懂”",
+      "url": "https://www.xueqiu.com/7736566551/409968041",
+      "platform": "雪球",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-106",
+      "candidate_id": "article-candidate-106",
+      "name": "人民日报海外版导读：中国车企发力线控底盘",
+      "url": "https://m.weibo.cn/2/detail/5354200254911308",
+      "platform": "微博",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    },
+    {
+      "id": "article-107",
+      "candidate_id": "article-candidate-107",
+      "name": "中控技术：工业AI成果发布会",
+      "url": "https://weibo.com/2/detail/5355734640363402",
+      "platform": "微博",
+      "page_type": "article",
+      "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+    }
+  ],
+  "revision": 14,
+  "revisions": [
+    {
+      "revision": 2,
+      "approved_on": "2026-10-19",
+      "previous_cohort_sha256": "12fa83ae2479370e80520777ef5b2c356a8da9d318f6c392e053ef4c3a3917ba",
+      "previous_git_commit": "c74477bbef40e906716d258b0d0a80f0b8a48396",
+      "basis": "The user explicitly approved these five full-article replacements for initial directory or excerpt-only pages. Other approved cases remain unchanged.",
+      "changes": [
+        {
+          "id": "article-044",
+          "previous": {
+            "candidate_id": "article-candidate-044",
+            "name": "就叫姜诚的文章合集",
+            "url": "https://xueqiu.com/2245748859/218571421",
+            "page_type": "collection"
+          },
+          "replacement": {
+            "candidate_id": "article-candidate-044-r2",
+            "name": "入行二十年，有知有畏，但求称职",
+            "url": "https://www.xueqiu.com/2245748859/383327076",
+            "page_type": "article"
+          }
+        },
+        {
+          "id": "article-053",
+          "previous": {
+            "candidate_id": "article-candidate-053",
+            "name": "消费主题文章集合",
+            "url": "https://www.ifanr.com/tags/%E6%B6%88%E8%B4%B9",
+            "page_type": "collection"
+          },
+          "replacement": {
+            "candidate_id": "article-candidate-053-r2",
+            "name": "我们采访了十几个人，发现基本没人想「报复性消费」",
+            "url": "https://www.ifanr.com/1312711",
+            "page_type": "article"
+          }
+        },
+        {
+          "id": "article-063",
+          "previous": {
+            "candidate_id": "article-candidate-063",
+            "name": "Official English Blog 文章集合",
+            "url": "https://about.geekpark.net/blog/",
+            "page_type": "collection"
+          },
+          "replacement": {
+            "candidate_id": "article-candidate-063-r2",
+            "name": "7 Things We Learned From 1,000+ Conversations With AI Founders",
+            "url": "https://about.geekpark.net/7-things-we-learned-from-1-000-conversations-with-ai-founders/",
+            "page_type": "article"
+          }
+        },
+        {
+          "id": "article-091",
+          "previous": {
+            "candidate_id": "article-candidate-091",
+            "name": "2024 in Review 文章集合",
+            "url": "https://www.quantamagazine.org/tag/2024-in-review/",
+            "page_type": "collection"
+          },
+          "replacement": {
+            "candidate_id": "article-candidate-091-r2",
+            "name": "The Year in Computer Science",
+            "url": "https://www.quantamagazine.org/the-year-in-computer-science-20241219/",
+            "page_type": "article"
+          }
+        },
+        {
+          "id": "article-104",
+          "previous": {
+            "candidate_id": "article-candidate-104",
+            "name": "多伦多的大道信徒：专栏列表",
+            "url": "https://www.xueqiu.com/7736566551/column",
+            "page_type": "collection"
+          },
+          "replacement": {
+            "candidate_id": "article-candidate-104-r2",
+            "name": "能力圈不在于多大，在于敢说“我不懂”",
+            "url": "https://www.xueqiu.com/7736566551/409968041",
+            "page_type": "article"
+          }
+        }
+      ]
+    },
+    {
+      "revision": 3,
+      "approved_on": "2026-10-19",
+      "previous_cohort_sha256": "7d335ee4a2fa1659261e18aa2c3ad6a234424798345d4aa39097a0dde9ecd020",
+      "previous_git_commit": "dff7cd12d067c280880a0660dbdd50ec8d594415",
+      "basis": "The user explicitly requested removal of article-042, article-062, article-083 and article-097 without replacements. All other cases, including the five approved revision 2 replacements, remain unchanged.",
+      "changes": [
+        {
+          "id": "article-042",
+          "action": "remove",
+          "previous": {
+            "id": "article-042",
+            "candidate_id": "article-candidate-042",
+            "name": "Browser Use 文章页",
+            "url": "https://x.com/browser_use/articles",
+            "platform": "X",
+            "page_type": "collection",
+            "task_prompt": "直接获取此网址首次自动加载后展示的文章或帖子正文，保留完整段落、章节、列表、表格和文字链接，并保留相关稳定页面文字；不得点击、展开、切换、登录、翻页或滚动触发加载。"
+          }
+        },
+        {
+          "id": "article-062",
+          "action": "remove",
+          "previous": {
+            "id": "article-062",
+            "candidate_id": "article-candidate-062",
+            "name": "土壤地理文章集合",
+            "url": "https://www.dili360.com/cng/tag/list/6494.htm",
+            "platform": "中国国家地理",
+            "page_type": "collection",
+            "task_prompt": "直接获取此网址首次自动加载后展示的文章或帖子正文，保留完整段落、章节、列表、表格和文字链接，并保留相关稳定页面文字；不得点击、展开、切换、登录、翻页或滚动触发加载。"
+          }
+        },
+        {
+          "id": "article-083",
+          "action": "remove",
+          "previous": {
+            "id": "article-083",
+            "candidate_id": "article-candidate-083",
+            "name": "博物馆如何加速成长",
+            "url": "https://kpzg.people.com.cn/n1/2025/1014/c404214-40581444.html",
+            "platform": "人民网",
+            "page_type": "article",
+            "task_prompt": "直接获取此网址首次自动加载后展示的文章或帖子正文，保留完整段落、章节、列表、表格和文字链接，并保留相关稳定页面文字；不得点击、展开、切换、登录、翻页或滚动触发加载。"
+          }
+        },
+        {
+          "id": "article-097",
+          "action": "remove",
+          "previous": {
+            "id": "article-097",
+            "candidate_id": "article-candidate-097",
+            "name": "嫦娥六号成功着陆月背，有效载荷圆满完成探测任务",
+            "url": "https://www.nssc.cas.cn/xwdt2015/xwsd2015/202406/t20240604_7184047.html",
+            "platform": "中科院国家空间科学中心",
+            "page_type": "article",
+            "task_prompt": "直接获取此网址首次自动加载后展示的文章或帖子正文，保留完整段落、章节、列表、表格和文字链接，并保留相关稳定页面文字；不得点击、展开、切换、登录、翻页或滚动触发加载。"
+          }
+        }
+      ]
+    },
+    {
+      "revision": 4,
+      "approved_on": "2026-10-19",
+      "previous_cohort_sha256": "bea786cb36ec52ab9304d26ef18052bd56367ab20ddfe0c30173b7dd45c4e5ab",
+      "previous_git_commit": "dba0be1ce794bb02a132b4b6ad071c8d0c60ca90",
+      "basis": "The user authorized selecting and implementing replacements without individual reconfirmation to complete 100 qualified cases. All replacement articles were directly opened and independently reviewed. Tool access restrictions do not establish evaluated Web Fetch failure. Previously requested removals remain removed.",
+      "changes": [
+        {
+          "id": "article-001",
+          "action": "replace",
+          "previous": {
+            "id": "article-001",
+            "candidate_id": "article-candidate-001",
+            "name": "量子位：脑电合成自然语音相关推文",
+            "url": "https://mp.weixin.qq.com/s/BcV3-3glmdsVF--fpPRU2g",
+            "platform": "微信公众号",
+            "page_type": "article",
+            "task_prompt": "直接获取此网址首次自动加载后展示的文章或帖子正文，保留完整段落、章节、列表、表格和文字链接，并保留相关稳定页面文字；不得点击、展开、切换、登录、翻页或滚动触发加载。"
+          },
+          "replacement": {
+            "id": "article-001",
+            "candidate_id": "article-candidate-001-r4",
+            "name": "Island Hopping in Japan",
+            "url": "https://www.japan.travel/en/guide/island-hopping/",
+            "platform": "JNTO Travel Japan",
+            "page_type": "article",
+            "task_prompt": "直接获取此网址首次自动加载后展示的文章或帖子正文，保留完整段落、章节、列表、表格和文字链接，并保留相关稳定页面文字；不得点击、展开、切换、登录、翻页或滚动触发加载。"
+          }
+        },
+        {
+          "id": "article-002",
+          "action": "replace",
+          "previous": {
+            "id": "article-002",
+            "candidate_id": "article-candidate-002",
+            "name": "量子位：Avenir-Web 相关推文",
+            "url": "https://mp.weixin.qq.com/s?__biz=MzIzNjc1NzUzMw==&mid=2247887827&idx=3&sn=6f15e73e3e9766986b064a1fce6fe955",
+            "platform": "微信公众号",
+            "page_type": "article",
+            "task_prompt": "直接获取此网址首次自动加载后展示的文章或帖子正文，保留完整段落、章节、列表、表格和文字链接，并保留相关稳定页面文字；不得点击、展开、切换、登录、翻页或滚动触发加载。"
+          },
+          "replacement": {
+            "id": "article-002",
+            "candidate_id": "article-candidate-002-r4",
+            "name": "Machine Learning Crash Course",
+            "url": "https://developers.googleblog.com/machine-learning-crash-course/",
+            "platform": "Google Developers Blog",
+            "page_type": "article",
+            "task_prompt": "直接获取此网址首次自动加载后展示的文章或帖子正文，保留完整段落、章节、列表、表格和文字链接，并保留相关稳定页面文字；不得点击、展开、切换、登录、翻页或滚动触发加载。"
+          }
+        },
+        {
+          "id": "article-003",
+          "action": "replace",
+          "previous": {
+            "id": "article-003",
+            "candidate_id": "article-candidate-003",
+            "name": "推特增长策略相关推文",
+            "url": "https://mp.weixin.qq.com/s/2y463r9G4hnsIc0c2ig7dA",
+            "platform": "微信公众号",
+            "page_type": "article",
+            "task_prompt": "直接获取此网址首次自动加载后展示的文章或帖子正文，保留完整段落、章节、列表、表格和文字链接，并保留相关稳定页面文字；不得点击、展开、切换、登录、翻页或滚动触发加载。"
+          },
+          "replacement": {
+            "id": "article-003",
+            "candidate_id": "article-candidate-003-r4",
+            "name": "What you need to do deep learning",
+            "url": "https://www.fast.ai/posts/2017-11-16-what-you-need.html",
+            "platform": "fast.ai",
+            "page_type": "article",
+            "task_prompt": "直接获取此网址首次自动加载后展示的文章或帖子正文，保留完整段落、章节、列表、表格和文字链接，并保留相关稳定页面文字；不得点击、展开、切换、登录、翻页或滚动触发加载。"
+          }
+        },
+        {
+          "id": "article-004",
+          "action": "remove",
+          "previous": {
+            "id": "article-004",
+            "candidate_id": "article-candidate-004",
+            "name": "语言治理：乔姆斯基：ChatGPT 的虚假承诺",
+            "url": "https://mp.weixin.qq.com/s/e9KDOZ3vwd10PFvH6hbtmg",
+            "platform": "微信公众号",
+            "page_type": "article",
+            "task_prompt": "直接获取此网址首次自动加载后展示的文章或帖子正文，保留完整段落、章节、列表、表格和文字链接，并保留相关稳定页面文字；不得点击、展开、切换、登录、翻页或滚动触发加载。"
+          },
+          "basis": "Reduce the revised inventory to exactly 100 qualified cases under the user-authorized target; this source could not be independently observed because of an authoring-tool site-safety restriction."
+        },
+        {
+          "id": "article-079",
+          "action": "replace",
+          "previous": {
+            "id": "article-079",
+            "candidate_id": "article-candidate-079",
+            "name": "6 Ways Coffee Helped Transform the World",
+            "url": "https://www.history.com/articles/coffee-history-facts",
+            "platform": "HISTORY",
+            "page_type": "article",
+            "task_prompt": "直接获取此网址首次自动加载后展示的文章或帖子正文，保留完整段落、章节、列表、表格和文字链接，并保留相关稳定页面文字；不得点击、展开、切换、登录、翻页或滚动触发加载。"
+          },
+          "replacement": {
+            "id": "article-079",
+            "candidate_id": "article-candidate-079-r4",
+            "name": "The Roosevelt Family Built a New York Coffee Chain 50 Years Before Starbucks",
+            "url": "https://www.smithsonianmag.com/history/roosevelt-family-built-new-york-coffee-chain-50-years-starbucks-180953398/",
+            "platform": "Smithsonian Magazine",
+            "page_type": "article",
+            "task_prompt": "直接获取此网址首次自动加载后展示的文章或帖子正文，保留完整段落、章节、列表、表格和文字链接，并保留相关稳定页面文字；不得点击、展开、切换、登录、翻页或滚动触发加载。"
+          }
+        },
+        {
+          "id": "article-082",
+          "action": "replace",
+          "previous": {
+            "id": "article-082",
+            "candidate_id": "article-candidate-082",
+            "name": "Oldest known animal sex chromosome evolved in octopuses",
+            "url": "https://www.nature.com/articles/d41586-024-00637-0",
+            "platform": "Nature",
+            "page_type": "article",
+            "task_prompt": "直接获取此网址首次自动加载后展示的文章或帖子正文，保留完整段落、章节、列表、表格和文字链接，并保留相关稳定页面文字；不得点击、展开、切换、登录、翻页或滚动触发加载。"
+          },
+          "replacement": {
+            "id": "article-082",
+            "candidate_id": "article-candidate-082-r4",
+            "name": "How sex chromosomes get trapped into nonrecombination",
+            "url": "https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3001718",
+            "platform": "PLOS Biology",
+            "page_type": "article",
+            "task_prompt": "直接获取此网址首次自动加载后展示的文章或帖子正文，保留完整段落、章节、列表、表格和文字链接，并保留相关稳定页面文字；不得点击、展开、切换、登录、翻页或滚动触发加载。"
+          }
+        }
+      ]
+    },
+    {
+      "revision": 5,
+      "dataset_id": "articles-v2",
+      "approved_on": "2026-10-20",
+      "authorization": "User requested independent review and implementation of initial comments/replies, separate title checks and semantic body sections; source-native title repetition must be retained. No interaction-triggered content is required.",
+      "previous_dataset_id": "articles-v1",
+      "previous_dataset_sha256": "753556d51b384f49405e886a312f2261c32207f82ad1fe614c26ebc767574d73",
+      "previous_cohort_sha256": "57860fac452ea018d89ddccf98210b889f725171c8447f22e5888aaf498bbfe9",
+      "previous_rules_sha256": "864b1bb525e454246704e158118f801fadb4c6b022a0cd4b4fd7d2efa3d8524a",
+      "scope": "All100cases reviewed:95fixedarticle comment components and5existing post-collection contracts. Originalbodybytes preserved except documented replacement061 and source revision090; precedinginputs remain unchanged.",
+      "changes": [
+        {
+          "id": "article-049",
+          "action": "revise_entry_url",
+          "previous": {
+            "id": "article-049",
+            "candidate_id": "article-candidate-049",
+            "name": "开源日报：PostgreSQL 17 等",
+            "url": "https://www.oschina.net/comment/news/313870",
+            "platform": "OSCHINA",
+            "page_type": "article",
+            "task_prompt": "直接获取此网址首次自动加载后展示的文章或帖子正文，保留完整段落、章节、列表、表格和文字链接，并保留相关稳定页面文字；不得点击、展开、切换、登录、翻页或滚动触发加载。"
+          },
+          "replacement": {
+            "id": "article-049",
+            "candidate_id": "article-candidate-049",
+            "name": "开源日报：PostgreSQL 17 等",
+            "url": "https://www.oschina.net/news/313870",
+            "platform": "OSCHINA",
+            "page_type": "article",
+            "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+          },
+          "basis": "Samearticle confirmed at canonical/news/313870 entry."
+        },
+        {
+          "id": "article-090",
+          "action": "revise_source_reference",
+          "previous": {
+            "id": "article-090",
+            "candidate_id": "article-candidate-090",
+            "name": "Social Media Fact Sheet",
+            "url": "https://www.pewresearch.org/internet/fact-sheet/social-media/?level=0",
+            "platform": "Pew Research",
+            "page_type": "article",
+            "task_prompt": "直接获取此网址首次自动加载后展示的文章或帖子正文，保留完整段落、章节、列表、表格和文字链接，并保留相关稳定页面文字；不得点击、展开、切换、登录、翻页或滚动触发加载。"
+          },
+          "replacement": {
+            "id": "article-090",
+            "candidate_id": "article-candidate-090",
+            "name": "Americans’ Use of Social Media in 2026",
+            "url": "https://www.pewresearch.org/internet/fact-sheet/social-media/?level=0",
+            "platform": "Pew Research",
+            "page_type": "article",
+            "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+          },
+          "basis": "SameURL nowpublishes2026fact sheet; oldbodyandfrozeninputspreserved."
+        },
+        {
+          "id": "article-061",
+          "action": "replace",
+          "previous": {
+            "id": "article-061",
+            "candidate_id": "article-candidate-061",
+            "name": "Impressionism: Art and Modernity",
+            "url": "https://www.metmuseum.org/essays/impressionism-art-and-modernity",
+            "platform": "The Met",
+            "page_type": "article",
+            "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+          },
+          "replacement": {
+            "id": "article-061",
+            "candidate_id": "article-candidate-061-r5",
+            "name": "What Is Impressionism? 4 Things to Know",
+            "url": "https://www.nga.gov/stories/articles/what-impressionism-4-things-know",
+            "platform": "National Gallery of Art",
+            "page_type": "article",
+            "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+          },
+          "basis": "Replaces the prior Met essay because its qualification included horizontally hidden gallery captions and the boundary could not be independently recovered. This independently observed same-topic National Gallery of Art article retains complete default prose and six visible ordinary art captions. Two normal loads, scrollY0, no click, expansion or carousel change. Ten other art captions have computedopacity0 and are excluded; an additional By figcaption is a separately checked byline label. Nonzero geometry alone does not establish visible text.",
+          "previous_body_sha256": "9fb0b5087372a0d9d8813e158284bfed5a59dfb7e7db85585290bd1fd4c55a85"
+        },
+        {
+          "id": "article-038",
+          "action": "require_all_initial_posts",
+          "previous_required_ratio": 0.8,
+          "required_ratio": 1.0,
+          "basis": "All independently observed initial posts and replies must be present; removing any one must fail. No interaction-triggered content is added."
+        },
+        {
+          "id": "article-040",
+          "action": "require_all_initial_posts",
+          "previous_required_ratio": 0.8,
+          "required_ratio": 1.0,
+          "basis": "All independently observed initial posts and replies must be present; removing any one must fail. No interaction-triggered content is added."
+        },
+        {
+          "id": "article-041",
+          "action": "require_all_initial_posts",
+          "previous_required_ratio": 0.8,
+          "required_ratio": 1.0,
+          "basis": "All independently observed initial posts and replies must be present; removing any one must fail. No interaction-triggered content is added."
+        }
+      ]
+    },
+    {
+      "revision": 6,
+      "dataset_id": "articles-v3",
+      "approved_on": "2026-10-20",
+      "previous_dataset_id": "articles-v2",
+      "previous_dataset_sha256": "8c9490b75d34fa8a7a5111bf27cf5cce1ba902ef753513afd5a47daf58a2d9c5",
+      "previous_cohort_sha256": "6b92d51728b3bd0f6f5a9992864fc26ed827fdbb8bd0aaccb84bc17dacdfb894",
+      "previous_rules_sha256": "d1255ab7dd51b722d736f3caecdbb1244e51e9cdfbf9de5fc12f0c454d3a3658",
+      "basis": "User requested at most five body regions. Merge adjacent reviewed components without changing any body, title, comment or post reference.",
+      "changes": [
+        {
+          "action": "merge_adjacent_body_regions",
+          "id": "article-001",
+          "previous_regions": 6,
+          "regions": 5
+        },
+        {
+          "action": "merge_adjacent_body_regions",
+          "id": "article-002",
+          "previous_regions": 11,
+          "regions": 5
+        },
+        {
+          "action": "merge_adjacent_body_regions",
+          "id": "article-003",
+          "previous_regions": 7,
+          "regions": 5
+        },
+        {
+          "action": "merge_adjacent_body_regions",
+          "id": "article-006",
+          "previous_regions": 11,
+          "regions": 5
+        },
+        {
+          "action": "merge_adjacent_body_regions",
+          "id": "article-007",
+          "previous_regions": 6,
+          "regions": 5
+        },
+        {
+          "action": "merge_adjacent_body_regions",
+          "id": "article-010",
+          "previous_regions": 6,
+          "regions": 5
+        },
+        {
+          "action": "merge_adjacent_body_regions",
+          "id": "article-013",
+          "previous_regions": 6,
+          "regions": 5
+        },
+        {
+          "action": "merge_adjacent_body_regions",
+          "id": "article-014",
+          "previous_regions": 7,
+          "regions": 5
+        },
+        {
+          "action": "merge_adjacent_body_regions",
+          "id": "article-016",
+          "previous_regions": 53,
+          "regions": 5
+        },
+        {
+          "action": "merge_adjacent_body_regions",
+          "id": "article-017",
+          "previous_regions": 65,
+          "regions": 5
+        },
+        {
+          "action": "merge_adjacent_body_regions",
+          "id": "article-018",
+          "previous_regions": 10,
+          "regions": 5
+        },
+        {
+          "action": "merge_adjacent_body_regions",
+          "id": "article-019",
+          "previous_regions": 12,
+          "regions": 5
+        },
+        {
+          "action": "merge_adjacent_body_regions",
+          "id": "article-020",
+          "previous_regions": 15,
+          "regions": 5
+        },
+        {
+          "action": "merge_adjacent_body_regions",
+          "id": "article-022",
+          "previous_regions": 10,
+          "regions": 5
+        },
+        {
+          "action": "merge_adjacent_body_regions",
+          "id": "article-023",
+          "previous_regions": 6,
+          "regions": 5
+        },
+        {
+          "action": "merge_adjacent_body_regions",
+          "id": "article-024",
+          "previous_regions": 55,
+          "regions": 5
+        },
+        {
+          "action": "merge_adjacent_body_regions",
+          "id": "article-026",
+          "previous_regions": 11,
+          "regions": 5
+        },
+        {
+          "action": "merge_adjacent_body_regions",
+          "id": "article-027",
+          "previous_regions": 12,
+          "regions": 5
+        },
+        {
+          "action": "merge_adjacent_body_regions",
+          "id": "article-028",
+          "previous_regions": 17,
+          "regions": 5
+        },
+        {
+          "action": "merge_adjacent_body_regions",
+          "id": "article-031",
+          "previous_regions": 6,
+          "regions": 5
+        },
+        {
+          "action": "merge_adjacent_body_regions",
+          "id": "article-032",
+          "previous_regions": 19,
+          "regions": 5
+        },
+        {
+          "action": "merge_adjacent_body_regions",
+          "id": "article-033",
+          "previous_regions": 28,
+          "regions": 5
+        },
+        {
+          "action": "merge_adjacent_body_regions",
+          "id": "article-034",
+          "previous_regions": 19,
+          "regions": 5
+        },
+        {
+          "action": "merge_adjacent_body_regions",
+          "id": "article-036",
+          "previous_regions": 14,
+          "regions": 5
+        },
+        {
+          "action": "merge_adjacent_body_regions",
+          "id": "article-044",
+          "previous_regions": 19,
+          "regions": 5
+        },
+        {
+          "action": "merge_adjacent_body_regions",
+          "id": "article-046",
+          "previous_regions": 62,
+          "regions": 5
+        },
+        {
+          "action": "merge_adjacent_body_regions",
+          "id": "article-047",
+          "previous_regions": 7,
+          "regions": 5
+        },
+        {
+          "action": "merge_adjacent_body_regions",
+          "id": "article-048",
+          "previous_regions": 6,
+          "regions": 5
+        },
+        {
+          "action": "merge_adjacent_body_regions",
+          "id": "article-050",
+          "previous_regions": 8,
+          "regions": 5
+        },
+        {
+          "action": "merge_adjacent_body_regions",
+          "id": "article-051",
+          "previous_regions": 10,
+          "regions": 5
+        },
+        {
+          "action": "merge_adjacent_body_regions",
+          "id": "article-053",
+          "previous_regions": 7,
+          "regions": 5
+        },
+        {
+          "action": "merge_adjacent_body_regions",
+          "id": "article-054",
+          "previous_regions": 9,
+          "regions": 5
+        },
+        {
+          "action": "merge_adjacent_body_regions",
+          "id": "article-055",
+          "previous_regions": 6,
+          "regions": 5
+        },
+        {
+          "action": "merge_adjacent_body_regions",
+          "id": "article-056",
+          "previous_regions": 6,
+          "regions": 5
+        },
+        {
+          "action": "merge_adjacent_body_regions",
+          "id": "article-059",
+          "previous_regions": 40,
+          "regions": 5
+        },
+        {
+          "action": "merge_adjacent_body_regions",
+          "id": "article-063",
+          "previous_regions": 8,
+          "regions": 5
+        },
+        {
+          "action": "merge_adjacent_body_regions",
+          "id": "article-064",
+          "previous_regions": 6,
+          "regions": 5
+        },
+        {
+          "action": "merge_adjacent_body_regions",
+          "id": "article-065",
+          "previous_regions": 8,
+          "regions": 5
+        },
+        {
+          "action": "merge_adjacent_body_regions",
+          "id": "article-066",
+          "previous_regions": 6,
+          "regions": 5
+        },
+        {
+          "action": "merge_adjacent_body_regions",
+          "id": "article-067",
+          "previous_regions": 15,
+          "regions": 5
+        },
+        {
+          "action": "merge_adjacent_body_regions",
+          "id": "article-068",
+          "previous_regions": 6,
+          "regions": 5
+        },
+        {
+          "action": "merge_adjacent_body_regions",
+          "id": "article-070",
+          "previous_regions": 6,
+          "regions": 5
+        },
+        {
+          "action": "merge_adjacent_body_regions",
+          "id": "article-071",
+          "previous_regions": 6,
+          "regions": 5
+        },
+        {
+          "action": "merge_adjacent_body_regions",
+          "id": "article-078",
+          "previous_regions": 32,
+          "regions": 5
+        },
+        {
+          "action": "merge_adjacent_body_regions",
+          "id": "article-081",
+          "previous_regions": 9,
+          "regions": 5
+        },
+        {
+          "action": "merge_adjacent_body_regions",
+          "id": "article-084",
+          "previous_regions": 28,
+          "regions": 5
+        },
+        {
+          "action": "merge_adjacent_body_regions",
+          "id": "article-087",
+          "previous_regions": 6,
+          "regions": 5
+        },
+        {
+          "action": "merge_adjacent_body_regions",
+          "id": "article-088",
+          "previous_regions": 9,
+          "regions": 5
+        },
+        {
+          "action": "merge_adjacent_body_regions",
+          "id": "article-089",
+          "previous_regions": 9,
+          "regions": 5
+        },
+        {
+          "action": "merge_adjacent_body_regions",
+          "id": "article-093",
+          "previous_regions": 6,
+          "regions": 5
+        },
+        {
+          "action": "merge_adjacent_body_regions",
+          "id": "article-094",
+          "previous_regions": 10,
+          "regions": 5
+        },
+        {
+          "action": "merge_adjacent_body_regions",
+          "id": "article-095",
+          "previous_regions": 13,
+          "regions": 5
+        },
+        {
+          "action": "merge_adjacent_body_regions",
+          "id": "article-096",
+          "previous_regions": 9,
+          "regions": 5
+        },
+        {
+          "action": "merge_adjacent_body_regions",
+          "id": "article-100",
+          "previous_regions": 93,
+          "regions": 5
+        },
+        {
+          "action": "merge_adjacent_body_regions",
+          "id": "article-103",
+          "previous_regions": 21,
+          "regions": 5
+        },
+        {
+          "action": "merge_adjacent_body_regions",
+          "id": "article-104",
+          "previous_regions": 16,
+          "regions": 5
+        },
+        {
+          "action": "merge_adjacent_body_regions",
+          "id": "article-106",
+          "previous_regions": 9,
+          "regions": 5
+        }
+      ]
+    },
+    {
+      "revision": 7,
+      "dataset_id": "articles-v4",
+      "approved_on": "2026-10-20",
+      "previous_dataset_id": "articles-v3",
+      "previous_git_commit": "554880fee0ae4d59bd779846b1d5f593790a5fcb",
+      "previous_dataset_sha256": "5b8d151e0b32b8d1bde8ce4ce2d6b1ef27f89ebb5588cee6d7598490426d379b",
+      "previous_cohort_sha256": "0417028629206d0e66a662ddf470df80fb9a2de1209efccd910ddb0ebead75b6",
+      "previous_rules_sha256": "b8ae6de3dd8f3f545e9c714c930d58dc9b9f5e5250496ee57c6dda038654396d",
+      "basis": "User approved fixed initial-comment coverage without runtime text matching or reply relationships. Add rules only for evidenced actual visible comment prose, using min(3, valid unique observed records); retain absence evidence. This checks section coverage, not exhaustive comment completeness.",
+      "changes": [
+        {
+          "id": "article-001",
+          "action": "remove_runtime_comment_rule",
+          "status": "observed_absent",
+          "minimum_comments": null
+        },
+        {
+          "id": "article-002",
+          "action": "remove_runtime_comment_rule",
+          "status": "observed_absent",
+          "minimum_comments": null
+        },
+        {
+          "id": "article-003",
+          "action": "remove_runtime_comment_rule",
+          "status": "observed_absent",
+          "minimum_comments": null
+        },
+        {
+          "id": "article-005",
+          "action": "fixed_comment_coverage",
+          "status": "visible_text",
+          "minimum_comments": 3
+        },
+        {
+          "id": "article-006",
+          "action": "remove_runtime_comment_rule",
+          "status": "observed_absent",
+          "minimum_comments": null
+        },
+        {
+          "id": "article-007",
+          "action": "remove_runtime_comment_rule",
+          "status": "observed_absent",
+          "minimum_comments": null
+        },
+        {
+          "id": "article-008",
+          "action": "remove_runtime_comment_rule",
+          "status": "observed_absent",
+          "minimum_comments": null
+        },
+        {
+          "id": "article-009",
+          "action": "fixed_comment_coverage",
+          "status": "visible_text",
+          "minimum_comments": 1
+        },
+        {
+          "id": "article-010",
+          "action": "remove_runtime_comment_rule",
+          "status": "observed_absent",
+          "minimum_comments": null
+        },
+        {
+          "id": "article-011",
+          "action": "remove_runtime_comment_rule",
+          "status": "observed_absent",
+          "minimum_comments": null
+        },
+        {
+          "id": "article-012",
+          "action": "remove_runtime_comment_rule",
+          "status": "observed_absent",
+          "minimum_comments": null
+        },
+        {
+          "id": "article-013",
+          "action": "remove_runtime_comment_rule",
+          "status": "observed_absent",
+          "minimum_comments": null
+        },
+        {
+          "id": "article-014",
+          "action": "fixed_comment_coverage",
+          "status": "visible_text",
+          "minimum_comments": 3
+        },
+        {
+          "id": "article-015",
+          "action": "remove_runtime_comment_rule",
+          "status": "observed_absent",
+          "minimum_comments": null
+        },
+        {
+          "id": "article-016",
+          "action": "remove_runtime_comment_rule",
+          "status": "observed_absent",
+          "minimum_comments": null
+        },
+        {
+          "id": "article-017",
+          "action": "fixed_comment_coverage",
+          "status": "visible_text",
+          "minimum_comments": 3
+        },
+        {
+          "id": "article-018",
+          "action": "remove_runtime_comment_rule",
+          "status": "observed_absent",
+          "minimum_comments": null
+        },
+        {
+          "id": "article-019",
+          "action": "remove_runtime_comment_rule",
+          "status": "observed_absent",
+          "minimum_comments": null
+        },
+        {
+          "id": "article-020",
+          "action": "remove_runtime_comment_rule",
+          "status": "observed_absent",
+          "minimum_comments": null
+        },
+        {
+          "id": "article-021",
+          "action": "remove_runtime_comment_rule",
+          "status": "observed_absent",
+          "minimum_comments": null
+        },
+        {
+          "id": "article-022",
+          "action": "remove_runtime_comment_rule",
+          "status": "observed_absent",
+          "minimum_comments": null
+        },
+        {
+          "id": "article-023",
+          "action": "fixed_comment_coverage",
+          "status": "visible_text",
+          "minimum_comments": 3
+        },
+        {
+          "id": "article-024",
+          "action": "remove_runtime_comment_rule",
+          "status": "observed_absent",
+          "minimum_comments": null
+        },
+        {
+          "id": "article-025",
+          "action": "fixed_comment_coverage",
+          "status": "visible_text",
+          "minimum_comments": 3
+        },
+        {
+          "id": "article-026",
+          "action": "remove_runtime_comment_rule",
+          "status": "observed_absent",
+          "minimum_comments": null
+        },
+        {
+          "id": "article-027",
+          "action": "fixed_comment_coverage",
+          "status": "visible_text",
+          "minimum_comments": 1
+        },
+        {
+          "id": "article-028",
+          "action": "remove_runtime_comment_rule",
+          "status": "observed_absent",
+          "minimum_comments": null
+        },
+        {
+          "id": "article-029",
+          "action": "remove_runtime_comment_rule",
+          "status": "observed_absent",
+          "minimum_comments": null
+        },
+        {
+          "id": "article-030",
+          "action": "fixed_comment_coverage",
+          "status": "visible_text",
+          "minimum_comments": 3
+        },
+        {
+          "id": "article-031",
+          "action": "remove_runtime_comment_rule",
+          "status": "observed_absent",
+          "minimum_comments": null
+        },
+        {
+          "id": "article-032",
+          "action": "fixed_comment_coverage",
+          "status": "visible_text",
+          "minimum_comments": 3
+        },
+        {
+          "id": "article-033",
+          "action": "remove_runtime_comment_rule",
+          "status": "observed_absent",
+          "minimum_comments": null
+        },
+        {
+          "id": "article-034",
+          "action": "remove_runtime_comment_rule",
+          "status": "observed_absent",
+          "minimum_comments": null
+        },
+        {
+          "id": "article-035",
+          "action": "remove_runtime_comment_rule",
+          "status": "observed_absent",
+          "minimum_comments": null
+        },
+        {
+          "id": "article-036",
+          "action": "remove_runtime_comment_rule",
+          "status": "observed_absent",
+          "minimum_comments": null
+        },
+        {
+          "id": "article-037",
+          "action": "remove_runtime_comment_rule",
+          "status": "observed_absent",
+          "minimum_comments": null
+        },
+        {
+          "id": "article-044",
+          "action": "fixed_comment_coverage",
+          "status": "visible_text",
+          "minimum_comments": 3
+        },
+        {
+          "id": "article-045",
+          "action": "remove_runtime_comment_rule",
+          "status": "observed_absent",
+          "minimum_comments": null
+        },
+        {
+          "id": "article-046",
+          "action": "remove_runtime_comment_rule",
+          "status": "observed_absent",
+          "minimum_comments": null
+        },
+        {
+          "id": "article-047",
+          "action": "fixed_comment_coverage",
+          "status": "visible_text",
+          "minimum_comments": 3
+        },
+        {
+          "id": "article-048",
+          "action": "remove_runtime_comment_rule",
+          "status": "observed_absent",
+          "minimum_comments": null
+        },
+        {
+          "id": "article-049",
+          "action": "fixed_comment_coverage",
+          "status": "visible_text",
+          "minimum_comments": 1
+        },
+        {
+          "id": "article-050",
+          "action": "remove_runtime_comment_rule",
+          "status": "observed_absent",
+          "minimum_comments": null
+        },
+        {
+          "id": "article-051",
+          "action": "remove_runtime_comment_rule",
+          "status": "observed_absent",
+          "minimum_comments": null
+        },
+        {
+          "id": "article-052",
+          "action": "fixed_comment_coverage",
+          "status": "visible_text",
+          "minimum_comments": 3
+        },
+        {
+          "id": "article-053",
+          "action": "fixed_comment_coverage",
+          "status": "visible_text",
+          "minimum_comments": 3
+        },
+        {
+          "id": "article-054",
+          "action": "remove_runtime_comment_rule",
+          "status": "observed_absent",
+          "minimum_comments": null
+        },
+        {
+          "id": "article-055",
+          "action": "remove_runtime_comment_rule",
+          "status": "observed_absent",
+          "minimum_comments": null
+        },
+        {
+          "id": "article-056",
+          "action": "remove_runtime_comment_rule",
+          "status": "observed_absent",
+          "minimum_comments": null
+        },
+        {
+          "id": "article-057",
+          "action": "remove_runtime_comment_rule",
+          "status": "observed_absent",
+          "minimum_comments": null
+        },
+        {
+          "id": "article-058",
+          "action": "remove_runtime_comment_rule",
+          "status": "observed_absent",
+          "minimum_comments": null
+        },
+        {
+          "id": "article-059",
+          "action": "remove_runtime_comment_rule",
+          "status": "observed_absent",
+          "minimum_comments": null
+        },
+        {
+          "id": "article-060",
+          "action": "remove_runtime_comment_rule",
+          "status": "observed_absent",
+          "minimum_comments": null
+        },
+        {
+          "id": "article-061",
+          "action": "remove_runtime_comment_rule",
+          "status": "observed_absent",
+          "minimum_comments": null
+        },
+        {
+          "id": "article-063",
+          "action": "remove_runtime_comment_rule",
+          "status": "observed_absent",
+          "minimum_comments": null
+        },
+        {
+          "id": "article-064",
+          "action": "remove_runtime_comment_rule",
+          "status": "observed_absent",
+          "minimum_comments": null
+        },
+        {
+          "id": "article-065",
+          "action": "remove_runtime_comment_rule",
+          "status": "observed_absent",
+          "minimum_comments": null
+        },
+        {
+          "id": "article-066",
+          "action": "remove_runtime_comment_rule",
+          "status": "observed_absent",
+          "minimum_comments": null
+        },
+        {
+          "id": "article-067",
+          "action": "remove_runtime_comment_rule",
+          "status": "observed_absent",
+          "minimum_comments": null
+        },
+        {
+          "id": "article-068",
+          "action": "fixed_comment_coverage",
+          "status": "visible_text",
+          "minimum_comments": 3
+        },
+        {
+          "id": "article-069",
+          "action": "remove_runtime_comment_rule",
+          "status": "visible_placeholders_only",
+          "minimum_comments": null
+        },
+        {
+          "id": "article-070",
+          "action": "remove_runtime_comment_rule",
+          "status": "observed_absent",
+          "minimum_comments": null
+        },
+        {
+          "id": "article-071",
+          "action": "remove_runtime_comment_rule",
+          "status": "observed_absent",
+          "minimum_comments": null
+        },
+        {
+          "id": "article-072",
+          "action": "remove_runtime_comment_rule",
+          "status": "observed_absent",
+          "minimum_comments": null
+        },
+        {
+          "id": "article-073",
+          "action": "remove_runtime_comment_rule",
+          "status": "observed_absent",
+          "minimum_comments": null
+        },
+        {
+          "id": "article-074",
+          "action": "remove_runtime_comment_rule",
+          "status": "observed_absent",
+          "minimum_comments": null
+        },
+        {
+          "id": "article-075",
+          "action": "remove_runtime_comment_rule",
+          "status": "observed_absent",
+          "minimum_comments": null
+        },
+        {
+          "id": "article-076",
+          "action": "remove_runtime_comment_rule",
+          "status": "observed_absent",
+          "minimum_comments": null
+        },
+        {
+          "id": "article-077",
+          "action": "remove_runtime_comment_rule",
+          "status": "observed_absent",
+          "minimum_comments": null
+        },
+        {
+          "id": "article-078",
+          "action": "remove_runtime_comment_rule",
+          "status": "observed_absent",
+          "minimum_comments": null
+        },
+        {
+          "id": "article-079",
+          "action": "remove_runtime_comment_rule",
+          "status": "observed_absent",
+          "minimum_comments": null
+        },
+        {
+          "id": "article-080",
+          "action": "remove_runtime_comment_rule",
+          "status": "observed_absent",
+          "minimum_comments": null
+        },
+        {
+          "id": "article-081",
+          "action": "remove_runtime_comment_rule",
+          "status": "observed_absent",
+          "minimum_comments": null
+        },
+        {
+          "id": "article-082",
+          "action": "remove_runtime_comment_rule",
+          "status": "observed_absent",
+          "minimum_comments": null
+        },
+        {
+          "id": "article-084",
+          "action": "remove_runtime_comment_rule",
+          "status": "observed_absent",
+          "minimum_comments": null
+        },
+        {
+          "id": "article-085",
+          "action": "remove_runtime_comment_rule",
+          "status": "observed_absent",
+          "minimum_comments": null
+        },
+        {
+          "id": "article-086",
+          "action": "remove_runtime_comment_rule",
+          "status": "observed_absent",
+          "minimum_comments": null
+        },
+        {
+          "id": "article-087",
+          "action": "remove_runtime_comment_rule",
+          "status": "observed_absent",
+          "minimum_comments": null
+        },
+        {
+          "id": "article-088",
+          "action": "remove_runtime_comment_rule",
+          "status": "observed_absent",
+          "minimum_comments": null
+        },
+        {
+          "id": "article-089",
+          "action": "remove_runtime_comment_rule",
+          "status": "observed_absent",
+          "minimum_comments": null
+        },
+        {
+          "id": "article-090",
+          "action": "remove_runtime_comment_rule",
+          "status": "observed_absent",
+          "minimum_comments": null
+        },
+        {
+          "id": "article-091",
+          "action": "remove_runtime_comment_rule",
+          "status": "observed_absent",
+          "minimum_comments": null
+        },
+        {
+          "id": "article-092",
+          "action": "fixed_comment_coverage",
+          "status": "visible_text",
+          "minimum_comments": 3
+        },
+        {
+          "id": "article-093",
+          "action": "fixed_comment_coverage",
+          "status": "visible_text",
+          "minimum_comments": 3
+        },
+        {
+          "id": "article-094",
+          "action": "remove_runtime_comment_rule",
+          "status": "observed_absent",
+          "minimum_comments": null
+        },
+        {
+          "id": "article-095",
+          "action": "fixed_comment_coverage",
+          "status": "visible_text",
+          "minimum_comments": 3
+        },
+        {
+          "id": "article-096",
+          "action": "remove_runtime_comment_rule",
+          "status": "observed_absent",
+          "minimum_comments": null
+        },
+        {
+          "id": "article-098",
+          "action": "fixed_comment_coverage",
+          "status": "visible_text",
+          "minimum_comments": 3
+        },
+        {
+          "id": "article-099",
+          "action": "remove_runtime_comment_rule",
+          "status": "observed_absent",
+          "minimum_comments": null
+        },
+        {
+          "id": "article-100",
+          "action": "remove_runtime_comment_rule",
+          "status": "observed_absent",
+          "minimum_comments": null
+        },
+        {
+          "id": "article-102",
+          "action": "remove_runtime_comment_rule",
+          "status": "observed_absent",
+          "minimum_comments": null
+        },
+        {
+          "id": "article-103",
+          "action": "fixed_comment_coverage",
+          "status": "visible_text",
+          "minimum_comments": 3
+        },
+        {
+          "id": "article-104",
+          "action": "remove_runtime_comment_rule",
+          "status": "observed_absent",
+          "minimum_comments": null
+        },
+        {
+          "id": "article-106",
+          "action": "remove_runtime_comment_rule",
+          "status": "observed_absent",
+          "minimum_comments": null
+        },
+        {
+          "id": "article-107",
+          "action": "remove_runtime_comment_rule",
+          "status": "observed_absent",
+          "minimum_comments": null
+        }
+      ]
+    },
+    {
+      "revision": 8,
+      "dataset_id": "articles-v5",
+      "approved_on": "2026-10-20",
+      "previous_dataset_id": "articles-v4",
+      "previous_git_commit": "c8c112616cc196f4c9dd0d776da26574b111bee3",
+      "previous_dataset_sha256": "9bd0f28ed98c9b78fc96a5a5806fce33cbbbbd6d7d93e23178aa99efd0e14978",
+      "previous_cohort_sha256": "af7d2a1e0b76169f7a9fce8ccc8909f962ebaa3300b777219f1b2b374c1ccd71",
+      "previous_rules_sha256": "ef1024358c314fd51bb9f414123b2a0de2f39ed7d5e29bbc469556e10b3928f3",
+      "basis": "Require all independently observed valid text records when the count is at most five; otherwise require 80%, rounded up. The baseline is the frozen authoring count, not a live page counter.",
+      "changes": [
+        {
+          "id": "article-005",
+          "observed_valid_comments": 7,
+          "previous_minimum": 3,
+          "minimum_comments": 6
+        },
+        {
+          "id": "article-009",
+          "observed_valid_comments": 1,
+          "previous_minimum": 1,
+          "minimum_comments": 1
+        },
+        {
+          "id": "article-014",
+          "observed_valid_comments": 3,
+          "previous_minimum": 3,
+          "minimum_comments": 3
+        },
+        {
+          "id": "article-017",
+          "observed_valid_comments": 4,
+          "previous_minimum": 3,
+          "minimum_comments": 4
+        },
+        {
+          "id": "article-023",
+          "observed_valid_comments": 9,
+          "previous_minimum": 3,
+          "minimum_comments": 8
+        },
+        {
+          "id": "article-025",
+          "observed_valid_comments": 255,
+          "previous_minimum": 3,
+          "minimum_comments": 204
+        },
+        {
+          "id": "article-027",
+          "observed_valid_comments": 1,
+          "previous_minimum": 1,
+          "minimum_comments": 1
+        },
+        {
+          "id": "article-030",
+          "observed_valid_comments": 22,
+          "previous_minimum": 3,
+          "minimum_comments": 18
+        },
+        {
+          "id": "article-032",
+          "observed_valid_comments": 24,
+          "previous_minimum": 3,
+          "minimum_comments": 20
+        },
+        {
+          "id": "article-044",
+          "observed_valid_comments": 29,
+          "previous_minimum": 3,
+          "minimum_comments": 24
+        },
+        {
+          "id": "article-047",
+          "observed_valid_comments": 3,
+          "previous_minimum": 3,
+          "minimum_comments": 3
+        },
+        {
+          "id": "article-049",
+          "observed_valid_comments": 1,
+          "previous_minimum": 1,
+          "minimum_comments": 1
+        },
+        {
+          "id": "article-052",
+          "observed_valid_comments": 4,
+          "previous_minimum": 3,
+          "minimum_comments": 4
+        },
+        {
+          "id": "article-053",
+          "observed_valid_comments": 4,
+          "previous_minimum": 3,
+          "minimum_comments": 4
+        },
+        {
+          "id": "article-068",
+          "observed_valid_comments": 13,
+          "previous_minimum": 3,
+          "minimum_comments": 11
+        },
+        {
+          "id": "article-092",
+          "observed_valid_comments": 14,
+          "previous_minimum": 3,
+          "minimum_comments": 12
+        },
+        {
+          "id": "article-093",
+          "observed_valid_comments": 20,
+          "previous_minimum": 3,
+          "minimum_comments": 16
+        },
+        {
+          "id": "article-095",
+          "observed_valid_comments": 69,
+          "previous_minimum": 3,
+          "minimum_comments": 56
+        },
+        {
+          "id": "article-098",
+          "observed_valid_comments": 49,
+          "previous_minimum": 3,
+          "minimum_comments": 40
+        },
+        {
+          "id": "article-103",
+          "observed_valid_comments": 24,
+          "previous_minimum": 3,
+          "minimum_comments": 20
+        }
+      ]
+    },
+    {
+      "revision": 9,
+      "dataset_id": "articles-v6",
+      "approved_on": "2026-10-20",
+      "previous_dataset_id": "articles-v5",
+      "previous_git_commit": "2ef8ade8fbb9cb40c35c350f04e4101f84465fe1",
+      "previous_dataset_sha256": "fc4ee3ee680fef3f3c021978f725e80a8b32804eb5acf6c93381e26b256f8073",
+      "previous_cohort_sha256": "e8d247e70392b7c806a15776ebb253d1e68dcfae4acdac3ba93c1b6e5d4e67ae",
+      "previous_rules_sha256": "23e810d3cf9910948ada5725d870825edcacb6c9a09d23e40dcc5b0360e63990",
+      "basis": "Require all independently observed initial posts when the baseline is at most five; otherwise require 80%, rounded up. Count distinct owned post links with author and visible text; accept attributed quote text for genuinely empty outer posts. No current identities, wording, runtime reference or freshness claim.",
+      "changes": [
+        {
+          "id": "article-038",
+          "action": "fixed_post_coverage",
+          "observed_valid_posts": 4,
+          "minimum_posts": 4
+        },
+        {
+          "id": "article-039",
+          "action": "fixed_post_coverage",
+          "observed_valid_posts": 9,
+          "minimum_posts": 8
+        },
+        {
+          "id": "article-040",
+          "action": "fixed_post_coverage",
+          "observed_valid_posts": 4,
+          "minimum_posts": 4
+        },
+        {
+          "id": "article-041",
+          "action": "fixed_post_coverage",
+          "observed_valid_posts": 4,
+          "minimum_posts": 4
+        },
+        {
+          "id": "article-101",
+          "action": "fixed_post_coverage",
+          "observed_valid_posts": 20,
+          "minimum_posts": 16
+        }
+      ]
+    },
+    {
+      "revision": 10,
+      "dataset_id": "articles-v7",
+      "approved_on": "2026-10-20",
+      "previous_dataset_id": "articles-v6",
+      "previous_git_commit": "e664d7ff8ba851769682abf328115a8c5befdf53",
+      "previous_dataset_sha256": "0da8b7e80f89f4f63185a32885b2c6c4e8ab10d5660e5dcc0f0669d92d7ed5f7",
+      "previous_cohort_sha256": "2254bde55de2fde5d6bf6861608e28d459c2ebcbd9bfbc1df49b0a507a7703da",
+      "previous_rules_sha256": "e2d2bf11b8fd7ace3438d4ee73ce1b2997c7519a413d9d8da7e24d8c4042a441",
+      "basis": "Independently reviewed external PR feedback: remove brittle exact anchors and bind text comments to source-reviewed start/end boundaries. Preserve visible excerpt scope, thresholds and frozen version identities.",
+      "changes": [
+        {
+          "id": "article-005",
+          "action": "bound_text_comments_to_reviewed_region",
+          "end_markers": [
+            "Relevant people",
+            "Trending now",
+            "Terms",
+            "Privacy"
+          ]
+        },
+        {
+          "id": "article-009",
+          "action": "bound_text_comments_to_reviewed_region",
+          "end_markers": [
+            "热门话题",
+            "热股榜"
+          ]
+        },
+        {
+          "id": "article-010",
+          "action": "remove_brittle_hard_anchors",
+          "removed_ids": [
+            "stable-15",
+            "stable-44",
+            "stable-45",
+            "stable-46"
+          ]
+        },
+        {
+          "id": "article-014",
+          "action": "bound_text_comments_to_reviewed_region",
+          "end_markers": [
+            "加个关注，精彩更新不错过~",
+            "相关推荐"
+          ]
+        },
+        {
+          "id": "article-017",
+          "action": "bound_text_comments_to_reviewed_region",
+          "end_markers": [
+            "加载中",
+            "关于澎湃"
+          ]
+        },
+        {
+          "id": "article-023",
+          "action": "bound_text_comments_to_reviewed_region",
+          "end_markers": [
+            "回顶部",
+            "Copyright ©"
+          ]
+        },
+        {
+          "id": "article-025",
+          "action": "bound_text_comments_to_reviewed_region",
+          "end_markers": [
+            "我要发表看法"
+          ]
+        },
+        {
+          "id": "article-027",
+          "action": "remove_brittle_hard_anchors",
+          "removed_ids": [
+            "body-33",
+            "body-35"
+          ]
+        },
+        {
+          "id": "article-027",
+          "action": "bound_text_comments_to_reviewed_region",
+          "end_markers": [
+            "Ready for more?",
+            "Privacy"
+          ]
+        },
+        {
+          "id": "article-030",
+          "action": "bound_text_comments_to_reviewed_region",
+          "end_markers": [
+            "Comments are closed for this article."
+          ]
+        },
+        {
+          "id": "article-032",
+          "action": "bound_text_comments_to_reviewed_region",
+          "end_markers": [
+            "Some comments may only be visible to logged-in visitors.",
+            "Code of Conduct",
+            "More from"
+          ]
+        },
+        {
+          "id": "article-044",
+          "action": "bound_text_comments_to_reviewed_region",
+          "end_markers": [
+            "热门话题",
+            "热股榜"
+          ]
+        },
+        {
+          "id": "article-047",
+          "action": "bound_text_comments_to_reviewed_region",
+          "end_markers": [
+            "除特别声明外，",
+            "使用 SegmentFault 发布",
+            "服务协议"
+          ]
+        },
+        {
+          "id": "article-049",
+          "action": "bound_text_comments_to_reviewed_region",
+          "end_markers": [
+            "推荐阅读",
+            "关于我们"
+          ]
+        },
+        {
+          "id": "article-052",
+          "action": "bound_text_comments_to_reviewed_region",
+          "end_markers": [
+            "推荐文章",
+            "本篇来自栏目"
+          ]
+        },
+        {
+          "id": "article-053",
+          "action": "bound_text_comments_to_reviewed_region",
+          "end_markers": [
+            "推荐文章",
+            "本篇来自栏目"
+          ]
+        },
+        {
+          "id": "article-068",
+          "action": "bound_text_comments_to_reviewed_region",
+          "end_markers": [
+            "Comments navigation",
+            "Got something to say?",
+            "More from ALA"
+          ]
+        },
+        {
+          "id": "article-092",
+          "action": "bound_text_comments_to_reviewed_region",
+          "end_markers": [
+            "Comments are closed for this article."
+          ]
+        },
+        {
+          "id": "article-093",
+          "action": "remove_brittle_hard_anchors",
+          "removed_ids": [
+            "stable-100",
+            "stable-3",
+            "stable-32",
+            "stable-4"
+          ]
+        },
+        {
+          "id": "article-093",
+          "action": "bound_text_comments_to_reviewed_region",
+          "end_markers": [
+            "Some comments may only be visible to logged-in visitors.",
+            "Code of Conduct",
+            "More from"
+          ]
+        },
+        {
+          "id": "article-095",
+          "action": "bound_text_comments_to_reviewed_region",
+          "end_markers": [
+            "我要发表看法"
+          ]
+        },
+        {
+          "id": "article-098",
+          "action": "bound_text_comments_to_reviewed_region",
+          "end_markers": [
+            "> 我来回复",
+            "关于豆瓣"
+          ]
+        },
+        {
+          "id": "article-103",
+          "action": "bound_text_comments_to_reviewed_region",
+          "end_markers": [
+            "抱歉，本帖讨论暂时受限",
+            "热门话题",
+            "热股榜"
+          ]
+        }
+      ]
+    },
+    {
+      "revision": 11,
+      "dataset_id": "articles-v8",
+      "approved_on": "2026-10-22",
+      "previous_dataset_id": "articles-v7",
+      "previous_git_commit": "41388ad5a97c916d4c2a9ca06f6be2a0d9dd32ea",
+      "previous_dataset_sha256": "9a3749c04a840b7f0543ecab61d06c83abf26a06c2dfcf1066501ca0306bfc1c",
+      "previous_cohort_sha256": "c75681dc17bf915aa24bc79b81636d65a112c347d4c6f96c90505f7f089e4d9d",
+      "previous_rules_sha256": "755c9fea31d4ccc0b9a6f11fd334ef889f7645f69c46130919147f03eb14c284",
+      "basis": "Bind existing whole-label exclusions in each comment/post contract rather than global scorer policy. Preserve original source scope, matching tolerances and record floors.",
+      "changes": [
+        {
+          "id": "article-005",
+          "action": "bind_record_labels_in_contract",
+          "component": "comment_contract"
+        },
+        {
+          "id": "article-009",
+          "action": "bind_record_labels_in_contract",
+          "component": "comment_contract"
+        },
+        {
+          "id": "article-014",
+          "action": "bind_record_labels_in_contract",
+          "component": "comment_contract"
+        },
+        {
+          "id": "article-017",
+          "action": "bind_record_labels_in_contract",
+          "component": "comment_contract"
+        },
+        {
+          "id": "article-023",
+          "action": "bind_record_labels_in_contract",
+          "component": "comment_contract"
+        },
+        {
+          "id": "article-025",
+          "action": "bind_record_labels_in_contract",
+          "component": "comment_contract"
+        },
+        {
+          "id": "article-027",
+          "action": "bind_record_labels_in_contract",
+          "component": "comment_contract"
+        },
+        {
+          "id": "article-030",
+          "action": "bind_record_labels_in_contract",
+          "component": "comment_contract"
+        },
+        {
+          "id": "article-032",
+          "action": "bind_record_labels_in_contract",
+          "component": "comment_contract"
+        },
+        {
+          "id": "article-038",
+          "action": "bind_record_labels_in_contract",
+          "component": "post_contract"
+        },
+        {
+          "id": "article-039",
+          "action": "bind_record_labels_in_contract",
+          "component": "post_contract"
+        },
+        {
+          "id": "article-040",
+          "action": "bind_record_labels_in_contract",
+          "component": "post_contract"
+        },
+        {
+          "id": "article-041",
+          "action": "bind_record_labels_in_contract",
+          "component": "post_contract"
+        },
+        {
+          "id": "article-044",
+          "action": "bind_record_labels_in_contract",
+          "component": "comment_contract"
+        },
+        {
+          "id": "article-047",
+          "action": "bind_record_labels_in_contract",
+          "component": "comment_contract"
+        },
+        {
+          "id": "article-049",
+          "action": "bind_record_labels_in_contract",
+          "component": "comment_contract"
+        },
+        {
+          "id": "article-052",
+          "action": "bind_record_labels_in_contract",
+          "component": "comment_contract"
+        },
+        {
+          "id": "article-053",
+          "action": "bind_record_labels_in_contract",
+          "component": "comment_contract"
+        },
+        {
+          "id": "article-068",
+          "action": "bind_record_labels_in_contract",
+          "component": "comment_contract"
+        },
+        {
+          "id": "article-092",
+          "action": "bind_record_labels_in_contract",
+          "component": "comment_contract"
+        },
+        {
+          "id": "article-093",
+          "action": "bind_record_labels_in_contract",
+          "component": "comment_contract"
+        },
+        {
+          "id": "article-095",
+          "action": "bind_record_labels_in_contract",
+          "component": "comment_contract"
+        },
+        {
+          "id": "article-098",
+          "action": "bind_record_labels_in_contract",
+          "component": "comment_contract"
+        },
+        {
+          "id": "article-101",
+          "action": "bind_record_labels_in_contract",
+          "component": "post_contract"
+        },
+        {
+          "id": "article-103",
+          "action": "bind_record_labels_in_contract",
+          "component": "comment_contract"
+        }
+      ]
+    },
+    {
+      "revision": 12,
+      "dataset_id": "articles-v9",
+      "approved_on": "2026-10-22",
+      "previous_dataset_id": "articles-v8",
+      "previous_git_commit": "664b4d692337876e67459e11ce4500ba1dbdcc8f",
+      "previous_dataset_sha256": "35f81af41d95ca22bcc211301c541a27e96939feb658a81b6aee35a720c620d8",
+      "previous_cohort_sha256": "4cb46611bcc061e81136779a2b5631ac949304a11f0d8bab988de4080caff6c3",
+      "previous_rules_sha256": "d38c600db75acb3cbc608adf61fb1f76c46d0cca2234f6aeeab66b5372b6a199",
+      "retired_label_defaults_sha256": "96fa81c9af82a091173cb5f78e2129f647d9ba4d6d17dc9963472bd6d1553998",
+      "basis": "Use each task contract as the only label source; remove redundant authoring defaults and require explicit label fields. Move unchanged non-author labels into post contracts. Preserve source bodies, acceptance requirements and record floors.",
+      "changes": [
+        {
+          "id": "article-038",
+          "action": "bind_non_author_labels_in_contract"
+        },
+        {
+          "id": "article-039",
+          "action": "bind_non_author_labels_in_contract"
+        },
+        {
+          "id": "article-040",
+          "action": "bind_non_author_labels_in_contract"
+        },
+        {
+          "id": "article-041",
+          "action": "bind_non_author_labels_in_contract"
+        },
+        {
+          "id": "article-101",
+          "action": "bind_non_author_labels_in_contract"
+        }
+      ]
+    },
+    {
+      "revision": 13,
+      "dataset_id": "articles-v10",
+      "approved_on": "2026-10-22",
+      "previous_dataset_id": "articles-v9",
+      "previous_cohort_sha256": "a15b097e3180b40af449a508d008c0a231332ded07b0efda9e611217e88da27a",
+      "previous_rules_sha256": "98cbce41a7ee97f46fd8a3cef58bcc94d8e5b443fc060a420a08fb2b342f00ea",
+      "previous_dataset_sha256": "2202a684149817daa34564cbff1a8c9d26431d4ee58bc85f4984e06db99e95eb",
+      "basis": "User approved four archive-based Weixin rules. Preserve 100 cases, all existing comment contracts and collection floors. Add evidenced missing profile fields to 038/041.",
+      "changes": [
+        {
+          "id": "article-001",
+          "action": "replace",
+          "previous": {
+            "id": "article-001",
+            "candidate_id": "article-candidate-001-r4",
+            "name": "Island Hopping in Japan",
+            "url": "https://www.japan.travel/en/guide/island-hopping/",
+            "platform": "JNTO Travel Japan",
+            "page_type": "article",
+            "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+          },
+          "replacement": {
+            "id": "article-001",
+            "candidate_id": "article-001-weixin-v10",
+            "name": "脑电合成自然语音！LeCun转发Nature子刊新成果，代码开源",
+            "url": "https://mp.weixin.qq.com/s/BcV3-3glmdsVF--fpPRU2g",
+            "platform": "微信公众号",
+            "page_type": "article",
+            "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+          },
+          "basis": "User-approved Weixin coverage; replaced a singleton platform without a comment contract."
+        },
+        {
+          "id": "article-002",
+          "action": "replace",
+          "previous": {
+            "id": "article-002",
+            "candidate_id": "article-candidate-002-r4",
+            "name": "Machine Learning Crash Course",
+            "url": "https://developers.googleblog.com/machine-learning-crash-course/",
+            "platform": "Google Developers Blog",
+            "page_type": "article",
+            "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+          },
+          "replacement": {
+            "id": "article-002",
+            "candidate_id": "article-002-weixin-v10",
+            "name": "龙虾冲浪终于不迷路了！网页智能体新框架Avenir-Web开源即SOTA",
+            "url": "https://mp.weixin.qq.com/s?__biz=MzIzNjc1NzUzMw==&mid=2247887827&idx=3&sn=6f15e73e3e9766986b064a1fce6fe955",
+            "platform": "微信公众号",
+            "page_type": "article",
+            "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+          },
+          "basis": "User-approved Weixin coverage; replaced a singleton platform without a comment contract."
+        },
+        {
+          "id": "article-003",
+          "action": "replace",
+          "previous": {
+            "id": "article-003",
+            "candidate_id": "article-candidate-003-r4",
+            "name": "What you need to do deep learning",
+            "url": "https://www.fast.ai/posts/2017-11-16-what-you-need.html",
+            "platform": "fast.ai",
+            "page_type": "article",
+            "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+          },
+          "replacement": {
+            "id": "article-003",
+            "candidate_id": "article-003-weixin-v10",
+            "name": "200+推文涨粉8000：我的推特增长策略",
+            "url": "https://mp.weixin.qq.com/s/2y463r9G4hnsIc0c2ig7dA",
+            "platform": "微信公众号",
+            "page_type": "article",
+            "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+          },
+          "basis": "User-approved Weixin coverage; replaced a singleton platform without a comment contract."
+        },
+        {
+          "id": "article-077",
+          "action": "replace",
+          "previous": {
+            "id": "article-077",
+            "candidate_id": "article-candidate-077",
+            "name": "A beginner’s guide to Javascript Closure",
+            "url": "https://rishabhthakur.hashnode.dev/closures-in-javascript",
+            "platform": "Hashnode",
+            "page_type": "article",
+            "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+          },
+          "replacement": {
+            "id": "article-077",
+            "candidate_id": "article-077-weixin-v10",
+            "name": "乔姆斯基：ChatGPT 的虚假承诺",
+            "url": "https://mp.weixin.qq.com/s/e9KDOZ3vwd10PFvH6hbtmg",
+            "platform": "微信公众号",
+            "page_type": "article",
+            "task_prompt": "直接获取此网址首次自动加载完成后、无需操作就已展示的文章或帖子内容，包括原有标题、正文、已展示的评论和回复，以及相关稳定页面文字；保留段落、章节、列表、表格和文字链接。不得点击、展开、切换、登录、翻页或滚动触发加载；不要求因此才会出现的正文、评论或回复。"
+          },
+          "basis": "User-approved Weixin coverage; replaced a singleton platform without a comment contract."
+        },
+        {
+          "id": "article-038",
+          "action": "require_existing_profile_fields",
+          "source_sha256": "226d68f680863e6e9c12945e96880ccc5dbc255bd8b2bbbfbd5306faa7f718e6"
+        },
+        {
+          "id": "article-041",
+          "action": "require_existing_profile_fields",
+          "source_sha256": "1405c78101c20680c4ede0ad7db835d0e5e7aba7b947fbc33b8fe7764f1e061d"
+        }
+      ]
+    },
+    {
+      "revision": 14,
+      "dataset_id": "articles-v11",
+      "approved_on": "2026-10-22",
+      "previous_dataset_id": "articles-v10",
+      "previous_dataset_sha256": "64e6d6410a42949ce171d4518c6e842e5911cd81f9f1d0262e2e83af5384648b",
+      "previous_cohort_sha256": "ba8bc7367ebb0ce6ea1432ffd323527f6433c62a45ba0cc978d3322a04639ac5",
+      "previous_rules_sha256": "4a50d72f3f4425587750ae76ea5a70f5b1226d31e675b920286f2bb2db91da60",
+      "basis": "User approved review scheme 2: every fixed-article region reaches 80 percent and the bound ending independently reaches 80 percent. Deduplicate repeated review metadata using per-case defaults without changing acceptance/title/comment/post contracts. Preserve all four approved Weixin cases.",
+      "changes": [
+        {
+          "action": "require_all_regions_and_ending",
+          "scope": "95 fixed articles",
+          "body_contract_version": 4
+        },
+        {
+          "action": "deduplicate_review_metadata",
+          "fields": [
+            "basis",
+            "observed_on"
+          ]
+        }
+      ]
+    }
+  ]
+}

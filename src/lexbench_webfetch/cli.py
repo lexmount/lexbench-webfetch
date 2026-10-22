@@ -37,6 +37,10 @@ def main() -> None:
     compile_rules.add_argument("--output", type=Path, required=True)
     compile_rules.add_argument("--definition-dir", type=Path)
     compile_rules.add_argument("--evidence-home", type=Path, required=True)
+    articles = sub.add_parser("compile-articles", help="Compile hash-bound article evidence")
+    articles.add_argument("--output", type=Path, required=True)
+    articles.add_argument("--definition-dir", type=Path)
+    articles.add_argument("--evidence-home", type=Path, required=True)
     args = parser.parse_args()
     try:
         if args.command == "inspect-revision":
@@ -56,6 +60,16 @@ def main() -> None:
         elif args.command == "compile-access-restrictions":
             from .risk_control_dataset import build, RISK
             result = build(args.output, args.definition_dir or RISK, evidence_home=args.evidence_home)
+        elif args.command == "compile-articles":
+            from .article_dataset import compile_dataset, DEFINITIONS
+            from .inputs import require_mutable_inputs
+            require_mutable_inputs(args.output)
+            if args.output.exists() or args.output.is_symlink():
+                raise ValueError("Output already exists; choose a new candidate dataset")
+            dataset = compile_dataset(args.evidence_home, args.definition_dir or DEFINITIONS)
+            with args.output.open("x", encoding="utf-8") as output:
+                output.write(json.dumps(dataset, ensure_ascii=False, indent=2) + "\n")
+            result = {"dataset": str(args.output.resolve()), "case_count": dataset["case_count"]}
         elif args.command == "list":
             result = [{k: row[k] for k in ("id", "dataset_id", "case_count")} for row in registry()["suites"]]
         elif args.command == "validate":

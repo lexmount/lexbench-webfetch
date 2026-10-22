@@ -139,8 +139,8 @@ def _visible(text, schema=None, *, normalized_html=False):
 
         text = visible_html_text(text)
     if schema == "name_description" and not normalized_html and not projected_html and re.search(r"<(?:div|section|article|span|script|template)\b", text, re.I):
-        from .dynamic_lists import _scoped_html
-        text = _scoped_html(text).get_text(separator="\n")
+        from .dynamic_lists import scoped_html
+        text = scoped_html(text).get_text(separator="\n")
         projected_html = True
     text = clean_reference_text(text)
     # An actual inline HTML break in Markdown is layout. Preserve escaped
@@ -626,7 +626,7 @@ def _non_record_visible(content, contract, records, base_url):
     """Remove owned record links, without erasing identical navigation text."""
     from urllib.parse import urljoin
 
-    from .dynamic_lists import _scoped_html, named_entry_identity, _canonical_entry_path, visible_html_text
+    from .dynamic_lists import scoped_html, named_entry_identity, canonical_entry_path, visible_html_text
     from .reference_quality import markdown_links, visible_markdown_links, visible_mixed_html_text
 
     identities = {named_entry_identity(r['fields']['url'], contract)
@@ -641,7 +641,7 @@ def _non_record_visible(content, contract, records, base_url):
             return (named_entry_identity(absolute, contract) in identities
                     or (parts.hostname in contract['hosts']
                         and re.fullmatch(contract['entry_path'],
-                                         _canonical_entry_path(parts.path).rstrip('/')) is not None))
+                                         canonical_entry_path(parts.path).rstrip('/')) is not None))
         except ValueError:
             return False
 
@@ -662,7 +662,7 @@ def _non_record_visible(content, contract, records, base_url):
             if target.scheme in {'http', 'https'} and target.hostname and not is_record(owner['href']):
                 image.name = 'span'
                 image.string = image['alt']
-        soup = _scoped_html(str(soup))
+        soup = scoped_html(str(soup))
         for node in list(soup.select('a[href]')):
             if node.parent is None or node.attrs is None:
                 continue
@@ -795,6 +795,46 @@ def _anchor_matches(anchor, records, visible, schema, non_record_visible=None,
                                      value, registered_words)]
 
 
+def _validate_visible_control(control):
+    """Validate the narrowly opted-in ordinary control attribute surface."""
+    if (not isinstance(control, dict) or set(control) != {"selector", "attribute"}
+            or not isinstance(control["selector"], str) or not control["selector"].strip()
+            or not isinstance(control["attribute"], str)
+            or control["attribute"] not in {"placeholder", "value"}):
+        raise ValueError("Invalid visible control declaration")
+    import soupsieve
+    try:
+        soupsieve.compile(control["selector"])
+    except (soupsieve.SelectorSyntaxError, NotImplementedError) as error:
+        raise ValueError("Invalid visible control selector") from error
+
+
+def _ordinary_control_text(soup, control):
+    """Read only declared rendered-label attributes, never accessibility metadata.
+
+    Explicit hidden nodes are removed by scoped_html. External stylesheet
+    visibility must be established by the independent source review.
+    """
+    parts = []
+    for node in soup.select(control["selector"]):
+        kind = str(node.get("type", "text")).lower()
+        attribute = control["attribute"]
+        # A populated control does not display its placeholder, even when the
+        # current value contains only whitespace.
+        if attribute == "placeholder" and (
+                node.get("value", "") if node.name == "input" else node.get_text()):
+            continue
+        permitted = (
+            attribute == "placeholder" and (
+                node.name == "textarea" or (node.name == "input" and kind in {
+                    "text", "search", "email", "url", "tel", "number"}))) or (
+            attribute == "value" and node.name == "input"
+            and kind in {"button", "submit", "reset"})
+        if permitted and isinstance(node.get(attribute), str):
+            parts.append(node[attribute])
+    return "\n".join(parts)
+
+
 def validate_acceptance_contract(contract: dict) -> None:
     """Fail closed before a caller chooses stable scoring instead of snapshots."""
     if (not isinstance(contract, dict) or type(contract.get("version")) is not int
@@ -891,6 +931,7 @@ def validate_acceptance_contract(contract: dict) -> None:
                 or set(anchor) - {
                     "id", "alternatives", "match_scope", "source_location",
                     "observation_status", "source_evidence_sha256",
+                    "visible_control",
                 }
                 or ('match_scope' in anchor and (anchor['match_scope'] != 'non_record_lines' or contract['schema'] != 'named_link'))
                 or ('source_location' in anchor and (
@@ -906,6 +947,8 @@ def validate_acceptance_contract(contract: dict) -> None:
                 or not isinstance(anchor.get("alternatives"), list) or not anchor["alternatives"]
                 or any(not isinstance(value, str) or not _visible(value).strip() for value in anchor["alternatives"])):
             raise ValueError("Invalid or duplicate stable text anchor group")
+        if "visible_control" in anchor:
+            _validate_visible_control(anchor["visible_control"])
         ids.add(anchor["id"])
     if contract["schema"] == "body_text" and not anchors and not patterns:
         raise ValueError("Stable body-text contracts require text anchors or page patterns")
@@ -1060,6 +1103,9 @@ def evaluate_stable_task(content: str, contract: dict, base_url: str = "", eligi
     same-site detail-link parser. Raw URL identity is not factual verification.
     anchor_text may reuse the caller's normalized visible HTML prose;
     document-title metadata cannot supply page text or structural records.
+    An anchor may opt into visible_control {selector, attribute} to recognize
+    independently reviewed ordinary input placeholders or button values in HTML.
+    This surface belongs only to that anchor, not page identity or body coverage.
     """
     validate_acceptance_contract(contract)
     schema = contract["schema"]
@@ -1184,6 +1230,12 @@ def evaluate_stable_task(content: str, contract: dict, base_url: str = "", eligi
                 )
             )
     anchors = []
+    control_soup = None
+    if any("visible_control" in a for a in contract.get("stable_text_anchors", [])):
+        from .reference_quality import is_html_document_or_fragment
+        if is_html_document_or_fragment(content):
+            from .dynamic_lists import scoped_html
+            control_soup = scoped_html(content)
     non_record_visible = None
     if schema == 'named_link' and any(a.get('match_scope') == 'non_record_lines'
                                       for a in contract.get('stable_text_anchors', [])):
@@ -1192,8 +1244,15 @@ def evaluate_stable_task(content: str, contract: dict, base_url: str = "", eligi
                              for value in anchor["alternatives"]
                              if re.fullmatch(r"[A-Za-z]+", value))
     for anchor in contract.get("stable_text_anchors", []):
+        selected_surface = anchor_visible
+        selected_non_record = non_record_visible
+        if control_soup is not None and "visible_control" in anchor:
+            control_text = _ordinary_control_text(control_soup, anchor["visible_control"])
+            selected_surface = (anchor_visible if anchor_visible is not None else visible) + "\n" + control_text
+            if non_record_visible is not None:
+                selected_non_record = non_record_visible + "\n" + control_text
         matched = _anchor_matches(anchor, records, visible, schema,
-                                  non_record_visible, anchor_visible, registered_words)
+                                  selected_non_record, selected_surface, registered_words)
         if original_markdown_visible is not None:
             literal_matches = _anchor_matches(
                 anchor, records, visible, schema, non_record_visible,

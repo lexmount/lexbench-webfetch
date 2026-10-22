@@ -57050,24 +57050,192 @@
       "artifact": "Training exercises\nHome\nLogin",
       "ok": true,
       "expected_task_pass": false
+    },
+    {
+      "id": "visible-control-visible-button",
+      "category": "answer-surface",
+      "root_cause": "visible_control_attribute_scope",
+      "failure_mode": "false-negative",
+      "case": {
+        "id": "visible-control-regression",
+        "url": "https://example.test/archive",
+        "task_kind": "body",
+        "min_content_chars": 1,
+        "acceptance_contract": {
+          "version": 1,
+          "schema": "body_text",
+          "minimum_records": 0,
+          "stable_text_role": "required",
+          "stable_text_anchors": [
+            {
+              "id": "control",
+              "alternatives": [
+                "Search archive"
+              ],
+              "visible_control": {
+                "selector": "input",
+                "attribute": "value"
+              }
+            }
+          ]
+        }
+      },
+      "artifact": "<p>Archive content.</p><input type=\"submit\" value=\"Search archive\">",
+      "ok": true,
+      "expected_task_pass": true,
+      "expected_metrics": {
+        "stable_task_pass": true
+      }
+    },
+    {
+      "id": "visible-control-hidden-button",
+      "category": "answer-surface",
+      "root_cause": "visible_control_attribute_scope",
+      "failure_mode": "false-positive",
+      "case": {
+        "id": "visible-control-regression",
+        "url": "https://example.test/archive",
+        "task_kind": "body",
+        "min_content_chars": 1,
+        "acceptance_contract": {
+          "version": 1,
+          "schema": "body_text",
+          "minimum_records": 0,
+          "stable_text_role": "required",
+          "stable_text_anchors": [
+            {
+              "id": "control",
+              "alternatives": [
+                "Search archive"
+              ],
+              "visible_control": {
+                "selector": "input",
+                "attribute": "value"
+              }
+            }
+          ]
+        }
+      },
+      "artifact": "<p>Archive content.</p><input type=\"submit\" value=\"Search archive\" hidden>",
+      "ok": true,
+      "expected_task_pass": false,
+      "expected_metrics": {
+        "stable_task_pass": false
+      }
+    },
+    {
+      "id": "native-disclosure-closed-details",
+      "category": "answer-surface",
+      "root_cause": "closed_disclosure_visibility",
+      "failure_mode": "false-positive",
+      "case": {
+        "id": "native-disclosure-regression",
+        "url": "https://example.test/article",
+        "task_kind": "body",
+        "min_content_chars": 1,
+        "acceptance_contract": {
+          "version": 1,
+          "schema": "body_text",
+          "minimum_records": 0,
+          "stable_text_role": "required",
+          "stable_text_anchors": [
+            {
+              "id": "visible-label",
+              "alternatives": [
+                "Visible explanation"
+              ]
+            }
+          ]
+        }
+      },
+      "artifact": "<details><summary>Overview</summary>Visible explanation</details>",
+      "ok": true,
+      "expected_task_pass": false,
+      "expected_metrics": {
+        "stable_task_pass": false
+      }
+    },
+    {
+      "id": "native-disclosure-open-details",
+      "category": "answer-surface",
+      "root_cause": "closed_disclosure_visibility",
+      "failure_mode": "false-negative",
+      "case": {
+        "id": "native-disclosure-regression",
+        "url": "https://example.test/article",
+        "task_kind": "body",
+        "min_content_chars": 1,
+        "acceptance_contract": {
+          "version": 1,
+          "schema": "body_text",
+          "minimum_records": 0,
+          "stable_text_role": "required",
+          "stable_text_anchors": [
+            {
+              "id": "visible-label",
+              "alternatives": [
+                "Visible explanation"
+              ]
+            }
+          ]
+        }
+      },
+      "artifact": "<details open><summary>Overview</summary>Visible explanation</details>",
+      "ok": true,
+      "expected_task_pass": true,
+      "expected_metrics": {
+        "stable_task_pass": true
+      }
+    },
+    {
+      "id": "native-disclosure-closed-summary",
+      "category": "answer-surface",
+      "root_cause": "closed_disclosure_visibility",
+      "failure_mode": "false-negative",
+      "case": {
+        "id": "native-disclosure-regression",
+        "url": "https://example.test/article",
+        "task_kind": "body",
+        "min_content_chars": 1,
+        "acceptance_contract": {
+          "version": 1,
+          "schema": "body_text",
+          "minimum_records": 0,
+          "stable_text_role": "required",
+          "stable_text_anchors": [
+            {
+              "id": "visible-label",
+              "alternatives": [
+                "Visible explanation"
+              ]
+            }
+          ]
+        }
+      },
+      "artifact": "<details><summary>Visible explanation</summary>Hidden body</details>",
+      "ok": true,
+      "expected_task_pass": true,
+      "expected_metrics": {
+        "stable_task_pass": true
+      }
     }
   ],
   "superseded_cases": {
-    "owned-specific-image-alt-is-an-accessible-record-name": "specific-image-alternative-does-not-create-visible-record-name",
-    "nested-image-accessible-names-identify-linked-records": "image-alternatives-do-not-create-visible-record-names",
-    "dynamic-final-page-mismatch-cannot-be-counted-as-a-pass": "content-policy-dynamic-final-page-mismatch-cannot-be-counted-as-a-pass",
+    "inline-linked-card-visible-fields": "inline-linked-card-visible-fields-ambiguous-boundaries-rejected",
+    "explicit-contract-missing-page-identity-with-valid-body-stays-unknown": "explicit-contract-missing-page-identity-counts-as-failure",
+    "answer-title-does-not-inflate-body-length": "body-only-word-boundary-answer-title-does-not-inflate-body-length",
+    "required-final-url-missing-is-a-measured-failure": "content-policy-required-final-url-missing-is-a-measured-failure",
     "dynamic-search-query-mismatch-is-a-different-page": "content-policy-dynamic-search-query-mismatch-is-a-different-page",
+    "inline-accessible-card-visible-fields": "inline-accessible-card-visible-fields-ambiguous-boundaries-rejected",
     "dynamic-source-document-language-mismatch-is-not-verified": "content-policy-dynamic-source-document-language-mismatch-is-not-verified",
     "dynamic-undeclared-source-language-rejects-declared-language": "content-policy-dynamic-undeclared-source-language-rejects-declared-language",
-    "required-final-url-missing-is-a-measured-failure": "content-policy-required-final-url-missing-is-a-measured-failure",
-    "required-final-url-present-keeps-valid-body": "content-policy-required-final-url-present-keeps-valid-body",
-    "inline-linked-card-visible-fields": "inline-linked-card-visible-fields-ambiguous-boundaries-rejected",
-    "inline-accessible-card-visible-fields": "inline-accessible-card-visible-fields-ambiguous-boundaries-rejected",
-    "body-unfenced-native-table-code-retained": "body-unfenced-table-is-markup-not-literal-code",
-    "dynamic-matching-final-page-and-language-remain-eligible": "query-sensitive-dynamic-matching-final-page-and-language-remain-eligible",
     "answer-title-supplies-required-fact": "body-only-word-boundary-answer-title-supplies-required-fact",
-    "answer-title-does-not-inflate-body-length": "body-only-word-boundary-answer-title-does-not-inflate-body-length",
-    "explicit-contract-missing-page-identity-with-valid-body-stays-unknown": "explicit-contract-missing-page-identity-counts-as-failure"
+    "dynamic-final-page-mismatch-cannot-be-counted-as-a-pass": "content-policy-dynamic-final-page-mismatch-cannot-be-counted-as-a-pass",
+    "body-unfenced-native-table-code-retained": "body-unfenced-table-is-markup-not-literal-code",
+    "nested-image-accessible-names-identify-linked-records": "image-alternatives-do-not-create-visible-record-names",
+    "owned-specific-image-alt-is-an-accessible-record-name": "specific-image-alternative-does-not-create-visible-record-name",
+    "required-final-url-present-keeps-valid-body": "content-policy-required-final-url-present-keeps-valid-body",
+    "dynamic-matching-final-page-and-language-remain-eligible": "query-sensitive-dynamic-matching-final-page-and-language-remain-eligible"
   },
   "superseded_controls": {
     "frozen_scorer_sha256": "ceb62fb821e6777d24a015ff713f406faecfff6181b0601b8e3ea2adffbf7c10",
