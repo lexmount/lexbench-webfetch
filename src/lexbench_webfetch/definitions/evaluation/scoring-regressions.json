@@ -56770,6 +56770,286 @@
       "artifact": "![Photo](https://images.pexels.com/photos/12377232/pexels-photo-12377232.jpeg?w=640)",
       "ok": true,
       "expected_task_pass": false
+    },
+    {
+      "id": "localized-required-navigation-english",
+      "category": "acceptance-contract",
+      "root_cause": "Equivalent observed navigation labels must satisfy their declared group without dropping required navigation or substantive records.",
+      "failure_mode": "false-negative",
+      "case": {
+        "id": "localized-training",
+        "url": "https://example.test/training",
+        "task_kind": "body",
+        "min_content_chars": 1,
+        "acceptance_contract": {
+          "version": 1,
+          "schema": "body_text",
+          "minimum_records": 0,
+          "stable_text_anchors": [
+            {
+              "id": "title",
+              "alternatives": [
+                "Training exercises"
+              ]
+            },
+            {
+              "id": "home",
+              "alternatives": [
+                "首页",
+                "Home"
+              ]
+            },
+            {
+              "id": "login",
+              "alternatives": [
+                "登录",
+                "Login"
+              ]
+            }
+          ]
+        },
+        "composite_acceptance": {
+          "version": 1,
+          "groups": [
+            {
+              "id": "exercises",
+              "kind": "table",
+              "minimum_records": 2,
+              "required_columns": [
+                {
+                  "id": "number",
+                  "kind": "text",
+                  "aliases": [
+                    "ID"
+                  ],
+                  "pattern": "^[A-Z][0-9]+$"
+                },
+                {
+                  "id": "name",
+                  "kind": "text",
+                  "aliases": [
+                    "Name"
+                  ]
+                }
+              ],
+              "identity_column": "number"
+            }
+          ]
+        }
+      },
+      "artifact": "Training exercises\nHome\nLogin\n\n| ID | Name |\n| --- | --- |\n| A1 | Addition |\n| A2 | Multiplication |\n",
+      "ok": true,
+      "expected_task_pass": true
+    },
+    {
+      "id": "localized-required-navigation-chinese",
+      "category": "acceptance-contract",
+      "root_cause": "Equivalent observed navigation labels must satisfy their declared group without dropping required navigation or substantive records.",
+      "failure_mode": "false-negative",
+      "case": {
+        "id": "localized-training",
+        "url": "https://example.test/training",
+        "task_kind": "body",
+        "min_content_chars": 1,
+        "acceptance_contract": {
+          "version": 1,
+          "schema": "body_text",
+          "minimum_records": 0,
+          "stable_text_anchors": [
+            {
+              "id": "title",
+              "alternatives": [
+                "Training exercises"
+              ]
+            },
+            {
+              "id": "home",
+              "alternatives": [
+                "首页",
+                "Home"
+              ]
+            },
+            {
+              "id": "login",
+              "alternatives": [
+                "登录",
+                "Login"
+              ]
+            }
+          ]
+        },
+        "composite_acceptance": {
+          "version": 1,
+          "groups": [
+            {
+              "id": "exercises",
+              "kind": "table",
+              "minimum_records": 2,
+              "required_columns": [
+                {
+                  "id": "number",
+                  "kind": "text",
+                  "aliases": [
+                    "ID"
+                  ],
+                  "pattern": "^[A-Z][0-9]+$"
+                },
+                {
+                  "id": "name",
+                  "kind": "text",
+                  "aliases": [
+                    "Name"
+                  ]
+                }
+              ],
+              "identity_column": "number"
+            }
+          ]
+        }
+      },
+      "artifact": "Training exercises\n首页\n登录\n\n| ID | Name |\n| --- | --- |\n| A1 | Addition |\n| A2 | Multiplication |\n",
+      "ok": true,
+      "expected_task_pass": true
+    },
+    {
+      "id": "localized-required-navigation-missing",
+      "category": "acceptance-contract",
+      "root_cause": "Equivalent observed navigation labels must satisfy their declared group without dropping required navigation or substantive records.",
+      "failure_mode": "false-positive",
+      "case": {
+        "id": "localized-training",
+        "url": "https://example.test/training",
+        "task_kind": "body",
+        "min_content_chars": 1,
+        "acceptance_contract": {
+          "version": 1,
+          "schema": "body_text",
+          "minimum_records": 0,
+          "stable_text_anchors": [
+            {
+              "id": "title",
+              "alternatives": [
+                "Training exercises"
+              ]
+            },
+            {
+              "id": "home",
+              "alternatives": [
+                "首页",
+                "Home"
+              ]
+            },
+            {
+              "id": "login",
+              "alternatives": [
+                "登录",
+                "Login"
+              ]
+            }
+          ]
+        },
+        "composite_acceptance": {
+          "version": 1,
+          "groups": [
+            {
+              "id": "exercises",
+              "kind": "table",
+              "minimum_records": 2,
+              "required_columns": [
+                {
+                  "id": "number",
+                  "kind": "text",
+                  "aliases": [
+                    "ID"
+                  ],
+                  "pattern": "^[A-Z][0-9]+$"
+                },
+                {
+                  "id": "name",
+                  "kind": "text",
+                  "aliases": [
+                    "Name"
+                  ]
+                }
+              ],
+              "identity_column": "number"
+            }
+          ]
+        }
+      },
+      "artifact": "Training exercises\nHome\n\n| ID | Name |\n| --- | --- |\n| A1 | Addition |\n| A2 | Multiplication |\n",
+      "ok": true,
+      "expected_task_pass": false
+    },
+    {
+      "id": "localized-required-navigation-without-records",
+      "category": "acceptance-contract",
+      "root_cause": "Equivalent observed navigation labels must satisfy their declared group without dropping required navigation or substantive records.",
+      "failure_mode": "false-positive",
+      "case": {
+        "id": "localized-training",
+        "url": "https://example.test/training",
+        "task_kind": "body",
+        "min_content_chars": 1,
+        "acceptance_contract": {
+          "version": 1,
+          "schema": "body_text",
+          "minimum_records": 0,
+          "stable_text_anchors": [
+            {
+              "id": "title",
+              "alternatives": [
+                "Training exercises"
+              ]
+            },
+            {
+              "id": "home",
+              "alternatives": [
+                "首页",
+                "Home"
+              ]
+            },
+            {
+              "id": "login",
+              "alternatives": [
+                "登录",
+                "Login"
+              ]
+            }
+          ]
+        },
+        "composite_acceptance": {
+          "version": 1,
+          "groups": [
+            {
+              "id": "exercises",
+              "kind": "table",
+              "minimum_records": 2,
+              "required_columns": [
+                {
+                  "id": "number",
+                  "kind": "text",
+                  "aliases": [
+                    "ID"
+                  ],
+                  "pattern": "^[A-Z][0-9]+$"
+                },
+                {
+                  "id": "name",
+                  "kind": "text",
+                  "aliases": [
+                    "Name"
+                  ]
+                }
+              ],
+              "identity_column": "number"
+            }
+          ]
+        }
+      },
+      "artifact": "Training exercises\nHome\nLogin",
+      "ok": true,
+      "expected_task_pass": false
     }
   ],
   "superseded_cases": {
