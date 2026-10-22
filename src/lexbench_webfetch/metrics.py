@@ -891,7 +891,7 @@ def evaluate_content(
                 result["stable_task_errors"].append("content_too_short")
         result["content_pass"] = bool(
             declared_body_pass and declared_pattern_pass and result["stable_task_pass"]
-            and result["fact_coverage_pass"] and not forbidden
+            and result["fact_coverage_pass"] and legacy_pass and length_pass and not forbidden
         )
         result["content_decision_basis"] = (
             "declared_content_requirements_with_stable_text_diagnostics"

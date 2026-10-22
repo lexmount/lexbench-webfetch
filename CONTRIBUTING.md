@@ -64,7 +64,10 @@ legitimately have no article body. Navigation and footer words do not establish
 that a news feed or article was retrieved.
 
 Use the existing fact, body-region, record, pattern, resource and file checks.
-Combine the applicable requirements in the task definition. Do not implement a
+Combine the applicable requirements in the task definition. For record-only or
+resource-only deliveries, set `content_score_applicable: false` to omit the default
+body-length and literal checks; explicit facts and body-region requirements still
+apply. Do not implement a
 separate scorer for a site or report family. `score_attempt` exposes the selected
 `acceptance_checks`; `task_passed` requires all of them. Undeclared checks are
 omitted. Missing evidence for a declared requirement is unavailable and cannot

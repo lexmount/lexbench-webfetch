@@ -158,8 +158,8 @@ def score_attempt(
     result.update(request_ok=ok, request_status_basis=status_basis,
                   normalized_named_link_count=len(links))
     language_page_identity = bool(
-        case.get("expected_final_url")
-        and (case.get("expected_document_language") or case.get("target_language"))
+        case.get("expected_document_language") or case.get("target_language")
+        or case.get("expected_document_language_present") is False
     )
     risk_navigation = (
         ((case.get("source_benchmark") or {}).get("risk_control") or {}).get(
@@ -183,7 +183,7 @@ def score_attempt(
         )
         final_consistent = bool(
             isinstance(final_url, str) and final_url
-            and _same_page_url(final_url, case["expected_final_url"])
+            and _same_page_url(final_url, case.get("expected_final_url") or case["url"])
         )
         language_consistent = (
             observed_language == "" if not language_present else bool(
@@ -248,8 +248,7 @@ def score_attempt(
         declared_regions
         and len(measured_regions) == len(declared_regions)
         and all(region.get("coverage") == 1.0 for region in measured_regions)
-        and result.get("content_pass")
-        and (not case.get("acceptance_contract") or result.get("stable_task_pass"))
+        and result.get("body_coverage_pass")
     )
     if ((result["task_kind"] == "body" or declared_regions)
             and result["declared_truncation_hits"]
@@ -346,8 +345,7 @@ def acceptance_checks(case: dict, metrics: dict) -> dict[str, bool | None]:
     if case.get('content_score_applicable', True):
         if case.get('expected_any'):
             checks['literals'] = metrics.get('legacy_marker_pass')
-        if 'min_content_chars' in case:
-            checks['length'] = metrics.get('content_length_pass')
+        checks['length'] = metrics.get('content_length_pass')
     if case.get('required_facts'):
         checks['facts'] = metrics.get('fact_coverage_pass')
     if case.get('required_patterns'):

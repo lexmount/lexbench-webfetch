@@ -493,7 +493,7 @@ class StableTaskTests(unittest.TestCase):
             {"id": "section", "alternatives": ["Product catalog", "Available products"]},
             {"id": "explanation", "alternatives": ["Prices include tax"]}])
         text = "# Available products\nPrices include tax\n\nNew coat\n$19\n\nNew scarf\n$99"
-        result = evaluate_content(text, ["Old title"],
+        result = evaluate_content(text, [],
                                   ground_truth_main_content="Old title Old price", acceptance_contract=rules)
         self.assertTrue(result["stable_structure_pass"])
         self.assertTrue(result["stable_content_pass"])
