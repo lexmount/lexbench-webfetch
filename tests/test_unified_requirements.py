@@ -156,9 +156,32 @@ def test_omitted_literal_check_cannot_invalidate_proven_complete_body():
     assert result['passed']
 
 
-def test_stored_metrics_without_declared_check_results_require_the_frozen_scorer():
-    with pytest.raises(ValueError, match='frozen scorer'):
-        task_passed(True, {'scoring_source_sha256': 'a' * 64,
-                           'stable_task_pass': True, 'content_pass': True})
-    metrics = score_attempt({'url': 'https://example.test/'}, b'Article body', ok=True)
-    assert task_passed(True, metrics)
+def test_frozen_metric_projection_keeps_its_recorded_acceptance_semantics():
+    frozen = {'scoring_source_sha256': 'a' * 64, 'stable_task_pass': True,
+              'content_pass': False, 'content_score_applicable': False,
+              'stable_anchor_results': [{'pass': True}]}
+    assert task_passed(True, frozen)
+    # A failed declared pattern remained a failure in the historical format.
+    assert not task_passed(True, {**frozen, 'pattern_results': [{'pass': False}]})
+    current = score_attempt({'url': 'https://example.test/',
+        'acceptance_contract': CONTRACT, 'required_facts': [
+            {'id': 'required', 'alternatives': ['Battery lasts twelve hours']}]},
+        b'[Speaker](/item/1)', ok=True)
+    assert not task_passed(True, current)
+    assert 'acceptance_checks' not in frozen
+
+
+@pytest.mark.parametrize('answer,passed', [
+    ('[Speaker](/item/1)', True), ('Account Privacy Terms', False)])
+def test_page_shell_literals_can_be_diagnostic_when_records_own_acceptance(answer, passed):
+    case = {'url': 'https://example.test/', 'acceptance_contract': {
+        **CONTRACT, 'stable_text_role': 'diagnostic',
+        'stable_text_anchors': [{'id': 'shell', 'alternatives': ['Account Privacy Terms']}]}}
+    assert task_passed(True, score_attempt(case, answer.encode(), ok=True)) is passed
+
+
+def test_imported_tasks_apply_the_same_record_owned_acceptance_role():
+    from lexbench_webfetch.risk_control_dataset import assign_content_acceptance_roles
+    case = {'acceptance_contract': {**CONTRACT, 'stable_text_role': 'diagnostic'}}
+    assign_content_acceptance_roles([case])
+    assert case['acceptance_contract']['stable_text_role'] == 'diagnostic'

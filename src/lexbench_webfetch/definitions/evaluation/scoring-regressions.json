@@ -57293,6 +57293,66 @@
       "final_url": "https://example.test/",
       "ok": true,
       "expected_task_pass": false
+    },
+    {
+      "id": "diagnostic-shell-with-required-record-record",
+      "category": "structured-extraction",
+      "root_cause": "page_shell_role_tied_to_record_schema",
+      "failure_mode": "false-negative",
+      "case": {
+        "url": "https://example.test/",
+        "acceptance_contract": {
+          "version": 1,
+          "schema": "named_link",
+          "minimum_records": 1,
+          "hosts": [
+            "example.test"
+          ],
+          "entry_path": "/item/\\d+",
+          "stable_text_role": "diagnostic",
+          "stable_text_anchors": [
+            {
+              "id": "shell",
+              "alternatives": [
+                "Account Privacy Terms"
+              ]
+            }
+          ]
+        }
+      },
+      "artifact": "[Speaker](/item/1)",
+      "ok": true,
+      "expected_task_pass": true
+    },
+    {
+      "id": "diagnostic-shell-with-required-record-shell",
+      "category": "structured-extraction",
+      "root_cause": "page_shell_role_tied_to_record_schema",
+      "failure_mode": "false-positive",
+      "case": {
+        "url": "https://example.test/",
+        "acceptance_contract": {
+          "version": 1,
+          "schema": "named_link",
+          "minimum_records": 1,
+          "hosts": [
+            "example.test"
+          ],
+          "entry_path": "/item/\\d+",
+          "stable_text_role": "diagnostic",
+          "stable_text_anchors": [
+            {
+              "id": "shell",
+              "alternatives": [
+                "Account Privacy Terms"
+              ]
+            }
+          ]
+        }
+      },
+      "artifact": "Account Privacy Terms",
+      "ok": true,
+      "expected_task_pass": false
     }
   ],
   "superseded_cases": {

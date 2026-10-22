@@ -84,19 +84,6 @@ def test_empty_composite_owner_cannot_make_stable_text_diagnostic():
         assign_content_acceptance_roles([case])
 
 
-def test_structured_contract_cannot_relax_its_stable_text():
-    contract = {
-        "version": 1,
-        "schema": "named_link",
-        "minimum_records": 1,
-        "hosts": ["example.test"],
-        "entry_path": "/item/[0-9]+",
-        "stable_text_role": "diagnostic",
-    }
-    with pytest.raises(ValueError, match="body-text"):
-        validate_acceptance_contract(contract)
-
-
 def test_compiler_policy_does_not_infer_diagnostic_from_gate_presence():
     body = body_case()
     del body["acceptance_contract"]["stable_text_role"]

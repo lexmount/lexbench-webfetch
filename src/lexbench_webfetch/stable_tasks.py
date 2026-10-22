@@ -805,8 +805,6 @@ def validate_acceptance_contract(contract: dict) -> None:
         raise ValueError("Unknown stable acceptance contract fields")
     if contract.get("stable_text_role", "required") not in {"required", "diagnostic"}:
         raise ValueError("Invalid stable text role")
-    if contract.get("stable_text_role") == "diagnostic" and contract["schema"] != "body_text":
-        raise ValueError("Diagnostic stable text requires a body-text contract")
     if contract.get('content_scope', 'legacy') not in {'legacy', 'target_content', 'full_page_stable_coverage'}:
         raise ValueError('Invalid stable content scope')
     if contract.get('content_scope') == 'target_content' and any(

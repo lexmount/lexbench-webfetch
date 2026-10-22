@@ -74,6 +74,10 @@ omitted. Missing evidence for a declared requirement is unavailable and cannot
 pass. Full-text overlap remains diagnostic unless an explicit acceptance rule
 requires the content.
 
+A positive record-count requirement can own acceptance while page-shell anchors
+remain diagnostic, using `stable_text_role: "diagnostic"`. The same role applies
+to every record schema.
+
 `required_facts` are requirements even when a stable record contract is present.
 Do not put obsolete prices, rankings or changing membership in this field just
 to obtain diagnostic overlap metrics. Keep historical reference text in its
