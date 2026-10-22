@@ -209,7 +209,9 @@ def _review_annotation(definition, revision_path, identifier, root, changes):
         check_scoring_regressions(controls)
         records.append({'suite': identifier, 'case_id': change['case_id'],
                         'reason': item['reason'], 'sources': sources, 'changes': delta,
-                        'regression_ids': controls})
+                        'regression_ids': controls,
+                        'source_coverage': ('page_bytes_declared' if any(source['path'] != 'dataset.json' for source in sources)
+                                            else 'task_and_source_hashes_only')})
     return {'revision': definition['id'], 'revision_sha256': digest(revision_path),
             'review_sha256': digest(reviews_path), 'changes': records}
 
@@ -274,6 +276,64 @@ def _apply_annotation_revision(identifier: str, dataset: dict, revision: str):
     return result, review
 
 
+def check_revision_references(dataset: dict, review: dict, source: Path) -> dict:
+    """Run frozen reference and error-page controls without treating absent text as a pass."""
+    from html import escape
+    from .scoring import score_attempt, SCORING_SOURCE_SHA256
+    from .metrics import task_passed
+    cases = {case['id']: case for case in dataset['cases']}
+    results = []
+    for item in review['changes']:
+        case = cases[item['case_id']]
+        candidates = []
+        for field in ('ground_truth_main_content', 'reference_answer'):
+            if isinstance(case.get(field), str) and case[field].strip():
+                candidates.append((case[field].encode(), {'path': 'dataset.json', 'field': field}))
+        for binding in item['sources']:
+            if binding['path'] == 'dataset.json':
+                continue
+            path = contained_path(source, binding['path'], reject_symlinks=True)
+            if digest(path) != binding['sha256']:
+                raise ValueError('Reference control source hash mismatch: ' + binding['path'])
+            raw = path.read_bytes()
+            if path.suffix == '.json':
+                payload = json.loads(raw)
+                resources = payload.get('resource_candidates') if isinstance(payload, dict) else None
+                if isinstance(resources, list):
+                    image_answer = bool(case.get('expected_resources')) and all(
+                        resource.get('kind') == 'image' for resource in case['expected_resources'])
+                    lines = []
+                    for resource in resources:
+                        url = resource.get('url')
+                        if isinstance(url, str):
+                            lines.append(('<img src="' if image_answer else '<a href="')
+                                         + escape(url, quote=True) + ('">' if image_answer else '">Reference</a>'))
+                    raw = '\n'.join(lines).encode()
+                elif isinstance(payload, dict) and isinstance(payload.get('reference'), str):
+                    raw = payload['reference'].encode()
+                else:
+                    continue
+            candidates.append((raw, {'path': binding['path'], 'sha256': binding['sha256']}))
+        controls = []
+        for raw, binding in candidates:
+            metrics = score_attempt(case, raw, ok=True)
+            controls.append({'source': binding, 'answer_sha256': hashlib.sha256(raw).hexdigest(),
+                             'passed': task_passed(True, metrics, case.get('task_kind', 'body'))})
+            if controls[-1]['passed']:
+                break
+        negative = b'<html><body>Verify you are human. Access Denied. CAPTCHA.</body></html>'
+        metrics = score_attempt(case, negative, ok=True)
+        negative_pass = task_passed(True, metrics, case.get('task_kind', 'body'))
+        status = ('passed' if any(control['passed'] for control in controls) and not negative_pass
+                  else 'failed' if controls else 'unavailable')
+        results.append({'case_id': case['id'], 'status': status, 'reference_candidates': controls,
+                        'error_page_passed': negative_pass,
+                        'reason': ('The frozen inputs retain source hashes but no executable reference answer.'
+                                   if not controls else '')})
+    return {'scoring_source_sha256': SCORING_SOURCE_SHA256,
+            'complete': all(result['status'] == 'passed' for result in results), 'cases': results}
+
+
 def export(identifier: str, source: Path, output: Path, *, revision: str | None = None) -> Path:
     """Copy only declared inputs after verification; never overwrite a run or input tree."""
     verify_inputs(identifier, source)
@@ -293,6 +353,9 @@ def export(identifier: str, source: Path, output: Path, *, revision: str | None 
         if revision is not None:
             dataset_path = stage / manifest['dataset']
             revised, review = _apply_annotation_revision(identifier, read(dataset_path), revision)
+            review['reference_controls'] = check_revision_references(revised, review, stage)
+            if any(item['status'] == 'failed' for item in review['reference_controls']['cases']):
+                raise ValueError('Revised contract rejects its frozen reference or accepts an error page')
             (stage/'annotation-review.json').write_text(json.dumps(review, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
             dataset_path.write_text(json.dumps(revised, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
         # A materialized dataset is intentionally independent of the historical

@@ -45,3 +45,18 @@ Text field patterns consume their matched spans, so distinct declared fields may
 Required facts use body text by default. An information task may declare `match_scope: "body_or_title"` for a fact that explicitly requests a page title. This permits the delivered title field, an HTML document title, or a scalar top-level Markdown front-matter title. Keywords and descriptions cannot supply the title, and title metadata cannot supply other facts.
 
 Contract-declared field aliases support Unicode labels. The built-in English metadata-role recognition is a limited legacy fallback, not an automatic translation dictionary. Declare the language-specific labels needed by a task rather than treating every colon in prose as a metadata separator. Body matching treats unfenced table tags as HTML, including in mixed prose. Literal code needs an explicit code fence or escape; a standalone table tag cannot disable HTML visibility rules for hidden elements or attributes.
+
+### Reference controls for annotation revisions
+
+A revision export runs the frozen reference through the public scorer and task
+predicate, then checks that an error page fails. The resulting
+`annotation-review.json` records the source and answer hashes, outcomes and scorer
+identity. Resource references use URLs retained by an independent source capture,
+serialized in the requested answer format; they are not generated from expected
+URLs. A known reference that fails the revised contract blocks export.
+
+Some historical input bundles retain observation hashes without the original
+page bytes or an executable reference answer. Their control is `unavailable`,
+never passed, and the review's `complete` flag remains false. Exporting these
+frozen inputs preserves their historical definition; it does not certify the
+missing evidence or create a new independent source observation.

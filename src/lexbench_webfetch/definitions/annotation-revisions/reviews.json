@@ -190,7 +190,7 @@
             {
               "path": "dataset.json",
               "sha256": "0da2bb30aaabe3ca2b93ec17b4cb88cdc1cf3ea46336bb3777fdb21c1f211b84",
-              "scope": "Frozen task and independently captured reference inputs for replacement-ja-nintendo-mario"
+              "scope": "Frozen task contract and independent observation hashes for replacement-ja-nintendo-mario; the original page bytes are not retained in this input bundle."
             }
           ],
           "regression_ids": [
@@ -207,7 +207,7 @@
             {
               "path": "dataset.json",
               "sha256": "0da2bb30aaabe3ca2b93ec17b4cb88cdc1cf3ea46336bb3777fdb21c1f211b84",
-              "scope": "Frozen task and independently captured reference inputs for replacement-ja-nintendo-zelda"
+              "scope": "Frozen task contract and independent observation hashes for replacement-ja-nintendo-zelda; the original page bytes are not retained in this input bundle."
             }
           ],
           "regression_ids": [
@@ -224,7 +224,7 @@
             {
               "path": "dataset.json",
               "sha256": "165b888133e859304b035d74183dd40bf7ab609cac78bb6ae6e75b645c1de426",
-              "scope": "Frozen task and independently captured reference inputs for risk-diverse-074"
+              "scope": "Frozen task contract and independent observation hashes for risk-diverse-074; the original page bytes are not retained in this input bundle."
             }
           ],
           "regression_ids": [
