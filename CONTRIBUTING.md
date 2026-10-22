@@ -53,3 +53,7 @@ uv run --frozen lexbench-webfetch inspect-revision \
 `export --revision` writes `annotation-review.json` beside the dataset, including
 the field differences, source hashes and executed controls. It preserves the
 original input files and the revision's existing dataset identity.
+
+## License
+
+Contributions use the [Apache License 2.0](LICENSE). Preserve third-party licenses, copyright notices and source attributions described in [THIRD_PARTY](THIRD_PARTY.md).

@@ -5,7 +5,7 @@
 [English](README.md) · [简体中文](docs/README.zh-CN.md)
 
 [![CI](https://github.com/lexmount/lexbench-webfetch/actions/workflows/ci.yml/badge.svg)](https://github.com/lexmount/lexbench-webfetch/actions/workflows/ci.yml)
-[![License: MIT](https://img.shields.io/badge/code-MIT-51735b)](LICENSE)
+[![License: Apache 2.0](https://img.shields.io/badge/code-Apache--2.0-51735b)](LICENSE)
 [![Python 3.11+](https://img.shields.io/badge/Python-3.11%2B-356a91)](pyproject.toml)
 
 [Tasks](#task-suites) · [Quickstart](#quickstart) · [Evaluation protocol](docs/protocol.md) · [Contributing](CONTRIBUTING.md)
@@ -131,7 +131,7 @@ Browser adapters, credentials, measured runs, report renderers and hosting confi
 
 Read [CONTRIBUTING](CONTRIBUTING.md) before changing a task or proposing a result. Run `make check` to validate the definitions and test the input tools. Report security issues through [SECURITY](SECURITY.md).
 
-Project-owned code and definitions use the [MIT license](LICENSE); third-party source material retains its own terms, described in [THIRD_PARTY](THIRD_PARTY.md).
+Project-owned code and definitions use the [Apache 2.0 license](LICENSE); third-party source material retains its own terms, described in [THIRD_PARTY](THIRD_PARTY.md).
 
 ## Cite LexBench Web Fetch
 
