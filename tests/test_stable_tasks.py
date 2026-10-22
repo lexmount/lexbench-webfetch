@@ -467,16 +467,16 @@ class StableTaskTests(unittest.TestCase):
             with self.subTest(value=value), self.assertRaises(ValueError):
                 validate_acceptance_contract(value)
 
-    def test_contract_metrics_decision_is_independent_of_frozen_literal_metrics(self):
+    def test_declared_facts_remain_required_with_a_record_contract(self):
         rules = contract("product")
         before = deepcopy(rules)
         result = evaluate_content("Alpha\n$10\n\nBeta\n$20", ["Old name"], required_facts=[
             {"id": "frozen", "alternatives": ["Old title $50"]}], min_content_chars=10000,
             ground_truth_main_content="Old title $50", acceptance_contract=rules)
-        self.assertTrue(result["content_pass"])
+        self.assertFalse(result["content_pass"])
         self.assertEqual(result["fact_coverage"], 0)
         self.assertIsNotNone(result["word_f1"])
-        self.assertTrue(task_passed(True, result, "structure"))
+        self.assertFalse(task_passed(True, result, "structure"))
         self.assertFalse(task_passed(False, result))
         self.assertEqual(rules, before)
         self.assertIsNone(result["factual_correctness"])
@@ -493,7 +493,7 @@ class StableTaskTests(unittest.TestCase):
             {"id": "section", "alternatives": ["Product catalog", "Available products"]},
             {"id": "explanation", "alternatives": ["Prices include tax"]}])
         text = "# Available products\nPrices include tax\n\nNew coat\n$19\n\nNew scarf\n$99"
-        result = evaluate_content(text, ["Old title"], required_facts=[{"id": "old", "alternatives": ["Old price"]}],
+        result = evaluate_content(text, [],
                                   ground_truth_main_content="Old title Old price", acceptance_contract=rules)
         self.assertTrue(result["stable_structure_pass"])
         self.assertTrue(result["stable_content_pass"])

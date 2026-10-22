@@ -118,7 +118,7 @@ def test_xml_declarations_cannot_crash_body_or_resource_scoring(declaration):
     body_case = {"url": "https://example.test/spec", "expected_any": ["Specification"]}
     raw = ("Specification\n" + declaration).encode()
     assert task_passed(True, score_attempt(body_case, raw, ok=True))
-    resource_case = {**body_case, "task_kind": "resource",
+    resource_case = {**body_case, "task_kind": "resource", "content_score_applicable": False,
         "expected_resources": [{"id": "image", "urls": ["/target.png"]}]}
     for answer, passed in [(declaration + '\n<iframe srcdoc="example"></iframe>\n'
         + '[Target](/target.png)', True), (declaration + '\n<iframe></iframe>', False)]:

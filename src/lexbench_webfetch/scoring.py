@@ -160,26 +160,21 @@ def score_attempt(
     ))
     result.update(request_ok=ok, request_status_basis=status_basis,
                   normalized_named_link_count=len(links))
-    dynamic_page_identity = bool(
-        case.get("track") == "dynamic"
-        and case.get("evaluation_url")
-        and case.get("expected_final_url")
-        and case.get("target_language")
-        and case.get("target_region")
+    language_page_identity = bool(
+        case.get("expected_document_language") or case.get("target_language")
+        or case.get("expected_document_language_present") is False
     )
     risk_navigation = (
         ((case.get("source_benchmark") or {}).get("risk_control") or {}).get(
             "navigation_contract"
         )
-        if case.get("track") == "risk_control"
-        else None
     )
     risk_page_identity = bool(
         isinstance(risk_navigation, dict)
         and isinstance(risk_navigation.get("requested_url"), str)
         and isinstance(risk_navigation.get("observed_final_url"), str)
     )
-    if dynamic_page_identity:
+    if language_page_identity:
         observed_language = (metadata or {}).get("document_language")
         language_present = case.get("expected_document_language_present", True)
         if not isinstance(language_present, bool):
@@ -187,11 +182,11 @@ def score_attempt(
         if not language_present and case.get("expected_document_language"):
             raise ValueError("An absent source language cannot have an expected language tag")
         expected_document_language = (
-            case.get("expected_document_language") or case["target_language"]
+            case.get("expected_document_language") or case.get("target_language")
         )
         final_consistent = bool(
             isinstance(final_url, str) and final_url
-            and _same_page_url(final_url, case["expected_final_url"])
+            and _same_page_url(final_url, case.get("expected_final_url") or case["url"])
         )
         language_consistent = (
             observed_language == "" if not language_present else bool(
@@ -256,10 +251,10 @@ def score_attempt(
         declared_regions
         and len(measured_regions) == len(declared_regions)
         and all(region.get("coverage") == 1.0 for region in measured_regions)
-        and result.get("content_pass")
-        and (not case.get("acceptance_contract") or result.get("stable_task_pass"))
+        and result.get("body_coverage_pass")
     )
-    if (result["task_kind"] == "body" and result["declared_truncation_hits"]
+    if ((result["task_kind"] == "body" or declared_regions)
+            and result["declared_truncation_hits"]
             and not exact_body_proven):
         result["content_pass"] = False
         if contract := case.get("acceptance_contract"):
@@ -267,6 +262,9 @@ def score_attempt(
             result["stable_content_pass"] = False
             if "declared_truncation" not in result["stable_task_errors"]:
                 result["stable_task_errors"].append("declared_truncation")
+    result['body_delivery_pass'] = bool(
+        result['body_coverage_pass']
+        and (not result['declared_truncation_hits'] or exact_body_proven))
     file_evaluation = (metadata or {}).get('file_evaluation')
     if result['task_kind'] == 'file' and isinstance(file_evaluation, dict) and ('raw_file_pass' not in result or delivered_files is not None):
         result['raw_file_pass'] = bool(file_evaluation.get('pass'))
@@ -340,8 +338,47 @@ def score_attempt(
         # A threshold is only an explicit task requirement, not a benchmark-wide
         # interpretation of continuous similarity as a pass rate.
         if 'ordered_tree_min_similarity' in case:
+            result['ordered_tree_pass'] = bool(
+                tree_result['score'] >= case['ordered_tree_min_similarity'])
             result['content_pass'] = bool(
-                ok and tree_result['score'] >= case['ordered_tree_min_similarity']
+                result['content_pass'] and ok and result['ordered_tree_pass']
                 and not result['forbidden_requirement_hits'])
+    result["acceptance_checks"] = acceptance_checks(case, result)
     result["scoring_source_sha256"] = SCORING_SOURCE_SHA256
     return result
+
+
+def acceptance_checks(case: dict, metrics: dict) -> dict[str, bool | None]:
+    """Select declared requirements, never a website- or provider-specific scorer.
+
+    Missing evidence for a selected requirement remains unavailable. Undeclared
+    requirements are omitted; similarity diagnostics never become pass gates.
+    """
+    kind = case.get('task_kind', 'body')
+    checks = {}
+    if case.get('acceptance_contract'):
+        checks['records_and_anchors'] = metrics.get('stable_task_pass')
+    elif (case.get('source_benchmark') or {}).get('mode') == 'dynamic_list_structure':
+        checks['records'] = metrics.get('list_task_pass')
+    elif kind == 'body':
+        checks['content'] = metrics.get('content_pass')
+    if case.get('content_score_applicable', True):
+        if case.get('expected_any'):
+            checks['literals'] = metrics.get('legacy_marker_pass')
+        checks['length'] = metrics.get('content_length_pass')
+    if case.get('required_facts'):
+        checks['facts'] = metrics.get('fact_coverage_pass')
+    if case.get('required_patterns'):
+        checks['patterns'] = metrics.get('pattern_pass')
+    if case.get('body_requirements'):
+        checks['body'] = metrics.get('body_delivery_pass')
+    if case.get('composite_acceptance'):
+        checks['composite'] = metrics.get('composite_acceptance_pass')
+    if case.get('expected_resources') or case.get('resource_output_contract') or kind == 'resource':
+        checks['resources'] = metrics.get('resource_pass')
+    if kind == 'file':
+        checks['file'] = metrics.get('raw_file_pass')
+    if 'ordered_tree_min_similarity' in case:
+        checks['tree'] = metrics.get('ordered_tree_pass')
+    checks.update(metrics.get('required_components', {}))
+    return checks

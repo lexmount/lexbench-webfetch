@@ -53,6 +53,8 @@ def assign_content_acceptance_roles(cases: list[dict]) -> None:
                 and case["composite_acceptance"].get("groups")
             )
             or contract.get("page_patterns")
+            or (type(contract.get("minimum_records")) is int
+                and contract["minimum_records"] > 0)
         ):
             raise ValueError(
                 "Diagnostic stable text requires body, composite, or page-pattern acceptance"
