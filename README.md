@@ -147,7 +147,7 @@ Project-owned code and definitions use the [Apache 2.0 license](LICENSE); third-
 
 ## Cite LexBench Web Fetch
 
-If you use the task definitions or scoring tools in published work, cite this repository and record the exact commit and suite used. GitHub's citation menu reads [CITATION.cff](CITATION.cff). For version 0.3.0:
+Use this citation or [CITATION.cff](CITATION.cff), and record the benchmark edition and suites used.
 
 ```bibtex
 @software{lexbench_webfetch_2026,
@@ -158,5 +158,3 @@ If you use the task definitions or scoring tools in published work, cite this re
   url = {https://github.com/lexmount/lexbench-webfetch}
 }
 ```
-
-Cite [Browser Eval](https://github.com/lexmount/browser-eval#cite-browser-eval) separately when using its execution harness, and cite upstream sources or benchmarks according to their attribution terms. This repository citation does not replace those citations. When using another version, update the version and year in the example and identify its tag or commit.
