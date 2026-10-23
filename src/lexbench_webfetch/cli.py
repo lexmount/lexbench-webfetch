@@ -15,6 +15,8 @@ def main() -> None:
     release.add_argument("--output", type=Path, required=True)
     release.add_argument("--benchmark", required=True)
     release.add_argument("--version", required=True)
+    release.add_argument("--scorer-revision", required=True,
+                         help="Full Git commit containing the selected scorer")
     release.add_argument("--previous", type=Path)
     release.add_argument("--change-note")
     compare = sub.add_parser("compare-releases", help="Check whether two result editions can be compared")
@@ -58,7 +60,8 @@ def main() -> None:
             previous = json.loads(args.previous.read_text()) if args.previous else None
             result = freeze_release(args.dataset, args.output, benchmark=args.benchmark,
                                     version=args.version, previous=previous,
-                                    change_note=args.change_note)
+                                    change_note=args.change_note,
+                                    scorer_revision=args.scorer_revision)
         elif args.command == "compare-releases":
             from .versions import compare_releases
             result = compare_releases(json.loads(args.left.read_text()),

@@ -71,17 +71,24 @@ def _validate(release: dict) -> tuple[int, int, int]:
                 "acceptance_sha256", "scoring_source_sha256"):
         if not isinstance(release.get(key), str) or not re.fullmatch(r"[0-9a-f]{64}", release[key]):
             raise ValueError("Release needs an immutable SHA-256: " + key)
+    revision = release.get("scorer_revision")
+    if revision is not None and (not isinstance(revision, str)
+                                 or not re.fullmatch(r"[0-9a-f]{40}", revision)):
+        raise ValueError("Scorer revision must be a full immutable Git commit")
     return version
 
 
 def create_release(dataset: dict, *, benchmark: str, version: str,
                    previous: dict | None = None, change_note: str | None = None,
-                   scoring_source_sha256: str = SCORING_SOURCE_SHA256) -> dict:
+                   scoring_source_sha256: str = SCORING_SOURCE_SHA256,
+                   scorer_revision: str | None = None) -> dict:
     """Identify an edition; source qualification and correction review stay upstream."""
     release = {"schema_version": 1, "kind": "benchmark_release",
                "benchmark": benchmark, "version": version,
                "dataset_sha256": _digest(dataset), **_measurement(dataset),
                "scoring_source_sha256": scoring_source_sha256}
+    if scorer_revision is not None:
+        release["scorer_revision"] = scorer_revision
     new = _validate(release)
     if previous is not None:
         old = _validate(previous)

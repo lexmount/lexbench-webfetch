@@ -142,9 +142,18 @@ def test_public_cli_freezes_and_compares_real_files(tmp_path, capsys, monkeypatc
     frozen = tmp_path / "release.json"
     monkeypatch.setattr("sys.argv", ["lexbench-webfetch", "release", "--dataset", str(source),
                                     "--output", str(frozen), "--benchmark", "sample-benchmark",
-                                    "--version", "1.0.0"])
+                                    "--version", "1.0.0", "--scorer-revision", "a" * 40])
     main()
     assert json.loads(capsys.readouterr().out)["version"] == "1.0.0"
     monkeypatch.setattr("sys.argv", ["lexbench-webfetch", "compare-releases", str(frozen), str(frozen)])
     main()
     assert json.loads(capsys.readouterr().out)["mode"] == "direct"
+
+
+def test_scorer_commit_is_a_locator_and_source_hash_owns_compatibility():
+    first = release(scorer_revision="a" * 40)
+    second = release(version="1.0.1", previous=first, scorer_revision="b" * 40)
+    assert first["scorer_revision"] == "a" * 40
+    assert compare_releases(first, second)["mode"] == "direct"
+    with pytest.raises(ValueError, match="Git commit"):
+        release(scorer_revision="main")

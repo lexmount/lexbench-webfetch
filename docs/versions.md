@@ -33,11 +33,14 @@ provider calls:
 uv run --frozen lexbench-webfetch release \
   --dataset /absolute/inputs/dataset.json \
   --output /absolute/inputs/benchmark-release.json \
-  --benchmark lexbench-webfetch --version 2.0.0
+  --benchmark lexbench-webfetch --version 2.0.0 \
+  --scorer-revision <full-40-character-scorer-commit>
 ```
 
 For a successor, add `--previous /absolute/previous/benchmark-release.json`.
-Scoring corrections also require a concrete `--change-note`. The tool rejects
+The scorer commit locates the code; the independently computed scoring-source
+hash fixes the actual evaluator bytes. Scoring corrections also require a
+concrete `--change-note`. The tool rejects
 an insufficient version bump and an existing output path. Keep the sidecar
 alongside frozen inputs, outside Git. It contains no provider measurements or
 local paths. Commit reusable definitions and publish the code through the
