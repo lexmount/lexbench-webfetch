@@ -12,6 +12,7 @@ from lexbench_webfetch.versions import (
 def test_installed_catalog_binds_every_registered_suite():
     from lexbench_webfetch.benchmark import registry
     release = catalog_release()
+    assert release["tag"] == "bench-v" + release["version"]
     entries = registry()["suites"]
     assert [row["suite"] for row in release["suites"]] == [row["id"] for row in entries]
     assert release["case_count"] == sum(row["case_count"] for row in entries)
@@ -29,7 +30,7 @@ def test_published_catalog_rejects_changed_population_rules_or_reference_binding
     elif change == "scorer":
         release["scoring_source_sha256"] = "0" * 64
     else:
-        release["tag"] = "benchmark-v99.0.0"
+        release["tag"] = "bench-v99.0.0"
     path = tmp_path / "release.json"
     path.write_text(json.dumps(release))
     with pytest.raises(ValueError):

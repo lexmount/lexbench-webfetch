@@ -6,12 +6,13 @@ the Python package version. A package upgrade does not upgrade a report.
 
 Use a readable `MAJOR.MINOR.PATCH` together with immutable SHA-256 bindings.
 Keep the exact repository commit in the harness dependency lock. A Git tag
-such as `benchmark-v2.0.1` gives a released commit a durable name; never move
+such as `bench-v2.0.1` gives a released commit a durable name; never move
 or overwrite a published release tag. A tag alone does not identify external
 reference bytes or a report's selected task population.
 
-Create `benchmark-vMAJOR.MINOR.PATCH` tags only in this benchmark repository.
-Browser Eval identifies harness and report-building code by full Git commit.
+Create `bench-vMAJOR.MINOR.PATCH` tags only in this benchmark repository.
+Browser Eval publishes software versions as `vMAJOR.MINOR.PATCH` and records the
+full Git commit for execution and report-building code.
 A report names the benchmark edition it uses, and the hosting platform's
 immutable version ID identifies each published build. Retain benchmark tags
 needed by published reports; do not create report, date or review-checkpoint tags.
@@ -33,7 +34,7 @@ their independent source evidence and executable correction controls.
 
 `lexbench-webfetch version` verifies the installed catalog's complete suite list,
 task definitions, frozen reference bindings and scorer against
-`definitions/benchmark-release.json`. The published `benchmark-vMAJOR.MINOR.PATCH`
+`definitions/benchmark-release.json`. The published `bench-vMAJOR.MINOR.PATCH`
 tag fixes that catalog. Full reference inputs remain separately hash-bound;
 the catalog does not replace the executable datasets or distribute their source
 captures. A report binds its actual selected population with the sidecar below;

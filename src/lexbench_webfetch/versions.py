@@ -171,7 +171,7 @@ def catalog_release(path: Path | None = None) -> dict:
     if release.get("schema_version") != 1 or release.get("kind") != "benchmark_catalog_release":
         raise ValueError("Unsupported benchmark catalog release")
     _version(release.get("version"))
-    if release.get("tag") != "benchmark-v" + release["version"]:
+    if release.get("tag") != "bench-v" + release["version"]:
         raise ValueError("Catalog release tag differs from its version")
     if release.get("scoring_source_sha256") != SCORING_SOURCE_SHA256:
         raise ValueError("Catalog release scoring source changed")
