@@ -9,7 +9,7 @@
       "category": "static_html",
       "track": "web",
       "description": "最小静态 HTML 基准。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -64,7 +64,7 @@
       "category": "long_article",
       "track": "web",
       "description": "长正文；事实组只使用文章稳定主题词。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -144,7 +144,7 @@
       "category": "technical_documentation",
       "track": "web",
       "description": "CowAgent 自带 Web Fetch 的中文技术文档。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -233,7 +233,7 @@
       "category": "technical_documentation",
       "track": "web",
       "description": "Lexmount 快速开始、鉴权头和响应字段。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -328,7 +328,7 @@
       "category": "developer_portal",
       "track": "web",
       "description": "GitHub 复杂模板与 README 正文。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -412,7 +412,7 @@
       "category": "ecommerce_static",
       "track": "web",
       "description": "教学用静态电商列表，验证商品、价格和库存。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -493,7 +493,7 @@
       "category": "javascript_rendering",
       "track": "web",
       "description": "识别只抓到页面壳的假成功。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -573,7 +573,7 @@
       "category": "table_structure",
       "track": "web",
       "description": "验证表头和示例行文本。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -662,7 +662,7 @@
       "category": "redirect",
       "track": "web",
       "description": "跨主机重定向后的完整 Example Domain 正文。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -717,7 +717,7 @@
       "track": "web",
       "task_kind": "body",
       "description": "真实零售网站的客户服务正文；避开动态商品榜单。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -753,7 +753,7 @@
       "category": "lightmount_render_documentation",
       "track": "web",
       "description": "来自 lightmount-dark render-quality seed；用于暴露 hydration、运行时 API 与文档模板差异。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -861,7 +861,7 @@
       "category": "lightmount_render_documentation",
       "track": "web",
       "description": "来自 lightmount-dark render-quality seed；用于暴露 hydration、运行时 API 与文档模板差异。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -942,7 +942,7 @@
       "category": "lightmount_render_documentation",
       "track": "web",
       "description": "来自 lightmount-dark render-quality seed；用于暴露 hydration、运行时 API 与文档模板差异。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -1022,7 +1022,7 @@
       "category": "lightmount_render_documentation",
       "track": "web",
       "description": "来自 lightmount-dark render-quality seed；用于暴露 hydration、运行时 API 与文档模板差异。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -1103,7 +1103,7 @@
       "category": "lightmount_render_documentation",
       "track": "web",
       "description": "来自 lightmount-dark render-quality seed；用于暴露 hydration、运行时 API 与文档模板差异。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -1183,7 +1183,7 @@
       "category": "lightmount_render_service",
       "track": "web",
       "description": "来自 lightmount-dark render-quality seed；用于暴露 hydration、运行时 API 与文档模板差异。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -1264,7 +1264,7 @@
       "category": "technical_documentation",
       "track": "web",
       "description": "当前公开页面；已由 Codex 使用真实浏览器或独立 Web Fetch 通道核验正文。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -1348,7 +1348,7 @@
       "category": "technical_documentation",
       "track": "web",
       "description": "当前公开页面；已由 Codex 使用真实浏览器或独立 Web Fetch 通道核验正文。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -1432,7 +1432,7 @@
       "category": "technical_documentation",
       "track": "web",
       "description": "当前公开页面；已由 Codex 使用真实浏览器或独立 Web Fetch 通道核验正文。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -1529,7 +1529,7 @@
       "category": "technical_documentation",
       "track": "web",
       "description": "当前公开页面；已由 Codex 使用真实浏览器或独立 Web Fetch 通道核验正文。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -1613,7 +1613,7 @@
       "category": "technical_documentation",
       "track": "web",
       "description": "当前公开页面；已由 Codex 使用真实浏览器或独立 Web Fetch 通道核验正文。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -1697,7 +1697,7 @@
       "category": "technical_documentation",
       "track": "web",
       "description": "当前公开页面；已由 Codex 使用真实浏览器或独立 Web Fetch 通道核验正文。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -1781,7 +1781,7 @@
       "category": "technical_documentation",
       "track": "web",
       "description": "当前公开页面；已由 Codex 使用真实浏览器或独立 Web Fetch 通道核验正文。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -1865,7 +1865,7 @@
       "category": "technical_documentation",
       "track": "web",
       "description": "当前公开页面；已由 Codex 使用真实浏览器或独立 Web Fetch 通道核验正文。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -1949,7 +1949,7 @@
       "category": "technical_documentation",
       "track": "web",
       "description": "当前公开页面；已由 Codex 使用真实浏览器或独立 Web Fetch 通道核验正文。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -2033,7 +2033,7 @@
       "category": "developer_portal",
       "track": "web",
       "description": "当前公开页面；已由 Codex 使用真实浏览器或独立 Web Fetch 通道核验正文。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -2117,7 +2117,7 @@
       "category": "developer_portal",
       "track": "web",
       "description": "当前公开页面；已由 Codex 使用真实浏览器或独立 Web Fetch 通道核验正文。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -2200,7 +2200,7 @@
       "category": "developer_portal",
       "track": "web",
       "description": "当前公开页面；已由 Codex 使用真实浏览器或独立 Web Fetch 通道核验正文。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -2284,7 +2284,7 @@
       "category": "developer_portal",
       "track": "web",
       "description": "当前公开页面；已由 Codex 使用真实浏览器或独立 Web Fetch 通道核验正文。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -2368,7 +2368,7 @@
       "category": "developer_portal",
       "track": "web",
       "description": "当前公开页面；已由 Codex 使用真实浏览器或独立 Web Fetch 通道核验正文。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -2452,7 +2452,7 @@
       "category": "technical_documentation",
       "track": "web",
       "description": "当前公开页面；已由 Codex 使用真实浏览器或独立 Web Fetch 通道核验正文。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -2536,7 +2536,7 @@
       "category": "developer_portal",
       "track": "web",
       "description": "当前公开页面；已由 Codex 使用真实浏览器或独立 Web Fetch 通道核验正文。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -2620,7 +2620,7 @@
       "category": "developer_portal",
       "track": "web",
       "description": "当前公开页面；已由 Codex 使用真实浏览器或独立 Web Fetch 通道核验正文。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -2704,7 +2704,7 @@
       "category": "developer_portal",
       "track": "web",
       "description": "当前公开页面；已由 Codex 使用真实浏览器或独立 Web Fetch 通道核验正文。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -2787,7 +2787,7 @@
       "category": "developer_portal",
       "track": "web",
       "description": "当前公开页面；已由 Codex 使用真实浏览器或独立 Web Fetch 通道核验正文。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -2871,7 +2871,7 @@
       "category": "developer_portal",
       "track": "web",
       "description": "当前公开页面；已由 Codex 使用真实浏览器或独立 Web Fetch 通道核验正文。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -2954,7 +2954,7 @@
       "category": "technical_documentation",
       "track": "web",
       "description": "当前公开页面；已由 Codex 使用真实浏览器或独立 Web Fetch 通道核验正文。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -3037,7 +3037,7 @@
       "category": "framework_documentation",
       "track": "web",
       "description": "当前公开页面；已由 Codex 使用真实浏览器或独立 Web Fetch 通道核验正文。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -3121,7 +3121,7 @@
       "category": "framework_documentation",
       "track": "web",
       "description": "当前公开页面；已由 Codex 使用真实浏览器或独立 Web Fetch 通道核验正文。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -3204,7 +3204,7 @@
       "category": "web_standard",
       "track": "web",
       "description": "当前公开页面；已由 Codex 使用真实浏览器或独立 Web Fetch 通道核验正文。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -3288,7 +3288,7 @@
       "category": "vendor_documentation",
       "track": "web",
       "description": "当前公开页面；已由 Codex 使用真实浏览器或独立 Web Fetch 通道核验正文。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -3372,7 +3372,7 @@
       "category": "framework_documentation",
       "track": "web",
       "description": "当前公开页面；已由 Codex 使用真实浏览器或独立 Web Fetch 通道核验正文。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -3456,7 +3456,7 @@
       "category": "framework_documentation",
       "track": "web",
       "description": "当前公开页面；已由 Codex 使用真实浏览器或独立 Web Fetch 通道核验正文。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -3540,7 +3540,7 @@
       "category": "framework_documentation",
       "track": "web",
       "description": "当前公开页面；已由 Codex 使用真实浏览器或独立 Web Fetch 通道核验正文。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -3624,7 +3624,7 @@
       "category": "web_standard",
       "track": "web",
       "description": "当前公开页面；已由 Codex 使用真实浏览器或独立 Web Fetch 通道核验正文。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -3708,7 +3708,7 @@
       "category": "web_standard",
       "track": "web",
       "description": "当前公开页面；已由 Codex 使用真实浏览器或独立 Web Fetch 通道核验正文。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -3791,7 +3791,7 @@
       "category": "vendor_documentation",
       "track": "web",
       "description": "当前公开页面；已由 Codex 使用真实浏览器或独立 Web Fetch 通道核验正文。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -3874,7 +3874,7 @@
       "category": "vendor_documentation",
       "track": "web",
       "description": "当前公开页面；已由 Codex 使用真实浏览器或独立 Web Fetch 通道核验正文。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -3957,7 +3957,7 @@
       "category": "public_institution",
       "track": "web",
       "description": "当前公开页面；已由 Codex 使用真实浏览器或独立 Web Fetch 通道核验正文。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -4041,7 +4041,7 @@
       "category": "listing",
       "track": "web",
       "description": "当前公开页面；已由 Codex 使用真实浏览器或独立 Web Fetch 通道核验正文。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -4124,7 +4124,7 @@
       "category": "technical_documentation",
       "track": "web",
       "description": "当前公开页面；已由 Codex 使用真实浏览器或独立 Web Fetch 通道核验正文。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -4208,7 +4208,7 @@
       "category": "vendor_documentation",
       "track": "web",
       "description": "当前公开页面；已由 Codex 使用真实浏览器或独立 Web Fetch 通道核验正文。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -4316,7 +4316,7 @@
       "category": "public_institution",
       "track": "web",
       "description": "当前公开页面；已由 Codex 使用真实浏览器或独立 Web Fetch 通道核验正文。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -4498,7 +4498,7 @@
       "category": "listing",
       "track": "web",
       "description": "当前公开页面；已由 Codex 使用真实浏览器或独立 Web Fetch 通道核验正文。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -4581,7 +4581,7 @@
       "category": "technical_documentation",
       "track": "web",
       "description": "当前公开页面；已由 Codex 使用真实浏览器或独立 Web Fetch 通道核验正文。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -4665,7 +4665,7 @@
       "category": "technical_documentation",
       "track": "web",
       "description": "当前公开页面；已由 Codex 使用真实浏览器或独立 Web Fetch 通道核验正文。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -4749,7 +4749,7 @@
       "category": "encyclopedia",
       "track": "web",
       "description": "当前公开页面；已由 Codex 使用真实浏览器或独立 Web Fetch 通道核验正文。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -4845,7 +4845,7 @@
       "category": "technical_documentation",
       "track": "web",
       "description": "当前公开页面；已由 Codex 使用真实浏览器或独立 Web Fetch 通道核验正文。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -4929,7 +4929,7 @@
       "category": "encyclopedia",
       "track": "web",
       "description": "当前公开页面；已由 Codex 使用真实浏览器或独立 Web Fetch 通道核验正文。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -5013,7 +5013,7 @@
       "category": "technical_documentation",
       "track": "web",
       "description": "当前公开页面；已由 Codex 使用真实浏览器或独立 Web Fetch 通道核验正文。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -5097,7 +5097,7 @@
       "category": "technical_documentation",
       "track": "web",
       "description": "当前公开页面；已由 Codex 使用真实浏览器或独立 Web Fetch 通道核验正文。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -5181,7 +5181,7 @@
       "category": "technical_documentation",
       "track": "web",
       "description": "当前公开页面；已由 Codex 使用真实浏览器或独立 Web Fetch 通道核验正文。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -5265,7 +5265,7 @@
       "category": "technical_documentation",
       "track": "web",
       "description": "当前公开页面；已由 Codex 使用真实浏览器或独立 Web Fetch 通道核验正文。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -5349,7 +5349,7 @@
       "category": "technical_documentation",
       "track": "web",
       "description": "当前公开页面；已由 Codex 使用真实浏览器或独立 Web Fetch 通道核验正文。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -5433,7 +5433,7 @@
       "category": "technical_documentation",
       "track": "web",
       "description": "当前公开页面；已由 Codex 使用真实浏览器或独立 Web Fetch 通道核验正文。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -5517,7 +5517,7 @@
       "category": "technical_documentation",
       "track": "web",
       "description": "当前公开页面；已由 Codex 使用真实浏览器或独立 Web Fetch 通道核验正文。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -5601,7 +5601,7 @@
       "category": "technical_documentation",
       "track": "web",
       "description": "当前公开页面；已由 Codex 使用真实浏览器或独立 Web Fetch 通道核验正文。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -5685,7 +5685,7 @@
       "category": "technical_documentation",
       "track": "web",
       "description": "当前公开页面；已由 Codex 使用真实浏览器或独立 Web Fetch 通道核验正文。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -5769,7 +5769,7 @@
       "category": "technical_documentation",
       "track": "web",
       "description": "当前公开页面；已由 Codex 使用真实浏览器或独立 Web Fetch 通道核验正文。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -5853,7 +5853,7 @@
       "category": "developer_portal",
       "track": "web",
       "description": "当前公开页面；已由 Codex 使用真实浏览器或独立 Web Fetch 通道核验正文。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -5937,7 +5937,7 @@
       "category": "developer_portal",
       "track": "web",
       "description": "当前公开页面；已由 Codex 使用真实浏览器或独立 Web Fetch 通道核验正文。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -6021,7 +6021,7 @@
       "category": "developer_portal",
       "track": "web",
       "description": "当前公开页面；已由 Codex 使用真实浏览器或独立 Web Fetch 通道核验正文。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -6105,7 +6105,7 @@
       "category": "developer_portal",
       "track": "web",
       "description": "当前公开页面；已由 Codex 使用真实浏览器或独立 Web Fetch 通道核验正文。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -6189,7 +6189,7 @@
       "category": "developer_portal",
       "track": "web",
       "description": "当前公开页面；已由 Codex 使用真实浏览器或独立 Web Fetch 通道核验正文。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -6273,7 +6273,7 @@
       "category": "developer_portal",
       "track": "web",
       "description": "当前公开页面；已由 Codex 使用真实浏览器或独立 Web Fetch 通道核验正文。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -6357,7 +6357,7 @@
       "category": "encyclopedia",
       "track": "web",
       "description": "当前公开页面；已由 Codex 使用真实浏览器或独立 Web Fetch 通道核验正文。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -6441,7 +6441,7 @@
       "category": "encyclopedia",
       "track": "web",
       "description": "当前公开页面；已由 Codex 使用真实浏览器或独立 Web Fetch 通道核验正文。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -6525,7 +6525,7 @@
       "category": "encyclopedia",
       "track": "web",
       "description": "当前公开页面；已由 Codex 使用真实浏览器或独立 Web Fetch 通道核验正文。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -6609,7 +6609,7 @@
       "category": "developer_portal",
       "track": "web",
       "description": "当前公开页面；已由 Codex 使用真实浏览器或独立 Web Fetch 通道核验正文。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -6693,7 +6693,7 @@
       "category": "developer_portal",
       "track": "web",
       "description": "当前公开页面；已由 Codex 使用真实浏览器或独立 Web Fetch 通道核验正文。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -6777,7 +6777,7 @@
       "category": "developer_portal",
       "track": "web",
       "description": "当前公开页面；已由 Codex 使用真实浏览器或独立 Web Fetch 通道核验正文。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -6861,7 +6861,7 @@
       "category": "developer_portal",
       "track": "web",
       "description": "当前公开页面；已由 Codex 使用真实浏览器或独立 Web Fetch 通道核验正文。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -6945,7 +6945,7 @@
       "category": "developer_portal",
       "track": "web",
       "description": "当前公开页面；已由 Codex 使用真实浏览器或独立 Web Fetch 通道核验正文。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -7041,7 +7041,7 @@
       "category": "developer_portal",
       "track": "web",
       "description": "当前公开页面；已由 Codex 使用真实浏览器或独立 Web Fetch 通道核验正文。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -7125,7 +7125,7 @@
       "category": "developer_portal",
       "track": "web",
       "description": "当前公开页面；已由 Codex 使用真实浏览器或独立 Web Fetch 通道核验正文。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -7197,7 +7197,7 @@
       "category": "developer_portal",
       "track": "web",
       "description": "当前公开页面；已由 Codex 使用真实浏览器或独立 Web Fetch 通道核验正文。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -7281,7 +7281,7 @@
       "category": "ecommerce_category",
       "track": "web",
       "description": "当前公开页面；已由 Codex 使用真实浏览器或独立 Web Fetch 通道核验正文。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -7364,7 +7364,7 @@
       "category": "technical_documentation",
       "track": "web",
       "description": "当前公开页面；已由 Codex 使用真实浏览器或独立 Web Fetch 通道核验正文。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -7450,7 +7450,7 @@
       "category": "technical_documentation",
       "track": "web",
       "description": "当前公开页面；已由 Codex 使用真实浏览器或独立 Web Fetch 通道核验正文。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -7534,7 +7534,7 @@
       "category": "technical_documentation",
       "track": "web",
       "description": "当前公开页面；已由 Codex 使用真实浏览器或独立 Web Fetch 通道核验正文。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -7618,7 +7618,7 @@
       "category": "technical_documentation",
       "track": "web",
       "description": "当前公开页面；已由 Codex 使用真实浏览器或独立 Web Fetch 通道核验正文。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -7704,7 +7704,7 @@
       "category": "technical_documentation",
       "track": "web",
       "description": "当前公开页面；已由 Codex 使用真实浏览器或独立 Web Fetch 通道核验正文。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -7788,7 +7788,7 @@
       "category": "technical_documentation",
       "track": "web",
       "description": "当前公开页面；已由 Codex 使用真实浏览器或独立 Web Fetch 通道核验正文。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -7878,7 +7878,7 @@
       "category": "technical_documentation",
       "track": "web",
       "description": "当前公开页面；已由 Codex 使用真实浏览器或独立 Web Fetch 通道核验正文。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -7962,7 +7962,7 @@
       "category": "technical_documentation",
       "track": "web",
       "description": "当前公开页面；已由 Codex 使用真实浏览器或独立 Web Fetch 通道核验正文。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -8046,7 +8046,7 @@
       "category": "technical_documentation",
       "track": "web",
       "description": "当前公开页面；已由 Codex 使用真实浏览器或独立 Web Fetch 通道核验正文。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -8132,7 +8132,7 @@
       "category": "technical_documentation",
       "track": "web",
       "description": "当前公开页面；已由 Codex 使用真实浏览器或独立 Web Fetch 通道核验正文。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -8218,7 +8218,7 @@
       "category": "technical_documentation",
       "track": "web",
       "description": "当前公开页面；已由 Codex 使用真实浏览器或独立 Web Fetch 通道核验正文。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -8304,7 +8304,7 @@
       "category": "technical_documentation",
       "track": "web",
       "description": "当前公开页面；已由 Codex 使用真实浏览器或独立 Web Fetch 通道核验正文。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -8388,7 +8388,7 @@
       "category": "technical_documentation",
       "track": "web",
       "description": "当前公开页面；已由 Codex 使用真实浏览器或独立 Web Fetch 通道核验正文。",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
       "expected_any": [],
       "required_facts": [
         {
@@ -10469,7 +10469,7 @@
       "track": "dynamic",
       "task_kind": "body",
       "description": "源站为公开抓取练习站；核对固定练习数据，不代表生产网站分布。",
-      "task_prompt": "读取初次自动加载完成后的 10 条记录，保留全部文字字段；不要求滚动、翻页或点击。允许渲染、解析内嵌数据或获取公开接口，不限制实现路径。",
+      "task_prompt": "返回目标页面初次加载后的 10 条记录，并保留全部文字字段；不包含滚动、翻页或点击后才出现的记录。",
       "expected_any": [],
       "required_facts": [
         {
@@ -10745,7 +10745,7 @@
       "track": "dynamic",
       "task_kind": "body",
       "description": "源站为公开抓取练习站；核对固定练习数据，不代表生产网站分布。",
-      "task_prompt": "读取初次自动加载完成后的 12 条记录，保留全部文字字段；不要求滚动、翻页或点击。允许渲染、解析内嵌数据或获取公开接口，不限制实现路径。",
+      "task_prompt": "返回目标页面初次加载后的 12 条记录，并保留全部文字字段；不包含滚动、翻页或点击后才出现的记录。",
       "expected_any": [],
       "required_facts": [
         {
@@ -10925,7 +10925,7 @@
       "track": "dynamic",
       "task_kind": "body",
       "description": "源站为公开抓取练习站；核对固定练习数据，不代表生产网站分布。",
-      "task_prompt": "读取初次自动加载完成后的 6 条记录，保留全部文字字段；不要求滚动、翻页或点击。允许渲染、解析内嵌数据或获取公开接口，不限制实现路径。",
+      "task_prompt": "返回目标页面初次加载后的 6 条记录，并保留全部文字字段；不包含滚动、翻页或点击后才出现的记录。",
       "expected_any": [],
       "required_facts": [
         {
@@ -11147,7 +11147,7 @@
       "track": "dynamic",
       "task_kind": "body",
       "description": "源站为公开抓取练习站；核对固定练习数据，不代表生产网站分布。",
-      "task_prompt": "读取初次自动加载完成后的 10 条记录，保留全部文字字段；不要求滚动、翻页或点击。允许渲染、解析内嵌数据或获取公开接口，不限制实现路径。",
+      "task_prompt": "返回目标页面初次加载后的 10 条记录，并保留全部文字字段；不包含滚动、翻页或点击后才出现的记录。",
       "expected_any": [],
       "required_facts": [
         {
@@ -11423,7 +11423,7 @@
       "track": "dynamic",
       "task_kind": "body",
       "description": "公开练习站及应用示例；核对声明范围内固定示例数据，不代表生产网站分布。",
-      "task_prompt": "首次自动加载的 20 条评论：日期与评论全文；不含星级图形，不点击 Load More。允许渲染、解析内嵌数据、加载子文档或获取公开接口，不限制实现路径。",
+      "task_prompt": "返回目标页面初次加载后的 20 条评论的日期和全文；不包含点击 Load More 后的评论，星级图形不属于文字答案。",
       "expected_any": [],
       "required_facts": [
         {
@@ -11820,7 +11820,7 @@
       "track": "dynamic",
       "task_kind": "body",
       "description": "公开练习站及应用示例；核对声明范围内固定示例数据，不代表生产网站分布。",
-      "task_prompt": "默认未筛选目录的全部 16 个商品：名称、售价、可见分期与免邮文字；不含按钮、图片及广告。允许渲染、解析内嵌数据、加载子文档或获取公开接口，不限制实现路径。",
+      "task_prompt": "默认未筛选目录的全部 16 个商品：名称、售价、可见分期与免邮文字；不含按钮、图片及广告。",
       "expected_any": [],
       "required_facts": [
         {
@@ -12230,7 +12230,7 @@
       "track": "dynamic",
       "task_kind": "body",
       "description": "公开练习站及应用示例；核对声明范围内固定示例数据，不代表生产网站分布。",
-      "task_prompt": "默认手机列表全部 20 条名称与描述；不搜索、不排序、不进入详情。允许渲染、解析内嵌数据、加载子文档或获取公开接口，不限制实现路径。",
+      "task_prompt": "返回默认手机列表全部 20 条名称与描述；搜索、排序和详情页结果不属于答案。",
       "expected_any": [],
       "required_facts": [
         {
@@ -12626,7 +12626,7 @@
       "track": "dynamic",
       "task_kind": "body",
       "description": "公开练习站及应用示例；核对声明范围内固定示例数据，不代表生产网站分布。",
-      "task_prompt": "默认展开分组中全部 20 条操作摘要：HTTP 方法、路径和说明；不展开参数、不执行 API、不含 Cookie 横幅。允许渲染、解析内嵌数据、加载子文档或获取公开接口，不限制实现路径。",
+      "task_prompt": "默认展开分组中全部 20 条操作摘要：HTTP 方法、路径和说明；不展开参数、不执行 API、不含 Cookie 横幅。",
       "expected_any": [],
       "required_facts": [
         {
@@ -13143,7 +13143,7 @@
       "track": "dynamic",
       "task_kind": "body",
       "description": "公开练习站及应用示例；核对声明范围内固定示例数据，不代表生产网站分布。",
-      "task_prompt": "商品页首次自动呈现的 5 条评论：日期和评论全文；不含星级图形、商品推荐，不点击 Load More。允许渲染、解析内嵌数据、加载子文档或获取公开接口，不限制实现路径。",
+      "task_prompt": "返回商品页初次加载后的 5 条评论的日期和全文；不包含点击 Load More 后的评论，星级图形和商品推荐不属于答案。",
       "expected_any": [],
       "required_facts": [
         {
@@ -13270,7 +13270,7 @@
       "track": "dynamic",
       "task_kind": "body",
       "description": "公开练习站及应用示例；核对声明范围内固定示例数据，不代表生产网站分布。",
-      "task_prompt": "父页自动加载的 iframe 中全部 14 个龟类科名称；不进入详情，不要求图片或按钮文字。允许渲染、解析内嵌数据、加载子文档或获取公开接口，不限制实现路径。",
+      "task_prompt": "父页自动加载的 iframe 中全部 14 个龟类科名称；不进入详情，不要求图片或按钮文字。",
       "expected_any": [],
       "required_facts": [
         {

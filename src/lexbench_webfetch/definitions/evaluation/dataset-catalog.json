@@ -5,7 +5,7 @@
   "name": "Web Fetch 评测",
   "track": "web_fetch",
   "dataset": "dataset.json",
-  "dataset_sha256": "5f751146143dcbe9daf46f0fb2511da1147508b3c8c4cd3377a6f3cceb82264e",
+  "dataset_sha256": "b42bf6482f03bb8a436470213d25c697d25aff4026f429a9cae0000047c953f8",
   "case_count": 150,
   "coverage_plan": {
     "web": [
@@ -88,8 +88,8 @@
       "url": "https://example.com/",
       "category": "static_html",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "982c4083495d0edeec20bc720b4dd104eab2333d7011ebe249e5be58e69f3fad",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "350656e979e18985f6c34349c65b94c9b1af64c4478555f2185e5be88a7ca79f",
       "reference_sha256": "feb057ddba5ac313506909af05c17370808a81030f057346499d045c25534dbf"
     },
     {
@@ -98,8 +98,8 @@
       "url": "https://en.wikipedia.org/w/index.php?title=Artificial_intelligence&oldid=1373671334",
       "category": "long_article",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "dce2468c3da39bba3b93b64c3458615034049aabe43112eb5f9bea08aa48f7c5",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "511f57a2c01c4e563f9f68b06a9ea017fff959c41d54c1a02850ae5bc3b9edfc",
       "reference_sha256": "92aeb97b02820f046043dc771243243260835ba3565bcb24c798346107c7d0ef"
     },
     {
@@ -108,8 +108,8 @@
       "url": "https://docs.cowagent.ai/zh/tools/web-fetch",
       "category": "technical_documentation",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "e4b165a4f5ea4b652a3d8fad8980106382cb65429342ea4a61753a8b30180015",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "c4f84acaa790c5a0217a8f4fd14b6b0068a54afe553220c6149a629591e098a2",
       "reference_sha256": "6d63269cfe683cd215e564852909f903c97d33fc7a01495421670ab7fe0c2591"
     },
     {
@@ -118,8 +118,8 @@
       "url": "https://browser.lexmount.com/docs/webfetch/quickstart",
       "category": "technical_documentation",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "a1984114c6e0971710378f29e41959644a6d884ff50734f95c44d445a0fd468a",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "f060029b39d40afc040739e37ea3d0d6469c07e090b886d87a807784fe82303e",
       "reference_sha256": "3b86a49de945d27dd623dce61f6559c5e4bfe55de8d4b1347a7d5d13f611cb9d"
     },
     {
@@ -128,8 +128,8 @@
       "url": "https://github.com/lexmount/moli",
       "category": "developer_portal",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "7d729f5b8b201eb1d946d400c3a69a2fc15c0d1d3ef5cb879b8a530976c39bc1",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "29a3f9831fb53ed57e260277a6d74bd22d60e24a51a5cc0df3c0a8c2e775fcea",
       "reference_sha256": "1850ed85106a71e71f39704d0dd77be64bc249700b4e1b830b3c49691be4db8c"
     },
     {
@@ -138,8 +138,8 @@
       "url": "https://books.toscrape.com/",
       "category": "ecommerce_static",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "96c60a726458be5194df5a9175d3427b668a3d5c051d5f3b23ade69eedff493b",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "8a6274a695f9031be350449904016d05b69b766ae2b4dd60655dc41c01611bce",
       "reference_sha256": "aaa7dd5c7ad0c4c8cea3f1fbf22d44a07b352844cf2f123e91ecd844ec2e5dd0"
     },
     {
@@ -148,8 +148,8 @@
       "url": "https://quotes.toscrape.com/js/",
       "category": "javascript_rendering",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "2aa99876fb978a58344e2a7f924ff6d2277145b78eccefb650f5dd3ca7000f61",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "e9a45ae8a21509f85aac64aced143461a123244c19c94b46fe4b8f5f2c51e8a1",
       "reference_sha256": "3ebebfe513f7a7be96cd3954bb21574be91c3bad15d15276dc07e151002d3604"
     },
     {
@@ -158,8 +158,8 @@
       "url": "https://www.w3schools.com/html/html_tables.asp",
       "category": "table_structure",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "42974f421158307c19ccfcf9eb69dda406d3a3abe7b2a4f2b7697a10720dc419",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "ba9963e4e7bb46888c256cb12202f643d46f52c2671ab64f2430bf922a580b49",
       "reference_sha256": "7e2668811bf28402947d7db76115eca20798ecea29a5f4a576f5e272097e3964"
     },
     {
@@ -168,8 +168,8 @@
       "url": "https://httpbin.org/redirect-to?url=https%3A%2F%2Fexample.com%2F",
       "category": "redirect",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "64162f1829c5e527f3818b5781a99f7b9146c4dac8d63524729b5ee129b219ee",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "94977a85e8fd3252bfa5de922ba1ba0b59b5ca141e678cb60de0b01af72b3f5c",
       "reference_sha256": "feb057ddba5ac313506909af05c17370808a81030f057346499d045c25534dbf"
     },
     {
@@ -179,8 +179,8 @@
       "category": "retail_help",
       "track": "web",
       "task_kind": "body",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "bbc22cbaa92edf04bafdb991ae6be973477ee236668d15400496f9145e4fa1fa",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "dcb9f23140240ce35f116ec6a610f7c4517b30971a2d4461016732cbc83e639c",
       "reference_sha256": null
     },
     {
@@ -189,8 +189,8 @@
       "url": "https://www.feishu.cn/hc/zh-CN/articles/485770964672-管理者查看企业-ai-功能使用数据",
       "category": "lightmount_render_documentation",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "c2da792de8cb12f5fce639d45a013b912b961e4f2315ba8344eadbcc16137eb3",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "90a9b0ff5926f75b4723f24f63f5d854d7398c084c0064ec56a77860643c2f73",
       "reference_sha256": "00f8c8370b761ab0c8774100d101fed818d2302cda190a0e130dbda2bad6031e"
     },
     {
@@ -199,8 +199,8 @@
       "url": "https://docs.python.org/3/tutorial/index.html",
       "category": "lightmount_render_documentation",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "20e6d74b148c8031246718974806e4cbe030582c6e12fbf0df6f19be26c3c314",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "2b9ee3b032e2c3ec983519e9f63f66c500573b25d16d9bc68ff6b1bd2471bdac",
       "reference_sha256": "ac1c8ffbbbed1193e32b33155b1cdbf28f107ec18c819e81fec316534d9172b9"
     },
     {
@@ -209,8 +209,8 @@
       "url": "https://www.rfc-editor.org/rfc/rfc8259.html",
       "category": "lightmount_render_documentation",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "8d54fbdd418213d8414edf37f6bcd1ed9c84667e3465afc8fca1ba76edcfc6a9",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "bf5f173116cfcccdc1c244ce6f8ff4493c454be3237f97e62da39723ff5ae10b",
       "reference_sha256": "c957c1749ac9474280f070d86ad1767a9cce89acd67a02ce8d9d3db824731149"
     },
     {
@@ -219,8 +219,8 @@
       "url": "https://nodejs.org/en/learn/getting-started/introduction-to-nodejs",
       "category": "lightmount_render_documentation",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "faaca07cde3dde080c13e4d22d07f086dfef04e9cf740c79a1aee2ea154c2194",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "45e3743678d4c8f1a4cafe58a0a04aa51ccf3f8746dfa937666c8fd1914ba49b",
       "reference_sha256": "e26275b906e5be73bf165b6b07cb82e7e494d9b985b0494d1974232123fd88ce"
     },
     {
@@ -229,8 +229,8 @@
       "url": "https://www.rfc-editor.org/rfc/rfc6455.html",
       "category": "lightmount_render_documentation",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "033ad868f3fdd70f21df255773ad84323c12f735613aac702633ea320394d16d",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "665a22be6b2d975fefee19ac7d8782f5b67e073a4c0a5c38e128e4890ec5bd03",
       "reference_sha256": "b4e82cb20f4acd3545b61474bb9cbc873f1293c940077aa60a1ac921917e0ed8"
     },
     {
@@ -239,8 +239,8 @@
       "url": "https://www.rust-lang.org/learn",
       "category": "lightmount_render_service",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "daf76f7d5df1e7b2eb12821984816442ae0260209d922fa346009ab8fcb110af",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "93353430c1a0c3a836e81c19f5b5b45fc2d5e42251186af7da8427ab03fa6527",
       "reference_sha256": "87265e23d47e43f2da8b098824f6879cce013bee55e1d7eb7752c2833daad26b"
     },
     {
@@ -249,8 +249,8 @@
       "url": "https://docs.python.org/3/library/pathlib.html",
       "category": "technical_documentation",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "e150112bc880f0a03153b68dd71025c149e976b85e24414aa7b536469ea1e398",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "23cbe4a144eb4923efd682feaa17c112f34952a68c68a2c8fbf5d5b22727dd02",
       "reference_sha256": "495187a4fbd8d066a77144b771a11fe8eddc5aa298914984dee5095e534f5f1f"
     },
     {
@@ -259,8 +259,8 @@
       "url": "https://docs.python.org/3/library/http.html",
       "category": "technical_documentation",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "264e650ef850d31945332487f7339aa475110d0b3942e9090bd2b920e49e186a",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "22e29f5e00376b0d5e9627095f2640382d1f2183908811fc5c5907873dd794f3",
       "reference_sha256": "e29dc2f62887d9ae6b801935b9eb709cb891683374e4d1caf102e5ba4a170936"
     },
     {
@@ -269,8 +269,8 @@
       "url": "https://doc.rust-lang.org/book/ch16-00-concurrency.html",
       "category": "technical_documentation",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "1e8ccc7135ca2fc25585988bbbf876d8f2cb8f974663cbdc69941f63976b8d16",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "42c239e81cc47a66d951998a0d07ccdeb51b16f9c0b1f0054f76f470ed2d9e2f",
       "reference_sha256": "8de7885c4ca78ede2ecaa0994e5f65cd5566c6401264aba82093b289cb08c2c1"
     },
     {
@@ -279,8 +279,8 @@
       "url": "https://kubernetes.io/docs/concepts/workloads/controllers/deployment/",
       "category": "technical_documentation",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "a98a5dabc37b6aea99d763e43d486ddc9d3b530f1a80ba7bf1956284ea610672",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "ee27223f11dd0d68289fdb7d393576e2ec000c9dbcd62163b5f7500a7a7913c7",
       "reference_sha256": "b3dee8de7837b6f1ea15941f8f576db8aa5d88eedb207a2e8daec22e9434ad44"
     },
     {
@@ -289,8 +289,8 @@
       "url": "https://docs.python.org/3/library/asyncio.html",
       "category": "technical_documentation",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "a7c67df9cfaaf7fc86779adcc5dd84d220093088e612471f68375cd9c3cd3393",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "8f550736576ea28e4e859a9ad0e6db14043cb1034add29d99c2ddc64878a4f70",
       "reference_sha256": "91a43f92fe5a2084a3271e5b1dad0c3890f2a2a065d647cfd66bdc4a257594c4"
     },
     {
@@ -299,8 +299,8 @@
       "url": "https://docs.python.org/3/library/typing.html",
       "category": "technical_documentation",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "8b97ebeaedea277c32a6243043ad590bdc3e291ee55d2ceadfa55f864c35be73",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "0fbe344a34ff4b5632ae5c739ec99d1fb04cd28f7d578c2b3a41ba678105a944",
       "reference_sha256": "bbbba2fff68106ad38605de360f48f1a73f3d58ff695d358fda9937762717e2e"
     },
     {
@@ -309,8 +309,8 @@
       "url": "https://docs.python.org/3/library/html.html",
       "category": "technical_documentation",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "877b62d6a370638089d130b577ef56d2f52bf7b8a8f12736c23b029ffe642c9b",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "c0fd033ade1d390181ff27e09335c34b7323e84ff11ef6e10698290a036fc73c",
       "reference_sha256": "d0c055677330ce4f19b4bec7310817c9f3cb5b075f8357a1379116b30bfe5f0b"
     },
     {
@@ -319,8 +319,8 @@
       "url": "https://kubernetes.io/docs/concepts/services-networking/service/",
       "category": "technical_documentation",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "b8a8a5d7f697919a3b15e025eff5cb6c946c55760a1111fbc440254bc711ee2e",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "b365d1f3151c13eb652066826d5d9eb30d3b888c48578ed18c06b36f09158f53",
       "reference_sha256": "498b8bfcb95c7b7bd6c40e25c01e6f00a5029df225165d52c74a797125685289"
     },
     {
@@ -329,8 +329,8 @@
       "url": "https://kubernetes.io/docs/tasks/run-application/run-stateless-application-deployment/",
       "category": "technical_documentation",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "6fd283a77dcf8f9d8c1e7ed67ae0392fffb2f4dc755b5322d0567ffaa126aa7a",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "c83147f3509fdbc08d100759bf9ab7a7388f16a46ae252bf5be99398fda935e8",
       "reference_sha256": "c71ed1402b7e7e06b7f4c3ce553d9225f046992b1f1fb52732a691dd993f43f7"
     },
     {
@@ -339,8 +339,8 @@
       "url": "https://github.com/scrapy/scrapy",
       "category": "developer_portal",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "3df38d53f2af6f76cd123826274e09fea639c63ceca7d7631c2eddeb440327b0",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "6cddb84f85b43d2641be256720cc0f0e8c5ed574c9209bc579d1c57964b082b0",
       "reference_sha256": "81862b8427914538c896b7ba2050caf5a1722a748e05065cf7828335905163ee"
     },
     {
@@ -349,8 +349,8 @@
       "url": "https://github.com/browser-use/browser-use/blob/2b1f9d377999a59fe7627c1a5aa88c12aa42e11f/README.md",
       "category": "developer_portal",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "db0e4eaa3f751335fff23b18dc282986c15f03c8955989643a000278f9dd33d7",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "f4499950ca7c6113cf452b060a1dcbdd8e6141b439e892c0881804ce51775bdd",
       "reference_sha256": "e0125e5233473fcf1266c1bdfb5fb3d5e3545ae027b5f954dcceb3d874e50765"
     },
     {
@@ -359,8 +359,8 @@
       "url": "https://github.com/django/django",
       "category": "developer_portal",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "ad55cb5b12ba08988ad8e5c9a2c6cb5f76c8970719ce481b5cb50ea04fc3d9fa",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "0255b644d08a4c0c10f49148a991067218986213a0c85b06647b170af44a27eb",
       "reference_sha256": "f25fd75f2fb7a6ed7b9100ab29c1f919bc7f419e5c47ddcb00a71053f2feec2a"
     },
     {
@@ -369,8 +369,8 @@
       "url": "https://github.com/sveltejs/svelte",
       "category": "developer_portal",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "dbb05225131b2a74f04fb3fe2ce3429c9f7cd6a5061dfd2d69aff4edeecc0984",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "2b778bf15a48108a5ee15de35a87df697eed9d0302b4b708499943b47d0cfb96",
       "reference_sha256": "6442ac60be3b7262cde9215d82126a6cdc23c44f6f14e5edb41822437a7e9977"
     },
     {
@@ -379,8 +379,8 @@
       "url": "https://github.com/postgres/postgres",
       "category": "developer_portal",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "b61dc55c3fb4d1969cfaa8880f49cc8eb283f657211fcfe7329406c5bd44665c",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "b31425653c62e1d09821d856ecbefbaf04bdb75785a2124990b61a47f461bbaf",
       "reference_sha256": "d784716f9466d5d9e1583271cbb8fe48a1d0ab9537a026a3917f957ef1ae3059"
     },
     {
@@ -389,8 +389,8 @@
       "url": "https://kubernetes.io/docs/concepts/configuration/configmap/",
       "category": "technical_documentation",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "dc45d110d089489c2df1ae97108342f6f7f580ba7a07304af9456767e67e3294",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "5a8fdd8b8c811ed1849d05b983d00b9abbf0376aa70f9f05229fab9e9d4d1645",
       "reference_sha256": "90cf50e7cefb4625f510ca8dec2595025fff16316b9cc1de74fa72f3bbf509f4"
     },
     {
@@ -399,8 +399,8 @@
       "url": "https://github.com/openai/openai-python",
       "category": "developer_portal",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "f710070a914159c4c6dfa15e21879b9d9fb87b34a07947cf2eeafd6af3ab88af",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "71280e3b5b59a17eab3f2caf7453c6a19789033c8f484cf89cadd83225404d0b",
       "reference_sha256": "f4c17022b6dc26eabfaff8495232c48e330d13fc08ab9a8753520223b3aee924"
     },
     {
@@ -409,8 +409,8 @@
       "url": "https://github.com/langchain-ai/langchain",
       "category": "developer_portal",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "76fa457bb38f9b1455ae0c61c91f46b42ef259e09da25d4cfdcd3be8d2452ee4",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "bcb02bb716a05076d7628b3dbb4f1aad50e95b0631887ab28facec73ce7e9517",
       "reference_sha256": "b747123702b61e59eafd51f97ce7f3443e6f220ba861eb49c45e8239ed650e24"
     },
     {
@@ -419,8 +419,8 @@
       "url": "https://github.com/openclaw/openclaw/blob/d662d5753720e9e700fb49c1f76fb4bfc21c4c04/README.md",
       "category": "developer_portal",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "8c3226ecfe2324e5c2ffbd87b7c970e7bc40347951c37c47e1af77585ccbd414",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "ce76cef0858fc90f3bd8b50987a934a9dd5b47e03b3fd87c519504b9f2cef84a",
       "reference_sha256": "6bad11b5a5173718236a8a3679e4c199ad2df70d2b325cde368fd3c15a14fe01"
     },
     {
@@ -429,8 +429,8 @@
       "url": "https://github.com/fastapi/fastapi",
       "category": "developer_portal",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "14849d8fc6e3669dd5e828c5fccd0314a3b2d6595b9423301abe2225d9032669",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "c13b4082f615104a8666ebf7768ad66d235e75f148d66d4f8c6ebb1fd6b14b4c",
       "reference_sha256": "93797b3f0b913af43024be1d604c60543cdb8b42051b5d489bad925a80b0c291"
     },
     {
@@ -439,8 +439,8 @@
       "url": "https://github.com/nodejs/node/blob/2987a5965f1f5c6d9f0023406389c57002e63629/README.md",
       "category": "developer_portal",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "57178dd2c3e1a6491c48f83e2f834094dc181e218bbb23ed485b9aab1f90690f",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "cd853072f05a440a1548f93845aa9b4b633784332022a6670434512594b8e53f",
       "reference_sha256": "5ceadd992886da6a039f6106b7f76af2a6ea599dc8ff65d245d8d351c23f3820"
     },
     {
@@ -449,8 +449,8 @@
       "url": "https://docs.python.org/3/library/os.path.html",
       "category": "technical_documentation",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "cdb6826ed8a33d4ce85070d8542a81b0d909fd31b5fffa721fc38a89240cdcfa",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "3ebc276715cd5eab89e0b380a92a9eb584ff1858542ed393999347825f7d048d",
       "reference_sha256": "b141e5a767ee51780ff865d7d7acb6699555729964cf4ccbf370618a76957701"
     },
     {
@@ -459,8 +459,8 @@
       "url": "https://docs.djangoproject.com/en/stable/intro/",
       "category": "framework_documentation",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "1f20479a42ba32d87dd6bc618ecd1131498fd1637ccf760d60a19eeada3f3d64",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "6f99c2cba833cb89aa210023c8147b84b056d79aef53f132c1b1ae3a3d1a780b",
       "reference_sha256": "212b55e4a8f69a812a587b67b40aa5f6926fcd9fbc104aa41d25d9adde2fdd3f"
     },
     {
@@ -469,8 +469,8 @@
       "url": "https://www.w3.org/TR/2018/REC-WCAG21-20180605/",
       "category": "framework_documentation",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "ac5702034479f9d3339a298740c39f9fefd849c1d99883ffa391325da63e4b4f",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "9ac1a7470eab242b1e86a9fc193f789b5e1ea9e5f9349a52755fbd20d7f58825",
       "reference_sha256": "4e427c638b8372ae21dec876596004451c1bfe43a23ac4331fc3ce8e6f1a1a5c"
     },
     {
@@ -479,8 +479,8 @@
       "url": "https://www.w3.org/TR/CSS2/",
       "category": "web_standard",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "11dc6633e00b6bb7913ce195e4a5d399bd19bdb1b5d06a30bd4a9fc3893010cb",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "ca146fa45d0bb63c14d1a3051d3c19646e833d819f959de2df4f1099d380e9cb",
       "reference_sha256": "5f326b8ed12b5e559079908f1ddb97faa2ed6072948032f5cee40eab63726059"
     },
     {
@@ -489,8 +489,8 @@
       "url": "https://docs.tavily.com/documentation/api-reference/endpoint/extract",
       "category": "vendor_documentation",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "5bc3b2282b7f76999d3ee3462c825c98e1bb2d66fcab13ce4ded8956cc290739",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "d86618b42d35fc63b6c44fcce9c3fb154eb360742fc63a53fe68a00a73c69d5b",
       "reference_sha256": "ccb12d707395080d9c67e35d53d9d2ef51b7b86c0e1eefb531f8e4e2afc347d6"
     },
     {
@@ -499,8 +499,8 @@
       "url": "https://vuejs.org/guide/introduction.html",
       "category": "framework_documentation",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "7dbf738f0c8aa7f88108db3d7d639c77220992258287dc1680d8d0e92c14c88d",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "305a5e695897c56cbae5534a951b959df4bf9a0f036a6ff8bf4c177b0f42b905",
       "reference_sha256": "f6bb260aedaf3b7019150fab616a796bad593bdb7bb3a62fc7b844eea0407b32"
     },
     {
@@ -509,8 +509,8 @@
       "url": "https://fastapi.tiangolo.com/",
       "category": "framework_documentation",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "beffe97ed59b0a5470d66d3d123e06abcf73d18f78568ad47858c0bae88e32da",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "132f424ef2485ab4a6c34eca59dbfb3476d200237ea6913719a2a96605f27ef7",
       "reference_sha256": "ae5fb5dadb8c0f10c619e1f471836f48295d9a2ce8d4d2b271b694df8623d2b3"
     },
     {
@@ -519,8 +519,8 @@
       "url": "https://guides.rubyonrails.org/getting_started.html",
       "category": "framework_documentation",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "c305834ce72671528197f73db1d262597b2a81751a189b2e6cefc16972877c76",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "8e0e211cc269b5cd6d12f33504c7cca31fbe16de55c70a3747d2ad991d71ac9e",
       "reference_sha256": "c72ff3e594f1240bfb74c7f80b1ab4d371d8a924850ca1dac58d81d8fe1872be"
     },
     {
@@ -529,8 +529,8 @@
       "url": "https://fetch.spec.whatwg.org/",
       "category": "web_standard",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "6c69c5a4da76ea9b8fa42c0f0da8e0e592e0403b3a9eb289202f6060df19b820",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "28df4bef92f0dd5da773c31d5565383bb09d5b2a6d68b87ca85cc6220431d53d",
       "reference_sha256": "d8488fa7ec56cf5af3ff03ede5024574beb50b456a3eb77a4ff62eb2494376d1"
     },
     {
@@ -539,8 +539,8 @@
       "url": "https://www.rfc-editor.org/rfc/rfc9110.html",
       "category": "web_standard",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "1b49d83c4b8c5ed8201119b62c1c96404fe4535f5d66a155a7f83e01834f991e",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "f7330776be9aab0d521d213017ba6d75806c02f64d62e4c54eb698ec91de1ee8",
       "reference_sha256": "f8ca256a4b0c0c0dce03f544daf37930fdcd78ef90fd28b506a3b7684f9f5df2"
     },
     {
@@ -549,8 +549,8 @@
       "url": "https://www.w3.org/TR/2008/REC-xml-20081126/",
       "category": "vendor_documentation",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "122f611f94264038f3d2d4a2454cd82634226f86aaca95dff94bf64531b995eb",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "25eef2c530a33d0c8931232eec671e6fc4dcc526ebf4ef12a783649a5416c036",
       "reference_sha256": "6a134efe043e557a4fa4b6cffd66b7349a526cd6e2fab121220941b2d204f2ef"
     },
     {
@@ -559,8 +559,8 @@
       "url": "https://docs.stripe.com/api",
       "category": "vendor_documentation",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "1c6a853cd20757d43ef80071d218d41076e8646a535848c74c310b3bb0e51029",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "b35545f03d1d7e3a3231d52f624f23456121cbc8527b5868f3528963b06a75ae",
       "reference_sha256": "c94b73baba14e0993d25796f4d0ad908fc6ff3d3cf4e2bebf10d958a4ae564a7"
     },
     {
@@ -569,8 +569,8 @@
       "url": "https://science.nasa.gov/",
       "category": "public_institution",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "3c101595c8d6370cac192a7b45ae2b101bb86394fcf3750a7a5d48349607bba7",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "60e310fe974aa89537ae86af60362fea7f89cf758dfdf52090284d5a371946f7",
       "reference_sha256": "948f805b35895817b403a927a9d71a22c09823ac1770f7fd1994b650dd0cda46"
     },
     {
@@ -579,8 +579,8 @@
       "url": "https://books.toscrape.com/catalogue/category/books/travel_2/index.html",
       "category": "listing",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "5c631805d5f4bbb3cbcd63e5cd27efdbb6657c1fd9efa0ad225e1dd64a5a1f38",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "a16086832c4550dfade84ce0eb7f941f9d029e3e7bb268aa52185afbe4a68d38",
       "reference_sha256": "65316da9424c487f2d35cb784630e042fd2bced78f1097eea867e91cd3181fd6"
     },
     {
@@ -589,8 +589,8 @@
       "url": "https://www.postgresql.org/docs/current/tutorial.html",
       "category": "technical_documentation",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "4a43eecdc326bc7a9d6038844dd0f8eb6fce650b8fd3af6cee049a1dba0714d9",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "5204b68b34f5dca82558616423be5b0f34ac98eb36d6744c2e9df8f98bc1d669",
       "reference_sha256": "4e0e8a9c0c36ae70556d26dc7fe92eac0af4fd504ddde22671165ab76194bd2a"
     },
     {
@@ -599,8 +599,8 @@
       "url": "https://developers.openai.com/api/docs",
       "category": "vendor_documentation",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "7a0e4ee714173832b40ce7c4403d5fc0889badd3d6adcdd23a302840839b1303",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "8595037121e4d0803b466039955f011234d209fe8ad82bf3678e8a84e4e1b924",
       "reference_sha256": "2d8f74b76070490ec14ce387643e51495b9b840e2ac8479fc555f9ddba2859c8"
     },
     {
@@ -609,8 +609,8 @@
       "url": "https://www.noaa.gov/climate",
       "category": "public_institution",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "418e6f2b5bdd966d38e42f415c63ab22adf4b70e03daf66cf418b9ecfc984bcf",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "16f76e0bb082ce25a176de26ea53b206e4d8d8134136308fc1160ada3d33f11b",
       "reference_sha256": "ab62f0273ab9f9b792c99d2d021bb1fe7f6ff7fcf6af9935de7b65cc4443d2e8"
     },
     {
@@ -619,8 +619,8 @@
       "url": "https://books.toscrape.com/catalogue/category/books/mystery_3/index.html",
       "category": "listing",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "26e280f51e0e8e5d31a33bf9d43a977a5ea41f0fe4bb365bffe41e574d85f27c",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "df344358fb1f9e9ebc749342fa54a8739954dc8d491479b3e22d2cddd8fa435e",
       "reference_sha256": "6ba12faca73e0ee0e5ead5aa2d315ab44f3b845b7bac96f5a5acf1a409a5f4e4"
     },
     {
@@ -629,8 +629,8 @@
       "url": "https://redis.io/docs/latest/",
       "category": "technical_documentation",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "d56b28fe802d610b5705f4de34366c9adb04ac55719aa741eeb098ab5469c34b",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "bff31cebd7751da8466a9986888eac925d8906d3db75bdb2523a8f80b4fb14d6",
       "reference_sha256": "3361eb5e52041d343cb58cc75e7716a88a70c85f894a93c07e965f5d3a1fb75e"
     },
     {
@@ -639,8 +639,8 @@
       "url": "https://curl.se/docs/",
       "category": "technical_documentation",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "c11f64a0d9772eab54773c9cbb1d84edf1692d832b6e5ad2adbf62e9830732af",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "c9d60131d80ff929a0873058315109f71df279ea31bd562902584107a61b326c",
       "reference_sha256": "f9a1c4348fd86bc8579275b434ca0310dc6a2c651ba1f1f8f8818866d77abe5b"
     },
     {
@@ -649,8 +649,8 @@
       "url": "https://en.wikipedia.org/wiki/Python_(programming_language)",
       "category": "encyclopedia",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "6d730411cb1eb4b9a894d72b9f2451e3742566f8334069748bc9737ca2abcb92",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "bce7a1bf71fefe6881a1111f2dddb93cc4f3dcf676902996c7587c92abeaf731",
       "reference_sha256": "fb74a848af4ac2b1b42295c16c139913f56a40cc027aa59ac354fd6d349c8e35"
     },
     {
@@ -659,8 +659,8 @@
       "url": "https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model",
       "category": "technical_documentation",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "bb5538db32268a90c4531fc07c258d277be635628de50b51218358a744fd400a",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "cc772df585b08e794f734df1ee4128fa2ea3e1b91daec4cc2c59e5838c0c2b96",
       "reference_sha256": "d9ef1715ddbdb7493317a188ec4e40717cb17f8e7cfa8e5d6ce2f18402a7f77f"
     },
     {
@@ -669,8 +669,8 @@
       "url": "https://en.wikipedia.org/wiki/Cascading_Style_Sheets",
       "category": "encyclopedia",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "c113695702923a8235525dd424aafa70233c564d9ac2f0429e26916d061cd15d",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "f64c474d4394bf187118b888412e2712778ad00365f877db1a8df938aef3117a",
       "reference_sha256": "e30091545652add8e4f437abbd84d224ee47a2ec735551ea84b65c55a181e37c"
     },
     {
@@ -679,8 +679,8 @@
       "url": "https://developer.mozilla.org/en-US/docs/Web/API/History_API",
       "category": "technical_documentation",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "d742c3ed6faf7249e543837c5b9b6c0bfe499b06903fb5d005244ffee52c8fe5",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "1e0d51a73299f811da439af64940b4bd5e192fa66267babf35def11fb619e2f6",
       "reference_sha256": "dbef78f9faeb47246efb250e3bdf0d9cc4c112267ccfa14cb5d88aa7ced4990a"
     },
     {
@@ -689,8 +689,8 @@
       "url": "https://developer.mozilla.org/en-US/docs/Web/API/Cache",
       "category": "technical_documentation",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "cec593acea6dce32bfefea0d7807e1918c7ae517b38864d2dcd5df26b6080b4e",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "6c5339acd79fe959afa705bacf8c34832d594f27528adc8774962ddc21ca7907",
       "reference_sha256": "cc0386124291ef80b195615b9181484f5741a593ba9c8fea8ebf744fff72815a"
     },
     {
@@ -699,8 +699,8 @@
       "url": "https://developer.mozilla.org/en-US/docs/Web/API/File_API",
       "category": "technical_documentation",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "4385d614093f6f47019461571ea088a634191491a0edb199a4247c1d9310a9bd",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "28e0738398849645ca904b2a15236868937279425c5dd025e08e3eeadee95932",
       "reference_sha256": "f96aead8346e57edb476e781e760fc9ca74319f3e310cf144b43ca1b9d465ca3"
     },
     {
@@ -709,8 +709,8 @@
       "url": "https://developer.mozilla.org/en-US/docs/Web/API/Push_API",
       "category": "technical_documentation",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "b4d5853b70c4ae4718ab601f67425f71a67df6f20aa5aa672e2041488115ea8a",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "ca13ce52ecd5c1641b37eba6da98f6e09e0334a88d2d2222b47a0977341526e9",
       "reference_sha256": "be1afcc305e7c195ade88c963d556cce7911f2fc55d7b1b30c7156364bec478b"
     },
     {
@@ -719,8 +719,8 @@
       "url": "https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API",
       "category": "technical_documentation",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "bd8031fcef36cb72a13bc2e6e1b0ba26cd4cd3b6ea5bcd5c6e23ed578af153b6",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "1858787a94028870b1829f460777415a037f72a02fd317465bee08e691683529",
       "reference_sha256": "20872705cbad77ea0ec98bf12c0b612edf64ef5f30e5a03bd80c5d31e866c92c"
     },
     {
@@ -729,8 +729,8 @@
       "url": "https://docs.python.org/3/library/functools.html",
       "category": "technical_documentation",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "1e2bd182361f9d40a810d7a330fd13d5d35aff556be13e95db0459828def7b1c",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "2cde5a0a815bca928c17bad84ce5d214b49dcab250b390f65eca9d7d262edc4d",
       "reference_sha256": "e4822720ea7353b64aa901d2f6885ff70f551f47ff616a351b68209d62ade8a8"
     },
     {
@@ -739,8 +739,8 @@
       "url": "https://docs.python.org/3/library/re.html",
       "category": "technical_documentation",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "3b65bcd99257b258a1039d285791f333b5d7ad6a5d1060e6afbfd86e138e012e",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "ae2cf341899d77fcd115d83f66181021643985800ba026a86932cdd9d4dbd91d",
       "reference_sha256": "11fbfcf8b481dd5dfaf9fc96d5ea2de55ca171039bbb3f9f55dd0a0d21bbae4f"
     },
     {
@@ -749,8 +749,8 @@
       "url": "https://docs.python.org/3/library/email.html",
       "category": "technical_documentation",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "22112d6706829673a61d80d6e4d6d618f8cea8fc0534c9f06738ced58f8f4cfa",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "cf3ff2cd137599122dd8ec48cc112f832a5b6da7194491193c2f66572847ff0d",
       "reference_sha256": "0847d46feb1558e534f62f3343a00e68ee93353be15098195eaea779b16af8a7"
     },
     {
@@ -759,8 +759,8 @@
       "url": "https://kubernetes.io/docs/concepts/overview/working-with-objects/",
       "category": "technical_documentation",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "949d5d6616294c138098fa595ad51bfe2599682fc16b84a0ae7f1f34469af2e9",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "252a612360214637114d65b4db3c64b56a5970e5a9d0c3482fd73fbf6c2900b2",
       "reference_sha256": "820f24aa9d8f475ed9a4fcacc18d7f3d72fdbc961876180b291d0c49d68a3fd3"
     },
     {
@@ -769,8 +769,8 @@
       "url": "https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/",
       "category": "technical_documentation",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "a52d9940bd91f49366b01116b39435ed97a9a6447ef528bc128421b3204a40cc",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "dc21cd16d9eeb0397f8ff472e8a67f2b8a51bf992718f58e2b75ca8dd560b4e4",
       "reference_sha256": "b6999cedc7d06fc009300b6a553ed58321804c47e8f15d60f048912785ad3d6d"
     },
     {
@@ -779,8 +779,8 @@
       "url": "https://github.com/aio-libs/aiohttp",
       "category": "developer_portal",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "3d1f711a17bcb8a30d98d4367b8fb76117daf02cbda5d351d145a2f8f73817c3",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "1d2a3832804ca5656680f26ff56cb2c8e5f8ade7e5dbb8d5e7c80a69eb27a581",
       "reference_sha256": "b2a704192861c4a3ec13e574fe93af4cfc940954a38ab5cfe800c58de6a54a97"
     },
     {
@@ -789,8 +789,8 @@
       "url": "https://github.com/pytest-dev/pytest",
       "category": "developer_portal",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "fcc3298b90f3ce23a3536834e903ed95811ad5e18082435df2f6a1fd215d8101",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "f7ac00e648d000f46c9ba8be07824ec341ae8afb92703de86cf55baea73b9d5c",
       "reference_sha256": "8271ea53b67903be42db1449426629c7136f9981166339d1bbcd6026dc38d4e6"
     },
     {
@@ -799,8 +799,8 @@
       "url": "https://github.com/denoland/deno",
       "category": "developer_portal",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "f9fb5593a34f0b6217d26f6a7ab94217cc9512992200042e390bd942d56221bb",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "99893df0b1060b9e12bba695e5b56eafcdbd4bbce32a0aaa8d53bfe98033c5f0",
       "reference_sha256": "eedcf89698e14c92c506c365e687f7ba6ca1dcf47ad97a7d6b343725925add39"
     },
     {
@@ -809,8 +809,8 @@
       "url": "https://github.com/spring-projects/spring-boot",
       "category": "developer_portal",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "38319d27a7cb1ef795f626cb66c8ca2ca889f7b59eb51efce23196c672779339",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "040276b0980a6d130b59968883ecab483f7e380c8bc854dccc88fb1f5b6c959f",
       "reference_sha256": "de6c72a4c7b2dcf94a19d37cd92c92d92d25799da5066d80399405092ec2814e"
     },
     {
@@ -819,8 +819,8 @@
       "url": "https://github.com/apache/superset",
       "category": "developer_portal",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "0eb0cad99fedca718da25ce0508d79dc62598ae86d65d49e82e1bcc968678771",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "f0340d3b8ab38d90bef75c18d583d6d3d23289b9c24fdace4a5e2600f941e965",
       "reference_sha256": "3cce71a11fb37013943ec5c70356a4493247627ca5f1eb8067545d7febcb7485"
     },
     {
@@ -829,8 +829,8 @@
       "url": "https://github.com/docker/compose",
       "category": "developer_portal",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "39d3e7b7e489e4ddd2c83ac6c80ee14521d3d3ab31cf8612e9a6068d6607003e",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "9778107529fe7e4d38c6ce80ebc15825d8ee69e39be8a395af79d2c9ae4e12a7",
       "reference_sha256": "09ab457b5d6df2da8e2dfb6c02c6b86378e73b4d39c325f1f0851466a4c0d744"
     },
     {
@@ -839,8 +839,8 @@
       "url": "https://en.wikipedia.org/wiki/Database",
       "category": "encyclopedia",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "e72d81edd2ca1e47b179bc1b410fab73aa94c0f256f10a6432be059bc4b07a0d",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "7b94a70fac746bf8ef1ef8da533c88730b78b5c7aa7c1634602d1597477e3d89",
       "reference_sha256": "e1f308fc3ea556c06333b3e8bfbca0f6e273977379010284c3a6dff3ae739025"
     },
     {
@@ -849,8 +849,8 @@
       "url": "https://en.wikipedia.org/wiki/Version_control",
       "category": "encyclopedia",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "a49b985350efd4adba895cf74ac66c0b775ea41926ea7dd1b180de156658531a",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "937ddf0a26967b19891a6ee12f7f6d29556f0cd8ebbd0c5f34401b15f2a1e466",
       "reference_sha256": "160de8855f46ee74ca06194c5c1c8428601796a7bc82b8bb833ec6f9481ec040"
     },
     {
@@ -859,8 +859,8 @@
       "url": "https://en.wikipedia.org/wiki/Natural_language_processing",
       "category": "encyclopedia",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "99a1ea7311a0204de4550abff1603c949e94222611478e27f162f4d13dcb2c75",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "fe0a002eae569ebd118f4fdaf5d06f514cbb40ef2dc5e4dedee9ab7eba778b11",
       "reference_sha256": "91d697638c621d4ef93863a51b97ff788646abbb6a1c803e748d5e3666f50027"
     },
     {
@@ -869,8 +869,8 @@
       "url": "https://github.com/astral-sh/ruff",
       "category": "developer_portal",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "d89529e59ab1ec5b63bf5004dd06f8955dd77c928240d66b59b5dc1f99d20d88",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "147c4b5ebb6945c02b7e5c9a4cd605bba112b5ff1ed1d8f54f7a1e1f4f77e51b",
       "reference_sha256": "f5587102b1cd98f674ea1a4eae17cb6154a4a4585b12595fa08bc978d5a1579e"
     },
     {
@@ -879,8 +879,8 @@
       "url": "https://github.com/pandas-dev/pandas",
       "category": "developer_portal",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "f8908e6deb8d9cc12ab7191b4546b8ca4ef5cfa12f6644c1e0c02c81325153fb",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "74bb8b83717e82cd2ec1ec0e7832b060d37226dac77cf43bde4953bda5fd3347",
       "reference_sha256": "d66ecb4b0b0f2b02a88d4be777207e6a19488b19b41ae5e8e5ab7ab7392ab58a"
     },
     {
@@ -889,8 +889,8 @@
       "url": "https://github.com/huggingface/datasets",
       "category": "developer_portal",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "c021a42f8f97c8ec2cc2de35f86ad68159e070cdb9ad04b261fbdb5d5b5c4c31",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "d5a8fe990d443904a199e67a071af7ccd3b9b5118589d9f201a4b813cdf358f0",
       "reference_sha256": "54488abd3239ef898a2357ba9208d292357d012658e6d84a02a60f5caeec01c3"
     },
     {
@@ -899,8 +899,8 @@
       "url": "https://github.com/open-webui/open-webui",
       "category": "developer_portal",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "94cc195bc118d143910fa9231dcb218e84ae2d4f0b71dd3e97b2a32d8d25ff42",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "0e37e4d88c6c6d6fb954b8354ec1ec8640b50a3628a1d46f5412ee1ffdd0d947",
       "reference_sha256": "b0732f87fa6d1482ba44f92968f2cf74f39c2b2ea1ad890be2712a501724c045"
     },
     {
@@ -909,8 +909,8 @@
       "url": "https://github.com/infiniflow/ragflow",
       "category": "developer_portal",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "7fe86157e72bcb38ca5275592811cc502c77a80d964f3afb6d91463c33155c81",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "2c64862817e916edda70027d3b88b2903cef8e849175412bb1a92dd389c5dd0d",
       "reference_sha256": "1a12ed21ede37a79e19fd152c353f1714958fe19eef55b260235be1a2fbc0ccb"
     },
     {
@@ -919,8 +919,8 @@
       "url": "https://github.com/remix-run/react-router",
       "category": "developer_portal",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "8cde5138c7458c28c4b0c7a32f0dce8e168fa58a9d228dd21d96cf2b6fc9057d",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "96abaf3f721375c5b005d8c0708bfeb8ef7e2a721d1bd9fdff647d8b45792f49",
       "reference_sha256": "67acc10cb1dfa39d6aae913496570736ac254f66173dc74cc9fe6a176e8e22ea"
     },
     {
@@ -929,8 +929,8 @@
       "url": "https://github.com/prettier/prettier",
       "category": "developer_portal",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "b272cc2ef0510a91443f314ebae409091669140d0970ba6d7c23b2fefe40eae3",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "1030801df05cccf10335e88ad294816bb9ed5ffb1f8c9b5b22a8d4defa465a3d",
       "reference_sha256": "ed8db79d4538a266591efd751f61853615b2480b32ad0e2f1a41f0c6c230b7e4"
     },
     {
@@ -939,8 +939,8 @@
       "url": "https://github.com/reduxjs/redux",
       "category": "developer_portal",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "f076b8f9d24c41a0a86c8aa45813a7b578225c1d81a7a483d72c0827c4d2f5f3",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "f2e348005fd3a0dba8a2bbb1ee43ee2956a1e8e17a036287d8240eabeb707bb8",
       "reference_sha256": "f54b64aaff9b4446741fc3c36a12207ffc298c6171d11ae22c5040c9e14064c0"
     },
     {
@@ -949,8 +949,8 @@
       "url": "https://books.toscrape.com/catalogue/category/books/science_22/index.html",
       "category": "ecommerce_category",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "95b159c1194b2f6405f72707b5ea7cfc9df67cb5446c6ef014881e57e56f4bf6",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "60bb45dfe349e3a0a736d7b17e05b92cc3316aecba5a7fb3d2bd1b422b08a782",
       "reference_sha256": "4d0c61f291eac4a8dd8317fca34bf3cf68c6bc35860d7f4a03adbdcb7c094fe1"
     },
     {
@@ -959,8 +959,8 @@
       "url": "https://docs.python.org/3/library/itertools.html",
       "category": "technical_documentation",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "cdc156e64cb5b88dcf5d48c8ea86fe7d583d38f447204287a1a8ecabb08fa91e",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "48f006339ee42911b9ade1aaedf0c7c651a48f779225562a82243ae553c0ae71",
       "reference_sha256": "00c68ee0fcc8ac5e2022398158b9cb0545fee221bdfe5960963aa5052af2c694"
     },
     {
@@ -969,8 +969,8 @@
       "url": "https://docs.python.org/3/library/json.html",
       "category": "technical_documentation",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "966e51f3ecf074e81e04d0203f757a02f50e25a83dc36827452bcaba07290010",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "699494246d7b775cdfdf183a355facfddd045c2b8a3ba9b6c31185e87a658517",
       "reference_sha256": "0f6f3b40c0e029fa6062bfe6f689e2dc17d243929870d05ae02f6caba2d4a738"
     },
     {
@@ -979,8 +979,8 @@
       "url": "https://docs.python.org/3/library/sqlite3.html",
       "category": "technical_documentation",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "0a458568bed996bf342f98c5ca5aa6418ce5df9dd3358b4fd0de9e790bbf97a8",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "6ed3c922b7f8cab053b4fe9198c57babf60bcc51c3aa56d8eb885b582b1666f2",
       "reference_sha256": "95cf7c5373e4c51e710ae2a4fd2aa8987a1c020e5c793d61d2f6277b96cf6851"
     },
     {
@@ -989,8 +989,8 @@
       "url": "https://docs.python.org/3/library/logging.html",
       "category": "technical_documentation",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "236fac0ebd4b698fa508a76f8f5ee2d9dbe70814b74042fd593855219e779702",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "7b6152bc22c23adaf9f439408d5a3629c2fdd5922f9f391f8b685eb39234ff6b",
       "reference_sha256": "aa4364bace3adf44c9356a178a72b580edac35444c39bab4a01079ba361a7deb"
     },
     {
@@ -999,8 +999,8 @@
       "url": "https://docs.python.org/3/library/unittest.html",
       "category": "technical_documentation",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "ca4df2db378231cc8be0bb2abef52386c2412f0a85e2db20d5e10eb39fcec6e3",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "3e45cd9b9e9ffce7a812263514bee74e6019d29eeb2a3c4a2db9a28c751f9809",
       "reference_sha256": "70adcd0e024cbd2e9e942544ea2cfb270e03ab710c5e9311883634156b4a6bb8"
     },
     {
@@ -1009,8 +1009,8 @@
       "url": "https://docs.python.org/3/library/dataclasses.html",
       "category": "technical_documentation",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "72a1bf599480f042b5224ccfd989c0883220c0a225fa4f3b66ddb3b2d9ea8585",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "c355002af2c1c51ed02da25b7c05fb35f82a8ccda36fa6046d86ae0018f0499e",
       "reference_sha256": "219c1b929598937d3f7db381b58092211a47cc0fb2ce3a776a052a2191257c0d"
     },
     {
@@ -1019,8 +1019,8 @@
       "url": "https://docs.python.org/3/library/collections.html",
       "category": "technical_documentation",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "81fc65eefa98f557f6a585059edb6fe5475d4c742d8686598adcf64f05de30e3",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "d708ed5440f721e93cc72fe6d5fc8a43d31df09be1496d32b833f8758049abb6",
       "reference_sha256": "df55bcf569ff5f0145c2459823dd6fa58467b98a1fa48a5fb51f4f04fc94c7e0"
     },
     {
@@ -1029,8 +1029,8 @@
       "url": "https://docs.python.org/3/library/hashlib.html",
       "category": "technical_documentation",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "2a3f5acd3c3dc9be1543de63cd5fcfa99f4a09d9371b8bc70173e4ead6ff0457",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "ce3621f965905052c60a09885bf20913d00a0791448386eced9da76a5965f92d",
       "reference_sha256": "f1edaedec7cda48e87471bd63ea4a34f51906e537526a1d0c267d83f721179fb"
     },
     {
@@ -1039,8 +1039,8 @@
       "url": "https://docs.python.org/3/library/urllib.parse.html",
       "category": "technical_documentation",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "59ec1ed222f911df4103617be803a39a43849abaf3ae2903a1a3087e5ad060d0",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "1b76c4ef2e0f8e1faec18cd1b5dc3cd4ba595d194ef341b6cf453e0275ed5ebc",
       "reference_sha256": "7b3a60e67f3b5b75eae7cde0499ff782c9a7c092103893cc0d8d074e648ae366"
     },
     {
@@ -1049,8 +1049,8 @@
       "url": "https://docs.python.org/3/library/csv.html",
       "category": "technical_documentation",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "b830b7b4da824cad20f0ba5406283e9ed551ffe326c71a54e9b028da1d8e06be",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "f7c5af12846175cda2afe5e2d2c771f75bc084ca82c2225bc2913c509e121650",
       "reference_sha256": "3461028f49e0bf710ed574ca2592b5601ab4f40d94483ac482c01c825ed26268"
     },
     {
@@ -1059,8 +1059,8 @@
       "url": "https://docs.python.org/3/library/decimal.html",
       "category": "technical_documentation",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "81f25dc24948a4673c6f259775d4a6c21e74356dd8682a73b133f01ca31d90d9",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "1312faeefc93929a0c09bf86bcbc2c4206a994b3e3c85203dd78230e7a39fcba",
       "reference_sha256": "897fb638f5915a7df1f2c6adecc3d59552156ef11f45124835ae7f097675ca4e"
     },
     {
@@ -1069,8 +1069,8 @@
       "url": "https://docs.python.org/3/library/datetime.html",
       "category": "technical_documentation",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "0527916c104884b6c33ea12836b560fe832ce3acba202d561a7569035bcead96",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "6d4aec0f73179828eab89b2a42b448f8774b6384ac53fb7e8ff1aa19fb9b1a40",
       "reference_sha256": "b956d8852f21f2434461eea529f3e2ae853c996ef777a1c722921e113b8263ae"
     },
     {
@@ -1079,8 +1079,8 @@
       "url": "https://docs.python.org/3/library/concurrent.futures.html",
       "category": "technical_documentation",
       "track": "web",
-      "task_prompt": "读取给定网页当前首屏加载完成后的整页正文；保留标题、正文、列表和表格，不要求翻页或点击展开。项目仓库页的正文目标为完整项目说明（README），不要求侧栏统计。",
-      "definition_sha256": "37c9fef904753381d80d6cff3b577655388d1dc431a9f5dc60f0bb5aac351ef5",
+      "task_prompt": "读取给定网页初次加载后的正文，以 Markdown 保留标题、正文、列表和表格；不包含翻页或点击展开后才出现的内容。项目仓库页应包含完整项目说明（README）；侧栏统计不属于验收范围。",
+      "definition_sha256": "212c65b4a292b6a8ef87fa8cb1029d1f48f40112e4251cf78997ebc9d7380cce",
       "reference_sha256": "79ace7aed1c2fc80fda604f5627ef2dc9eed5046f4b6d7836fa0b9e3a2062aa0"
     },
     {
@@ -1530,8 +1530,8 @@
       "category": "async_api",
       "track": "dynamic",
       "task_kind": "body",
-      "task_prompt": "读取初次自动加载完成后的 10 条记录，保留全部文字字段；不要求滚动、翻页或点击。允许渲染、解析内嵌数据或获取公开接口，不限制实现路径。",
-      "definition_sha256": "3d514e2173e75e24383119f2aca149674175c560f39cdf3633ba290b6ce74de3",
+      "task_prompt": "返回目标页面初次加载后的 10 条记录，并保留全部文字字段；不包含滚动、翻页或点击后才出现的记录。",
+      "definition_sha256": "12dac965c1db891c9b5828bcdeb4d35e9fd54cdcdfdcec6aa9598b590446aab7",
       "reference_sha256": "1b0d230de9e4e8f91674cd3db383c68b17519c94da70b6d1dda382848fae4780"
     },
     {
@@ -1541,8 +1541,8 @@
       "category": "async_api",
       "track": "dynamic",
       "task_kind": "body",
-      "task_prompt": "读取初次自动加载完成后的 12 条记录，保留全部文字字段；不要求滚动、翻页或点击。允许渲染、解析内嵌数据或获取公开接口，不限制实现路径。",
-      "definition_sha256": "8ac7b7c9cbb294b79f169510d9f4c727d648b6ab2ad73a8d4eb856dc691c7ca8",
+      "task_prompt": "返回目标页面初次加载后的 12 条记录，并保留全部文字字段；不包含滚动、翻页或点击后才出现的记录。",
+      "definition_sha256": "26e304b6913f53058c9053e2723286fcba969f54f571a826bca4f85aff023703",
       "reference_sha256": "133390e3d8bb20f971778abb2b43c4803f1c363703e60cabe9aecc5304cdd09c"
     },
     {
@@ -1552,8 +1552,8 @@
       "category": "client_catalog",
       "track": "dynamic",
       "task_kind": "body",
-      "task_prompt": "读取初次自动加载完成后的 6 条记录，保留全部文字字段；不要求滚动、翻页或点击。允许渲染、解析内嵌数据或获取公开接口，不限制实现路径。",
-      "definition_sha256": "e671e4fc607a2e8885717ac9859150037536676efd2efcba15d133cb4a9887ff",
+      "task_prompt": "返回目标页面初次加载后的 6 条记录，并保留全部文字字段；不包含滚动、翻页或点击后才出现的记录。",
+      "definition_sha256": "7d7eb5358d687b7720be461848bac04192bf21eddf7ca05afbe0ced86b03b08b",
       "reference_sha256": "304b607dabec992e508c3cfbef381e44dc55915c820e05627ecbaa08034ae836"
     },
     {
@@ -1563,8 +1563,8 @@
       "category": "delayed_render",
       "track": "dynamic",
       "task_kind": "body",
-      "task_prompt": "读取初次自动加载完成后的 10 条记录，保留全部文字字段；不要求滚动、翻页或点击。允许渲染、解析内嵌数据或获取公开接口，不限制实现路径。",
-      "definition_sha256": "ab7024d55aaee7678db7d73ecfb007df3e19def1c27a14677c46966c8d570f47",
+      "task_prompt": "返回目标页面初次加载后的 10 条记录，并保留全部文字字段；不包含滚动、翻页或点击后才出现的记录。",
+      "definition_sha256": "ea7282a618431c2af121dc49092cc4d0af06ea02845392dcbc625a1e739ecfcf",
       "reference_sha256": "1b0d230de9e4e8f91674cd3db383c68b17519c94da70b6d1dda382848fae4780"
     },
     {
@@ -1574,8 +1574,8 @@
       "category": "graphql",
       "track": "dynamic",
       "task_kind": "body",
-      "task_prompt": "首次自动加载的 20 条评论：日期与评论全文；不含星级图形，不点击 Load More。允许渲染、解析内嵌数据、加载子文档或获取公开接口，不限制实现路径。",
-      "definition_sha256": "9483d511924b9673a688224ed5d75ef3ba8fe740b8c99af79d23120d1005303c",
+      "task_prompt": "返回目标页面初次加载后的 20 条评论的日期和全文；不包含点击 Load More 后的评论，星级图形不属于文字答案。",
+      "definition_sha256": "a0466834b51646e3f2191c4c490715f2d01fdf3744242f79f6ce5bfcca4700cf",
       "reference_sha256": "176193496a44f0acfbd9d91ecca4a8443a75debc8839acab4c37f5cb31de0535"
     },
     {
@@ -1585,8 +1585,8 @@
       "category": "react_app",
       "track": "dynamic",
       "task_kind": "body",
-      "task_prompt": "默认未筛选目录的全部 16 个商品：名称、售价、可见分期与免邮文字；不含按钮、图片及广告。允许渲染、解析内嵌数据、加载子文档或获取公开接口，不限制实现路径。",
-      "definition_sha256": "9b769d8eacc2a83fd65cacb2da12b364b99b2f40813e15af32b0618a435b7fb7",
+      "task_prompt": "默认未筛选目录的全部 16 个商品：名称、售价、可见分期与免邮文字；不含按钮、图片及广告。",
+      "definition_sha256": "7419bade6e1a24904432257acacdb389241f6aa96c2c8bf932fe7945aa9ad33e",
       "reference_sha256": "cf603310fbc4eabf16baa9ef3ddcb0ae6bfc156de5cb4e3a4fe9af605692a2df"
     },
     {
@@ -1596,8 +1596,8 @@
       "category": "client_router",
       "track": "dynamic",
       "task_kind": "body",
-      "task_prompt": "默认手机列表全部 20 条名称与描述；不搜索、不排序、不进入详情。允许渲染、解析内嵌数据、加载子文档或获取公开接口，不限制实现路径。",
-      "definition_sha256": "eb0dca8ece4e3cc4bbb8f83eb2a906875d81c9b93e3fb9b5cd54052ed0d1cabb",
+      "task_prompt": "返回默认手机列表全部 20 条名称与描述；搜索、排序和详情页结果不属于答案。",
+      "definition_sha256": "a9f220701eae92a09645354b31bdd4aac1d3749c4497d1b2a1c4590a640e2efa",
       "reference_sha256": "877d5cd0a01d27940808b469c7792136644f4df27dcebf6f814324bd5ede95f1"
     },
     {
@@ -1607,8 +1607,8 @@
       "category": "schema_render",
       "track": "dynamic",
       "task_kind": "body",
-      "task_prompt": "默认展开分组中全部 20 条操作摘要：HTTP 方法、路径和说明；不展开参数、不执行 API、不含 Cookie 横幅。允许渲染、解析内嵌数据、加载子文档或获取公开接口，不限制实现路径。",
-      "definition_sha256": "12a0c29c5caea32b52fe9b910c8cbe3d426c7eefa32038622a4e4c53df9a64bc",
+      "task_prompt": "默认展开分组中全部 20 条操作摘要：HTTP 方法、路径和说明；不展开参数、不执行 API、不含 Cookie 横幅。",
+      "definition_sha256": "e909adbd68d196296968d437dd7279f452e1427e729b1b383515d581a7b3179a",
       "reference_sha256": "37727508e4f211fe7a6f2f18e74b5840f8f9a6c9595d91bc8f74f5d662db5054"
     },
     {
@@ -1618,8 +1618,8 @@
       "category": "embedded_state",
       "track": "dynamic",
       "task_kind": "body",
-      "task_prompt": "商品页首次自动呈现的 5 条评论：日期和评论全文；不含星级图形、商品推荐，不点击 Load More。允许渲染、解析内嵌数据、加载子文档或获取公开接口，不限制实现路径。",
-      "definition_sha256": "1dafabee494016c28e779e7bfa895078047b3054e769f5bafd042ee41494064e",
+      "task_prompt": "返回商品页初次加载后的 5 条评论的日期和全文；不包含点击 Load More 后的评论，星级图形和商品推荐不属于答案。",
+      "definition_sha256": "f4b099153d0d0a6066c7597740e7d82eeac07081bce6c06c0b5afb8b9c2241d9",
       "reference_sha256": "e1b7d42946c236ed613e0318b20fefd56a7652073fccb88d6dcc29980fb27246"
     },
     {
@@ -1629,8 +1629,8 @@
       "category": "embedded_frame",
       "track": "dynamic",
       "task_kind": "body",
-      "task_prompt": "父页自动加载的 iframe 中全部 14 个龟类科名称；不进入详情，不要求图片或按钮文字。允许渲染、解析内嵌数据、加载子文档或获取公开接口，不限制实现路径。",
-      "definition_sha256": "f579c0878e0579cba78802a1fce87684d5c3cc5f253f4845a415ac98fd340536",
+      "task_prompt": "父页自动加载的 iframe 中全部 14 个龟类科名称；不进入详情，不要求图片或按钮文字。",
+      "definition_sha256": "5d31621e5e2dcc6489fd9aeeda173b26b3eb475a6547aa3ec4ead7415a28c86d",
       "reference_sha256": "e4183696f6e74f9016c0668ee9809eb2fe7b03c244bfdae2231d8e1a1326f9ca"
     }
   ]

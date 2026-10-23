@@ -9,7 +9,7 @@
     ]
   },
   "dataset": "dataset.json",
-  "dataset_sha256": "0da2bb30aaabe3ca2b93ec17b4cb88cdc1cf3ea46336bb3777fdb21c1f211b84",
+  "dataset_sha256": "d43ddabb528cd63a7b8b55045e5e96fb996e362df9e81abed14f2a1ef42df9e9",
   "case_count": 100,
   "cases": [
     {
@@ -18,8 +18,8 @@
       "url": "https://sspai.com/",
       "category": "dynamic_content",
       "track": "dynamic",
-      "task_prompt": "提取声明URL首次自动加载完成后的目标内容；不点击、不输入、不滚动、不搜索、不翻页。",
-      "definition_sha256": "4f2a23e911296d0f7f6cba3ce479ed83f4bfded40e7167c7c183ca235e63d753",
+      "task_prompt": "返回声明 URL 初次加载后的目标内容；不包含点击、输入、搜索、滚动或翻页后才出现的内容。",
+      "definition_sha256": "843daa15183067ef2789293ec2feafcae117685afb20a8b2d1bc5557c5aa60c6",
       "reference_sha256": null
     },
     {
@@ -28,8 +28,8 @@
       "url": "https://www.falabella.com/falabella-cl/category/cat3091/Equipos-de-musica-y-karaokes",
       "category": "dynamic_content",
       "track": "dynamic",
-      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。保留页面可见稳定文字；不点击、输入、滚动、翻页或使用OCR。动态成员不固定历史名单；同条目字段须对应完整。",
-      "definition_sha256": "8fd871dbf6b7898830c8c053a49f223c963cb54bf43b5f1b6faa2390d2c64bfc",
+      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。保留页面初次加载后的稳定文字；不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。动态成员不固定历史名单；同条目字段须对应完整。",
+      "definition_sha256": "4c8d7cfc8de9de43de1997798f1f220f4f5911d5f6216643b42376e12473e6d1",
       "reference_sha256": null
     },
     {
@@ -38,8 +38,8 @@
       "url": "https://www.lotteon.com/p/display/main/lotteon",
       "category": "dynamic_content",
       "track": "dynamic",
-      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。保留页面可见稳定文字；不点击、输入、滚动、翻页或使用OCR。动态成员不固定历史名单；同条目字段须对应完整。",
-      "definition_sha256": "a4547d08cce0a1109cf37e7d09f66cb3a9f9804227a62281cc9d07bce5403acd",
+      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。保留页面初次加载后的稳定文字；不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。动态成员不固定历史名单；同条目字段须对应完整。",
+      "definition_sha256": "a23f548ef782a60a34407812fb1aa1313511dbe68509e5d7af4604d2facb47cc",
       "reference_sha256": null
     },
     {
@@ -48,8 +48,8 @@
       "url": "https://www.nintendo.com/es-es/Buscar/Buscar-299117.html?q=Mario&f=147394-86",
       "category": "dynamic_content",
       "track": "dynamic",
-      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。保留页面可见稳定文字；不点击、输入、滚动、翻页或使用OCR。动态成员不固定历史名单；同条目字段须对应完整。",
-      "definition_sha256": "4a7e415b79d7e0ad0bd16a8e81d71cf508e4ef8eac62dcdece753e8945051b83",
+      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。保留页面初次加载后的稳定文字；不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。动态成员不固定历史名单；同条目字段须对应完整。",
+      "definition_sha256": "3dc951ae3de2d27da5c917812a6bdeb2849fee862b0343dd37f4c80b5119ea78",
       "reference_sha256": null
     },
     {
@@ -58,8 +58,8 @@
       "url": "https://www.nintendo.com/es-es/Buscar/Buscar-299117.html?f=147394-87-126555",
       "category": "dynamic_content",
       "track": "dynamic",
-      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。保留页面可见稳定文字；不点击、输入、滚动、翻页或使用OCR。动态成员不固定历史名单；同条目字段须对应完整。",
-      "definition_sha256": "77091b3d9b4b164bb34c37771b19691fa12fc6b529205a6bb65882cb6d487c01",
+      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。保留页面初次加载后的稳定文字；不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。动态成员不固定历史名单；同条目字段须对应完整。",
+      "definition_sha256": "682f42b14f481311b1374e1e27c522f49df47b77dfe8aeb07cfdab0f7a75e412",
       "reference_sha256": null
     },
     {
@@ -68,8 +68,8 @@
       "url": "https://www.nintendo.com/es-es/Buscar/Buscar-299117.html?q=2%2BEdition&f=147394-86-126556",
       "category": "dynamic_content",
       "track": "dynamic",
-      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。保留页面可见稳定文字；不点击、输入、滚动、翻页或使用OCR。动态成员不固定历史名单；同条目字段须对应完整。",
-      "definition_sha256": "023f404de501cb2107294125179e44bfed2e94ae70e1e3d7968457b35ce7c7af",
+      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。保留页面初次加载后的稳定文字；不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。动态成员不固定历史名单；同条目字段须对应完整。",
+      "definition_sha256": "b09192575f45f33d587db8bd73e006213dd963950249a325d35f5bf16e41c962",
       "reference_sha256": null
     },
     {
@@ -78,8 +78,8 @@
       "url": "https://www.kabum.com.br/hardware",
       "category": "dynamic_content",
       "track": "dynamic",
-      "task_prompt": "提取声明URL首次自动加载完成后的目标内容；不点击、不输入、不滚动、不搜索、不翻页。",
-      "definition_sha256": "eb159a5bbb36583a19d9cf1e0ccb75ace4014786919bd63f71b6eeced67be68a",
+      "task_prompt": "返回声明 URL 初次加载后的目标内容；不包含点击、输入、搜索、滚动或翻页后才出现的内容。",
+      "definition_sha256": "8e489404ed08f67bce738c66872b79f2c7d6d4d0cc7b457fcb311685f9327a33",
       "reference_sha256": null
     },
     {
@@ -88,8 +88,8 @@
       "url": "https://mui.com/x/react-data-grid/pagination/",
       "category": "dynamic_content",
       "track": "dynamic",
-      "task_prompt": "提取声明URL首次自动加载完成后的目标内容；不点击、不输入、不滚动、不搜索、不翻页。",
-      "definition_sha256": "67ff9377ffa0f138c83660f3c24f1eed863d243f33b6d6941e9d7978f7d1b584",
+      "task_prompt": "返回声明 URL 初次加载后的目标内容；不包含点击、输入、搜索、滚动或翻页后才出现的内容。",
+      "definition_sha256": "0c9063e1f21b4f4f4fc0a3e7b8ec14753c615636935452005e6f8b58c516ac36",
       "reference_sha256": "5b8f7d36f6a59f9af3368498007af4416b0f06ed6b514129d8c354de3f937a69"
     },
     {
@@ -98,8 +98,8 @@
       "url": "https://juejin.cn/",
       "category": "dynamic_content",
       "track": "dynamic",
-      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。保留页面可见稳定文字；不点击、输入、滚动、翻页或使用OCR。动态成员不固定历史名单；同条目字段须对应完整。",
-      "definition_sha256": "7f6794f8ffc9215deb94bc6bbb7400c005ac0b6043fe3e7aedf6af7355c3c7b1",
+      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。保留页面初次加载后的稳定文字；不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。动态成员不固定历史名单；同条目字段须对应完整。",
+      "definition_sha256": "ae36049d11ff75c62c028673870f0150495e45f2a485f93272b4b0f621570e4b",
       "reference_sha256": null
     },
     {
@@ -108,8 +108,8 @@
       "url": "https://www.nintendo.com/jp/games/switch2/index.html",
       "category": "dynamic_content",
       "track": "dynamic",
-      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。保留页面可见稳定文字；不点击、输入、滚动、翻页或使用OCR。动态成员不固定历史名单；同条目字段须对应完整。",
-      "definition_sha256": "35bac19f18232808fd38eca2f3274c8d05fdef94f96bc5b8610be8869b3fc4f1",
+      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。保留页面初次加载后的稳定文字；不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。动态成员不固定历史名单；同条目字段须对应完整。",
+      "definition_sha256": "27244909a0c5f1737a26dfb54870961f38196d8e22e908e2a25039f56b950ab2",
       "reference_sha256": null
     },
     {
@@ -118,8 +118,8 @@
       "url": "https://www.nintendo.com/jp/search/index.html?q=Nintendo",
       "category": "dynamic_content",
       "track": "dynamic",
-      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。保留页面可见稳定文字；不点击、输入、滚动、翻页或使用OCR。动态成员不固定历史名单；同条目字段须对应完整。",
-      "definition_sha256": "bc740d6c0db8af1eabe3364600e9190ba62ceb0feed0ff589196b99bcf1a17ad",
+      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。保留页面初次加载后的稳定文字；不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。动态成员不固定历史名单；同条目字段须对应完整。",
+      "definition_sha256": "1d11cae4eedcdebac5baa1f6b42c561add883b8734fade8324f8497a1c944ec1",
       "reference_sha256": null
     },
     {
@@ -128,8 +128,8 @@
       "url": "https://nutui.jd.com/h5/vue/4x/",
       "category": "dynamic_content",
       "track": "dynamic",
-      "task_prompt": "提取首次自动加载完成后的目标正文；不点击、不输入、不滚动、不搜索、不翻页。",
-      "definition_sha256": "cd99ca6e9ebcf2cd78ae9099cbd569c53f4ac78eb2be0f60f8b0d6d549e9d6df",
+      "task_prompt": "返回目标页面初次加载后的正文；不包含点击、输入、搜索、滚动或翻页后才出现的内容。",
+      "definition_sha256": "05a80da91e9639337bd0bc0b85916013ee457a31c55c1ea9b3dcd0f5f21bc966",
       "reference_sha256": "6ccb6ebc62ffa5f687457747ee4c1ba231d3da248592b0e0c29ca7fa87bde0f2"
     },
     {
@@ -138,8 +138,8 @@
       "url": "https://eui.elastic.co/docs/components/tables/basic/",
       "category": "dynamic_content",
       "track": "dynamic",
-      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。保留页面可见稳定文字；不点击、输入、滚动、翻页或使用OCR。动态成员不固定历史名单；同条目字段须对应完整。",
-      "definition_sha256": "371fa016afd498070778b1cd26e3dead2fb58b4b960006a05a6060e345c74896",
+      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。保留页面初次加载后的稳定文字；不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。动态成员不固定历史名单；同条目字段须对应完整。",
+      "definition_sha256": "e77552b3b81e8060a7c76fd850ed8fc0a0129ad74dbf9a22cb086e41b06a071d",
       "reference_sha256": "1c68cc0b88558e3c0c00244381dac11fb6ba337663a4d3f1328c8fc26c917814"
     },
     {
@@ -148,8 +148,8 @@
       "url": "https://www.heroui.com/docs/components/table",
       "category": "dynamic_content",
       "track": "dynamic",
-      "task_prompt": "提取声明 URL 首次自动加载完成后的目标正文；不得登录、点击、输入、搜索、滚动、翻页或接受同意墙。排除导航、广告、推荐、页脚、Cookie、登录和订阅提示。",
-      "definition_sha256": "d6c568f48c7905d3466ffb6e1da843c8da57aaca3caf98d9fde6f3ddfce1cc54",
+      "task_prompt": "返回声明 URL 初次加载后的目标正文；不包含点击、输入、搜索、滚动或翻页后才出现的内容。导航、广告、推荐、页脚、Cookie、登录和订阅提示不属于答案。",
+      "definition_sha256": "70ad78b6dcaa97322db8487f56a4a7cea1443dcc177f865c2289b6afd359d752",
       "reference_sha256": "3afbb8b8f09598f179126b2a614cd27564f8f67ed4454864a994a525dc4dd125"
     },
     {
@@ -158,8 +158,8 @@
       "url": "https://www.selenium.dev/selenium/web/iframes.html",
       "category": "dynamic_content",
       "track": "dynamic",
-      "task_prompt": "提取首次自动加载完成后的目标正文；不点击、不输入、不滚动、不搜索、不翻页。",
-      "definition_sha256": "cfd57dd7273d49da4a9792c5802eaab43969d1cf3412f85c55f377f397861187",
+      "task_prompt": "返回目标页面初次加载后的正文；不包含点击、输入、搜索、滚动或翻页后才出现的内容。",
+      "definition_sha256": "0b52cc14c12163337311a048291080116954b3ec228f04ae47cbfb1d85e36ba9",
       "reference_sha256": "7d03bf2e3f739f5ac451815a0bba26082210da0d995c26516c87288f813df5c9"
     },
     {
@@ -168,8 +168,8 @@
       "url": "https://webscraper.io/test-sites/e-commerce/ajax/computers/tablets",
       "category": "dynamic_content",
       "track": "dynamic",
-      "task_prompt": "提取首次自动加载完成后的目标正文；不点击、不输入、不滚动、不搜索、不翻页。",
-      "definition_sha256": "f829089a4eec107e9b04c17f24788ca08b134dc94d7a03780fe6607e6ca3d356",
+      "task_prompt": "返回目标页面初次加载后的正文；不包含点击、输入、搜索、滚动或翻页后才出现的内容。",
+      "definition_sha256": "18d458c7d7958d535bcd3c6769678d3cd953b668852653f300e3772dda3f42a3",
       "reference_sha256": "b580b2319ef322b1dc5ae0d1a951ffa85324cee85cb49772092407bcf841ced1"
     },
     {
@@ -178,8 +178,8 @@
       "url": "https://www.bilibili.com/v/popular/rank/all",
       "category": "dynamic_content",
       "track": "dynamic",
-      "task_prompt": "提取首次自动加载完成后的目标正文；不点击、不输入、不滚动、不搜索、不翻页。",
-      "definition_sha256": "b82e0ad9f1b21668272d2317a958584564d641e187fcbab3535a7cbb434fc674",
+      "task_prompt": "返回目标页面初次加载后的正文；不包含点击、输入、搜索、滚动或翻页后才出现的内容。",
+      "definition_sha256": "35ab78b0143c0875b0f5ac64ba32b9e32b4943756cce37bae05674bfaefe18ce",
       "reference_sha256": null
     },
     {
@@ -188,8 +188,8 @@
       "url": "https://ej2.syncfusion.com/react/demos/grid/grouping/index.html",
       "category": "dynamic_content",
       "track": "dynamic",
-      "task_prompt": "提取首次自动加载完成后的目标正文；不点击、不输入、不滚动、不搜索、不翻页。",
-      "definition_sha256": "c76278f800449281fd51e07da384d41f780bf3b638a0f8691da270549a3209d4",
+      "task_prompt": "返回目标页面初次加载后的正文；不包含点击、输入、搜索、滚动或翻页后才出现的内容。",
+      "definition_sha256": "464dcdd16adc4c3979cb6ca0cdb2f5bc25b39a6ff605c21c38ae3229e77442a3",
       "reference_sha256": "701f5df83963431f1274c025d2985342084b333e91a51abdf8f46ced110c341c"
     },
     {
@@ -198,8 +198,8 @@
       "url": "https://ej2.syncfusion.com/react/demos/grid/paging/",
       "category": "dynamic_content",
       "track": "dynamic",
-      "task_prompt": "提取首次自动加载完成后的目标正文；不点击、不输入、不滚动、不搜索、不翻页。",
-      "definition_sha256": "8af7c10b4a899dd2d100447d27560799b82dd1d60eba73e91e0c21298bed1c96",
+      "task_prompt": "返回目标页面初次加载后的正文；不包含点击、输入、搜索、滚动或翻页后才出现的内容。",
+      "definition_sha256": "30115be2699e1761e0de6602bc8f1c1149583ae6b722f5e405a7a4a0ad4018ba",
       "reference_sha256": "0318325d86327f2c869d66f12655fa29708860a84cc70a91be3956c423fb5354"
     },
     {
@@ -208,8 +208,8 @@
       "url": "https://www.yna.co.kr/",
       "category": "dynamic_content",
       "track": "dynamic",
-      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。保留页面可见稳定文字；不点击、输入、滚动、翻页或使用OCR。动态成员不固定历史名单；同条目字段须对应完整。",
-      "definition_sha256": "109d55100962a625c65fdaa6963dd68e9a38c4ae3e44acfacf55cc5d28b07d53",
+      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。保留页面初次加载后的稳定文字；不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。动态成员不固定历史名单；同条目字段须对应完整。",
+      "definition_sha256": "d902327c368c49d865b7a68ce27807338242a1cbaad96d89f1ee80029f8c5d3c",
       "reference_sha256": null
     },
     {
@@ -218,8 +218,8 @@
       "url": "https://quasar.dev/vue-components/virtual-scroll/",
       "category": "dynamic_content",
       "track": "dynamic",
-      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。保留页面可见稳定文字；不点击、输入、滚动、翻页或使用OCR。动态成员不固定历史名单；同条目字段须对应完整。",
-      "definition_sha256": "4a91c192ddcc022e57ea4138704f298e04648a7c5b38fc4d3ba144a528ae440a",
+      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。保留页面初次加载后的稳定文字；不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。动态成员不固定历史名单；同条目字段须对应完整。",
+      "definition_sha256": "fb5c9ceaeaf425dabd895d0287ca2c657980076a402518909faac8b52175e6c5",
       "reference_sha256": null
     },
     {
@@ -228,8 +228,8 @@
       "url": "https://material.angular.dev/components/table/examples",
       "category": "dynamic_content",
       "track": "dynamic",
-      "task_prompt": "提取首次自动加载完成后的目标正文；不点击、不输入、不滚动、不搜索、不翻页。",
-      "definition_sha256": "6bbea9daa4824b34d51bcd3d608aeda0c43184e732aa3b1c40aaa5488befc05c",
+      "task_prompt": "返回目标页面初次加载后的正文；不包含点击、输入、搜索、滚动或翻页后才出现的内容。",
+      "definition_sha256": "8c729deafb908f84a9aaf9212f0e7c7eeb4ab47943cf4b95b50e4d7be18357da",
       "reference_sha256": "4c3f95132d6e8853971eb62de9165bf13e11aa02399e28074e63314451dd1045"
     },
     {
@@ -238,8 +238,8 @@
       "url": "https://gridjs.io/docs/examples/hello-world",
       "category": "dynamic_content",
       "track": "dynamic",
-      "task_prompt": "提取首次自动加载完成后的目标正文；不点击、不输入、不滚动、不搜索、不翻页。",
-      "definition_sha256": "4db6150c9e5552c59d7baaba13de11db0a405a16829481d3da0ee1ec19af31f0",
+      "task_prompt": "返回目标页面初次加载后的正文；不包含点击、输入、搜索、滚动或翻页后才出现的内容。",
+      "definition_sha256": "480ff9ea3e3f7122083baa46a85267c674d7f7079819c5240fb7faf3e8ec8adf",
       "reference_sha256": "fcacdea375bdfd7396bde270160ed216d757aa44aa00374e7bdda995016aee68"
     },
     {
@@ -248,8 +248,8 @@
       "url": "https://youzan.github.io/vant/v2/",
       "category": "dynamic_content",
       "track": "dynamic",
-      "task_prompt": "提取首次自动加载完成后的目标正文；不点击、不输入、不滚动、不搜索、不翻页。",
-      "definition_sha256": "c991baf766697789c8913532c445e896693a0d5e7dcd6c26c7605b0b9bfc3764",
+      "task_prompt": "返回目标页面初次加载后的正文；不包含点击、输入、搜索、滚动或翻页后才出现的内容。",
+      "definition_sha256": "1c49433a07b1c5a76c4bfcfcf052914bd59513270d42bed0bedf001595ccf69e",
       "reference_sha256": "f43b4377f3d46be1f43fafcc7e231568b9fa3ac7cfe0985204dd1f2eb1c4d5ec"
     },
     {
@@ -258,8 +258,8 @@
       "url": "https://www.bilibili.com/v/popular/all/",
       "category": "dynamic_content",
       "track": "dynamic",
-      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。保留页面可见稳定文字；不点击、输入、滚动、翻页或使用OCR。动态成员不固定历史名单；同条目字段须对应完整。",
-      "definition_sha256": "611c80492c4636fb567362b6acfaa15e7830b2e1ae609260f47a69d0108f5f02",
+      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。保留页面初次加载后的稳定文字；不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。动态成员不固定历史名单；同条目字段须对应完整。",
+      "definition_sha256": "c3754d7dd0b1e9e924d118fe70a0aff0136bc5d3a3e45162c3719b18c09683d5",
       "reference_sha256": null
     },
     {
@@ -268,8 +268,8 @@
       "url": "https://procomponents.ant.design/components/table",
       "category": "dynamic_content",
       "track": "dynamic",
-      "task_prompt": "提取首次自动加载完成后的目标正文；不点击、不输入、不滚动、不搜索、不翻页。",
-      "definition_sha256": "5dcb7dc220c72a06243708911204f4ccffc895702d7e4663e8036fcb18f8661d",
+      "task_prompt": "返回目标页面初次加载后的正文；不包含点击、输入、搜索、滚动或翻页后才出现的内容。",
+      "definition_sha256": "2a8524b8224402929e7f98a534f75f572407df0ebbf7c7e5249960cd49caf1ef",
       "reference_sha256": "19b570b9a924c6f264afdc48bdaa78060f53c835fdfeea7ca6f3b49ed66c14ed"
     },
     {
@@ -278,8 +278,8 @@
       "url": "https://arco.design/vue/component/table",
       "category": "dynamic_content",
       "track": "dynamic",
-      "task_prompt": "提取首次自动加载完成后的目标正文；不点击、不输入、不滚动、不搜索、不翻页。",
-      "definition_sha256": "ee823dd9d72099b960c1c76ee17359f5d30542b15c219117e7d29bbecbca950e",
+      "task_prompt": "返回目标页面初次加载后的正文；不包含点击、输入、搜索、滚动或翻页后才出现的内容。",
+      "definition_sha256": "d7d11d778c556f690f14b2d645320c3270e53ff7d38812bc85acaf8ac0d43cce",
       "reference_sha256": "2ca4df7562bbd06eb179723de7aab37edeae75a6c35a6279a68af7ba01c77bee"
     },
     {
@@ -288,8 +288,8 @@
       "url": "https://vant-ui.github.io/vant/",
       "category": "dynamic_content",
       "track": "dynamic",
-      "task_prompt": "提取首次自动加载完成后的目标正文；不点击、不输入、不滚动、不搜索、不翻页。",
-      "definition_sha256": "5ff42d9a716f1aa5aab52791c2e5749eeb4dc2228338da83b97bf6244f7173eb",
+      "task_prompt": "返回目标页面初次加载后的正文；不包含点击、输入、搜索、滚动或翻页后才出现的内容。",
+      "definition_sha256": "e6b8c845d8d748ffe5ae9b23ee420b8c43670a24a7da7b65392d35bb22c0c627",
       "reference_sha256": "56498549b4dc576fa6e1b024e79cf1723155d93c114daecf6fb419d8f712ab40"
     },
     {
@@ -298,8 +298,8 @@
       "url": "https://www.layui-vue.com/zh-CN/components/table",
       "category": "dynamic_content",
       "track": "dynamic",
-      "task_prompt": "提取首次自动加载完成后的目标正文；不点击、不输入、不滚动、不搜索、不翻页。",
-      "definition_sha256": "a65f44ab4e461553a58c4efbe225be1edda6806130612570a815cae6d8fa242e",
+      "task_prompt": "返回目标页面初次加载后的正文；不包含点击、输入、搜索、滚动或翻页后才出现的内容。",
+      "definition_sha256": "fa514c4ba39f46f8dbe55b887bca87d002592d0708871ef2679a707e1f6d86b6",
       "reference_sha256": "fbed3d0116e68c5ee2c2dd0600f40d7c50a5cf5d7be88e1349738d617426a3d0"
     },
     {
@@ -308,8 +308,8 @@
       "url": "https://s.weibo.com/top/summary",
       "category": "dynamic_content",
       "track": "dynamic",
-      "task_prompt": "提取首次自动加载完成后的目标正文；不点击、不输入、不滚动、不搜索、不翻页。",
-      "definition_sha256": "0cdd48560402d980c1e5d7b82e3d8d3611a2919ec8036bc44851055071767686",
+      "task_prompt": "返回目标页面初次加载后的正文；不包含点击、输入、搜索、滚动或翻页后才出现的内容。",
+      "definition_sha256": "3697464d9da9f11ac5ef6b5a35c423a630907fa733453aea30e65d8d85f86480",
       "reference_sha256": null
     },
     {
@@ -318,8 +318,8 @@
       "url": "https://www.francetvinfo.fr/",
       "category": "dynamic_content",
       "track": "dynamic",
-      "task_prompt": "提取首次自动加载完成后的目标正文；不点击、不输入、不滚动、不搜索、不翻页。",
-      "definition_sha256": "a748369cce0fad76bca8c7b365d403d8f243c5028166673cf17a81c01626e59a",
+      "task_prompt": "返回目标页面初次加载后的正文；不包含点击、输入、搜索、滚动或翻页后才出现的内容。",
+      "definition_sha256": "cb5746a28781036f36b0801631110d4541bffe013463f90c349b3b8c3df4948d",
       "reference_sha256": null
     },
     {
@@ -328,8 +328,8 @@
       "url": "https://www.nintendo.com/jp/games/feature/index.html",
       "category": "dynamic_content",
       "track": "dynamic",
-      "task_prompt": "提取首次自动加载完成后的目标正文；不点击、不输入、不滚动、不搜索、不翻页。",
-      "definition_sha256": "142752ae8315d1f552c2e22210e80314d60a56e1776fb6f4d2261ac4340887ac",
+      "task_prompt": "返回目标页面初次加载后的正文；不包含点击、输入、搜索、滚动或翻页后才出现的内容。",
+      "definition_sha256": "700d52a37beecd148a7f6e6e18b922fbcb576c64a69f9b1f81891205441a6b6e",
       "reference_sha256": "63c4b4614acc4f07a40589af8dd6df52bfe77ea08c20347efdb3f03adf52e81e"
     },
     {
@@ -338,8 +338,8 @@
       "url": "https://www.melon.com/chart/",
       "category": "dynamic_content",
       "track": "dynamic",
-      "task_prompt": "提取首次自动加载完成后的目标正文；不点击、不输入、不滚动、不搜索、不翻页。",
-      "definition_sha256": "b3a17ecea077b80ad42393dc1d33207ad81f18009d294a32acd94434c9d42814",
+      "task_prompt": "返回目标页面初次加载后的正文；不包含点击、输入、搜索、滚动或翻页后才出现的内容。",
+      "definition_sha256": "2886aa0a28e40a8557f6db59844eeaa361ad26d54a91b62e44311c1874f9f159",
       "reference_sha256": null
     },
     {
@@ -348,8 +348,8 @@
       "url": "https://www.allocine.fr/film/",
       "category": "dynamic_content",
       "track": "dynamic",
-      "task_prompt": "提取首次自动加载完成后的目标正文；不点击、不输入、不滚动、不搜索、不翻页。",
-      "definition_sha256": "617fbaf8e8d8458d7457a7fc0c93ab44f97f58401fda21b0c9572faea9e39409",
+      "task_prompt": "返回目标页面初次加载后的正文；不包含点击、输入、搜索、滚动或翻页后才出现的内容。",
+      "definition_sha256": "9f9fec8767673a98ac6e2f68f4590e664c3271a9024ac16ca6b4a30ea6493263",
       "reference_sha256": null
     },
     {
@@ -358,8 +358,8 @@
       "url": "https://www.joyn.de/mediatheken/prosieben",
       "category": "dynamic_content",
       "track": "dynamic",
-      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。保留页面可见稳定文字；不点击、输入、滚动、翻页或使用OCR。动态成员不固定历史名单；同条目字段须对应完整。",
-      "definition_sha256": "d13635e79401a8972634924137bff41907131cccde94234f8308b60ac63fd602",
+      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。保留页面初次加载后的稳定文字；不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。动态成员不固定历史名单；同条目字段须对应完整。",
+      "definition_sha256": "f46b6ba5155fcbae6cb21ca66a2fa6ce610956e3f6b82b198e5b73bf465022e5",
       "reference_sha256": null
     },
     {
@@ -368,8 +368,8 @@
       "url": "https://www.joyn.de/filme",
       "category": "dynamic_content",
       "track": "dynamic",
-      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。保留页面可见稳定文字；不点击、输入、滚动、翻页或使用OCR。动态成员不固定历史名单；同条目字段须对应完整。",
-      "definition_sha256": "d7c907fd01e50424a58b45a45940c672d7e9e280d847b5821f357d81c113004d",
+      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。保留页面初次加载后的稳定文字；不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。动态成员不固定历史名单；同条目字段须对应完整。",
+      "definition_sha256": "0c58475fd71022f567e4fabfa0a23f14f60eab6626a307fd13a3ef50a1dc4b3d",
       "reference_sha256": null
     },
     {
@@ -378,8 +378,8 @@
       "url": "https://play.uol.com.br/",
       "category": "dynamic_content",
       "track": "dynamic",
-      "task_prompt": "提取首次自动加载完成后的目标正文；不点击、不输入、不滚动、不搜索、不翻页。",
-      "definition_sha256": "a75d41aa2717210ce5ef0fc3a21b9d4ca2bf71feb7e842fb0e7a0d2f153943a7",
+      "task_prompt": "返回目标页面初次加载后的正文；不包含点击、输入、搜索、滚动或翻页后才出现的内容。",
+      "definition_sha256": "7456f9457b05101b0cdf348a669467bbc807e79de0c38850ad653711c059d368",
       "reference_sha256": null
     },
     {
@@ -388,8 +388,8 @@
       "url": "https://www.joyn.de/",
       "category": "dynamic_content",
       "track": "dynamic",
-      "task_prompt": "提取首次自动加载完成后的目标正文；不点击、不输入、不滚动、不搜索、不翻页。",
-      "definition_sha256": "ce19dc33fa5c7d4de9d7ad027b7e591ef5d2d1253c71a6f68af8be6786675bd5",
+      "task_prompt": "返回目标页面初次加载后的正文；不包含点击、输入、搜索、滚动或翻页后才出现的内容。",
+      "definition_sha256": "553511e52e38452297a892e8d6fcc5fb8c3ca9f0f50c67a7c32d2c44dc3d5f2c",
       "reference_sha256": null
     },
     {
@@ -398,8 +398,8 @@
       "url": "https://shahid.mbc.net/ar",
       "category": "dynamic_content",
       "track": "dynamic",
-      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。保留页面可见稳定文字；不点击、输入、滚动、翻页或使用OCR。动态成员不固定历史名单；同条目字段须对应完整。",
-      "definition_sha256": "f47e31b2f62075976234fec975603f189d1dab17c93caeed9e9de5373c8749b9",
+      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。保留页面初次加载后的稳定文字；不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。动态成员不固定历史名单；同条目字段须对应完整。",
+      "definition_sha256": "66f11ba41df96bd51eee43b7d71649d5a633626c24532f97cd51fee36e20ea8c",
       "reference_sha256": null
     },
     {
@@ -408,8 +408,8 @@
       "url": "https://www.patternfly.org/components/table/react-demos/compact/",
       "category": "dynamic_content",
       "track": "dynamic",
-      "task_prompt": "提取声明 URL 首次自动加载完成后的目标正文；不得登录、点击、输入、搜索、滚动、翻页或接受同意墙。排除导航、广告、推荐、页脚、Cookie、登录和订阅提示。",
-      "definition_sha256": "dab821919ec00b27b1dfd0500675b2b11073a19de0f657b3b519ee2aa8e5074a",
+      "task_prompt": "返回声明 URL 初次加载后的目标正文；不包含点击、输入、搜索、滚动或翻页后才出现的内容。导航、广告、推荐、页脚、Cookie、登录和订阅提示不属于答案。",
+      "definition_sha256": "24027a5f372a0322c4d12f014e6ccc828e38858cb547fffb4132a8ea2db9ae27",
       "reference_sha256": "bd2afda485cdccb64c283a4cabfef562e5f10c56440cc75dfdda49bb3716734a"
     },
     {
@@ -418,8 +418,8 @@
       "url": "https://rsuitejs.com/components/table/",
       "category": "dynamic_content",
       "track": "dynamic",
-      "task_prompt": "提取声明 URL 首次自动加载完成后的目标正文；不得登录、点击、输入、搜索、滚动、翻页或接受同意墙。排除导航、广告、推荐、页脚、Cookie、登录和订阅提示。",
-      "definition_sha256": "6b3c60c86a959a0bc6dea81855c5b583781bb4c83b2c82f8b67f40ff371b1ac5",
+      "task_prompt": "返回声明 URL 初次加载后的目标正文；不包含点击、输入、搜索、滚动或翻页后才出现的内容。导航、广告、推荐、页脚、Cookie、登录和订阅提示不属于答案。",
+      "definition_sha256": "e1db40716bb9d4b422e57d360e10d05f5399d30bcb16f0be672ca367611943e3",
       "reference_sha256": "c1c4309b1db1c8d2b834d353326ca9d978ddba2ae63d4cf0e0da5ecd93f827e2"
     },
     {
@@ -428,8 +428,8 @@
       "url": "https://testpages.eviltester.com/pages/embedded-pages/iframes/",
       "category": "dynamic_content",
       "track": "dynamic",
-      "task_prompt": "提取声明 URL 首次自动加载完成后的目标正文；不得登录、点击、输入、搜索、滚动、翻页或接受同意墙。排除导航、广告、推荐、页脚、Cookie、登录和订阅提示。",
-      "definition_sha256": "f3dfb5832ac20c50a2246db9991fa255594a126ae0a8f4ad584e2434c269b60e",
+      "task_prompt": "返回声明 URL 初次加载后的目标正文；不包含点击、输入、搜索、滚动或翻页后才出现的内容。导航、广告、推荐、页脚、Cookie、登录和订阅提示不属于答案。",
+      "definition_sha256": "bebb939a22f3230bb8a63b47d97dda66d0073cf88166f3583342995e44972363",
       "reference_sha256": "9429d55770b19f44d152aaeae72630e567326e675ae712f22844b86a54817c3b"
     },
     {
@@ -438,8 +438,8 @@
       "url": "https://material.angular.dev/components/tree/examples",
       "category": "dynamic_content",
       "track": "dynamic",
-      "task_prompt": "提取声明 URL 首次自动加载完成后的目标正文；不得登录、点击、输入、搜索、滚动、翻页或接受同意墙。排除导航、广告、推荐、页脚、Cookie、登录和订阅提示。",
-      "definition_sha256": "db52ec4144ca8c5e38a6d45abcd28f3bd58a5bdfdc1934e0b72a6833161dc113",
+      "task_prompt": "返回声明 URL 初次加载后的目标正文；不包含点击、输入、搜索、滚动或翻页后才出现的内容。导航、广告、推荐、页脚、Cookie、登录和订阅提示不属于答案。",
+      "definition_sha256": "6d9239502e4196defa9067bf5b7d6ffb136ecd73c4d2233233f2c8caf1a9afba",
       "reference_sha256": "87f11b79a279fad210089deefaa2533bc09aa625b2ae60aa52133b0eb0fefdd2"
     },
     {
@@ -448,8 +448,8 @@
       "url": "https://www.varletjs.org/#/en-US/index",
       "category": "dynamic_content",
       "track": "dynamic",
-      "task_prompt": "提取声明 URL 首次自动加载完成后的目标正文；不得登录、点击、输入、搜索、滚动、翻页或接受同意墙。排除导航、广告、推荐、页脚、Cookie、登录和订阅提示。",
-      "definition_sha256": "120dcb7f43bcc8b54bebd49decc749b3b7024439d51892e14f49fba4da3d30b3",
+      "task_prompt": "返回声明 URL 初次加载后的目标正文；不包含点击、输入、搜索、滚动或翻页后才出现的内容。导航、广告、推荐、页脚、Cookie、登录和订阅提示不属于答案。",
+      "definition_sha256": "4940114880c8256bc6bd9196e0d8b6678c099b8657b114434ec0d1f619bfdeca",
       "reference_sha256": "af99d0b85518ba88b9f0d2d548f773d88e7e68a5c47285b1876deecae93e9afb"
     },
     {
@@ -458,8 +458,8 @@
       "url": "https://sandbox.scalar.com/#GET/",
       "category": "dynamic_content",
       "track": "dynamic",
-      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。保留页面可见稳定文字；不点击、输入、滚动、翻页或使用OCR。动态成员不固定历史名单；同条目字段须对应完整。",
-      "definition_sha256": "ed04a82103d885ef17f15bea054d1cc4b7ed316fbecb905b334bbc69535c825a",
+      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。保留页面初次加载后的稳定文字；不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。动态成员不固定历史名单；同条目字段须对应完整。",
+      "definition_sha256": "7c2b3c66c3d8581870dd37ef45adddc75fff0af05681e97b8f82ed3327fae5c3",
       "reference_sha256": "060905d2e11f535d1b5178840cec66805045ccf109ec0d88e97148ec70247639"
     },
     {
@@ -468,8 +468,8 @@
       "url": "https://ej2.syncfusion.com/react/demos/grid/overview/",
       "category": "dynamic_content",
       "track": "dynamic",
-      "task_prompt": "提取声明 URL 首次自动加载完成后的目标正文；不得登录、点击、输入、搜索、滚动、翻页或接受同意墙。排除导航、广告、推荐、页脚、Cookie、登录和订阅提示。",
-      "definition_sha256": "ec87495616619dd4cb014d91e94cc105498bfb1600a52e5daeb6dcc9dea8c5d0",
+      "task_prompt": "返回声明 URL 初次加载后的目标正文；不包含点击、输入、搜索、滚动或翻页后才出现的内容。导航、广告、推荐、页脚、Cookie、登录和订阅提示不属于答案。",
+      "definition_sha256": "4dc49e8c92a417cc98e4bcb817bfe2e473cb0f8218fce74820cf0a8b69043519",
       "reference_sha256": "a940a9cb54053414837069ebdcf23947cc591435f4d7ef69738bdf099e4aa2dd"
     },
     {
@@ -478,8 +478,8 @@
       "url": "https://gridjs.io/docs/examples/pagination",
       "category": "dynamic_content",
       "track": "dynamic",
-      "task_prompt": "提取声明 URL 首次自动加载完成后的目标正文；不得登录、点击、输入、搜索、滚动、翻页或接受同意墙。排除导航、广告、推荐、页脚、Cookie、登录和订阅提示。",
-      "definition_sha256": "705c288d284b70ff7098089f36f3ae6d6a87fe188131a7148b4ed1888145912e",
+      "task_prompt": "返回声明 URL 初次加载后的目标正文；不包含点击、输入、搜索、滚动或翻页后才出现的内容。导航、广告、推荐、页脚、Cookie、登录和订阅提示不属于答案。",
+      "definition_sha256": "8dd1b19682ddfa343a1c681f126553ac76463aecddb3bf40e538708ae7e15025",
       "reference_sha256": "24b942280b7444f71f06a5a6eb30a29fc8e188874093a49dc5d6e87a9229dd7e"
     },
     {
@@ -488,8 +488,8 @@
       "url": "https://www.tabulator.info/examples/6.x/",
       "category": "dynamic_content",
       "track": "dynamic",
-      "task_prompt": "提取声明 URL 首次自动加载完成后的目标正文；不得登录、点击、输入、搜索、滚动、翻页或接受同意墙。排除导航、广告、推荐、页脚、Cookie、登录和订阅提示。",
-      "definition_sha256": "12e1d4ff22f0a67ff8d5b996c6c5544cd4af14505bcea2eb682d6e07072a6cdc",
+      "task_prompt": "返回声明 URL 初次加载后的目标正文；不包含点击、输入、搜索、滚动或翻页后才出现的内容。导航、广告、推荐、页脚、Cookie、登录和订阅提示不属于答案。",
+      "definition_sha256": "15c348215bb32c88359152ab1c39e025f22ed851f868e27177ea9f5c791a8374",
       "reference_sha256": "89145f03771ac30baf0286863659da402f3acd94d72a9b1c16d5531d881099ab"
     },
     {
@@ -498,8 +498,8 @@
       "url": "https://primevue.dev/treetable/",
       "category": "dynamic_content",
       "track": "dynamic",
-      "task_prompt": "提取声明 URL 首次自动加载完成后的目标正文；不得登录、点击、输入、搜索、滚动、翻页或接受同意墙。排除导航、广告、推荐、页脚、Cookie、登录和订阅提示。",
-      "definition_sha256": "41356baec3ca18d0856a4febba663e97a8a65c2d373a7bd4fd56892777c5ff17",
+      "task_prompt": "返回声明 URL 初次加载后的目标正文；不包含点击、输入、搜索、滚动或翻页后才出现的内容。导航、广告、推荐、页脚、Cookie、登录和订阅提示不属于答案。",
+      "definition_sha256": "391a0b83567908b927daa07b7b2b4d357e9ec494e581f5b0a7d993076fdea0b8",
       "reference_sha256": "6cecfd6f5c56a8b3c392092a5182767be136b9fe18554d83e806db837dc66919"
     },
     {
@@ -508,8 +508,8 @@
       "url": "https://primevue.dev/virtualscroller/",
       "category": "dynamic_content",
       "track": "dynamic",
-      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。保留页面可见稳定文字；不点击、输入、滚动、翻页或使用OCR。动态成员不固定历史名单；同条目字段须对应完整。",
-      "definition_sha256": "2f8f5147e7ddd79293a77a5bcaabc309225f0b0e3f6f50bddb82e092ce22f898",
+      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。保留页面初次加载后的稳定文字；不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。动态成员不固定历史名单；同条目字段须对应完整。",
+      "definition_sha256": "f85aa73e26a1c94e2e8ed10a22fdf148e29c007ca4232a33790c9c71b47296f4",
       "reference_sha256": null
     },
     {
@@ -518,8 +518,8 @@
       "url": "https://primeng.dev/table",
       "category": "dynamic_content",
       "track": "dynamic",
-      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。保留页面可见稳定文字；不点击、输入、滚动、翻页或使用OCR。动态成员不固定历史名单；同条目字段须对应完整。",
-      "definition_sha256": "c65344831908c780ea372277b869f4e0fc711e9b9f005e985aa915aaa83a5b7d",
+      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。保留页面初次加载后的稳定文字；不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。动态成员不固定历史名单；同条目字段须对应完整。",
+      "definition_sha256": "51f5ade3644ffecb832db2e7d94fe4dc025b2fc1563f8652af85f6fe7b20a451",
       "reference_sha256": "92f822bb2535a6d146364fd9fc16556d8ff97e5b4c2c528719516013bbedce29"
     },
     {
@@ -528,8 +528,8 @@
       "url": "https://primeng.dev/virtualscroller",
       "category": "dynamic_content",
       "track": "dynamic",
-      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。保留页面可见稳定文字；不点击、输入、滚动、翻页或使用OCR。动态成员不固定历史名单；同条目字段须对应完整。",
-      "definition_sha256": "b70715b3b3ee614edb158aa837fd31bc348a05ed325eef7e3ea844d230aea82c",
+      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。保留页面初次加载后的稳定文字；不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。动态成员不固定历史名单；同条目字段须对应完整。",
+      "definition_sha256": "b3f181b0763e9d7f9a3123feccdda73a290030abdff2c8b6836ba9d22b45882c",
       "reference_sha256": null
     },
     {
@@ -538,8 +538,8 @@
       "url": "https://vuetifyjs.com/en/components/data-tables/basics/#usage",
       "category": "dynamic_content",
       "track": "dynamic",
-      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。保留页面可见稳定文字；不点击、输入、滚动、翻页或使用OCR。动态成员不固定历史名单；同条目字段须对应完整。",
-      "definition_sha256": "088b710683fcd33f5f3a70e4f26051c2cab981c0fb5c15a842f0f3bde723a088",
+      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。保留页面初次加载后的稳定文字；不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。动态成员不固定历史名单；同条目字段须对应完整。",
+      "definition_sha256": "41754944e749fddb271a71680b2a2b21b070320ae29d69f8617ad83b1cb78763",
       "reference_sha256": "a70494640e1b49db7cd6bef7ea6018ca795be4a551ad77dab2c2a6f44958fc2c"
     },
     {
@@ -548,8 +548,8 @@
       "url": "https://vuetifyjs.com/en/components/data-tables/server-side-tables/#examples",
       "category": "dynamic_content",
       "track": "dynamic",
-      "task_prompt": "提取声明 URL 首次自动加载完成后的目标正文；不得登录、点击、输入、搜索、滚动、翻页或接受同意墙。排除导航、广告、推荐、页脚、Cookie、登录和订阅提示。",
-      "definition_sha256": "0a5e34118131ec1ad1210b1cea822a794e62425a54b9dbd56b016b2069152a5c",
+      "task_prompt": "返回声明 URL 初次加载后的目标正文；不包含点击、输入、搜索、滚动或翻页后才出现的内容。导航、广告、推荐、页脚、Cookie、登录和订阅提示不属于答案。",
+      "definition_sha256": "2e3acfc617ab24bec1e68e1c7b962eca2949675ecbad054c78bbeb4721ae83c5",
       "reference_sha256": "35954335be53f0e64e94e8a432d30a051fdcf0d71650cf9035cdcf0d4459d5b8"
     },
     {
@@ -558,8 +558,8 @@
       "url": "https://vuetifyjs.com/en/components/data-tables/virtual-tables/#examples",
       "category": "dynamic_content",
       "track": "dynamic",
-      "task_prompt": "提取声明 URL 首次自动加载完成后的目标正文；不得登录、点击、输入、搜索、滚动、翻页或接受同意墙。排除导航、广告、推荐、页脚、Cookie、登录和订阅提示。",
-      "definition_sha256": "14c49b5bff05d8f2cedf4229d06af33542ac509a00af74581d0fe38fc4286d95",
+      "task_prompt": "返回声明 URL 初次加载后的目标正文；不包含点击、输入、搜索、滚动或翻页后才出现的内容。导航、广告、推荐、页脚、Cookie、登录和订阅提示不属于答案。",
+      "definition_sha256": "c529b09db9cee957acaf08b3d3948ed9de30ff04ba470703eacc822f3e88c345",
       "reference_sha256": "6559116ff0ce6a067a4c2df65bf93abb7ebf5bbe47598b07106b804b069c11ed"
     },
     {
@@ -568,8 +568,8 @@
       "url": "https://material.angular.dev/components/autocomplete/examples",
       "category": "dynamic_content",
       "track": "dynamic",
-      "task_prompt": "提取声明 URL 首次自动加载完成后的目标正文；不得登录、点击、输入、搜索、滚动、翻页或接受同意墙。排除导航、广告、推荐、页脚、Cookie、登录和订阅提示。",
-      "definition_sha256": "8856f3b2b51c3206e25452c6a32e410929e44f791aed8b8ae1fdba91b55443d9",
+      "task_prompt": "返回声明 URL 初次加载后的目标正文；不包含点击、输入、搜索、滚动或翻页后才出现的内容。导航、广告、推荐、页脚、Cookie、登录和订阅提示不属于答案。",
+      "definition_sha256": "1997ce895f58a455c4cc1b34116f859ca2b76366f974d3eb1eab227e30c25a70",
       "reference_sha256": "ee3f2a44b2c5320ef93f20dc1b2613d70a8509c6cbbff6e0fd62c2d9d8d0b188"
     },
     {
@@ -578,8 +578,8 @@
       "url": "https://v2.grommet.io/datatable",
       "category": "dynamic_content",
       "track": "dynamic",
-      "task_prompt": "提取声明 URL 首次自动加载完成后的目标正文；不得登录、点击、输入、搜索、滚动、翻页或接受同意墙。排除导航、广告、推荐、页脚、Cookie、登录和订阅提示。",
-      "definition_sha256": "1d71369c64f1cd6187aedeb24559f2aa6f82923e6a1f978b582eae3c9402cbe2",
+      "task_prompt": "返回声明 URL 初次加载后的目标正文；不包含点击、输入、搜索、滚动或翻页后才出现的内容。导航、广告、推荐、页脚、Cookie、登录和订阅提示不属于答案。",
+      "definition_sha256": "05d90024bf4b7e83f59de8e5a81f4a19b4cf5d320d897c96b3efa677b9090a39",
       "reference_sha256": "c055e3041af1a49e06bd3686ee98ecadb3f14621ecd1757ab531b8b44c8339ab"
     },
     {
@@ -588,8 +588,8 @@
       "url": "https://hn.algolia.com/?dateRange=all&page=0&prefix=true&query=javascript&sort=byPopularity&type=story",
       "category": "dynamic_content",
       "track": "dynamic",
-      "task_prompt": "提取声明 URL 首次自动加载完成后的目标正文；不得登录、点击、输入、搜索、滚动、翻页或接受同意墙。排除导航、广告、推荐、页脚、Cookie、登录和订阅提示。",
-      "definition_sha256": "80161073dfe8e74f203b1a4e2bbabb2e140f4661dd1f61bbb3f2ad8182a5fda1",
+      "task_prompt": "返回声明 URL 初次加载后的目标正文；不包含点击、输入、搜索、滚动或翻页后才出现的内容。导航、广告、推荐、页脚、Cookie、登录和订阅提示不属于答案。",
+      "definition_sha256": "a44e6d7291e024a68903fe3802f5f20d0baffe13e5464d217ba8b4d45c9383a7",
       "reference_sha256": null
     },
     {
@@ -598,8 +598,8 @@
       "url": "https://earthquake.usgs.gov/earthquakes/map/",
       "category": "dynamic_content",
       "track": "dynamic",
-      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。保留页面可见稳定文字；不点击、输入、滚动、翻页或使用OCR。动态成员不固定历史名单；同条目字段须对应完整。",
-      "definition_sha256": "0b7b79248b87bea1ab92b27d4387654ea786489b37479ed2e11228154b632422",
+      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。保留页面初次加载后的稳定文字；不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。动态成员不固定历史名单；同条目字段须对应完整。",
+      "definition_sha256": "6a6401ca19a45af9673bafa9a17a4986fa8aedc1c5f6296b1ca949aa4365a35d",
       "reference_sha256": "559864e428bc07cc083ad035799ad4066c09f6dd1405421e0e0fc3641f78b48f"
     },
     {
@@ -608,8 +608,8 @@
       "url": "https://tdesign.tencent.com/vue-next/components/table",
       "category": "dynamic_content",
       "track": "dynamic",
-      "task_prompt": "提取声明 URL 首次自动加载完成后的目标正文；不得登录、点击、输入、搜索、滚动、翻页或接受同意墙。排除导航、广告、推荐、页脚、Cookie、登录和订阅提示。",
-      "definition_sha256": "9e06499493d904b1ce92d036693d4319c650015ee636b823114b50ac0d8dd6a7",
+      "task_prompt": "返回声明 URL 初次加载后的目标正文；不包含点击、输入、搜索、滚动或翻页后才出现的内容。导航、广告、推荐、页脚、Cookie、登录和订阅提示不属于答案。",
+      "definition_sha256": "abc92496972d92ea8e9d1b693e54c99b20db9f1f49cf5adcd9139a238308809f",
       "reference_sha256": "4efa6a97e411a317392c68344ffc4474c41f1a167fc4d3387ba8c8e5a54f38e5"
     },
     {
@@ -618,8 +618,8 @@
       "url": "https://arabic.cnn.com/world",
       "category": "dynamic_content",
       "track": "dynamic",
-      "task_prompt": "提取声明 URL 首次自动加载完成后的目标正文；不得登录、点击、输入、搜索、滚动、翻页或接受同意墙。排除导航、广告、推荐、页脚、Cookie、登录和订阅提示。",
-      "definition_sha256": "0ca5826af32d65dcbcad3434329cc13c81ee5f1405544f1f1185cdbe197f2c4f",
+      "task_prompt": "返回声明 URL 初次加载后的目标正文；不包含点击、输入、搜索、滚动或翻页后才出现的内容。导航、广告、推荐、页脚、Cookie、登录和订阅提示不属于答案。",
+      "definition_sha256": "c861478960c96ca5668619f58cfe953b88230a7a1a05ea33336cc0fc59e591ef",
       "reference_sha256": null
     },
     {
@@ -628,8 +628,8 @@
       "url": "https://quotes.toscrape.com/scroll",
       "category": "async_api",
       "track": "dynamic",
-      "task_prompt": "读取初次自动加载完成后的 10 条记录，保留全部文字字段；不要求滚动、翻页或点击。允许渲染、解析内嵌数据或获取公开接口，不限制实现路径。",
-      "definition_sha256": "5cf871325f7883b0436cc7aeb50200f7d01090ffb6ab8885b501b1d883a283db",
+      "task_prompt": "返回目标页面初次加载后的 10 条记录，并保留全部文字字段；不包含滚动、翻页或点击后才出现的记录。",
+      "definition_sha256": "6949e5c9cdf6b18a992c26312701427f550760febd7e73498f13729fe3baaf0a",
       "reference_sha256": "1b0d230de9e4e8f91674cd3db383c68b17519c94da70b6d1dda382848fae4780"
     },
     {
@@ -638,8 +638,8 @@
       "url": "https://www.scrapingcourse.com/javascript-rendering",
       "category": "async_api",
       "track": "dynamic",
-      "task_prompt": "读取初次自动加载完成后的 12 条记录，保留全部文字字段；不要求滚动、翻页或点击。允许渲染、解析内嵌数据或获取公开接口，不限制实现路径。",
-      "definition_sha256": "b277550fe0e6c50e286b3a216f4627bf9fefb18986363619df56627c7a7c7dc1",
+      "task_prompt": "返回目标页面初次加载后的 12 条记录，并保留全部文字字段；不包含滚动、翻页或点击后才出现的记录。",
+      "definition_sha256": "f0ee86dedeb0615b9964279a7638d6a6a7ca60698311e19c41928e598956bf9b",
       "reference_sha256": "133390e3d8bb20f971778abb2b43c4803f1c363703e60cabe9aecc5304cdd09c"
     },
     {
@@ -648,8 +648,8 @@
       "url": "https://webscraper.io/test-sites/e-commerce/ajax/computers/laptops",
       "category": "client_catalog",
       "track": "dynamic",
-      "task_prompt": "读取初次自动加载完成后的 6 条记录，保留全部文字字段；不要求滚动、翻页或点击。允许渲染、解析内嵌数据或获取公开接口，不限制实现路径。",
-      "definition_sha256": "33aa0ac4db55ad2acf5d797f715a7a9a37a67f2a800bb4e4667b74bc206199bc",
+      "task_prompt": "返回目标页面初次加载后的 6 条记录，并保留全部文字字段；不包含滚动、翻页或点击后才出现的记录。",
+      "definition_sha256": "1d95496de1d53d4ab902aa6616696018d2668eb93a335bcb49e1ec4a97220cf5",
       "reference_sha256": "304b607dabec992e508c3cfbef381e44dc55915c820e05627ecbaa08034ae836"
     },
     {
@@ -658,8 +658,8 @@
       "url": "https://quotes.toscrape.com/js-delayed/?delay=3000",
       "category": "delayed_render",
       "track": "dynamic",
-      "task_prompt": "读取初次自动加载完成后的 10 条记录，保留全部文字字段；不要求滚动、翻页或点击。允许渲染、解析内嵌数据或获取公开接口，不限制实现路径。",
-      "definition_sha256": "fb358c76b50d670d547bc8a4b86839bc1cfbd6c343f289d13cfc33aa57d2fd5b",
+      "task_prompt": "返回目标页面初次加载后的 10 条记录，并保留全部文字字段；不包含滚动、翻页或点击后才出现的记录。",
+      "definition_sha256": "c22f98544e77e54642a3a6f40e6fe834817ed09c1001b9dcd96041a4c0a83beb",
       "reference_sha256": "1b0d230de9e4e8f91674cd3db383c68b17519c94da70b6d1dda382848fae4780"
     },
     {
@@ -668,8 +668,8 @@
       "url": "https://web-scraping.dev/reviews",
       "category": "graphql",
       "track": "dynamic",
-      "task_prompt": "首次自动加载的 20 条评论：日期与评论全文；不含星级图形，不点击 Load More。允许渲染、解析内嵌数据、加载子文档或获取公开接口，不限制实现路径。",
-      "definition_sha256": "986fb43f2ad57feddb89b68951c201c8d8bb442b955c186c80a4879642eef8d2",
+      "task_prompt": "返回目标页面初次加载后的 20 条评论的日期和全文；不包含点击 Load More 后的评论，星级图形不属于文字答案。",
+      "definition_sha256": "721b32d52a0b6c4aeb83e985fc971223bc8bf2b22268c1495a0af1d9475efead",
       "reference_sha256": "176193496a44f0acfbd9d91ecca4a8443a75debc8839acab4c37f5cb31de0535"
     },
     {
@@ -678,8 +678,8 @@
       "url": "https://react-shopping-cart-67954.firebaseapp.com/",
       "category": "react_app",
       "track": "dynamic",
-      "task_prompt": "默认未筛选目录的全部 16 个商品：名称、售价、可见分期与免邮文字；不含按钮、图片及广告。允许渲染、解析内嵌数据、加载子文档或获取公开接口，不限制实现路径。",
-      "definition_sha256": "feba1c4fc954edd6da972d93150946214606655358ec0f7704ee45f427b12e6d",
+      "task_prompt": "默认未筛选目录的全部 16 个商品：名称、售价、可见分期与免邮文字；不含按钮、图片及广告。",
+      "definition_sha256": "8904649eb92c1b569b9e8c7e2ea3a698ea63874726a2f8cea4b742a92e942316",
       "reference_sha256": "cf603310fbc4eabf16baa9ef3ddcb0ae6bfc156de5cb4e3a4fe9af605692a2df"
     },
     {
@@ -688,8 +688,8 @@
       "url": "https://angular.github.io/angular-phonecat/step-12/app/",
       "category": "client_router",
       "track": "dynamic",
-      "task_prompt": "默认手机列表全部 20 条名称与描述；不搜索、不排序、不进入详情。允许渲染、解析内嵌数据、加载子文档或获取公开接口，不限制实现路径。",
-      "definition_sha256": "54c5dc2cb74e93500dfc121746cb8f31f477d5368d6537fcb80db32bba239f63",
+      "task_prompt": "返回默认手机列表全部 20 条名称与描述；搜索、排序和详情页结果不属于答案。",
+      "definition_sha256": "e2284cfd295d7f990310e4be111a58fca584e04adb8c7a632ecfa98459e78845",
       "reference_sha256": "877d5cd0a01d27940808b469c7792136644f4df27dcebf6f814324bd5ede95f1"
     },
     {
@@ -698,8 +698,8 @@
       "url": "https://petstore.swagger.io/",
       "category": "schema_render",
       "track": "dynamic",
-      "task_prompt": "默认展开分组中全部 20 条操作摘要：HTTP 方法、路径和说明；不展开参数、不执行 API、不含 Cookie 横幅。允许渲染、解析内嵌数据、加载子文档或获取公开接口，不限制实现路径。",
-      "definition_sha256": "956e2afa03b05074be625000b5f72b091fde45823eff6cb063d347b44cb51b69",
+      "task_prompt": "默认展开分组中全部 20 条操作摘要：HTTP 方法、路径和说明；不展开参数、不执行 API、不含 Cookie 横幅。",
+      "definition_sha256": "a1bfbe97678d5346d09e6ce621e08350dc7ca5958a119105170a4360ab8671b6",
       "reference_sha256": "37727508e4f211fe7a6f2f18e74b5840f8f9a6c9595d91bc8f74f5d662db5054"
     },
     {
@@ -708,8 +708,8 @@
       "url": "https://web-scraping.dev/product/1",
       "category": "embedded_state",
       "track": "dynamic",
-      "task_prompt": "商品页首次自动呈现的 5 条评论：日期和评论全文；不含星级图形、商品推荐，不点击 Load More。允许渲染、解析内嵌数据、加载子文档或获取公开接口，不限制实现路径。",
-      "definition_sha256": "a2512778de7e7502817ccc865e0a99aa3fe0daa1c8622853f7a9c03f2b2c02a3",
+      "task_prompt": "返回商品页初次加载后的 5 条评论的日期和全文；不包含点击 Load More 后的评论，星级图形和商品推荐不属于答案。",
+      "definition_sha256": "c1d46a615bb759a8a728e0de33de9f42396493a0301d1789e7ff5d87f05f4431",
       "reference_sha256": "e1b7d42946c236ed613e0318b20fefd56a7652073fccb88d6dcc29980fb27246"
     },
     {
@@ -718,8 +718,8 @@
       "url": "https://www.scrapethissite.com/pages/frames/",
       "category": "embedded_frame",
       "track": "dynamic",
-      "task_prompt": "父页自动加载的 iframe 中全部 14 个龟类科名称；不进入详情，不要求图片或按钮文字。允许渲染、解析内嵌数据、加载子文档或获取公开接口，不限制实现路径。",
-      "definition_sha256": "d612b823798a1e3409a30c407a1e7cb52b22e7f4cf98608ed6095c1e3d164222",
+      "task_prompt": "父页自动加载的 iframe 中全部 14 个龟类科名称；不进入详情，不要求图片或按钮文字。",
+      "definition_sha256": "a06ebe7091c5303a6dbb2919687757f8ca64b0e9ff67e56d236e6af9ede577b6",
       "reference_sha256": "e4183696f6e74f9016c0668ee9809eb2fe7b03c244bfdae2231d8e1a1326f9ca"
     },
     {
@@ -728,8 +728,8 @@
       "url": "https://mui.com/x/react-data-grid/",
       "category": "dynamic_content",
       "track": "dynamic",
-      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。保留页面可见稳定文字；不点击、输入、滚动、翻页或使用OCR。动态成员不固定历史名单；同条目字段须对应完整。",
-      "definition_sha256": "25f0853ec2d5f18e756c275a50331fb03761b417c707928a515b142aed45b7b1",
+      "task_prompt": "提取声明网址首次自动加载后的真实文字、列表条目、对应链接和正文。保留页面初次加载后的稳定文字；不包含点击、输入、滚动或翻页后才出现的内容，图片文字不属于答案。动态成员不固定历史名单；同条目字段须对应完整。",
+      "definition_sha256": "6bca81e35ae98d186539c909d32d255fcb94edf361876cd9862d3bc91345204e",
       "reference_sha256": "65e76135cb5da54ecd7ca6ab6caec45334c9435d3ebf4b3bea8f5b777e96baf9"
     },
     {
@@ -738,8 +738,8 @@
       "url": "https://blueprintjs.com/docs/",
       "category": "dynamic_content",
       "track": "dynamic",
-      "task_prompt": "提取 Blueprint 文档首页首次自动加载后 main 区域的完整正文；不得点击、输入、搜索、滚动或翻页。排除顶栏、侧栏、页脚、广告、Cookie 和登录提示。",
-      "definition_sha256": "e34a661c7b07d06b6564af6803df1461e1ed27410c752266eaab4e64b9a15220",
+      "task_prompt": "返回 Blueprint 文档首页初次加载后的 main 区域完整正文；不包含点击、输入、搜索、滚动或翻页后才出现的内容。顶栏、侧栏、页脚、广告、Cookie 和登录提示不属于答案。",
+      "definition_sha256": "53dc0c6618415cbe02a550f3c4e8aaf12787ccdc64af73949c7fbf0449b005c8",
       "reference_sha256": "d01a60120c93e838407ee01c2c429664e8c9c939b5a41385810cfe5ec2565b21"
     },
     {
@@ -748,8 +748,8 @@
       "url": "https://redocly.github.io/redoc/",
       "category": "dynamic_content",
       "track": "dynamic",
-      "task_prompt": "提取声明 URL 首次自动加载完成后的目标正文；不得点击、输入、滚动、搜索或翻页。排除导航、广告、推荐、页脚、Cookie、登录和订阅提示。",
-      "definition_sha256": "349a6342cccb5b686a95d103f8a4ebd6e817ce2586dc89d416dd0bb39e7df171",
+      "task_prompt": "返回声明 URL 初次加载后的目标正文；不包含点击、输入、搜索、滚动或翻页后才出现的内容。导航、广告、推荐、页脚、Cookie、登录和订阅提示不属于答案。",
+      "definition_sha256": "36c20d2fb509d58dd46b6b68d3d417da16c73ac83ca048c00bb08915f31120dc",
       "reference_sha256": "0cb4397fe97bb627a02ff1cd851d843044b0b0e3bc2109ecd4ea1667e505a315"
     },
     {
@@ -758,8 +758,8 @@
       "url": "https://petstore3.swagger.io/",
       "category": "dynamic_content",
       "track": "dynamic",
-      "task_prompt": "提取声明 URL 首次自动加载完成后的目标正文；不得点击、输入、滚动、搜索或翻页。排除导航、广告、推荐、页脚、Cookie、登录和订阅提示。",
-      "definition_sha256": "19a0d12811cfff31abeb0f7965f8c4a36e56b1fbc552e9688ba916d980bdbe02",
+      "task_prompt": "返回声明 URL 初次加载后的目标正文；不包含点击、输入、搜索、滚动或翻页后才出现的内容。导航、广告、推荐、页脚、Cookie、登录和订阅提示不属于答案。",
+      "definition_sha256": "c8417d0141f1bc9aadf0eca78cc1182cd4fbcb9dd795be991a302b70c45b175c",
       "reference_sha256": "30ff491963bec4b6fc42b469acc077e48fb0d112315c0bb582fe7fa4b7a7dbb6"
     },
     {

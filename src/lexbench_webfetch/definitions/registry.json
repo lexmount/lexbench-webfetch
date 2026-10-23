@@ -6,9 +6,9 @@
       "dataset_id": "webfetch",
       "case_count": 150,
       "files": {
-        "tasks.json": "ae3aec6eab8d2d470cdeb18c4f80d238e5dd79e1108a729589b77a80fe869405",
-        "dataset-catalog.json": "994fa53f7fc7c3170692a7bb493ebc5af9ad8ffb5b576c022fa123e6e6fb3838",
-        "source-inputs.json": "c202abc4624811b938a837402bbaf0ecbe716e375fbca70567346d2edb3b1708"
+        "tasks.json": "24599f1cbed8663a4d92ceb8f8453b5bf56528c7102eba74c73c2647d1edc258",
+        "dataset-catalog.json": "ef179dc3db4a2748dc19aca4d0896be16b56bb2cea6a719057a29b0e405c9ce9",
+        "source-inputs.json": "eb33f32e61b1a2684e530274b0a9e15de9d9a4605fb31eca76c870140f96081c"
       },
       "directory": "evaluation"
     },
@@ -17,9 +17,9 @@
       "dataset_id": "popular-sites",
       "case_count": 100,
       "files": {
-        "tasks.json": "82859ffb301740bcf38fee4fe87a675e8fb21af8dd660f92f74e4cbaede35b33",
-        "dataset-catalog.json": "f2b9dfb550230cdf8dbbba544d58158ac957620c1d064173790ead70754c178d",
-        "source-inputs.json": "32c31cfd5458a1dfe06d370fc2411a1eea5d1a05da8ef88e0dcd4fd3b0f3c810"
+        "tasks.json": "48c85143a12f4e7e4593d6a0fc940fc741920617d5f25c75b355b84e022b078c",
+        "dataset-catalog.json": "bad998e84ace2eba30ca27798a3cf4fb3708705fbd77344ce9418942791e08dc",
+        "source-inputs.json": "fcca38dba3e0756954d9f4faae360c2c7199369f884d2e699c7e419beceb68f9"
       },
       "directory": "evaluation/popular-sites"
     },
@@ -28,9 +28,9 @@
       "dataset_id": "dynamic-qualified-100-moli-native-local-audit-20260924",
       "case_count": 100,
       "files": {
-        "tasks.json": "139c62a141183d305d8fa9c3658c546927731461d86aeba5ad3091649bd4ecd7",
-        "dataset-catalog.json": "ca1572aa80fc2324b2f00800a79b053cfd584d1831ffb16e6906ae0981522c6c",
-        "source-inputs.json": "710f9c91705b29bb9e4aa15af97dcc856e64e406baa4b9966446408d7e3d26a8"
+        "tasks.json": "46bcd726d6cb9a9f6de04716d3b5834dd24b86dbc71ecc28628c732613dbeaf3",
+        "dataset-catalog.json": "c3197e531c6e2e14c91d2dc00f010d6d35932c76c289d5dd305b18ddde1c1a6c",
+        "source-inputs.json": "d40618d17750536b3904b0534038bf4f3a381341a2d11f014ef2dad6f512d77f"
       },
       "directory": "evaluation/dynamic-content-100-moli-webfetch"
     },
@@ -39,9 +39,9 @@
       "dataset_id": "risk-control-audited-100",
       "case_count": 100,
       "files": {
-        "tasks.json": "c67b60ccf5ee0b14e4e23b3efc282e625005f8e096f0bfc978772d312e8f50c2",
-        "dataset-catalog.json": "52ec968b2ada26e5e061ccb25cbe4a73747539e556fa88f31bece6d7fb79b3cb",
-        "source-inputs.json": "c61d6825abbff2a92098592f83055347cd0b0101374794023046c0fd0323dd5f"
+        "tasks.json": "6a2953d2b08a06f911fb93d25fa46a6e0877a981ab067f5b376b4200a37c750d",
+        "dataset-catalog.json": "39db07738326507e91a91438ecf30a839272cbead4d1d8266b955b9f61ba4031",
+        "source-inputs.json": "2105aa849d158449921944cb71b596338d1672d0d58801a4bcaee9a435d88d5a"
       },
       "directory": "evaluation/risk-control/current"
     },
