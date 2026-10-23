@@ -145,7 +145,7 @@ uv run --frozen browser-harness-eval run \
 
 ## 引用 LexBench Web Fetch
 
-在公开作品中使用本仓库的任务定义或评分工具时，请引用仓库，并记录具体提交和任务集。GitHub 的引用入口读取 [CITATION.cff](../CITATION.cff)。0.3.0 版可这样引用：
+使用以下引用或 [CITATION.cff](../CITATION.cff)，并注明评测版本和任务集。
 
 ```bibtex
 @software{lexbench_webfetch_2026,
@@ -156,5 +156,3 @@ uv run --frozen browser-harness-eval run \
   url = {https://github.com/lexmount/lexbench-webfetch}
 }
 ```
-
-如果还使用了 [Browser Eval](https://github.com/lexmount/browser-eval#cite-browser-eval) 执行脚手架，请单独引用。上游来源或 benchmark 也应按各自的署名要求引用，本仓库的引用不能替代它们。使用其他版本时，请相应修改示例中的版本号和年份，并注明实际 tag 或提交。

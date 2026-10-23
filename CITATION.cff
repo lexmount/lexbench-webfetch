@@ -6,5 +6,5 @@ authors:
   - name: LexBench Web Fetch contributors
 repository-code: "https://github.com/lexmount/lexbench-webfetch"
 url: "https://github.com/lexmount/lexbench-webfetch"
-license: MIT
+license: Apache-2.0
 version: 0.3.0
