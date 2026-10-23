@@ -25,6 +25,14 @@ their independent source evidence and executable correction controls.
 
 ## Freeze an edition
 
+`lexbench-webfetch version` verifies the installed catalog's complete suite list,
+task definitions, frozen reference bindings and scorer against
+`definitions/benchmark-release.json`. The published `benchmark-vMAJOR.MINOR.PATCH`
+tag fixes that catalog. Full reference inputs remain separately hash-bound;
+the catalog does not replace the executable datasets or distribute their source
+captures. A report binds its actual selected population with the sidecar below;
+installing a newer catalog never expands that population.
+
 Compile or export the inputs through their existing owner first, including any
 registered annotation revision. Freeze the complete selected population before
 provider calls:

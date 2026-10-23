@@ -5,8 +5,35 @@ import json
 import pytest
 
 from lexbench_webfetch.versions import (
-    compare_releases, create_release, freeze_release, verify_release,
+    catalog_release, compare_releases, create_release, freeze_release, verify_release,
 )
+
+
+def test_installed_catalog_binds_every_registered_suite():
+    from lexbench_webfetch.benchmark import registry
+    release = catalog_release()
+    entries = registry()["suites"]
+    assert [row["suite"] for row in release["suites"]] == [row["id"] for row in entries]
+    assert release["case_count"] == sum(row["case_count"] for row in entries)
+
+
+@pytest.mark.parametrize("change", ["omitted_suite", "count", "reference", "scorer", "tag"])
+def test_published_catalog_rejects_changed_population_rules_or_reference_bindings(tmp_path, change):
+    release = catalog_release()
+    if change == "omitted_suite":
+        release["suites"].pop()
+    elif change == "count":
+        release["case_count"] += 1
+    elif change == "reference":
+        release["suites"][0]["dataset_sha256"] = "0" * 64
+    elif change == "scorer":
+        release["scoring_source_sha256"] = "0" * 64
+    else:
+        release["tag"] = "benchmark-v99.0.0"
+    path = tmp_path / "release.json"
+    path.write_text(json.dumps(release))
+    with pytest.raises(ValueError):
+        catalog_release(path)
 
 
 def dataset(track="web"):

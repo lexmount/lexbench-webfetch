@@ -10,6 +10,7 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Inspect and verify LexBench Web Fetch inputs")
     sub = parser.add_subparsers(dest="command", required=True)
     sub.add_parser("list", help="List the versioned suites")
+    sub.add_parser("version", help="Show and verify the published benchmark catalog edition")
     release = sub.add_parser("release", help="Freeze a dataset and scorer as a benchmark edition")
     release.add_argument("--dataset", type=Path, required=True)
     release.add_argument("--output", type=Path, required=True)
@@ -55,7 +56,10 @@ def main() -> None:
     articles.add_argument("--evidence-home", type=Path, required=True)
     args = parser.parse_args()
     try:
-        if args.command == "release":
+        if args.command == "version":
+            from .versions import catalog_release
+            result = catalog_release()
+        elif args.command == "release":
             from .versions import freeze_release
             previous = json.loads(args.previous.read_text()) if args.previous else None
             result = freeze_release(args.dataset, args.output, benchmark=args.benchmark,

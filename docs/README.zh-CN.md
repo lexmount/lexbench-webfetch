@@ -53,9 +53,12 @@ cd lexbench-webfetch
 uv sync --frozen
 uv run --frozen lexbench-webfetch list
 uv run --frozen lexbench-webfetch validate
+uv run --frozen lexbench-webfetch version
 ```
 
 这一步检查公开任务定义，无需浏览器、API Key 或 Browser Eval。它不访问网站，也不计算评测分数。
+
+`version` 会校验并显示当前题库版本，包括各子集题数、冻结输入哈希和评分器哈希。`benchmark-v主版本.次版本.补丁版本` 标签固定对应的仓库提交；报告另行绑定实际使用的题目和评分规则。
 
 复现冻结任务集需要取得获准使用的原始输入。所需文件及哈希列在 `src/lexbench_webfetch/definitions/registry.json` 中。本仓库不分发第三方页面快照，目前也没有公开的完整输入下载包。
 

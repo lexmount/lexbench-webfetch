@@ -158,3 +158,32 @@ def freeze_release(dataset_path: Path, output: Path, **options) -> dict:
     with output.open("x", encoding="utf-8") as stream:
         stream.write(json.dumps(release, ensure_ascii=False, indent=2) + "\n")
     return release
+
+
+def catalog_release(path: Path | None = None) -> dict:
+    """Read the published catalog edition and verify its complete suite bindings."""
+    from .benchmark import SUITES, registry, validate
+
+    selected = path if path is not None else SUITES / "benchmark-release.json"
+    if selected.is_symlink():
+        raise ValueError("Catalog release rejects symlinks")
+    release = json.loads(selected.read_text())
+    if release.get("schema_version") != 1 or release.get("kind") != "benchmark_catalog_release":
+        raise ValueError("Unsupported benchmark catalog release")
+    _version(release.get("version"))
+    if release.get("tag") != "benchmark-v" + release["version"]:
+        raise ValueError("Catalog release tag differs from its version")
+    if release.get("scoring_source_sha256") != SCORING_SOURCE_SHA256:
+        raise ValueError("Catalog release scoring source changed")
+    revision = release.get("scorer_revision", "")
+    if not re.fullmatch(r"[0-9a-f]{40}", revision):
+        raise ValueError("Catalog release needs a full scorer commit")
+    actual = []
+    for entry in registry()["suites"]:
+        validated = validate(entry["id"])
+        actual.append({**validated, "dataset_id": entry["dataset_id"],
+                       "directory": entry["directory"], "files": entry["files"]})
+    if release.get("suites") != actual or release.get("case_count") != sum(
+            row["case_count"] for row in actual):
+        raise ValueError("Catalog release task or frozen reference bindings changed")
+    return release
