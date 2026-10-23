@@ -24,6 +24,7 @@ PUBLIC_TASK_FIELDS = (
     "source_review_url", "evaluation_url", "expected_final_url", "page_identity_required",
     "expected_document_language", "document_language_match",
     "expected_document_language_present", "target_language", "target_region",
+    "ordered_tree_min_similarity", "ordered_tree_reference_sha256",
 )
 
 
@@ -49,9 +50,16 @@ def public_task(case: dict) -> dict:
     task = {key: case[key] for key in PUBLIC_TASK_FIELDS if key in case}
     if "body_requirements" in task:
         task["body_requirements"] = reference_bindings(task["body_requirements"])
+    if case.get("ordered_tree_reference") is not None:
+        task["ordered_tree_reference_sha256"] = hashlib.sha256(json.dumps(
+            case["ordered_tree_reference"], ensure_ascii=False, sort_keys=True,
+            separators=(",", ":"), allow_nan=False).encode()).hexdigest()
     benchmark = case.get("source_benchmark", {})
     routing = {key: benchmark[key] for key in
-               ("mode", "hosts", "entry_path", "minimum_entries", "verification_scope")
+               ("mode", "hosts", "entry_path", "minimum_entries", "verification_scope",
+                "entry_identity_pattern", "identity_query_keys", "link_base_url", "entry_scope",
+                "name_validation", "record_name_exclusions", "title_exclusion_patterns",
+                "price_patterns", "price_exclusion_patterns", "price_unavailable_patterns")
                if key in benchmark}
     from .required_components import COMPONENTS
     for component in COMPONENTS:

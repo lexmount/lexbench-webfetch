@@ -184,3 +184,53 @@ def test_scorer_commit_is_a_locator_and_source_hash_owns_compatibility():
     assert compare_releases(first, second)["mode"] == "direct"
     with pytest.raises(ValueError, match="Git commit"):
         release(scorer_revision="main")
+
+
+@pytest.mark.parametrize("field", ["ordered_tree_reference", "ordered_tree_min_similarity"])
+@pytest.mark.parametrize("reverse", [False, True])
+def test_tree_verdict_changes_require_rescoring_even_in_relaxed_report_verification(field, reverse):
+    from lexbench_webfetch.evaluation import evaluate_response
+
+    before = dataset()
+    case = before["cases"][0]
+    case.update(ordered_tree_reference={"tag": "p", "text": "hello"},
+                ordered_tree_min_similarity=0.5)
+    after = deepcopy(before)
+    if field == "ordered_tree_reference":
+        after["cases"][0][field]["text"] = "world"
+    else:
+        case["ordered_tree_reference"]["text"] = "world"
+        after["cases"][0]["ordered_tree_reference"]["text"] = "world"
+        case[field] = 0.1
+    if reverse:
+        before, after = after, before
+    answer = b'{"tag":"p","text":"hello"}'
+    assert evaluate_response(before["cases"][0], answer)["passed"] is not reverse
+    assert evaluate_response(after["cases"][0], answer)["passed"] is reverse
+    first = release(before)
+    with pytest.raises(ValueError, match="minor"):
+        release(after, "1.0.1", previous=first)
+    with pytest.raises(ValueError, match="dataset"):
+        verify_release(first, after, exact_dataset=False)
+    corrected = release(after, "1.1.0", previous=first, change_note="Correct frozen tree rule")
+    assert compare_releases(first, corrected)["mode"] == "rescore"
+
+
+def test_list_name_rule_is_part_of_measurement_not_just_public_display_fields():
+    from lexbench_webfetch.evaluation import evaluate_response
+
+    before = dataset()
+    before["cases"][0]["source_benchmark"] = {
+        "mode": "dynamic_list_structure", "hosts": ["example.test"],
+        "entry_path": r"/items/\d+", "minimum_entries": 1,
+    }
+    after = deepcopy(before)
+    after["cases"][0]["source_benchmark"]["name_validation"] = "nonempty"
+    answer = b'<a href="https://example.test/items/1">7</a>'
+    assert evaluate_response(before["cases"][0], answer)["metrics"]["structure_pass"] is False
+    assert evaluate_response(after["cases"][0], answer)["metrics"]["structure_pass"] is True
+    first = release(before)
+    with pytest.raises(ValueError, match="minor"):
+        release(after, "1.0.1", previous=first)
+    with pytest.raises(ValueError, match="dataset"):
+        verify_release(first, after, exact_dataset=False)

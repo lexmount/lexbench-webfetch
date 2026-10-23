@@ -10,6 +10,11 @@ such as `benchmark-v2.0.0` gives a released commit a durable name; never move
 or overwrite a published release tag. A tag alone does not identify external
 reference bytes or a report's selected task population.
 
+Use `benchmark-vMAJOR.MINOR.PATCH` in both the benchmark and report repositories.
+A report names the benchmark edition it uses; it does not introduce a separate
+report-version sequence. The hosting platform's immutable version ID identifies
+each published report build. Retain historical tags at their original commits.
+
 | Change | Version | Comparing results |
 | --- | --- | --- |
 | Documentation or presentation; measurement contracts and scorer unchanged | Patch | Direct, with the same execution controls |
