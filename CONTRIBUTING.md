@@ -1,5 +1,9 @@
 # Contributing
 
+Task, reference and scoring releases follow [benchmark versions](docs/versions.md).
+Keep package releases separate from benchmark editions; a new package commit
+must not silently replace a report's frozen inputs.
+
 Task definitions and acceptance requirements belong here. Task models, acceptance scoring, file checks and compilation also belong here. Browser adapters, scheduling, reference-capture orchestration and report rendering belong in the selected execution harness. Include a task ID and a reproducible accepted/rejected example when reporting a rule problem.
 
 Use Python 3.11 or newer and [uv](https://docs.astral.sh/uv/). Run `uv sync --frozen`, then `make check`. Run `uv sync --frozen --extra test` to install the test tools. Tests use synthetic inputs and need no browser, network access or historical source bundle. Keep the English and Chinese READMEs aligned; other guides use English.

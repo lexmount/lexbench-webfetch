@@ -69,6 +69,14 @@ uv run --frozen lexbench-webfetch export \
 
 The export includes only manifest-listed files and prints the executable dataset path. Missing files, changed bytes and symlinks fail validation. Existing output directories are never reused.
 
+## Freeze a benchmark version
+
+Reports bind a benchmark edition, its frozen dataset and its scoring source.
+Package upgrades do not change historical results. Use `lexbench-webfetch release`
+to freeze an external `benchmark-release.json`, and `compare-releases` to check
+whether two editions support direct comparison, require rescoring or belong
+to separate major versions. See [benchmark versions](docs/versions.md).
+
 ## Score a saved answer
 
 The benchmark includes its own scorer. It needs no Browser Eval installation:

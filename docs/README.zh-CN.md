@@ -69,6 +69,13 @@ uv run --frozen lexbench-webfetch export \
 
 导出工具只复制清单内的文件，并打印可执行数据集路径。缺文件、内容变化或符号链接都会使校验失败，已有输出目录不会被复用。
 
+## 固定评测版本
+
+报告绑定评测版本、冻结题目和评分源码。升级软件包不会改变历史结果。
+用 `lexbench-webfetch release` 在外部输入目录生成 `benchmark-release.json`，
+用 `compare-releases` 检查两个版本能否直接比较、是否需要统一重评，或应按不同大版本分别展示。
+具体规则见[评测版本管理](versions.md)。
+
 ## 对保存的响应评分
 
 本仓库自带评分器，无需安装 Browser Eval：

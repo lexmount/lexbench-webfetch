@@ -10,6 +10,16 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Inspect and verify LexBench Web Fetch inputs")
     sub = parser.add_subparsers(dest="command", required=True)
     sub.add_parser("list", help="List the versioned suites")
+    release = sub.add_parser("release", help="Freeze a dataset and scorer as a benchmark edition")
+    release.add_argument("--dataset", type=Path, required=True)
+    release.add_argument("--output", type=Path, required=True)
+    release.add_argument("--benchmark", required=True)
+    release.add_argument("--version", required=True)
+    release.add_argument("--previous", type=Path)
+    release.add_argument("--change-note")
+    compare = sub.add_parser("compare-releases", help="Check whether two result editions can be compared")
+    compare.add_argument("left", type=Path)
+    compare.add_argument("right", type=Path)
     check = sub.add_parser("validate", help="Check all public definitions and bindings")
     check.add_argument("--suite")
     for name in ("verify-inputs", "export"):
@@ -43,7 +53,17 @@ def main() -> None:
     articles.add_argument("--evidence-home", type=Path, required=True)
     args = parser.parse_args()
     try:
-        if args.command == "inspect-revision":
+        if args.command == "release":
+            from .versions import freeze_release
+            previous = json.loads(args.previous.read_text()) if args.previous else None
+            result = freeze_release(args.dataset, args.output, benchmark=args.benchmark,
+                                    version=args.version, previous=previous,
+                                    change_note=args.change_note)
+        elif args.command == "compare-releases":
+            from .versions import compare_releases
+            result = compare_releases(json.loads(args.left.read_text()),
+                                      json.loads(args.right.read_text()))
+        elif args.command == "inspect-revision":
             result = inspect_annotation_revision(args.suite, args.revision)
         elif args.command == "score":
             from .evaluation import evaluate_response
